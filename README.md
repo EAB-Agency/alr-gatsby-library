@@ -17,7 +17,6 @@
     # create a new Gatsby site using the minimal starter
     npm init gatsby
     ```
-
 2.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
