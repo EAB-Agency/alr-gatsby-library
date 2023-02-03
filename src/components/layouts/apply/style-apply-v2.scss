@@ -1,0 +1,43 @@
+@import 'styles/sass/foundation/index', 'styles/sass/acs', 'styles/sass/shared';
+
+.version-2 {
+  .lp-apply {
+    .lp-apply-content {
+      padding: 4vw 0;
+    }
+
+    @media (max-width: maxMQ($mq-900)) {
+      .lp-apply-content {
+        max-width: $mq-600;
+        margin: auto;
+      }
+
+      &:before {
+        background: url('styles/img-apply-sm.jpg') no-repeat top / cover;
+        content: '';
+        height: 40vw;
+        display: block;
+      }
+    }
+
+    @media (min-width: $mq-900) {
+      display: flex;
+      position: relative;
+
+      &:after {
+        background: url('styles/img-apply-lg.jpg') no-repeat left / cover;
+        content: '';
+        width: 50vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .lp-apply-content {
+        width: 50%;
+        padding-right: 2rem;
+      }
+    }
+  }
+}

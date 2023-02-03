@@ -1,0 +1,137 @@
+@import "foundation/index",
+				"acs",
+				"shared";
+
+
+// ================
+// Explore Landing Page Styles
+// ================
+
+// ================
+// School Link Styles
+
+.lp-school {
+	padding: 4vw 0;
+
+	.lp-school-content-title {
+	}	
+
+	.lp-school-link-list {
+		margin: 0;
+		padding: 0;
+		@include gridItems("4", $mq-600, $mq-1000, 1rem, 1.25rem);
+
+		li {
+			margin: 0;
+			list-style-type: none;
+
+			~ li {
+				margin-top: 2rem;
+			}
+
+			a {
+				display: block;
+				height: 100%;
+				width: 100%;
+				background: $c-lightGrey;
+				color: $c-black;
+				text-decoration: none;
+				position: relative;
+
+				&::before {
+					content: '';
+					display: block;
+					height: 42vw;
+					width: 100%;
+				}
+
+				// Span Wrapping Link Text
+				span {
+					display: block;
+					
+					// Arrow after link text
+					&::after {
+						content: $i-arrowRight;
+						display: inline-block;
+						font-family: $f-iconFont;
+						@extend %transition;
+						margin-left: 0.35rem;
+						margin-top: 0.3rem;
+						position: absolute;
+						font-size: 0.85rem;
+					}
+				}
+
+				&:hover,
+				&:focus {
+					background: darken($c-lightGrey, 20%);
+					color: $c-white;
+
+					span {
+						// Arrow after link text
+						&::after {
+							color: $c-white;
+						}
+					}
+				}
+			}
+
+			&:nth-child(1) {
+				a::before {
+					background: url("img-xxx.jpg") no-repeat center center / cover;
+				}
+			}
+
+			&:nth-child(2) {
+				a::before {
+					background: url("img-xxx.jpg") no-repeat center center / cover;
+				}
+			}
+
+			&:nth-child(3) {
+				a::before {
+					background: url("img-xxx.jpg") no-repeat center center / cover;
+				}
+			}
+
+			&:nth-child(4) {
+				a::before {
+					background: url("img-xxx.jpg") no-repeat center center / cover;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $mq-600) {
+		.lp-school-link-list {
+
+			li {
+
+				~ li {
+					margin-top: 0;
+				}
+
+				a {
+					&::before {
+						height: 20vw;
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width: $mq-1000) {
+		.lp-school-link-list {
+
+			li {
+				a {
+					&::before {
+						height: 12vw;
+					}
+				}
+			}
+		}
+	}
+}
+
+

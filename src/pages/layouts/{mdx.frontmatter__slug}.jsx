@@ -2,15 +2,15 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 
 export default function BlogPostTemplate({
-  data, // this prop will be injected by the GraphQL query below.
+  data, children // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark } = data; // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark;
+  const { mdx } = data; // data.mdx holds your post data
+  const { frontmatter } = mdx;
   return (
     <div>
       <div>
         <h1>{frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        {children}
       </div>
     </div>
   );
@@ -18,8 +18,7 @@ export default function BlogPostTemplate({
 
 export const pageQuery = graphql`
   query ($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+    mdx(id: { eq: $id }) {
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         slug

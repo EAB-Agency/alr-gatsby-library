@@ -1,0 +1,60 @@
+// ================
+// Settings
+// ================
+
+// ================
+// Fonts
+
+@include fontFace('styles/sass/fontawesome-webfont', 'Icons');
+
+// Use the below for Adobe Fonts. Replace the URL with the font(s) you're planning to use.
+// @import url("https://use.typekit.net/pyn1ykk.css");
+
+// ================
+// Variables
+
+// Font Stacks
+$f-headlineFont: serif;
+$f-bodyFont: sans-serif;
+$f-iconFont: 'Icons';
+
+// Colors
+$c-white: #fff;
+$c-lightGrey: #eee;
+$c-black: #000;
+
+$c-error: #c00;
+$c-valid: green;
+$c-link: blue;
+
+// Breakpoints
+$mq-2000: 125rem;
+$mq-1900: 118.75rem;
+$mq-1800: 112.5rem;
+$mq-1700: 106.25rem;
+$mq-1600: 100rem;
+$mq-1500: 93.75rem;
+$mq-1400: 87.5rem;
+$mq-1300: 81.25rem;
+$mq-1200: 75rem;
+$mq-1100: 68.75rem;
+$mq-1000: 62.5rem;
+$mq-900: 56.25rem;
+$mq-800: 50rem;
+$mq-700: 43.75rem;
+$mq-600: 37.5rem;
+$mq-500: 31.25rem;
+$mq-400: 25rem;
+$mq-300: 18.75rem;
+
+// Common Dimensions
+// $d-typeSpacing: 1rem;
+
+// Icons
+$i-arrowRight: '\f054';
+$i-errorCircle: '\f06a';
+$i-close: '\f00d';
+$i-check: '\f00c';
+$i-lightBulb: '\f0eb';
+$i-phone: '\f095';
+$i-email: '\f0e0';
