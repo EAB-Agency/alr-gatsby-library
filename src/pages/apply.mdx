@@ -1,6 +1,6 @@
-import ApplyOne from '../components/layouts/apply/apply1';
-import ApplyTwo from '../components/layouts/apply/apply2';
-import ApplyThree from '../components/layouts/apply/apply3';
+import ApplyOne from "../components/layouts/apply/apply1"
+import ApplyTwo from "../components/layouts/apply/apply2"
+import ApplyThree from "../components/layouts/apply/apply3"
 
 # Apply Layouts
 
@@ -25,12 +25,11 @@ Some descriptive copy about the layout. In eiusmod deserunt enim do aute aliqua 
 <ApplyOne />
 
 ```scss:title=styles.scss
-@use 'layouts' as layouts;
+@use 'layouts';
 
-#layout-a {
-  @include layouts.layout-a;
-
-}
+ .lp-apply {
+    @include layouts.layout-a();
+  }
 ```
 
 ## Apply Layout 2
