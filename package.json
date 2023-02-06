@@ -21,7 +21,6 @@
     "gatsby-design-tokens": "^5.5.0",
     "gatsby-mdx": "^1.0.0",
     "gatsby-plugin-mdx": "^5.5.0",
-    "gatsby-plugin-mdx-prismjs": "^1.0.4",
     "gatsby-plugin-sass": "^6.5.0",
     "gatsby-plugin-sitemap": "^6.5.0",
     "gatsby-remark-code-buttons": "^2.0.7",
@@ -37,6 +36,7 @@
     "sass": "^1.58.0"
   },
   "devDependencies": {
-    "gatsby-plugin-root-import": "^2.0.9"
+    "gatsby-plugin-root-import": "^2.0.9",
+    "resolve-url-loader": "^5.0.0"
   }
 }
