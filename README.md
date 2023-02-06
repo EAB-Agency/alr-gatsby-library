@@ -15,8 +15,8 @@
 
     ```shell
     cd alr-gatsby-library/
-    npm install
-    npm run develop
+    yarn install
+    yarn develop
     ```
 
 2.  **Open the code and start customizing!**
