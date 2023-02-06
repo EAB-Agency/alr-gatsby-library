@@ -5,7 +5,7 @@
 // ================
 // Fonts
 
-@include fontFace('styles/sass/fontawesome-webfont', 'Icons');
+// @include fontFace("../../assets/fonts/fontawesome-webfont", "Icons");
 
 // Use the below for Adobe Fonts. Replace the URL with the font(s) you're planning to use.
 // @import url("https://use.typekit.net/pyn1ykk.css");
@@ -16,7 +16,7 @@
 // Font Stacks
 $f-headlineFont: serif;
 $f-bodyFont: sans-serif;
-$f-iconFont: 'Icons';
+$f-iconFont: "Icons";
 
 // Colors
 $c-white: #fff;
@@ -51,10 +51,10 @@ $mq-300: 18.75rem;
 // $d-typeSpacing: 1rem;
 
 // Icons
-$i-arrowRight: '\f054';
-$i-errorCircle: '\f06a';
-$i-close: '\f00d';
-$i-check: '\f00c';
-$i-lightBulb: '\f0eb';
-$i-phone: '\f095';
-$i-email: '\f0e0';
+$i-arrowRight: "\f054";
+$i-errorCircle: "\f06a";
+$i-close: "\f00d";
+$i-check: "\f00c";
+$i-lightBulb: "\f0eb";
+$i-phone: "\f095";
+$i-email: "\f0e0";

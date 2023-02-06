@@ -2,17 +2,16 @@
 // Custom Mixins
 // ================
 
-
 // Button Color Mixin - (used on _buttons.scss)
 // -- Update Colors with Brand Colors -- //
-@mixin buttonColor (
+@mixin buttonColor(
   $_c-buttonColor: $c-black,
   $_c-buttonHoverColor: $c-white,
   $_c-buttonTextColor: $c-white,
   $_c-buttonTextColorHover: $c-black,
   $_c-buttonBorderColorIntial: $c-black,
-  $_c-buttonBorderColorHover: $c-black) {
-
+  $_c-buttonBorderColorHover: $c-black
+) {
   background: $_c-buttonColor;
   color: $_c-buttonTextColor;
   border: 1px solid $_c-buttonBorderColorIntial;
@@ -25,30 +24,38 @@
   }
 }
 
-
 // Container Style Mixin
-@mixin containerStyle ($_c-backgroundColor: $c-white, $_x-border: "null", $_c-borderColor: "null", $_x-boxShadow: "null") {
-
-	background: $_c-backgroundColor;
-	@include fluidRem("padding", 1rem 1.25rem, 2rem 2.5rem);
+@mixin containerStyle(
+  $_c-backgroundColor: $c-white,
+  $_x-border: "null",
+  $_c-borderColor: "null",
+  $_x-boxShadow: "null"
+) {
+  background: $_c-backgroundColor;
+  @include fluidRem("padding", 1rem 1.25rem, 2rem 2.5rem);
 
   @if $_x-border == "yes" {
     border: 1px solid $_c-borderColor;
   }
 
   @if $_x-boxShadow == "yes" {
-    box-shadow: 0 0 15px rgba($c-black, .2);
+    box-shadow: 0 0 15px rgba($c-black, 0.2);
   }
 }
 
 // Grid Items Mixin (School Content Section)
-@mixin gridItems($_x-number: "null", $_mq-small: $mq-600, $_mq-large: $mq-1000,  $_x-gridGapSmall: 1rem, $_x-gridGapLarge: 1rem) {
-  
+@mixin gridItems(
+  $_x-number: "null",
+  $_mq-small: $mq-600,
+  $_mq-large: $mq-1000,
+  $_x-gridGapSmall: 1rem,
+  $_x-gridGapLarge: 1rem
+) {
   @media (min-width: $_mq-small) {
     display: grid;
     grid-gap: $_x-gridGapSmall;
     grid-template-columns: repeat(2, 1fr);
-    
+
     @if $_x-number == "3" {
       grid-template-rows: repeat(auto, auto);
 
@@ -57,13 +64,9 @@
           grid-column: span 2;
         }
       }
-    } 
-    
-    @else if $_x-number == "4" {
+    } @else if $_x-number == "4" {
       grid-template-rows: repeat(2, 1fr);
-    } 
-    
-    @else if $_x-number == "5" {
+    } @else if $_x-number == "5" {
       grid-template-rows: repeat(3, 1fr);
 
       li {
@@ -71,13 +74,10 @@
           grid-column: span 2;
         }
       }
-    } 
-    
-    @else if $_x-number == "6" {
+    } @else if $_x-number == "6" {
       grid-template-rows: repeat(3, 1fr);
     }
   }
-  
 
   @media (min-width: $_mq-large) {
     grid-gap: $_x-gridGapLarge;
@@ -91,14 +91,10 @@
           grid-column: auto;
         }
       }
-    } 
-    
-    @elseif $_x-number == "4" {
+    } @else if $_x-number == "4" {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: 1fr;
-    } 
-    
-    @else if $_x-number == "5" {
+    } @else if $_x-number == "5" {
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(2, 1fr);
 
@@ -108,17 +104,14 @@
         &:last-child {
           grid-column-end: -2;
         }
-        
+
         &:nth-last-child(2) {
           grid-column-end: 4;
         }
       }
-    } 
-    
-    @else if $_x-number == "6" {
+    } @else if $_x-number == "6" {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
     }
   }
-
 }

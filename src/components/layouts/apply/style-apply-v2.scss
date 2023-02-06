@@ -1,4 +1,4 @@
-@import 'styles/sass/foundation/index', 'styles/sass/acs', 'styles/sass/shared';
+@import "styles/sass/foundation/index", "styles/sass/acs", "styles/sass/shared";
 
 .version-2 {
   .lp-apply {
@@ -13,8 +13,9 @@
       }
 
       &:before {
-        background: url('styles/img-apply-sm.jpg') no-repeat top / cover;
-        content: '';
+        background: url("../../../assets/images/img-apply-sm.jpg") no-repeat top /
+          cover;
+        content: "";
         height: 40vw;
         display: block;
       }
@@ -25,8 +26,9 @@
       position: relative;
 
       &:after {
-        background: url('styles/img-apply-lg.jpg') no-repeat left / cover;
-        content: '';
+        background: url("../../../assets/images/img-apply-lg.jpg") no-repeat
+          left / cover;
+        content: "";
         width: 50vw;
         height: 100%;
         position: absolute;
