@@ -5486,11 +5486,6 @@ gatsby-parcel-config@^1.5.0:
     "@parcel/transformer-js" "2.8.2"
     "@parcel/transformer-json" "2.8.2"
 
-gatsby-plugin-mdx-prismjs@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx-prismjs/-/gatsby-plugin-mdx-prismjs-1.0.4.tgz#e86f122f9f825ab331a85cc22fd46929b731e316"
-  integrity sha512-kUWUEjdP6O8He+ZvWLugRYS2mvjeGO+MHv1ofJ1zdU+JFh7SJBkuCdkOVRtQUy1dOy8x1ChKx78EM7pO2MQ13Q==
-
 gatsby-plugin-mdx@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-5.5.0.tgz#3d83650c939ce165d8e710e9b64854076ef7ecdd"

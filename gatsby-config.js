@@ -10,7 +10,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-sitemap',
     'gatsby-plugin-mdx',
-    'gatsby-plugin-mdx-prismjs',
     'gatsby-mdx',
     {
       resolve: `gatsby-plugin-sass`,
@@ -37,13 +36,6 @@ module.exports = {
         path: './src/pages/',
       },
       __key: 'pages',
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/src/content`,
-      },
     },
     {
       resolve: 'gatsby-transformer-remark',
