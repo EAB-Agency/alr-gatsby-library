@@ -91,7 +91,9 @@
           grid-column: auto;
         }
       }
-    } @else if $_x-number == "4" {
+    } 
+    
+    @else if $_x-number == "4" {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: 1fr;
     } @else if $_x-number == "5" {
@@ -253,7 +255,7 @@
 // - Lara - can delete if too specific
 @mixin addAccentBars ($_c-accentBarColor, $_c-accentBarSmall, $_c-accentBarLarge, $_x-contentClass, $_mq-small, $_mq-breakPoint) {
 	
-  @media (min-width: $_mq-small) {He g
+  @media (min-width: $_mq-small) {
     display: grid;
     grid-template-columns: $_c-accentBarSmall 1fr $_c-accentBarSmall;
     grid-template-rows: $_c-accentBarSmall 1fr $_c-accentBarSmall;
