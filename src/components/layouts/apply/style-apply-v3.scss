@@ -10,7 +10,8 @@
         display: block;
         width: 100%;
         height: 30vw;
-        background: url('styles/img-apply-sm.jpg') no-repeat center / cover;
+        background: url('/assets/images/img-apply-sm.jpg') no-repeat center /
+          cover;
         margin-top: 4vw;
       }
     }
@@ -30,7 +31,8 @@
           display: block;
           width: 100%;
           height: 100%;
-          background: url('styles/img-apply-lg.jpg') no-repeat center / cover;
+          background: url('/assets/images/img-apply-lg.jpg') no-repeat center /
+            cover;
         }
       }
     }

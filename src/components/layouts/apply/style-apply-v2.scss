@@ -13,7 +13,7 @@
       }
 
       &:before {
-        background: url('styles/img-apply-sm.jpg') no-repeat top / cover;
+        background: url('/assets/images/img-apply-sm.jpg') no-repeat top / cover;
         content: '';
         height: 40vw;
         display: block;
@@ -25,7 +25,8 @@
       position: relative;
 
       &:after {
-        background: url('styles/img-apply-lg.jpg') no-repeat left / cover;
+        background: url('/assets/images/img-apply-lg.jpg') no-repeat left /
+          cover;
         content: '';
         width: 50vw;
         height: 100%;

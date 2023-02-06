@@ -5,7 +5,7 @@
 // ================
 // Fonts
 
-@include fontFace('styles/sass/fontawesome-webfont', 'Icons');
+@include fontFace('/assets/fonts/fontawesome-webfont', 'Icons');
 
 // Use the below for Adobe Fonts. Replace the URL with the font(s) you're planning to use.
 // @import url("https://use.typekit.net/pyn1ykk.css");

@@ -17,6 +17,11 @@ module.exports = {
         sassOptions: {
           includePaths: [path.resolve(__dirname, 'src')],
         },
+        useResolveUrlLoader: {
+          options: {
+            sourceMap: true, //default is false
+          },
+        },
       },
     },
     {

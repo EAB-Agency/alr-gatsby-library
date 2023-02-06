@@ -36,6 +36,7 @@
     "sass": "^1.58.0"
   },
   "devDependencies": {
-    "gatsby-plugin-root-import": "^2.0.9"
+    "gatsby-plugin-root-import": "^2.0.9",
+    "resolve-url-loader": "^5.0.0"
   }
 }
