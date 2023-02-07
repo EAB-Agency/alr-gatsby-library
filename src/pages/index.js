@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Testimonial from '../components/social-proof/testimonial';
+import Testimonial from 'components/social-proof/Testimonial';
 
 
 const IndexPage = () => {
