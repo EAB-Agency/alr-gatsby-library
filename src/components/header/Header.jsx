@@ -3,7 +3,7 @@ import './header-styles.scss';
 
 const Header = () => {
   return (
-    <div>header withou the nav test</div>
+    <div>header without the nav test</div>
   )
 }
 

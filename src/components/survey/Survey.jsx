@@ -1,12 +1,12 @@
 import React from 'react';
+import DefaultSurvey from './default-survey'
 import './survey-styles.scss';
 
 const Survey = () => {
   return (
-    <div className="survey-1">
-      <div className="hello">put your Survey html here</div>
-      new html
-    </div>
+    <div className="version-1">
+      <DefaultSurvey />
+    </div>  
   );
 };
 

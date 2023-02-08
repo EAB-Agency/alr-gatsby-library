@@ -5,9 +5,6 @@ const DefaultApply = () => {
       <section className="lp-apply">
         <div className="center lp-apply-wrapper">
           <div className="content-container lp-apply-content">
-            <div className="lp-apply-img">
-              <img src="/images/apply/apply-1.jpg" alt="Apply" />
-            </div>
             <div className="lp-apply-copy">
               <h2 className="lp-apply-title">
                 Experience Support, Service, and Success
@@ -29,9 +26,13 @@ const DefaultApply = () => {
               </ul>
             </div>
 
-            <div className="apply-form lp-apply-form" id="apply-form"></div>
+            <div className="apply-form lp-apply-form" id="apply-form">
+              <script type="text/javascript" src="https://alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=2"></script>
+            </div>
 
-            <div className="lp-apply-footer"></div>
+            <div className="lp-apply-footer">
+              <p>Extra info about requirements, deadlines, etc.</p>
+            </div>
           </div>
         </div>
       </section>
