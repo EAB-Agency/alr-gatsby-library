@@ -1,7 +1,7 @@
 @use "sass:color";
 @import "styles/sass/foundation";
 
-@mixin layout-a(
+@mixin layout-apply2(
   $mq: $mq-900,
   $gridGap: 2rem,
   $marginTop: 4vw,
