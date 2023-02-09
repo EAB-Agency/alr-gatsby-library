@@ -5,9 +5,9 @@ import useScript from '../hooks/useScript';
 //* EAB Acquia Form
 // const x = `//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=2`;
 
-const AcquiaForm = ({ src }) => {
+const AcquiaForm = ({ src, multiple }) => {
   const scriptRef = useRef(null);
-  const status = useScript(src, scriptRef);
+  const status = useScript(src, scriptRef, multiple);
 
   return (
     <div ref={scriptRef} id="mauticform">

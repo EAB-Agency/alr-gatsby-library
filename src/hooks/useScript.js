@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react';
 
-function useScript(src, containerRef) {
+function useScript(src, containerRef, multiple) {
   // Keep track of script status ("idle", "loading", "ready", "error")
   const [status, setStatus] = useState(src ? 'loading' : 'idle');
+  useEffect(() => {
+    if (multiple) {
+      src = `${src}&${Math.floor(Math.random() * 90000) + 10000}`;
+    }
+  }, []);
   useEffect(
     () => {
       // Allow falsy src value if waiting on other data needed for
