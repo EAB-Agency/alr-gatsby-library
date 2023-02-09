@@ -1,6 +1,7 @@
-import ApplyOne from "../components/layouts/apply/apply1"
-import ApplyTwo from "../components/layouts/apply/apply2"
-import ApplyThree from "../components/layouts/apply/apply3"
+import ApplyOne from 'components/layouts/apply/apply1';
+import ApplyTwo from 'components/layouts/apply/apply2';
+import ApplyThree from 'components/layouts/apply/apply3';
+import ApplyThreeStyles from '!!raw-loader!../components/layouts/apply/style-apply-v2.scss';
 
 # Apply Layouts
 
@@ -8,15 +9,17 @@ import ApplyThree from "../components/layouts/apply/apply3"
 
 Some descriptive copy about the layout. In eiusmod deserunt enim do aute aliqua sunt. Id in ad proident ullamco ut non amet. Tempor mollit est duis dolor reprehenderit cillum reprehenderit consequat qui. Incididunt incididunt sint cillum occaecat amet et ut aliqua qui commodo.
 
-<ApplyThree />
+<pre>
+  <code className="language-scss">{ApplyThreeStyles}</code>
+</pre>
 
-```scss:title=styles.scss
+```scss
 @use 'layouts' as layouts;
-
 #layout-a {
-
 }
 ```
+
+<ApplyThree />
 
 ## Apply Layout 1
 

@@ -3,7 +3,7 @@ import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import Prism from 'prism-react-renderer/prism';
 
-import vsDark from 'prism-react-renderer/themes/vsDark';
+// import vsDark from 'prism-react-renderer/themes/github';
 import normalize from './normalize';
 import Copy from './copy';
 
@@ -45,6 +45,7 @@ const CodeBlock = ({ children, className }) => {
     language,
     params: { title = ``, live },
   } = getParams(className);
+
   const [content, highlights] = normalize(
     children.props && children.props.children
       ? children.props.children
@@ -54,14 +55,16 @@ const CodeBlock = ({ children, className }) => {
 
   return (
     <>
-      {live ? (
+      <button onClick={toggleCode} className="code-toggle">
+        {showCode ? 'Hide Code' : 'Show Code'}
+      </button>
+      {showCode && (
         <>
           {title && (
             <div className="gatsby-highlight-header">
               <div className="gatsby-code-title">{title}</div>
             </div>
           )}
-          <LiveComponent code={content} />
           <Copy
             fileName={title}
             css={{
@@ -69,64 +72,20 @@ const CodeBlock = ({ children, className }) => {
             }}
             content={content}
           />
-        </>
-      ) : (
-        <>
-          <button onClick={toggleCode} className="code-toggle">
-            {showCode ? 'Hide Code' : 'Show Code'}
-          </button>
-          {showCode && (
-            <>
-              {title && (
-                <div className="gatsby-highlight-header">
-                  <div className="gatsby-code-title">{title}</div>
-                </div>
-              )}
-              <Copy
-                fileName={title}
-                css={{
-                  position: `absolute`,
-                }}
-                content={content}
-              />
 
-              <Highlight
-                {...defaultProps}
-                code={content}
-                language={language}
-                theme={vsDark}
-              >
-                {({ tokens, getLineProps, getTokenProps }) => (
-                  <div className="gatsby-highlight">
-                    <pre className={`language-${language}`}>
-                      {tokens.map((line, i) => {
-                        const lineProps = getLineProps({ line, key: i });
-                        const className = [lineProps.className]
-                          .concat(highlights[i] && `gatsby-highlight-code-line`)
-                          .filter(Boolean)
-                          .join(` `);
-                        return (
-                          <div
-                            key={i}
-                            {...Object.assign({}, lineProps, {
-                              className,
-                            })}
-                          >
-                            {line.map((token, key) => (
-                              <span
-                                key={key}
-                                {...getTokenProps({ token, key })}
-                              />
-                            ))}
-                          </div>
-                        );
-                      })}
-                    </pre>
+          <Highlight {...defaultProps} code={content} language="jsx">
+            {({ className, style, tokens, getLineProps, getTokenProps }) => (
+              <pre className={className} style={style}>
+                {tokens.map((line, i) => (
+                  <div {...getLineProps({ line, key: i })}>
+                    {line.map((token, key) => (
+                      <span {...getTokenProps({ token, key })} />
+                    ))}
                   </div>
-                )}
-              </Highlight>
-            </>
-          )}
+                ))}
+              </pre>
+            )}
+          </Highlight>
         </>
       )}
     </>
