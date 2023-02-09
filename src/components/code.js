@@ -14,7 +14,7 @@ const Code = props => {
   const toggleCode = () => setShowCode(!showCode);
 
   return (
-    <>
+    <div className='code-block'>
       <button onClick={toggleCode} className="code-toggle">
         {showCode ? 'Hide Code' : 'Show Code'}
       </button>
@@ -50,7 +50,7 @@ const Code = props => {
           </Highlight>
         </>
       )}
-    </>
+    </div>
   );
 };
 
