@@ -1,22 +1,29 @@
-import ApplyOne from "../components/layouts/apply/apply1"
-import ApplyTwo from "../components/layouts/apply/apply2"
-import ApplyThree from "../components/layouts/apply/apply3"
+import ApplyOne from 'components/layouts/apply/apply1';
+import ApplyTwo from 'components/layouts/apply/apply2';
+import ApplyThree from 'components/layouts/apply/apply3';
+import ApplyThreeStyles from '../components/layouts/apply/style-apply-v2.scss';
 
 # Apply Layouts
 
 ## Base layout
 
 Some descriptive copy about the layout. In eiusmod deserunt enim do aute aliqua sunt. Id in ad proident ullamco ut non amet. Tempor mollit est duis dolor reprehenderit cillum reprehenderit consequat qui. Incididunt incididunt sint cillum occaecat amet et ut aliqua qui commodo.
+{console.log(ApplyThreeStyles)}
 
-<ApplyThree />
+<div
+  className="code-container"
+  dangerouslySetInnerHTML={{
+    __html: ApplyThreeStyles,
+  }}
+></div>
 
-```scss:title=styles.scss
+```scss
 @use 'layouts' as layouts;
-
 #layout-a {
-
 }
 ```
+
+<ApplyThree />
 
 ## Apply Layout 1
 
