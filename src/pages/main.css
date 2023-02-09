@@ -5,6 +5,10 @@ html {
   box-sizing: border-box;
 }
 
+.wrapper {
+  padding: 0 1rem;
+}
+
 h1, h2:not(.lp-apply-title), h3, h4 {
   font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif !important;
   color: #242A56;
@@ -47,9 +51,12 @@ nav.main-menu ul {
   height: inherit;
 }
 nav.main-menu .menu-icon {
+  background: transparent;
+  border: none;
   float: right;
   display: block;
   font-size: 2.5rem;
+  padding: 0;
   padding-right: 1rem;
   text-decoration: none;
   color: #343434;
