@@ -6,7 +6,8 @@ const Layout = ({ children }) => {
     <div className="wrapper">
       <nav className='main-menu'>
         <ul>
-          <li>
+          <li><Link to="javascript:void(0)" className='menu-icon'>&#9776;</Link></li>
+          <li className='menu-items'>
             <Link to="/header">Headers</Link>
             <Link to="/socialproof">Social Proof</Link>
             <Link to="/apply">Apply</Link>
