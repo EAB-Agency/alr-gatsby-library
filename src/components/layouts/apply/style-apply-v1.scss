@@ -3,6 +3,6 @@
 
 .version-1 {
   .lp-apply {
-    @include layouts.layout-a();
+    @include layouts.layout-apply1();
   }
 }
