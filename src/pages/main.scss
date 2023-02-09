@@ -1,0 +1,52 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&family=Roboto:wght@300;700&display=swap');
+
+
+// ----------
+// Variables
+// ----------
+
+// Colors
+$c-heading-color: #242A56;
+
+$c-border-info: #5CD6D6;
+$c-border-alert: #D65C79;
+
+$c-btn-primary: #00355F;
+$c-btn-primary-hover: #005599;
+$c-btn-active: #ED8B00;
+$c-btn-secondary: #00B1B0;
+$c-btn-secondary-hover: #00EBE9;
+$c-btn-tertiary: #7A82B8;
+
+$c-neutral-black: #343434;
+$c-neutral-gray-light: #F8F9FA;
+$c-neutral-gray-dark: #F1F5F5;
+
+$c-text-link: #0072CE;
+
+//Border-radius
+$b-border-radius: .5rem;
+
+
+// ----------
+// General Settings
+// ----------
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2:not(.lp-apply-title), h3, h4 {
+  font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
+  color: $c-heading-color;
+}
+
+h2:not(.lp-apply-title) ~ p {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: $c-neutral-black;
+  /* selects every p element that is preceded by an H2 that doees NOT have the .lp-apply-title class */
+}
