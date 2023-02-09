@@ -19,7 +19,7 @@ h2, h4 {
 }
 
 h1 {
-  font-size: 3.25rem !important;
+  font-size: 3.15em !important;
 }
 
 h2 {
@@ -35,6 +35,10 @@ h2:not(.lp-apply-title) ~ p {
   font-weight: 300;
   color: #343434;
   /* selects every p element that is preceded by an H2 that doees NOT have the .lp-apply-title class */
+}
+
+nav {
+  background-color: #F1F5F5;
 }
 
 /*# sourceMappingURL=main.css.map */

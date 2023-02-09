@@ -4,7 +4,7 @@ import React from 'react';
 const Layout = ({ children }) => {
   return (
     <div className="wrapper">
-      <nav>
+      <nav className='main-menu'>
         <ul>
           <li>
             <Link to="/header">Headers</Link>

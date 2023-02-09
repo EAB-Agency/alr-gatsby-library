@@ -27,7 +27,7 @@ h2, h4 {
 
 h1 {
   // @include fluidRem("font-size", 2.5rem, 3.5rem);
-  font-size: 3.25rem !important;
+  font-size: 3.15em !important;
 }
 h2 {
   // @include fluidRem("font-size", 2.25rem, 3rem);
@@ -45,5 +45,9 @@ h2:not(.lp-apply-title) ~ p {
 }
 
 // ----------
-// General Settings
+// Navigation
 // ----------
+
+nav {
+  background-color: $c-neutral-gray-dark;
+}
