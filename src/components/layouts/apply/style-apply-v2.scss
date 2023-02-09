@@ -2,6 +2,8 @@
 
 .version-2 {
   .lp-apply {
+    @include applyFormInlineEmail("(min-width: #{$mq-500})");
+
     .lp-apply-content {
       padding: 4vw 0;
     }

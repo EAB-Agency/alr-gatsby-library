@@ -4,5 +4,6 @@
 .version-1 {
   .lp-apply {
     @include layouts.layout-apply1();
+    @include applyFormInlineEmail("(min-width: #{$mq-500})");
   }
 }

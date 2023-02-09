@@ -36,7 +36,12 @@ const DefaultApply = () => {
           </div>
         </div>
       </div>
+
+      <AcquiaForm src="https://admiss.info/acquia-template/alr-plugins.js" />
+      <AcquiaForm src="https://admiss.info/acquia-template/alr-global.js" />
+      <AcquiaForm src="https://admiss.info/acquia-template/alr-landing-page.js" />
     </section>
+
   );
 };
 
