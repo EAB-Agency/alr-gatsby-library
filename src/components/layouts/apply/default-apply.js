@@ -27,8 +27,8 @@ const DefaultApply = () => {
             </ul>
           </div>
 
-          <div className="apply-form lp-apply-form" id="apply-form">
-            <AcquiaForm src="//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=2" />
+          <div className="apply-form lp-apply-form">
+            <AcquiaForm src="https://alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=2" multiple />
           </div>
 
           <div className="lp-apply-footer">
