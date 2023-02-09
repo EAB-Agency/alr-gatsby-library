@@ -1,9 +1,95 @@
-body {
-  background-color: #f5f5f5;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&family=Roboto:wght@300;700&display=swap");
+html {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+h1, h2:not(.lp-apply-title), h3, h4 {
+  font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif !important;
+  color: #242A56;
+}
+
+h1, h3 {
+  font-weight: 700;
+}
+
+h2, h4 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3.15em !important;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h2:not(.lp-apply-title) ~ p {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: #343434;
+  /* selects every p element that is preceded by an H2 that doees NOT have the .lp-apply-title class */
+}
+
+nav.main-menu {
+  background-color: #F1F5F5;
+  height: 4.5rem;
+  position: relative;
+}
+nav.main-menu ul {
+  margin: 0;
+  height: inherit;
+}
+nav.main-menu .menu-icon {
+  float: right;
+  display: block;
+  font-size: 2.5rem;
+  padding-right: 1rem;
+  text-decoration: none;
+  color: #343434;
+  transition: 0.5s;
+}
+nav.main-menu .menu-items {
+  display: block;
+  background-color: aqua;
+  position: relative;
+  right: -10000rem;
+}
+nav.main-menu .menu-items a {
+  display: block;
+  text-align: center;
+}
+nav.main-menu .menu-icon:active ~ .menu-items {
+  transform: translateX(-1000rem);
+}
+
+@media screen and (min-width: 56.25rem) {
+  nav.main-menu {
+    height: 6.25rem;
+  }
+  nav.main-menu .menu-icon {
+    display: none;
+  }
+  nav.main-menu ul {
+    margin: 0;
+    height: inherit;
+  }
+  nav.main-menu li {
+    height: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+  nav.main-menu li a {
+    display: inline-block;
+    align-self: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

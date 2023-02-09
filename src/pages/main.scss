@@ -1,0 +1,112 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+
+// ----------
+// General Settings
+// ----------
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2:not(.lp-apply-title), h3, h4 {
+  font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif !important;
+  color: $c-heading-color;
+}
+
+h1, h3 {
+  font-weight: 700;
+}
+
+h2, h4 {
+  font-weight: 300;
+}
+
+h1 {
+  // @include fluidRem("font-size", 2.5rem, 3.5rem);
+  font-size: 3.15em !important;
+}
+h2 {
+  // @include fluidRem("font-size", 2.25rem, 3rem);
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+
+h2:not(.lp-apply-title) ~ p {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: $c-neutral-black;
+  /* selects every p element that is preceded by an H2 that doees NOT have the .lp-apply-title class */
+}
+
+// ----------
+// Navigation
+// ----------
+
+nav.main-menu {
+  background-color: $c-neutral-gray-dark;
+  height: 4.5rem;
+  position: relative;
+
+  ul {
+    margin: 0;
+    height: inherit;
+  }
+  .menu-icon {
+    float: right;
+    display: block;
+    font-size: 2.5rem;
+    padding-right: 1rem;
+    text-decoration: none;
+    color: $c-neutral-black;
+    transition: 0.5s;
+  }
+
+  .menu-items {
+    display: block;
+    background-color: aqua;
+    position: relative;
+    right: -10000rem;
+
+    a {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .menu-icon:active ~ .menu-items {
+    transform: translateX(-1000rem);
+  }
+}
+
+@media screen and (min-width: $mq-900) {
+  nav.main-menu {
+    height: 6.25rem;
+
+    .menu-icon {
+      display: none;
+    }
+
+    ul {
+      margin: 0;
+      height: inherit;
+    }
+    li {
+      height: inherit;
+      display: flex;
+      justify-content: space-evenly;
+      align-content: center;
+  
+      a { 
+        display: inline-block;
+        align-self: center;
+      }
+    }
+  }
+  
+}
