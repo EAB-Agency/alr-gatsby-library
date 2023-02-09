@@ -5,7 +5,6 @@ const Layout = ({ children }) => {
   return (
     <div className="wrapper">
       <nav className='main-menu'>
-        <button className='menu-icon'>&#9776;</button>
         <ul>
           <li className='menu-items'>
             <Link to="/header">Headers</Link>

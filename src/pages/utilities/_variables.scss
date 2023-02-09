@@ -1,5 +1,8 @@
 // Imports
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&family=Roboto:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+// @include fontFace("fontawesome-webfont", "Icons");
+// @include fontFace("icomoon", "Custom-Icons");
 
 // ----------
 // Variables
@@ -46,3 +49,5 @@ $mq-600: 37.50rem;
 $mq-500: 31.25rem;
 $mq-400: 25rem;
 $mq-300: 18.75rem;
+
+//
