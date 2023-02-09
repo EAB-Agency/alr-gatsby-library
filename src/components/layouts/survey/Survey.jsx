@@ -4,9 +4,7 @@ import './survey-styles.scss';
 
 const Survey = () => {
   return (
-    <div className="version-1">
       <DefaultSurvey />
-    </div>  
   );
 };
 
