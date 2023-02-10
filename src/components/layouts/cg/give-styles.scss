@@ -1,0 +1,67 @@
+@import "styles/sass/foundation/index", "styles/sass/acs", "styles/sass/shared";
+
+
+.version-1{
+  .lp-intro-form{
+    padding: 4vw 0;
+  
+    //mobile image
+    &:after{
+        display:block;
+        height: 40vw;
+        margin-top:4vw;
+        background: url('../../../assets/images/img-survey-sm.jpg') no-repeat center 20% /cover;
+        content: "";
+    }
+   
+    .lp-form{
+        border-top:3px solid $c-lightGrey;
+        padding-top:1rem;
+    }
+     
+    //med screen layout - edge to edge
+    @media (min-width: $mq-800) and (max-width: $mq-1000){
+   
+        .center{
+            width: 100%;
+        }
+  
+        .lp-intro-form-content{
+            padding: 0 1rem;
+        }
+    }
+   
+    @media (min-width: $mq-800){
+  
+        //hide mobile image
+        &:after{
+            display:none;
+        }
+   
+        .center{
+            display:flex;
+   
+            &:after{
+                content:'';
+                display:block;
+                background: url('../../../assets/images/img-survey-lg.jpg') no-repeat 65% center /cover;
+                flex-grow:.6;
+            }
+        }
+   
+        .lp-intro-form-content{
+            max-width: $mq-500;
+            flex:1;
+        }
+   
+    }
+   
+    @media (min-width: $mq-900){
+  
+        .lp-intro-form-content{
+            margin-right:2rem;
+        }
+    }
+  }
+}
+

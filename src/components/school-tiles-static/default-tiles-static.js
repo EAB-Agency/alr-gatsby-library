@@ -7,10 +7,10 @@ const DefaultTilesStatic = () => {
       <div className="lp-school-content">
         <h3 className="lp-school-content-title">Learn more about the School Name.</h3>
         <ul className="lp-school-link-list">
-          <li className="lp-school-link-item"><a href="https://[[ EDU URL ]]" id="link_linkdescription" target="_blank"><span className="link-wrap">School link #1</span></a></li>
-          <li className="lp-school-link-item"><a href="https://[[ EDU URL ]]" id="link_linkdescription" target="_blank"><span className="link-wrap">School link #2</span></a></li>
-          <li className="lp-school-link-item"><a href="https://[[ EDU URL ]]" id="link_linkdescription" target="_blank"><span className="link-wrap">School link #3</span></a></li>
-          <li className="lp-school-link-item"><a href="https://[[ EDU URL ]]" id="link_linkdescription" target="_blank"><span className="link-wrap">School link #4</span></a></li>
+          <li className="lp-school-link-item"><div><span className="link-wrap">School link #1</span></div></li>
+          <li className="lp-school-link-item"><div><span className="link-wrap">School link #2</span></div></li>
+          <li className="lp-school-link-item"><div><span className="link-wrap">School link #3</span></div></li>
+          <li className="lp-school-link-item"><div><span className="link-wrap">School link #4</span></div></li>
         </ul>
       </div>
     </div>
