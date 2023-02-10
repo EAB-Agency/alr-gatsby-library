@@ -12,12 +12,15 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@mdx-js/mdx": "^2.0.0-rc.2",
     "@mdx-js/react": "^2.0.0-rc.2",
     "alr-sass-utilities": "^0.0.12",
+    "eslint-config-wesbos": "3.2.3",
     "gatsby": "^5.5.0",
     "gatsby-design-tokens": "^5.5.0",
     "gatsby-mdx": "^1.0.0",
@@ -38,7 +41,16 @@
     "sass": "^1.58.0"
   },
   "devDependencies": {
+    "eslint": "^8.0.0",
     "gatsby-plugin-root-import": "^2.0.9",
-    "resolve-url-loader": "^5.0.0"
+    "husky": "^8.0.0",
+    "prettier": "^2.7.1",
+    "resolve-url-loader": "^5.0.0",
+    "typescript": "^4.8.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ]
   }
 }
