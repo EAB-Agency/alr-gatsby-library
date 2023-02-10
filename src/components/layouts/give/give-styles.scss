@@ -2,66 +2,55 @@
 
 
 .version-1{
-  .lp-intro-form{
-    padding: 4vw 0;
-  
-    //mobile image
-    &:after{
-        display:block;
-        height: 40vw;
-        margin-top:4vw;
-        background: url('../../../assets/images/img-survey-sm.jpg') no-repeat center 20% /cover;
-        content: "";
-    }
-   
-    .lp-form{
-        border-top:3px solid $c-lightGrey;
-        padding-top:1rem;
-    }
+    .lp-intro-form{
+        padding: 4vw 0;
      
-    //med screen layout - edge to edge
-    @media (min-width: $mq-800) and (max-width: $mq-1000){
-   
-        .center{
-            width: 100%;
-        }
-  
         .lp-intro-form-content{
-            padding: 0 1rem;
+            max-width: $mq-800;
+            margin:auto;
         }
-    }
-   
-    @media (min-width: $mq-800){
-  
-        //hide mobile image
-        &:after{
-            display:none;
+     
+        .lp-form{
+            background: $c-lightGrey;
+            padding:2rem;
         }
-   
-        .center{
-            display:flex;
-   
-            &:after{
-                content:'';
-                display:block;
-                background: url('../../../assets/images/img-survey-lg.jpg') no-repeat 65% center /cover;
-                flex-grow:.6;
+     
+        @media (max-width: maxMQ($mq-700)){
+            padding-bottom:0;
+     
+            .lp-intro{
+              &::after{
+                content: "";
+                 display:block;
+                 height: 10rem;
+                 max-width: 17rem;
+                 margin:auto;
+                 margin-top:2rem;
+                 background: url("../../../assets/images/img-cg-prev-sm.jpg") no-repeat top /cover;
+                }  
             }
         }
-   
-        .lp-intro-form-content{
-            max-width: $mq-500;
-            flex:1;
+     
+        @media (min-width: $mq-700){
+     
+            .intro-copy{
+                display:flex;
+     
+                p{
+                    flex-basis:70%;
+                }
+     
+                &::after{
+                    flex-basis:30%;
+                    z-index:1;
+                    display:block;
+                    height:auto;
+                    margin-left:1rem;
+                    background: url("../../../assets/images/img-cg-prev.jpg") center top 0/100% auto no-repeat;
+                    content: "";
+                }
+            }
         }
-   
     }
-   
-    @media (min-width: $mq-900){
-  
-        .lp-intro-form-content{
-            margin-right:2rem;
-        }
-    }
-  }
 }
 

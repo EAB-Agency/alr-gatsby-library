@@ -22,7 +22,7 @@ const DefaultGive = () => {
               </div>
 
               <div class="lp-form-fields" id="form-form">
-                <AcquiaForm src="//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=2" />
+                <AcquiaForm src="//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=5" />
               </div>
 
               <div class="lp-form-footer"></div>                
@@ -31,7 +31,7 @@ const DefaultGive = () => {
             <div class="lp-form-thanks form-thanks" id="form-thanks" style={{ display: 'none'}}>
               <h3 class="lp-form-thanks-title">Thanks for providing us with your information!</h3>
               <p>Click the link below to download <strong>global-token=content-give-title.</strong></p>
-              <p class="button"><a href="{global-token=content-give-url}" class="lp-give-download" target="_blank">Download</a></p>
+              <p class="button"><a href="global-token=content-give-url" class="lp-give-download" target="_blank">Download</a></p>
               <hr />
               <p>Ready to apply to global-token=school-name-alt now? That's great! Simply <a href="global-token=application-url" id="link_apply_cg_thanks">submit your application</a> and we'll consider you for admission soon.</p>
             </div>
