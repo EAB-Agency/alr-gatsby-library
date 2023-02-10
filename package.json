@@ -17,7 +17,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^2.0.0-rc.2",
     "@mdx-js/react": "^2.0.0-rc.2",
-    "alr-sass-utilities": "^0.0.11",
+    "alr-sass-utilities": "^0.0.12",
     "gatsby": "^5.5.0",
     "gatsby-design-tokens": "^5.5.0",
     "gatsby-mdx": "^1.0.0",
