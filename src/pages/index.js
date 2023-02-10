@@ -4,6 +4,7 @@ import 'styles/config/prism.css';
 import 'styles/main.scss';
 
 const IndexPage = () => {
+  // TODO: build this page out as the home page
   return (
     <main className="hello">
       <Testimonial />

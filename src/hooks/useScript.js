@@ -46,7 +46,7 @@ function useScript(src, containerRef, multiple) {
         setStatus(script.getAttribute('data-status'));
       }
       // Script event handler to update status in state
-      // Note: Even if the script already exists we still need to add
+      // Even if the script already exists we still need to add
       // event handlers to update the state for *this* hook instance.
       const setStateFromEvent = event => {
         setStatus(event.type === 'load' ? 'ready' : 'error');
