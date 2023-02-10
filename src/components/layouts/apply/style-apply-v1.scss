@@ -1,7 +1,11 @@
 @use 'styles/sass/layouts';
-@import "styles/sass/foundation/index", "styles/sass/acs", "styles/sass/shared";
+@use 'alr-sass-utilities' as alr;
+@import 'styles/sass/foundation/index', 'styles/sass/acs', 'styles/sass/shared';
 
 .version-1 {
+  .button {
+    @include alr.button-color(red, green, blue, purple, yellow);
+  }
   .lp-apply {
     @include layouts.layout-a();
   }
