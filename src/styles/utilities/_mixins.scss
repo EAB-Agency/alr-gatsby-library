@@ -46,3 +46,13 @@
     src: url('#{$_p-fileName}.woff') format('woff');
   }
 }
+
+@mixin setFont($_f-fontFamily, $_f-fontWeight, $_f-lineHeight, $_f-letterSpacing, $_c-color) {
+  font-family: $_f-fontFamily, Georgia, 'Times New Roman', Times, serif;
+  font-weight: $_f-fontWeight;
+  line-height: $_f-lineHeight;
+  letter-spacing: $_f-letterSpacing;
+
+  color: $_c-color;
+  // padding: $_p-padding;
+}

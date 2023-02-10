@@ -14,59 +14,53 @@ html {
 
 .wrapper {
   padding-bottom: 2rem;
-  // @include fluidRem('padding-right', 1rem, 4rem);
-  // @include fluidRem('padding-left', 1rem, 4rem);
 }
 
-.main-menu ~ h1, h2:not(.lp-apply-title), h3, h4, h2:not(.lp-apply-title) ~ p, .code-block {
+.page-title h1, 
+.intro-wrap h2, 
+.intro-wrap h3, 
+.intro-wrap h4, 
+.intro-wrap p, 
+.code-block {
   @include fluidRem('padding-right', 1rem, 4rem);
   @include fluidRem('padding-left', 1rem, 4rem);
 } 
 
-.main-menu ~ h1 {
-  color: $c-heading-color;
-  font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
-  font-size: 3.15em;
-  // @include fluidRem('padding-right', 1rem, 4rem);
-  // @include fluidRem('padding-left', 1rem, 4rem);
+.page-title h1 {
+  // $_f-fontFamily, $_f-fontWeight, $_f-lineHeight, $_f-letterSpacing, $_c-color
+  @include setFont('Roboto Slab', 700, 3rem, 0.02rem, $c-heading-color);
+  @include fluidRem("font-size", 2.5rem, 3.5rem);
+  @include fluidRem('padding-bottom', 2rem, 4rem);
+ 
 }
 
-h2:not(.lp-apply-title) {
-  // @include fluidRem("font-size", 2.25rem, 3rem);
-  font-size: 3rem;
-  @include fluidRem('padding-top', 3rem, 12rem);
+.intro-wrap {
+  h2 {
+    @include setFont('Roboto Slab', 300, 3rem, 0.02rem, $c-heading-color);
+    @include fluidRem("font-size", 2.25rem, 3rem);
+    @include fluidRem('padding-bottom', 1.75rem, 2rem);
+  }
+  h3 {
+    @include setFont('Roboto Slab', 700, 2.5rem, 0.02rem, $c-heading-color);
+    @include fluidRem("font-size", 2rem, 2.5rem);
+  }
+
+  p {
+    @include setFont('Roboto', 300, 2rem, 0.02rem, $c-neutral-black);
+    @include fluidRem("font-size", 1rem, 1.25rem);
+    width: 100%;
+    @media screen and (min-width: $mq-900) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
 }
 
-h2:not(.lp-apply-title), h3, h4 {
-  font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
-  color: $c-heading-color;
-  // @include fluidRem('padding-right', 1rem, 4rem);
-  // @include fluidRem('padding-left', 1rem, 4rem);
+.page-title, .intro-wrap {
+  @include fluidRem('padding-right', 1rem, 4rem);
+  @include fluidRem('padding-left', 1rem, 4rem);
 }
 
-h2:not(.lp-apply-title) ~ p {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  color: $c-neutral-black;
-  width: 80%;
-  padding-bottom: 2rem;
-  // @include fluidRem('padding-right', 1rem, 4rem);
-  // @include fluidRem('padding-left', 1rem, 4rem);
-  /* selects every p element that is preceded by an H2 that doees NOT have the .lp-apply-title class */
-  
-}
-
-h2:not(.lp-apply-title), h4 {
-  font-weight: 300;
-}
-
-h1, h3 {
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 2.5rem;
-}
 
 
 
