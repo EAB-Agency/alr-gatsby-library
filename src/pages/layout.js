@@ -1,6 +1,8 @@
 import { Link } from 'gatsby';
 import React from 'react';
-// import ScriptTag from 'react-script-tag';
+import ScriptTag from 'react-script-tag';
+import MenuBtn from './navigation-OpenNav';
+import CloseBtn from './navigation-CloseNav';
 
 // const Navigation = props => (
 //   <ScriptTag type='text/javascript' src='navigation.js' />
@@ -15,9 +17,9 @@ const Layout = ({ children }) => {
   return (
     <div className="wrapper">
       <nav className='top-nav' id='topNav'>
-      <button className='main-menu-btn' title='Main Menu'>&#9776;</button>
+        <MenuBtn />
         <div id="menu" className='main-menu-overlay'>
-          <Link to="javascript:void(0)" className='close-btn'>&times;</Link>
+          <CloseBtn />
           <div class='main-menu'>
             <Link to="/header">Headers</Link>
             <Link to="/socialproof">Social Proof</Link>

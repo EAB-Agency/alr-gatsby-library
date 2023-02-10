@@ -16,6 +16,10 @@ html {
   padding-bottom: 2rem;
 }
 
+.page-title {
+  padding-top: 2rem;
+}
+
 .page-title h1, 
 .intro-wrap h2, 
 .intro-wrap h3, 
@@ -69,8 +73,8 @@ html {
 // ----------
 
 .top-nav {
-  background: white;
-  border-bottom: 1px solid $c-text-link;
+  background: $c-neutral-gray-dark;
+  // border-bottom: 1px solid $c-text-link;
   display: flex;
   height: 3.125rem;
   justify-content: space-between;
@@ -81,23 +85,23 @@ html {
   z-index: 5;
 
   .main-menu-btn {
-    background-color: transparent;
-    border: 1px solid $c-neutral-black;
-    color: $c-text-link;
+    background-color: $c-btn-primary;
+    border: none;
+    color: white;
     font-size: 1.5rem;
     padding: 0 1rem;
 
     &:hover {
-      background-color: $c-text-link;
+      background-color: $c-btn-primary-hover;
       color: white;
     }
     &:active, &:focus {
-      background-color: $c-heading-color;
+      background-color: $c-btn-active;
     }
 
-    @media screen and (min-width: $mq-900) {
-      display: none;
-    }
+    // @media screen and (min-width: $mq-900) {
+    //   display: none;
+    // }
   }
 
   .main-menu-overlay {
@@ -136,14 +140,15 @@ html {
       color: $c-text-link;
       display: block;
       font-size: 1.3rem;
-      padding: .75rem 1em;
+      padding: 0 1em .5rem 1em;
       text-decoration: none;
 
       &:hover {
         color: $c-heading-color;
       }
-      &:active {
-        color: $c-btn-active;
+      &:active, &:focus {
+        // color: $c-neutral-gray-dark;
+        background-color: $c-btn-active;
       }
     }
 
@@ -151,25 +156,39 @@ html {
       align-items: center;
       display: flex;
       justify-content: flex-start;
-      
-      a{
-        display: inline-block;
-        font-size: 1.1em;
+      & {
+        a{
+          display: inline-block;
+          font-size: 1.1em;
+          transition: all .2s;
+
+          &:active, &:focus {
+            background-color: transparent;
+            color: $c-btn-active;
+            border-bottom: 3px solid $c-btn-active;
+          }
+        }
       }
     }
   }
   .close-btn {
-    &:visited {
-      color: $c-neutral-black;
-      position: absolute;
-      top: 2%;
-      left: 5%;
-      text-decoration: none;
-      transition: .2s;
-      font-size: 3.5rem;
+    background-color: white;
+    border: 1px solid $c-btn-primary;
+    color: $c-btn-primary;
+  
+    position: absolute;
+    top: 2%;
+    left: 2%;
+
+    transition: .2s;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: white;
+      background-color: $c-btn-primary-hover;
     }
-    &:hover, &:active, &:focus {
-      color: $c-btn-active;
+    &:active, &:focus {
+      background-color: $c-btn-active;
     }
     @media screen and (min-width: $mq-900) {
       display: none;
