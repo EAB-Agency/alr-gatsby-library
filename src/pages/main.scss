@@ -1,5 +1,5 @@
-@import 'utilities/variables';
 @import 'utilities/mixins';
+@import 'utilities/variables';
 
 
 // ----------
@@ -12,101 +12,139 @@ html {
   box-sizing: border-box;
 }
 
-h1, h2:not(.lp-apply-title), h3, h4 {
-  font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif !important;
+.wrapper {
+  padding-bottom: 2rem;
+  // @include fluidRem('padding-right', 1rem, 4rem);
+  // @include fluidRem('padding-left', 1rem, 4rem);
+}
+
+.main-menu ~ h1, h2:not(.lp-apply-title), h3, h4, h2:not(.lp-apply-title) ~ p, .code-block {
+  @include fluidRem('padding-right', 1rem, 4rem);
+  @include fluidRem('padding-left', 1rem, 4rem);
+} 
+
+.main-menu ~ h1 {
   color: $c-heading-color;
+  font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
+  font-size: 3.15em;
+  // @include fluidRem('padding-right', 1rem, 4rem);
+  // @include fluidRem('padding-left', 1rem, 4rem);
 }
 
-h1, h3 {
-  font-weight: 700;
-}
-
-h2, h4 {
-  font-weight: 300;
-}
-
-h1 {
-  // @include fluidRem("font-size", 2.5rem, 3.5rem);
-  font-size: 3.15em !important;
-}
-h2 {
+h2:not(.lp-apply-title) {
   // @include fluidRem("font-size", 2.25rem, 3rem);
   font-size: 3rem;
+  @include fluidRem('padding-top', 3rem, 12rem);
 }
-h3 {
-  font-size: 2.5rem;
+
+h2:not(.lp-apply-title), h3, h4 {
+  font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
+  color: $c-heading-color;
+  // @include fluidRem('padding-right', 1rem, 4rem);
+  // @include fluidRem('padding-left', 1rem, 4rem);
 }
 
 h2:not(.lp-apply-title) ~ p {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-weight: 300;
   color: $c-neutral-black;
+  width: 80%;
+  padding-bottom: 2rem;
+  // @include fluidRem('padding-right', 1rem, 4rem);
+  // @include fluidRem('padding-left', 1rem, 4rem);
   /* selects every p element that is preceded by an H2 that doees NOT have the .lp-apply-title class */
+  
 }
+
+h2:not(.lp-apply-title), h4 {
+  font-weight: 300;
+}
+
+h1, h3 {
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+
 
 // ----------
 // Navigation
 // ----------
 
 nav.main-menu {
-  background-color: $c-neutral-gray-dark;
-  height: 4.5rem;
-  position: relative;
+  background-color: white;
+  border-bottom: 2px solid $c-text-link;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2rem 2rem -2rem;
+  height: 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  margin-bottom: 2rem;
 
   ul {
     margin: 0;
     height: inherit;
   }
-  .menu-icon {
-    float: right;
-    display: block;
-    font-size: 2.5rem;
-    padding-right: 1rem;
-    text-decoration: none;
-    color: $c-neutral-black;
-    transition: 0.5s;
-  }
+  li {
+    height: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
 
-  .menu-items {
-    display: block;
-    background-color: aqua;
-    position: relative;
-    right: -10000rem;
+    a, a:visited { 
+      display: inline-block;
+      align-self: center;
+      color: $c-text-link;
+      text-decoration: none;
+      transition: all .3s;
 
-    a {
-      display: block;
-      text-align: center;
+      &:hover {
+        color: $c-heading-color;
+        font-weight: 700;
+      }
+      &:active {
+        text-decoration: underline;
+      }
     }
-  }
-
-  .menu-icon:active ~ .menu-items {
-    transform: translateX(-1000rem);
   }
 }
 
 @media screen and (min-width: $mq-900) {
   nav.main-menu {
     height: 6.25rem;
+  }
+}
 
-    .menu-icon {
-      display: none;
-    }
 
-    ul {
-      margin: 0;
-      height: inherit;
-    }
-    li {
-      height: inherit;
-      display: flex;
-      justify-content: space-evenly;
-      align-content: center;
-  
-      a { 
-        display: inline-block;
-        align-self: center;
-      }
-    }
+// ----------
+// Code Block
+// ----------
+
+.code-block {
+  button.code-toggle.code-toggle-style {
+    border: none;
+    border-radius: $b-border-radius;
+    background-color: $c-btn-secondary;
+    margin-right: 1.5rem;
+    transition: all .3s;
+  }
+  button.code-toggle.code-toggle-style:hover, button.code-toggle.code-toggle-style:focus {
+    background-color: $c-btn-secondary-hover;
+    color: white;
   }
   
+  button[css= '[object Object]'] {
+    border: 2px solid $c-btn-tertiary;
+    border-radius: $b-border-radius;
+    background-color: transparent;
+    color: $c-btn-tertiary;
+    vertical-align: middle;
+  }
+  button[css= '[object Object]']:hover {
+    background-color: $c-btn-tertiary;
+    color: white;
+  }
 }

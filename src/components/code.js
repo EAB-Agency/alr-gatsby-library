@@ -15,7 +15,7 @@ const Code = props => {
 
   return (
     <div className='code-block'>
-      <button onClick={toggleCode} className="code-toggle">
+      <button onClick={toggleCode} className="code-toggle code-toggle-style">
         {showCode ? 'Hide Code' : 'Show Code'}
       </button>
 

@@ -19,8 +19,9 @@
     @if $_d-iMax == 0 {
       $_d-iMax: 0rem;
     }
-    $_d-iMid: calc(#{$_d-iMin} + #{($_d-iMax - $_d-iMin) / 1rem} * ((100vw - #{$_mq-min}) / #{($_mq-max - $_mq-min) / 1rem}));
-
+    // $_d-iMid: calc(#{$_d-iMin} + #{($_d-iMax - $_d-iMin) / 1rem} * ( calc((100vw - #{$_mq-min}) / #{($_mq-max - $_mq-min) / 1rem } )));
+    //math.div($-mq-max - $-mq-min, 1rem)
+    $_d-iMid: calc(#{$_d-iMin} + #{calc(($-d-iMax - $-d-iMin) / 1rem)} * ( calc((100vw - #{$_mq-min}) / #{calc(($-mq-max - $-mq-min) / 1rem)} )));
     @if ($_x-i > 1) {
       $_d-mid: $_d-mid + " ";
     }
@@ -34,5 +35,14 @@
 
   @media (min-width: #{$_mq-max}) {
     #{$_x-prop}: #{$_d-maxRem};
+  }
+}
+
+@mixin fontFace($_p-fileName, $_f-fontFamily: $_fileName, $_f-fontWeight: normal, $_f-fontStyle: normal) {
+  @font-face {
+    font-family: '#{$_f-fontFamily}';
+    font-weight: $_f-fontWeight;
+    font-style: $_f-fontStyle;
+    src: url('#{$_p-fileName}.woff') format('woff');
   }
 }
