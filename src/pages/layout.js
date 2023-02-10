@@ -11,7 +11,9 @@ const Layout = ({ children }) => {
             <Link to="/socialproof">Social Proof</Link>
             <Link to="/apply">Apply</Link>
             <Link to="/survey">Survey</Link>
+            <Link to="/give">Give</Link>
             <Link to="/school-tiles">School Tiles</Link>
+            <Link to="/school-tiles-static">Static School Tiles</Link>
           </li>
         </ul>
       </nav>
