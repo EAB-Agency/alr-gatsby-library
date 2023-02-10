@@ -2557,6 +2557,11 @@ ajv@^8.0.1:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
+alr-sass-utilities@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/alr-sass-utilities/-/alr-sass-utilities-0.0.11.tgz#e468c1aa94c900b6bc492da940da07e8a90ffd79"
+  integrity sha512-+rIUhldNp9tV4jO8UMx+bkLZxkthRTB1LgO+lUZ53GJnE/gIlpJTo+Gw1YmdGurWi0C9EaguihrUjrUGEcLDBw==
+
 anser@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/anser/-/anser-2.1.1.tgz#8afae28d345424c82de89cc0e4d1348eb0c5af7c"
