@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Testimonial from 'components/social-proof/Testimonial';
-import './prism.css';
-import './main.css';
+import 'styles/config/prism.css';
+import 'styles/main.scss';
 
 const IndexPage = () => {
   return (
