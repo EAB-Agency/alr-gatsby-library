@@ -1,5 +1,5 @@
 import React from 'react';
-import AcquiaForm from '../../AcquiaForm';
+import AcquiaForm from '../../utils/AcquiaForm';
 
 const DefaultGive = () => {
   return (
