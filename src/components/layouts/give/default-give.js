@@ -22,7 +22,7 @@ const DefaultGive = () => {
               </div>
 
               <div class="lp-form-fields" id="form-form">
-                <AcquiaForm src="//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=5" />
+                <AcquiaForm src="//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=5" multiple />
               </div>
 
               <div class="lp-form-footer"></div>                

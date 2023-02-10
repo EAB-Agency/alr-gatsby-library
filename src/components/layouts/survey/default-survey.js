@@ -19,7 +19,7 @@ const DefaultSurvey = () => {
               <div className="lp-form-intro"></div>
 
               <div className="lp-form-fields" id="form-form">
-                <AcquiaForm src="//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=6" />
+                <AcquiaForm src="//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=6" multiple/>
               </div>
 
               <div className="lp-form-footer"></div>
