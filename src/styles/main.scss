@@ -68,49 +68,115 @@ html {
 // Navigation
 // ----------
 
-nav.main-menu {
-  background-color: white;
-  border-bottom: 2px solid $c-text-link;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 2rem 2rem -2rem;
-  height: 3rem;
+.top-nav {
+  background: white;
+  border-bottom: 1px solid $c-text-link;
+  display: flex;
+  height: 3.125rem;
+  justify-content: space-between;
   position: sticky;
   top: 0;
+  transition: 0.2s;
+  width: 100%;
   z-index: 5;
-  margin-bottom: 2rem;
 
-  ul {
-    margin: 0;
-    height: inherit;
+  .main-menu-btn {
+    background-color: transparent;
+    border: 1px solid $c-neutral-black;
+    color: $c-text-link;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+
+    &:hover {
+      background-color: $c-text-link;
+      color: white;
+    }
+    &:active, &:focus {
+      background-color: $c-heading-color;
+    }
+
+    @media screen and (min-width: $mq-900) {
+      display: none;
+    }
   }
-  li {
-    height: inherit;
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
 
-    a, a:visited { 
-      display: inline-block;
-      align-self: center;
+  .main-menu-overlay {
+    background: white;
+    color: $c-neutral-black;
+    height: 0%;
+    width: 100%;
+    overflow-y: hidden;
+    position: fixed;
+    z-index: inherit;
+    top: 0;
+    left: 0;
+    transition: .5s;
+
+    @media screen and (min-width: $mq-900) {
+      top: 3.75rem;
+    }
+  }
+
+  .main-menu-overlay-open {
+    height: 100%;
+
+    @media screen and (min-width: $mq-900) {
+      height: 3.75rem;
+      box-shadow: rgba(0,0,0,.45) 0px 25px 20px -20px;
+    }
+  }
+
+  .main-menu {
+    position: relative;
+    text-align: center;
+    top: 15%;
+    width: 100%;
+
+    a, a:visited {
       color: $c-text-link;
+      display: block;
+      font-size: 1.3rem;
+      padding: .75rem 1em;
       text-decoration: none;
-      transition: all .3s;
 
       &:hover {
         color: $c-heading-color;
-        font-weight: 700;
       }
       &:active {
-        text-decoration: underline;
+        color: $c-btn-active;
       }
+    }
+
+    @media screen and (min-width: $mq-900) {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      
+      a{
+        display: inline-block;
+        font-size: 1.1em;
+      }
+    }
+  }
+  .close-btn {
+    &:visited {
+      color: $c-neutral-black;
+      position: absolute;
+      top: 2%;
+      left: 5%;
+      text-decoration: none;
+      transition: .2s;
+      font-size: 3.5rem;
+    }
+    &:hover, &:active, &:focus {
+      color: $c-btn-active;
+    }
+    @media screen and (min-width: $mq-900) {
+      display: none;
     }
   }
 }
 
-@media screen and (min-width: $mq-900) {
-  nav.main-menu {
-    height: 6.25rem;
-  }
-}
 
 
 // ----------
