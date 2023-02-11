@@ -1,5 +1,6 @@
-@import "utilities/mixins";
-@import "utilities/variables";
+// stylelint-disable no-descending-specificity
+@import 'utilities/mixins';
+@import 'utilities/variables';
 
 // ----------
 // General Settings
@@ -21,32 +22,32 @@ html {
 .intro-wrap h4,
 .intro-wrap p,
 .code-block {
-    @include fluidRem("padding-right", 1rem, 4rem);
-    @include fluidRem("padding-left", 1rem, 4rem);
+    @include fluidRem('padding-right', 1rem, 4rem);
+    @include fluidRem('padding-left', 1rem, 4rem);
 }
 
 .page-title h1 {
     // $_f-fontFamily, $_f-fontWeight, $_f-lineHeight, $_f-letterSpacing, $_c-color
-    @include setFont("Roboto Slab", 700, 3rem, 0.02rem, $c-heading-color);
-    @include fluidRem("font-size", 2.5rem, 3.5rem);
-    @include fluidRem("padding-bottom", 2rem, 4rem);
+    @include setFont('Roboto Slab', 700, 3rem, 0.02rem, $c-heading-color);
+    @include fluidRem('font-size', 2.5rem, 3.5rem);
+    @include fluidRem('padding-bottom', 2rem, 4rem);
 }
 
 .intro-wrap {
     h2 {
-        @include setFont("Roboto Slab", 300, 3rem, 0.02rem, $c-heading-color);
-        @include fluidRem("font-size", 2.25rem, 3rem);
-        @include fluidRem("padding-bottom", 1.75rem, 2rem);
+        @include setFont('Roboto Slab', 300, 3rem, 0.02rem, $c-heading-color);
+        @include fluidRem('font-size', 2.25rem, 3rem);
+        @include fluidRem('padding-bottom', 1.75rem, 2rem);
     }
 
     h3 {
-        @include setFont("Roboto Slab", 700, 2.5rem, 0.02rem, $c-heading-color);
-        @include fluidRem("font-size", 2rem, 2.5rem);
+        @include setFont('Roboto Slab', 700, 2.5rem, 0.02rem, $c-heading-color);
+        @include fluidRem('font-size', 2rem, 2.5rem);
     }
 
     p {
-        @include setFont("Roboto", 300, 2rem, 0.02rem, $c-neutral-black);
-        @include fluidRem("font-size", 1rem, 1.25rem);
+        @include setFont('Roboto', 300, 2rem, 0.02rem, $c-neutral-black);
+        @include fluidRem('font-size', 1rem, 1.25rem);
 
         width: 100%;
 
@@ -59,8 +60,8 @@ html {
 
 .page-title,
 .intro-wrap {
-    @include fluidRem("padding-right", 1rem, 4rem);
-    @include fluidRem("padding-left", 1rem, 4rem);
+    @include fluidRem('padding-right', 1rem, 4rem);
+    @include fluidRem('padding-left', 1rem, 4rem);
 }
 
 // ----------
@@ -133,7 +134,7 @@ nav.main-menu {
         color: white;
     }
 
-    button[css="[object Object]"] {
+    button[css='[object Object]'] {
         border: 2px solid $c-btn-tertiary;
         border-radius: $b-border-radius;
         background-color: transparent;
@@ -141,7 +142,7 @@ nav.main-menu {
         vertical-align: middle;
     }
 
-    button[css="[object Object]"]:hover {
+    button[css='[object Object]']:hover {
         background-color: $c-btn-tertiary;
         color: white;
     }

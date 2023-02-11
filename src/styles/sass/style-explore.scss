@@ -1,6 +1,4 @@
-@import "foundation/index",
-    "acs",
-    "shared";
+@import 'foundation/index', 'acs', 'shared';
 
 // ================
 // Explore Landing Page Styles
@@ -13,13 +11,14 @@
     padding: 4vw 0;
 
     .lp-school-content-title {
+        font-weight: normal;
     }
 
     .lp-school-link-list {
         margin: 0;
         padding: 0;
 
-        @include gridItems("4", $mq-600, $mq-1000, 1rem, 1.25rem);
+        @include gridItems('4', $mq-600, $mq-1000, 1rem, 1.25rem);
 
         li {
             margin: 0;
@@ -39,7 +38,7 @@
                 position: relative;
 
                 &::before {
-                    content: "";
+                    content: '';
                     display: block;
                     height: 42vw;
                     width: 100%;
@@ -66,7 +65,7 @@
 
                 &:hover,
                 &:focus {
-                    background: darken($c-lightGrey, 20%);
+                    background: color.adjust($c-lightGrey, $lightness: -20%);
                     color: $c-white;
 
                     span {
@@ -80,25 +79,29 @@
 
             &:nth-child(1) {
                 a::before {
-                    background: url("img-xxx.jpg") no-repeat center center / cover;
+                    background: url('img-xxx.jpg') no-repeat center center /
+                        cover;
                 }
             }
 
             &:nth-child(2) {
                 a::before {
-                    background: url("img-xxx.jpg") no-repeat center center / cover;
+                    background: url('img-xxx.jpg') no-repeat center center /
+                        cover;
                 }
             }
 
             &:nth-child(3) {
                 a::before {
-                    background: url("img-xxx.jpg") no-repeat center center / cover;
+                    background: url('img-xxx.jpg') no-repeat center center /
+                        cover;
                 }
             }
 
             &:nth-child(4) {
                 a::before {
-                    background: url("img-xxx.jpg") no-repeat center center / cover;
+                    background: url('img-xxx.jpg') no-repeat center center /
+                        cover;
                 }
             }
         }
