@@ -1,7 +1,4 @@
-@import "foundation/index",
-				"acs",
-				"shared";
-
+@import 'foundation/index', 'acs', 'shared';
 
 // ================
 // Explore Landing Page Styles
@@ -11,127 +8,130 @@
 // School Link Styles
 
 .lp-school {
-	padding: 4vw 0;
+    padding: 4vw 0;
 
-	.lp-school-content-title {
-	}	
+    .lp-school-content-title {
+        font-weight: normal;
+    }
 
-	.lp-school-link-list {
-		margin: 0;
-		padding: 0;
-		@include gridItems("4", $mq-600, $mq-1000, 1rem, 1.25rem);
+    .lp-school-link-list {
+        margin: 0;
+        padding: 0;
 
-		li {
-			margin: 0;
-			list-style-type: none;
+        @include gridItems('4', $mq-600, $mq-1000, 1rem, 1.25rem);
 
-			~ li {
-				margin-top: 2rem;
-			}
+        li {
+            margin: 0;
+            list-style-type: none;
 
-			a {
-				display: block;
-				height: 100%;
-				width: 100%;
-				background: $c-lightGrey;
-				color: $c-black;
-				text-decoration: none;
-				position: relative;
+            ~ li {
+                margin-top: 2rem;
+            }
 
-				&::before {
-					content: '';
-					display: block;
-					height: 42vw;
-					width: 100%;
-				}
+            a {
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: $c-lightGrey;
+                color: $c-black;
+                text-decoration: none;
+                position: relative;
 
-				// Span Wrapping Link Text
-				span {
-					display: block;
-					
-					// Arrow after link text
-					&::after {
-						content: $i-arrowRight;
-						display: inline-block;
-						font-family: $f-iconFont;
-						@extend %transition;
-						margin-left: 0.35rem;
-						margin-top: 0.3rem;
-						position: absolute;
-						font-size: 0.85rem;
-					}
-				}
+                &::before {
+                    content: '';
+                    display: block;
+                    height: 42vw;
+                    width: 100%;
+                }
 
-				&:hover,
-				&:focus {
-					background: darken($c-lightGrey, 20%);
-					color: $c-white;
+                // Span Wrapping Link Text
+                span {
+                    display: block;
 
-					span {
-						// Arrow after link text
-						&::after {
-							color: $c-white;
-						}
-					}
-				}
-			}
+                    // Arrow after link text
+                    &::after {
+                        content: $i-arrowRight;
+                        display: inline-block;
+                        font-family: $f-iconFont;
 
-			&:nth-child(1) {
-				a::before {
-					background: url("img-xxx.jpg") no-repeat center center / cover;
-				}
-			}
+                        @extend %transition;
 
-			&:nth-child(2) {
-				a::before {
-					background: url("img-xxx.jpg") no-repeat center center / cover;
-				}
-			}
+                        margin-left: 0.35rem;
+                        margin-top: 0.3rem;
+                        position: absolute;
+                        font-size: 0.85rem;
+                    }
+                }
 
-			&:nth-child(3) {
-				a::before {
-					background: url("img-xxx.jpg") no-repeat center center / cover;
-				}
-			}
+                &:hover,
+                &:focus {
+                    background: color.adjust($c-lightGrey, $lightness: -20%);
+                    color: $c-white;
 
-			&:nth-child(4) {
-				a::before {
-					background: url("img-xxx.jpg") no-repeat center center / cover;
-				}
-			}
-		}
-	}
+                    span {
+                        // Arrow after link text
+                        &::after {
+                            color: $c-white;
+                        }
+                    }
+                }
+            }
 
-	@media (min-width: $mq-600) {
-		.lp-school-link-list {
+            &:nth-child(1) {
+                a::before {
+                    background: url('img-xxx.jpg') no-repeat center center /
+                        cover;
+                }
+            }
 
-			li {
+            &:nth-child(2) {
+                a::before {
+                    background: url('img-xxx.jpg') no-repeat center center /
+                        cover;
+                }
+            }
 
-				~ li {
-					margin-top: 0;
-				}
+            &:nth-child(3) {
+                a::before {
+                    background: url('img-xxx.jpg') no-repeat center center /
+                        cover;
+                }
+            }
 
-				a {
-					&::before {
-						height: 20vw;
-					}
-				}
-			}
-		}
-	}
+            &:nth-child(4) {
+                a::before {
+                    background: url('img-xxx.jpg') no-repeat center center /
+                        cover;
+                }
+            }
+        }
+    }
 
-	@media (min-width: $mq-1000) {
-		.lp-school-link-list {
+    @media (min-width: $mq-600) {
+        .lp-school-link-list {
+            li {
+                ~ li {
+                    margin-top: 0;
+                }
 
-			li {
-				a {
-					&::before {
-						height: 12vw;
-					}
-				}
-			}
-		}
-	}
+                a {
+                    &::before {
+                        height: 20vw;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $mq-1000) {
+        .lp-school-link-list {
+            li {
+                a {
+                    &::before {
+                        height: 12vw;
+                    }
+                }
+            }
+        }
+    }
 }
-
-
