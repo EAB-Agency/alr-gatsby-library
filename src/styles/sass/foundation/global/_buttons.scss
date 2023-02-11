@@ -7,41 +7,41 @@
 
 // Base Button Styles
 %button {
-    @include buttonColor;
-    @include fluidRem("font-size", 1rem, 1.15rem);
+  @include buttonColor;
+  @include fluidRem('font-size', 1rem, 1.15rem);
 
-    transition: all 0.25s ease-in-out;
-    display: block;
-    width: 100%;
-    padding: 0.65em 1.5em;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    font-family: $f-bodyFont;
-    font-weight: bold;
-    outline: 0;
-    line-height: 1.2;
-    appearance: none;
-    border-radius: 0;
+  transition: all 0.25s ease-in-out;
+  display: block;
+  width: 100%;
+  padding: 0.65em 1.5em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-family: $f-bodyFont;
+  font-weight: bold;
+  outline: 0;
+  line-height: 1.2;
+  appearance: none;
+  border-radius: 0;
 
-    @media (min-width: $mq-500) {
-        display: inline-block;
-        width: auto;
-    }
+  @media (min-width: $mq-500) {
+    display: inline-block;
+    width: auto;
+  }
 }
 
 // Major Buttons
 %major-button {
-    @extend %button;
-    @include fluidRem("font-size", 1.25rem, 1.5rem);
+  @extend %button;
+  @include fluidRem('font-size', 1.25rem, 1.5rem);
 }
 
 // Minor Buttons
 %minor-button {
-    @extend %button;
-    @include fluidRem("font-size", 0.78rem, 0.975rem);
+  @extend %button;
+  @include fluidRem('font-size', 0.78rem, 0.975rem);
 
-    padding: 0.35em 0.65em;
+  padding: 0.35em 0.65em;
 }
 
 // ================
@@ -50,27 +50,30 @@
 // Default Button Selectors
 button,
 .type_event_button a,
-input[type="submit"],
-input[type="button"] {
-    @extend %button;
+input[type='submit'],
+input[type='button'] {
+  @extend %button;
 }
 
 // Reusable Button Classes
+// FIX: no descending specificity
+// see explanation here: https://stylelint.io/user-guide/rules/no-descending-specificity/
+/* stylelint-disable-next-line no-descending-specificity */
 button,
 a,
 input {
-    &.button,
-    .button & {
-        @extend %button !optional;
-    }
+  &.button,
+  .button & {
+    @extend %button !optional;
+  }
 
-    &.major-button,
-    .major-button & {
-        @extend %major-button !optional;
-    }
+  &.major-button,
+  .major-button & {
+    @extend %major-button !optional;
+  }
 
-    &.minor-button,
-    .minor-button & {
-        @extend %minor-button !optional;
-    }
+  &.minor-button,
+  .minor-button & {
+    @extend %minor-button !optional;
+  }
 }
