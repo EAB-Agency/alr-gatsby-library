@@ -19,6 +19,14 @@
     "lint:css:fix": "npx stylelint **/*.scss --fix",
     "stylelint-check": "stylelint-config-prettier-check"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{scss,css}": [
+      "stylelint --fix"
+    ]
+  },
   "dependencies": {
     "@mdx-js/mdx": "^2.0.0-rc.2",
     "@mdx-js/react": "^2.0.0-rc.2",
@@ -47,6 +55,7 @@
     "eslint": "^8.0.0",
     "gatsby-plugin-root-import": "^2.0.9",
     "husky": "^8.0.0",
+    "lint-staged": "^13.1.1",
     "postcss": "^8.4.21",
     "postcss-scss": "^4.0.6",
     "prettier": "^2.7.1",
