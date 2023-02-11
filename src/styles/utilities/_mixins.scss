@@ -24,7 +24,7 @@
         //math.div($-mq-max - $-mq-min, 1rem)
         $_d-iMid: calc(#{$_d-iMin} + #{calc(($-d-iMax - $-d-iMin) / 1rem)} * ( calc((100vw - #{$_mq-min}) / #{calc(($-mq-max - $-mq-min) / 1rem)})));
 
-        @if  $_x-i > 1 {
+        @if $_x-i > 1 {
             $_d-mid: $_d-mid + " ";
         }
 

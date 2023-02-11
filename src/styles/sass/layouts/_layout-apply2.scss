@@ -3,8 +3,8 @@
 
 @mixin layout-apply2(
     $mq: $mq-900,
-  $gridGap: 2rem,
-  $marginTop: 4vw,
+    $gridGap: 2rem,
+    $marginTop: 4vw,
   $gridTemplateColumns: 1fr 1.5fr
 ) {
     padding: 4vw 0;

@@ -8,7 +8,7 @@
 
 @mixin applyFormInlineEmail(
     $_mq-inlineEmail: "(min-width: #{$mq-500})"
-	) {
+) {
     @media #{$_mq-inlineEmail} {
         .apply-form {
             .mauticform-page-wrapper {

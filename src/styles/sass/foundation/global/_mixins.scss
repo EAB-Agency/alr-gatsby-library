@@ -6,8 +6,8 @@
 // -- Update Colors with Brand Colors -- //
 @mixin buttonColor(
     $_c-buttonColor: $c-black,
-  $_c-buttonHoverColor: $c-white,
-  $_c-buttonTextColor: $c-white,
+    $_c-buttonHoverColor: $c-white,
+    $_c-buttonTextColor: $c-white,
   $_c-buttonTextColorHover: $c-black,
   $_c-buttonBorderColorIntial: $c-black,
   $_c-buttonBorderColorHover: $c-black
@@ -27,8 +27,8 @@
 // Container Style Mixin
 @mixin containerStyle(
     $_c-backgroundColor: $c-white,
-  $_x-border: "null",
-  $_c-borderColor: "null",
+    $_x-border: "null",
+    $_c-borderColor: "null",
   $_x-boxShadow: "null"
 ) {
     background: $_c-backgroundColor;
@@ -47,8 +47,8 @@
 // Grid Items Mixin (School Content Section)
 @mixin gridItems(
     $_x-number: "null",
-  $_mq-small: $mq-600,
-  $_mq-large: $mq-1000,
+    $_mq-small: $mq-600,
+    $_mq-large: $mq-1000,
   $_x-gridGapSmall: 1rem,
   $_x-gridGapLarge: 1rem
 ) {
@@ -295,17 +295,17 @@
 // Default is Apply Top Section on Apply LP
 @mixin fullWidthTwoColSection(
     $_x-wrapperClass: lp-apply-wrapper,
-  $_x-imagePositionStacked: "bottom", 
-  $_x-imagePositionHorz: "right", 
-  $_mq-breakpoint: $mq-800, 
-  $_mq-breakpointLg: $mq-1600, 
+    $_x-imagePositionStacked: "bottom",
+    $_x-imagePositionHorz: "right",
+  $_mq-breakpoint: $mq-800,
+  $_mq-breakpointLg: $mq-1600,
   $_f-imageName: "img-family-tablet.jpg",
-  $_x-imageBgPositionSm: center 52%, 
-  $_x-imageBgPositionMed: center 75%, 
-  $_x-imageBgPositionLg: center 52%, 
-  $_d-gridTempColumns: 5% 1fr 5% 1fr 5%, 
-  $_d-gridTempRows: 10vw 1fr 12vw, 
-  $_d-gridTempColumnsWide: 5% calc(#{$mq-1400} / 2) 5% calc(#{$mq-1400} / 2) auto 
+  $_x-imageBgPositionSm: center 52%,
+  $_x-imageBgPositionMed: center 75%,
+  $_x-imageBgPositionLg: center 52%,
+  $_d-gridTempColumns: 5% 1fr 5% 1fr 5%,
+  $_d-gridTempRows: 10vw 1fr 12vw,
+  $_d-gridTempColumnsWide: 5% calc(#{$mq-1400} / 2) 5% calc(#{$mq-1400} / 2) auto
   ) {
     @if $_x-imagePositionStacked == "bottom" {
         padding: 4vw 0 0;
