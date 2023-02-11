@@ -1,6 +1,7 @@
 // Imports
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&family=Roboto:wght@300;700&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&family=Roboto:wght@300;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
+
 // @include fontFace("fontawesome-webfont", "Icons");
 // @include fontFace("icomoon", "Custom-Icons");
 
@@ -9,26 +10,22 @@
 // ----------
 
 // Colors
-$c-heading-color: #242A56;
-
-$c-border-info: #5CD6D6;
-$c-border-alert: #D65C79;
-
-$c-btn-primary: #00355F;
-$c-btn-primary-hover: #005599;
-$c-btn-active: #ED8B00;
-$c-btn-secondary: #00B1B0;
-$c-btn-secondary-hover: #00EBE9;
-$c-btn-tertiary: #7A82B8;
-
+$c-heading-color: #242a56;
+$c-border-info: #5cd6d6;
+$c-border-alert: #d65c79;
+$c-btn-primary: #00355f;
+$c-btn-primary-hover: #059;
+$c-btn-active: #ed8b00;
+$c-btn-secondary: #00b1b0;
+$c-btn-secondary-hover: #00ebe9;
+$c-btn-tertiary: #7a82b8;
 $c-neutral-black: #343434;
-$c-neutral-gray-light: #F8F9FA;
-$c-neutral-gray-dark: #F1F5F5;
-
-$c-text-link: #0072CE;
+$c-neutral-gray-light: #f8f9fa;
+$c-neutral-gray-dark: #f1f5f5;
+$c-text-link: #0072ce;
 
 //Border-radius
-$b-border-radius: .5rem;
+$b-border-radius: 0.5rem;
 
 // Breakpoints
 $mq-2000: 125rem;
@@ -45,7 +42,7 @@ $mq-1000: 62.5rem;
 $mq-900: 56.25rem;
 $mq-800: 50rem;
 $mq-700: 43.75rem;
-$mq-600: 37.50rem;
+$mq-600: 37.5rem;
 $mq-500: 31.25rem;
 $mq-400: 25rem;
 $mq-300: 18.75rem;

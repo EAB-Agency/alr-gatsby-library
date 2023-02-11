@@ -4,14 +4,14 @@
 
 // Imports third-party code
 @import "vendor/reset",
-        "vendor/royall";
+    "vendor/royall";
 
 // Imports configuration settings (fonts, colors, variables, etc.)
 @import "global/settings";
 
 // Imports global styles
 @import "global/mixins",
-        "global/type",
+    "global/type",
         "global/forms",
         "global/buttons",
         "global/layout",
