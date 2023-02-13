@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import AcquiaForm from '../../utils/AcquiaForm';
 
-const DefaultGive = (props) => (
+const DefaultGive = () => (
     <section className="lp-intro-form">
         <div className="center lp-intro-form-wrapper">
             <div className="lp-intro-form-content">

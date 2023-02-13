@@ -1,23 +1,27 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import MenuBtn from './navigation-OpenNav';
+import CloseBtn from './navigation-CloseNav';
 
-const Layout = ({ children }) => {
-  return (
+const Layout = ({ children }) => (
     <div className="wrapper">
-      <nav className='main-menu'>
-        <ul>
-          <li className='menu-items'> <Link to="/header">Headers</Link></li>
-           <li> <Link to="/socialproof">Social Proof</Link></li>
-           <li> <Link to="/apply">Apply</Link></li>
-           <li> <Link to="/survey">Survey</Link></li>
-           <li><Link to="/give">Give</Link></li>
-           <li><Link to="/school-tiles">School Tiles</Link></li>
-           <li><Link to="/school-tiles-static">Static School Tiles</Link></li>
-        </ul>
-      </nav>
-      {children}
+        <nav className="top-nav" id="topNav">
+            <MenuBtn />
+            <div id="menu" className="main-menu-overlay">
+                <CloseBtn />
+                <div className="main-menu" id="mainMenu">
+                    <Link to="/header">Headers</Link>
+                    <Link to="/socialproof">Social Proof</Link>
+                    <Link to="/apply">Apply</Link>
+                    <Link to="/survey">Survey</Link>
+                    <Link to="/give">Give</Link>
+                    <Link to="/school-tiles">School Tiles</Link>
+                    <Link to="/school-tiles-static">Static School Tiles</Link>
+                </div>
+            </div>
+        </nav>
+        {children}
     </div>
-  );
-};
+);
 
 export default Layout;

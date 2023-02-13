@@ -6,15 +6,15 @@ import useScript from '../../hooks/useScript';
 // const x = `//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=2`;
 
 const AcquiaForm = ({ src, multiple }) => {
-  const scriptRef = useRef(null);
-  const status = useScript(src, scriptRef, multiple);
+    const scriptRef = useRef(null);
+    const status = useScript(src, scriptRef, multiple);
 
-  return (
-    <div ref={scriptRef} id="mauticform">
-      {status === 'loading' && 'Loading...'}
-      {status === 'error' && 'Error'}
-    </div>
-  );
+    return (
+        <div ref={scriptRef} id="mauticform">
+            {status === 'loading' && 'Loading...'}
+            {status === 'error' && 'Error'}
+        </div>
+    );
 };
 
 export default AcquiaForm;
