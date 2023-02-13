@@ -10,5 +10,6 @@
                 "tabWidth": 4
             }
         ]
-    }
+    },
+    "plugins": ["prettier"]
 }
