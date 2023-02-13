@@ -1,3 +1,4 @@
+/* stylelint-disable */
 // ================
 // Royall Mixins
 // ================
@@ -28,7 +29,7 @@
 // More info: https://wiki.eab.com/display/RWD/mres%28%29+mixin
 
 @mixin mres($_mq-density: 1.1) {
-  @media (min-device-pixel-ratio: $_mq-density),
+  @media (-webkit-min-device-pixel-ratio: $_mq-density),
     (min-resolution: $_mq-density + "dppx") {
     @content;
   }
@@ -266,11 +267,11 @@
     $_d-iMax: nth($_d-maxRem, $_x-i);
 
     @if $_d-iMin == 0 {
-      $_d-iMin: 0;
+      $_d-iMin: 0rem;
     }
 
     @if $_d-iMax == 0 {
-      $_d-iMax: 0;
+      $_d-iMax: 0rem;
     }
 
     $_d-iMid: calc(
@@ -279,13 +280,11 @@
         ((100vw - #{$_mq-min}) / #{math.div(($_mq-max - $_mq-min), 1rem)})
     );
 
-    @if  $_x-i > 1 {
+    @if ($_x-i > 1) {
       $_d-mid: $_d-mid + " ";
     }
-
     $_d-mid: $_d-mid + $_d-iMid;
   }
-
   #{$_x-prop}: #{$_d-minRem};
 
   @media (min-width: #{$_mq-min}) {
