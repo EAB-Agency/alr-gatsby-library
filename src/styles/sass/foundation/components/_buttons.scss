@@ -2,13 +2,15 @@
 // Buttons
 // ================
 
+@use "../config" as *;
+
 // ================
 // Extendable Placeholders
 
 // Base Button Styles
 %button {
   @include buttonColor;
-  @include fluidRem('font-size', 1rem, 1.15rem);
+  @include fluidRem("font-size", 1rem, 1.15rem);
 
   transition: all 0.25s ease-in-out;
   display: block;
@@ -22,6 +24,8 @@
   outline: 0;
   line-height: 1.2;
   appearance: none;
+  appearance: none;
+  border-radius: 0;
   border-radius: 0;
 
   @media (min-width: $mq-500) {
@@ -30,19 +34,22 @@
   }
 }
 
+
 // Major Buttons
 %major-button {
   @extend %button;
-  @include fluidRem('font-size', 1.25rem, 1.5rem);
+  @include fluidRem("font-size", 1.25rem, 1.5rem);
 }
+
 
 // Minor Buttons
 %minor-button {
   @extend %button;
-  @include fluidRem('font-size', 0.78rem, 0.975rem);
+  @include fluidRem("font-size", 0.78rem, 0.975rem);
 
   padding: 0.35em 0.65em;
 }
+
 
 // ================
 // Application of Placeholders
@@ -50,15 +57,12 @@
 // Default Button Selectors
 button,
 .type_event_button a,
-input[type='submit'],
-input[type='button'] {
+input[type=submit],
+input[type=button] {
   @extend %button;
 }
 
 // Reusable Button Classes
-// FIX: no descending specificity
-// see explanation here: https://stylelint.io/user-guide/rules/no-descending-specificity/
-/* stylelint-disable-next-line no-descending-specificity */
 button,
 a,
 input {

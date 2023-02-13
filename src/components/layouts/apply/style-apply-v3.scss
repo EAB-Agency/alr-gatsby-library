@@ -1,42 +1,13 @@
-@import "styles/sass/foundation/index", "styles/sass/acs", "styles/sass/shared";
+@use 'styles/sass/layouts';
+@use 'alr-sass-utilities' as alr;
+@use 'styles/sass/foundation/global';
+@use 'styles/sass/foundation/config' as *;
+@use 'styles/sass/foundation/components';
+@use 'styles/sass/shared';
 
 .version-3 {
     .lp-apply {
-        padding: 4vw 0;
-
-        .lp-apply-wrapper {
-            &::after {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 30vw;
-                background:
-                    url("/assets/images/img-apply-sm.jpg") no-repeat center /
-                    cover;
-                margin-top: 4vw;
-            }
-        }
-
-        @media (min-width: $mq-900) {
-            .lp-apply-wrapper {
-                display: grid;
-                grid-template-columns: 1fr 1.5fr;
-                grid-gap: 2rem;
-
-                &::after {
-                    display: none;
-                }
-
-                &::before {
-                    content: "";
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    background:
-                        url("/assets/images/img-apply-lg.jpg") no-repeat center /
-                        cover;
-                }
-            }
-        }
+        @include layouts.layout-apply3;
+        @include applyFormInlineEmail("(min-width: #{$mq-500})");
     }
 }
