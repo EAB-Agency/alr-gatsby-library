@@ -1,9 +1,9 @@
 @import 'utilities/mixins';
 @import 'utilities/variables';
 
-.helloworld {
-    color: red;
-}
+// .helloworld {
+//     color: red;
+// }
 
 // ----------
 // General Settings
@@ -110,7 +110,8 @@ html {
         transition: 0.5s;
 
         &.show-menu {
-            width: 100%;
+            width: 35%;
+            max-width:  25rem;
         }
     }
 }
