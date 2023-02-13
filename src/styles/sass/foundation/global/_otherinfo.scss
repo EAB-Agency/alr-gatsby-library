@@ -2,6 +2,8 @@
 // Other Info Form
 // ================
 
+@use "../config" as *;
+
 // ================
 // On/Off Toggle
 
@@ -15,8 +17,15 @@ $x-otherInfo: 'false'; // 'true' or 'false'
       margin: 1.125em 0;
     }
 
+
+
     // ================
     // Edit Mode
+
+    .group_mode_edit & {
+    }
+
+
 
     // ================
     // View Mode
@@ -36,16 +45,17 @@ $x-otherInfo: 'false'; // 'true' or 'false'
       }
 
       // Removes unnecessary fields
-      [class*='field_pname'],
-      [class*='field_major_pc1'],
-      [class*='field_major_pc2'] {
+      [class*="field_pname"],
+      [class*="field_major_pc1"],
+      [class*="field_major_pc2"] {
         display: none;
       }
 
+
       // Name (inline with hidden labels)
-      [class*='field_fname'],
-      [class*='field_mname'],
-      [class*='field_lname'] {
+      [class*="field_fname"],
+      [class*="field_mname"],
+      [class*="field_lname"] {
         display: inline;
 
         label {
@@ -53,61 +63,63 @@ $x-otherInfo: 'false'; // 'true' or 'false'
         }
       }
 
+
       // Address
-      [class*='field_addr1'],
-      [class*='field_addr2'],
-      [class*='field_city'],
-      [class*='field_state'],
-      [class*='field_zip5_dash_zip4'],
-      [class*='field_country_cd'] {
+      [class*="field_addr1"],
+      [class*="field_addr2"],
+      [class*="field_city"],
+      [class*="field_state"],
+      [class*="field_zip5_dash_zip4"],
+      [class*="field_country_cd"] {
         label {
           display: none;
         }
       }
 
-      [class*='field_addr1'] {
+      [class*="field_addr1"] {
         margin-bottom: 0;
       }
 
-      [class*='field_addr2'],
-      [class*='field_city'],
-      [class*='field_state'],
-      [class*='field_zip5_dash_zip4'] {
+      [class*="field_addr2"],
+      [class*="field_city"],
+      [class*="field_state"],
+      [class*="field_zip5_dash_zip4"] {
         margin: 0;
       }
 
-      [class*='field_country_cd'] {
+      [class*="field_country_cd"] {
         margin-top: 0;
       }
 
-      [class*='field_city'],
-      [class*='field_state'],
-      [class*='field_zip5_dash_zip4'] {
+      [class*="field_city"],
+      [class*="field_state"],
+      [class*="field_zip5_dash_zip4"] {
         display: inline;
       }
 
-      [class*='field_city'] {
+      [class*="field_city"] {
         span::after {
-          content: ', ';
+          content: ", ";
         }
       }
 
+
       // Phone Number
-      [name^='phone'][name$='area'] {
+      [name^="phone"][name$="area"] {
         & + span {
           &::before {
-            content: '(';
+            content: "(";
           }
 
           &::after {
-            content: ')';
+            content: ")";
           }
 
           &.no_answer {
             display: block;
 
             &::before {
-              content: 'None provided';
+              content: "None provided";
             }
 
             &::after {
@@ -117,13 +129,14 @@ $x-otherInfo: 'false'; // 'true' or 'false'
         }
       }
 
-      [name^='phone'][name$='prefix'] {
+      [name^="phone"][name$="prefix"] {
         & + span {
           &::after {
-            content: ' -';
+            content: " -";
           }
         }
       }
+
 
       // Checkbox
       .type_checkbox {
@@ -136,7 +149,7 @@ $x-otherInfo: 'false'; // 'true' or 'false'
           float: left;
           width: 1em;
           height: 1em;
-          margin: 0.3125em 0 0;
+          margin: .3125em 0 0;
           text-align: center;
           color: #666;
           border: 1px solid #ddd;
@@ -144,18 +157,25 @@ $x-otherInfo: 'false'; // 'true' or 'false'
 
           &.groupedit_display_checked {
             &::before {
-              content: '\2713';
+              content: "\2713";
             }
           }
         }
       }
+
 
       // Edit Button
       .edit_save {
         position: absolute;
         top: 0;
         right: 0;
+
+        button {
+        }
       }
     }
   }
+
+
+
 }

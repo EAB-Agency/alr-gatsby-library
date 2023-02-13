@@ -1,4 +1,9 @@
-@import 'styles/sass/foundation/index', 'styles/sass/acs', 'styles/sass/shared';
+@use 'styles/sass/layouts';
+@use 'alr-sass-utilities' as alr;
+@use 'styles/sass/foundation/global';
+@use 'styles/sass/foundation/config' as *;
+@use 'styles/sass/foundation/components';
+@use 'styles/sass/shared';
 
 .version-1 {
     font-weight: normal;

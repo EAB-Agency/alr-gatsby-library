@@ -1,14 +1,14 @@
-/* stylelint-disable no-descending-specificity */
-
 // ================
 // CEEB Lookups
 // ================
 
+@use "../config" as *;
+
 // ================
 // CEEB Format Selection
-$x-ceebFormat: 'autosuggest'; // 'modal' or 'autosuggest'
+$x-ceebFormat: "autosuggest"; // 'modal' or 'autosuggest'
 
-@if $x-ceebFormat == 'autosuggest' {
+@if $x-ceebFormat == "autosuggest" {
   // ================
   // Auto-Suggest Format
 
@@ -36,7 +36,7 @@ $x-ceebFormat: 'autosuggest'; // 'modal' or 'autosuggest'
         font-size: 0;
 
         &::after {
-          content: '\2717\00a0';
+          content: "\2717\00a0";
           color: #000;
         }
 
@@ -56,12 +56,12 @@ $x-ceebFormat: 'autosuggest'; // 'modal' or 'autosuggest'
 
     .ceeb-icon.show {
       &::after {
-        content: '\2717\00a0';
+        content: "\2717\00a0";
         position: absolute;
         right: 0;
         cursor: pointer;
       }
-
+      
       &:hover::after,
       &:focus::after {
         // Add x icon hover and focus state
@@ -77,13 +77,6 @@ $x-ceebFormat: 'autosuggest'; // 'modal' or 'autosuggest'
     z-index: 1000;
 
     &.hide {
-      /* 
-        FIX: Using a class selector with the @extend directive usually results in more generated CSS
-        than when using a placeholder selector. Furthermore, Sass specifically introduced placeholder
-        selectors in order to be used with @extend.
-      */
-
-      /* stylelint-disable-next-line */
       @extend .visuallyhidden;
     }
 
@@ -130,7 +123,6 @@ $x-ceebFormat: 'autosuggest'; // 'modal' or 'autosuggest'
 
       // Matching Search Text
       &:not(.cantfind) strong {
-        font-weight: bold;
       }
 
       .location,
@@ -143,11 +135,8 @@ $x-ceebFormat: 'autosuggest'; // 'modal' or 'autosuggest'
 
       // Can't Find Link
       &.cantfind {
-        font-style: normal;
-
         // Hover State
         &.ac_over {
-          font-style: normal;
         }
       }
     }
@@ -158,13 +147,11 @@ $x-ceebFormat: 'autosuggest'; // 'modal' or 'autosuggest'
 
   // CEEB Modal
   .ceebpop-modal.fancybox-wrap {
-    font-style: normal;
   }
 
   // CEEB Forms
   .ceeb-search,
   .ceeb-manual {
-    font-style: normal;
   }
 
   // CEEB Search Results List
@@ -231,20 +218,20 @@ $x-ceebFormat: 'autosuggest'; // 'modal' or 'autosuggest'
   }
 
   // CEEB School Data Formatting
-  [class^='ceeb'][class$='name'] {
+  [class^="ceeb"][class$="name"] {
     display: block;
   }
 
-  [class^='ceeb'][class$='city'],
-  [class^='ceeb'][class$='state'] {
+  [class^="ceeb"][class$="city"],
+  [class^="ceeb"][class$="state"] {
     font-size: 0.875em;
     font-style: italic;
     line-height: 1;
   }
 
-  [class^='ceeb'][class$='city'] {
+  [class^="ceeb"][class$="city"] {
     &::after {
-      content: ', ';
+      content: ", ";
     }
   }
 }

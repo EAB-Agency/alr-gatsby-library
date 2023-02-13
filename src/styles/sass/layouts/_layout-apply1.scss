@@ -1,5 +1,7 @@
 @use "sass:color";
-@import "styles/sass/foundation";
+@use "sass:math";
+@use "../foundation/config" as *;
+@use "../foundation/components" as *;
 
 @mixin layout-apply1(
     $mq: $mq-900,
