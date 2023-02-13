@@ -76,9 +76,14 @@ html {
 // ----------
 // Navigation
 // ----------
+.hamburger-react {
+    z-index: 5;
+}
 
 .top-nav {
-    .main-menu-btn#menu-btn {
+    position: relative;
+
+    .main-menu-btn {
         position: fixed;
         top: 0;
         left: 0;
@@ -104,20 +109,24 @@ html {
         background-color: $c-neutral-gray-dark;
         transition: 0.5s;
 
-        .close-btn {
-            color: $c-neutral-black;
-            text-decoration: none;
-            position: absolute;
-            top: 1.5rem;
-            right: 2.25rem;
-            font-size: 4rem;
-            transition: 0.3s;
-
-            &:hover,
-            &:focus {
-                color: $c-text-link;
-            }
+        &.show-menu {
+            width: 100%;
         }
+    }
+}
+
+.close-btn {
+    color: $c-neutral-black;
+    text-decoration: none;
+    position: absolute;
+    top: 1.5rem;
+    right: 2.25rem;
+    font-size: 4rem;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+        color: $c-text-link;
     }
 }
 
