@@ -2,41 +2,42 @@
 @import "styles/sass/foundation";
 
 @mixin layout-apply2(
-  $mq: $mq-900,
-  $gridGap: 2rem,
-  $marginTop: 4vw,
+    $mq: $mq-900,
+    $gridGap: 2rem,
+    $marginTop: 4vw,
   $gridTemplateColumns: 1fr 1.5fr
 ) {
-  padding: 4vw 0;
+    padding: 4vw 0;
 
-  .lp-apply-wrapper {
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      background: url("../../../assets/images/img-apply-sm.jpg") no-repeat center /cover;
-      margin-top: $marginTop;
-    }
-  }
-
-  @media (min-width: $mq) {
     .lp-apply-wrapper {
-      display: grid;
-      grid-template-columns: $gridTemplateColumns;
-      grid-gap: $gridGap;
-
-      &::after {
-        display: none;
-      }
-
-      &::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        // background:blue;
-        background: url("../../../assets/images/img-apply-lg.jpg") no-repeat center / cover;
-      }
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            background: url("../../../assets/images/img-apply-sm.jpg") no-repeat center /cover;
+            margin-top: $marginTop;
+        }
     }
-  }
+
+    @media (min-width: $mq) {
+        .lp-apply-wrapper {
+            display: grid;
+            grid-template-columns: $gridTemplateColumns;
+            grid-gap: $gridGap;
+
+            &::after {
+                display: none;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+
+                // background:blue;
+                background: url("../../../assets/images/img-apply-lg.jpg") no-repeat center / cover;
+            }
+        }
+    }
 }

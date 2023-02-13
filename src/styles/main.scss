@@ -1,8 +1,8 @@
-@import "utilities/mixins";
-@import "utilities/variables";
+@import 'utilities/mixins';
+@import 'utilities/variables';
 
 .helloworld {
-  color: red;
+    color: red;
 }
 
 // ----------
@@ -10,17 +10,17 @@
 // ----------
 
 html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .wrapper {
-  padding-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .page-title {
-  padding-top: 4rem;
+    padding-top: 4rem;
 }
 
 .page-title h1,
@@ -29,46 +29,48 @@ html {
 .intro-wrap h4,
 .intro-wrap p,
 .code-block {
-  @include fluidRem("padding-right", 1rem, 4rem);
-  @include fluidRem("padding-left", 1rem, 4rem);
+    @include fluidRem('padding-right', 1rem, 4rem);
+    @include fluidRem('padding-left', 1rem, 4rem);
 }
 
 .page-title h1 {
-  // $_f-fontFamily, $_f-fontWeight, $_f-lineHeight, $_f-letterSpacing, $_c-color
-  @include setFont("Roboto Slab", 700, 3rem, 0.02rem, $c-heading-color);
-  @include fluidRem("font-size", 2.5rem, 3.5rem);
-  @include fluidRem("padding-bottom", 2rem, 4rem);
+    // $_f-fontFamily, $_f-fontWeight, $_f-lineHeight, $_f-letterSpacing, $_c-color
+    @include setFont('Roboto Slab', 700, 3rem, 0.02rem, $c-heading-color);
+    @include fluidRem('font-size', 2.5rem, 3.5rem);
+    @include fluidRem('padding-bottom', 2rem, 4rem);
 }
 
 .intro-wrap {
-  @include fluidRem("padding-top", 2rem, 3rem);
-  @include fluidRem("padding-bottom", 2rem, 3rem);
+    @include fluidRem('padding-top', 2rem, 3rem);
+    @include fluidRem('padding-bottom', 2rem, 3rem);
 
-  h2 {
-    @include setFont("Roboto Slab", 300, 3rem, 0.02rem, $c-heading-color);
-    @include fluidRem("font-size", 2.25rem, 3rem);
-    @include fluidRem("padding-bottom", 1.75rem, 2rem);
-  }
-  h3 {
-    @include setFont("Roboto Slab", 700, 2.5rem, 0.02rem, $c-heading-color);
-    @include fluidRem("font-size", 2rem, 2.5rem);
-  }
-
-  p {
-    @include setFont("Roboto", 300, 2rem, 0.02rem, $c-neutral-black);
-    @include fluidRem("font-size", 1rem, 1.25rem);
-    width: 100%;
-    @media screen and (min-width: $mq-900) {
-      width: 80%;
-      margin: 0 auto;
+    h2 {
+        @include setFont('Roboto Slab', 300, 3rem, 0.02rem, $c-heading-color);
+        @include fluidRem('font-size', 2.25rem, 3rem);
+        @include fluidRem('padding-bottom', 1.75rem, 2rem);
     }
-  }
+
+    h3 {
+        @include setFont('Roboto Slab', 700, 2.5rem, 0.02rem, $c-heading-color);
+        @include fluidRem('font-size', 2rem, 2.5rem);
+    }
+
+    p {
+        @include setFont('Roboto', 300, 2rem, 0.02rem, $c-neutral-black);
+        @include fluidRem('font-size', 1rem, 1.25rem);
+
+        width: 100%;
+        @media screen and (min-width: $mq-900) {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
 }
 
 .page-title,
 .intro-wrap {
-  @include fluidRem("padding-right", 1rem, 4rem);
-  @include fluidRem("padding-left", 1rem, 4rem);
+    @include fluidRem('padding-right', 1rem, 4rem);
+    @include fluidRem('padding-left', 1rem, 4rem);
 }
 
 // ----------
@@ -76,79 +78,81 @@ html {
 // ----------
 
 .top-nav {
-  .main-menu-btn#menu-btn {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 3.125rem;
-    z-index: 5;
-
-    background-color: $c-btn-primary;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    padding: 0 1rem;
-    width: auto;
-    text-align: left;
-  }
-
-  .main-menu-overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    background-color: $c-neutral-gray-dark;
-    transition: 0.5s;
-
-    .close-btn {
-      color: $c-neutral-black;
-      text-decoration: none;
-      position: absolute;
-      top: 1.5rem;
-      right: 2.25rem;
-      font-size: 4rem;
-      transition: 0.3s;
-
-      &:hover,
-      &:focus {
-        color: $c-text-link;
-      }
+    .main-menu-btn#menu-btn {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3.125rem;
+        z-index: 5;
+        background-color: $c-btn-primary;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        padding: 0 1rem;
+        width: auto;
+        text-align: left;
     }
-  }
+
+    .main-menu-overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        background-color: $c-neutral-gray-dark;
+        transition: 0.5s;
+
+        .close-btn {
+            color: $c-neutral-black;
+            text-decoration: none;
+            position: absolute;
+            top: 1.5rem;
+            right: 2.25rem;
+            font-size: 4rem;
+            transition: 0.3s;
+
+            &:hover,
+            &:focus {
+                color: $c-text-link;
+            }
+        }
+    }
 }
 
 .main-menu {
-  position: relative;
-  top: 18%;
-  width: 100%;
-  text-align: center;
-  // margin-top: 2rem;
+    position: relative;
+    top: 18%;
+    width: 100%;
+    text-align: center;
 
-  a {
-    color: $c-neutral-black;
-    display: block;
-    padding: 1rem 0.5rem;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    transition: 0.3s;
-    @include setFont("Roboto", 700, 1rem, 0.02rem, $c-neutral-black);
-    @include fluidRem("font-size", 1.125rem, 1.5rem);
+    // margin-top: 2rem;
 
-    &:visited {
-      color: inherit;
+    a {
+        color: $c-neutral-black;
+        display: block;
+        padding: 1rem 0.5rem;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        transition: 0.3s;
+        @include setFont('Roboto', 700, 1rem, 0.02rem, $c-neutral-black);
+        @include fluidRem('font-size', 1.125rem, 1.5rem);
+
+        &:visited {
+            color: inherit;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $c-text-link;
+            color: white;
+        }
+
+        &:active {
+            background-color: $c-btn-active;
+        }
     }
-    &:hover,
-    &:focus {
-      background-color: $c-text-link;
-      color: white;
-    }
-    &:active {
-      background-color: $c-btn-active;
-    }
-  }
 }
 
 // ----------
@@ -156,28 +160,30 @@ html {
 // ----------
 
 .code-block {
-  button.code-toggle.code-toggle-style {
-    border: none;
-    border-radius: $b-border-radius;
-    background-color: $c-btn-secondary;
-    margin-right: 1.5rem;
-    transition: all 0.3s;
-  }
-  button.code-toggle.code-toggle-style:hover,
-  button.code-toggle.code-toggle-style:focus {
-    background-color: $c-btn-secondary-hover;
-    color: white;
-  }
+    button.code-toggle.code-toggle-style {
+        border: none;
+        border-radius: $b-border-radius;
+        background-color: $c-btn-secondary;
+        margin-right: 1.5rem;
+        transition: all 0.3s;
+    }
 
-  button[css="[object Object]"] {
-    border: 2px solid $c-btn-tertiary;
-    border-radius: $b-border-radius;
-    background-color: transparent;
-    color: $c-btn-tertiary;
-    vertical-align: middle;
-  }
-  button[css="[object Object]"]:hover {
-    background-color: $c-btn-tertiary;
-    color: white;
-  }
+    button.code-toggle.code-toggle-style:hover,
+    button.code-toggle.code-toggle-style:focus {
+        background-color: $c-btn-secondary-hover;
+        color: white;
+    }
+
+    button[css='[object Object]'] {
+        border: 2px solid $c-btn-tertiary;
+        border-radius: $b-border-radius;
+        background-color: transparent;
+        color: $c-btn-tertiary;
+        vertical-align: middle;
+    }
+
+    button[css='[object Object]']:hover {
+        background-color: $c-btn-tertiary;
+        color: white;
+    }
 }
