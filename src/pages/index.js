@@ -6,8 +6,14 @@ import '../styles/main.scss';
 const IndexPage = () => (
     // TODO: build this page out as the home page
     <main className="hello">
+        <div className="page-title">
+            <h1>Root Page</h1>
+        </div>
+        <div className="intro-wrap">
+            <h2>About Guide</h2>
+            <p>Some descriptive copy about the layout...</p>
+        </div>
         <Testimonial />
-        <h1>Hello world!</h1>
     </main>
 );
 export default IndexPage;
