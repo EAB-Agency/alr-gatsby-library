@@ -17,7 +17,7 @@ html {
 }
 
 .page-title {
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 
 .page-title h1, 
@@ -39,6 +39,9 @@ html {
 }
 
 .intro-wrap {
+  @include fluidRem('padding-top', 2rem, 3rem);
+  @include fluidRem('padding-bottom', 2rem, 3rem);
+
   h2 {
     @include setFont('Roboto Slab', 300, 3rem, 0.02rem, $c-heading-color);
     @include fluidRem("font-size", 2.25rem, 3rem);
@@ -73,129 +76,79 @@ html {
 // ----------
 
 .top-nav {
-  background: $c-neutral-gray-dark;
-  // border-bottom: 1px solid $c-text-link;
-  display: flex;
-  height: 3.125rem;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  transition: 0.2s;
-  width: 100%;
-  z-index: 5;
+  .main-menu-btn#menu-btn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3.125rem;
+    z-index: 5;
 
-  .main-menu-btn {
     background-color: $c-btn-primary;
     border: none;
     color: white;
     font-size: 1.5rem;
     padding: 0 1rem;
-
-    &:hover {
-      background-color: $c-btn-primary-hover;
-      color: white;
-    }
-    &:active, &:focus {
-      background-color: $c-btn-active;
-    }
-
-    // @media screen and (min-width: $mq-900) {
-    //   display: none;
-    // }
+    width: auto;
+    text-align: left;
   }
 
   .main-menu-overlay {
-    background: white;
-    color: $c-neutral-black;
-    height: 0%;
-    width: 100%;
-    overflow-y: hidden;
+    height: 100%;
+    width: 0;
     position: fixed;
-    z-index: inherit;
+    z-index: 2;
     top: 0;
     left: 0;
+    overflow-x: hidden;
+    background-color: $c-neutral-gray-dark;
     transition: .5s;
 
-    @media screen and (min-width: $mq-900) {
-      top: 3.75rem;
-    }
-  }
-
-  .main-menu-overlay-open {
-    height: 100%;
-
-    @media screen and (min-width: $mq-900) {
-      height: 3.75rem;
-      box-shadow: rgba(0,0,0,.45) 0px 25px 20px -20px;
-    }
-  }
-
-  .main-menu {
-    position: relative;
-    text-align: center;
-    top: 15%;
-    width: 100%;
-
-    a, a:visited {
-      color: $c-text-link;
-      display: block;
-      font-size: 1.3rem;
-      padding: 0 1em .5rem 1em;
+    .close-btn {
+      color: $c-neutral-black;
       text-decoration: none;
+      position: absolute;
+      top: 1.5rem;
+      right: 2.25rem;
+      font-size: 4rem;
+      transition: .3s;
 
-      &:hover {
-        color: $c-heading-color;
+      &:hover, &:focus {
+        color: $c-text-link;
       }
-      &:active, &:focus {
-        // color: $c-neutral-gray-dark;
-        background-color: $c-btn-active;
-      }
-    }
-
-    @media screen and (min-width: $mq-900) {
-      align-items: center;
-      display: flex;
-      justify-content: flex-start;
-      & {
-        a{
-          display: inline-block;
-          font-size: 1.1em;
-          transition: all .2s;
-
-          &:active, &:focus {
-            background-color: transparent;
-            color: $c-btn-active;
-            border-bottom: 3px solid $c-btn-active;
-          }
-        }
-      }
-    }
-  }
-  .close-btn {
-    background-color: white;
-    border: 1px solid $c-btn-primary;
-    color: $c-btn-primary;
-  
-    position: absolute;
-    top: 2%;
-    left: 2%;
-
-    transition: .2s;
-    font-size: 1.5rem;
-
-    &:hover {
-      color: white;
-      background-color: $c-btn-primary-hover;
-    }
-    &:active, &:focus {
-      background-color: $c-btn-active;
-    }
-    @media screen and (min-width: $mq-900) {
-      display: none;
     }
   }
 }
 
+
+.main-menu {
+  position: relative;
+  top: 18%;
+  width: 100%;
+  text-align: center;
+  // margin-top: 2rem;
+
+  a {
+    color: $c-neutral-black;
+    display: block;
+    padding: 1rem .5rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    transition: .3s;
+    @include setFont('Roboto', 700, 1rem, 0.02rem, $c-neutral-black);
+    @include fluidRem('font-size', 1.125rem, 1.5rem);
+
+    &:visited {
+      color: inherit;
+    }
+    &:hover, &:focus {
+      background-color: $c-text-link;
+      color: white;
+    }
+    &:active {
+      background-color: $c-btn-active;
+    }
+  }
+}
 
 
 // ----------

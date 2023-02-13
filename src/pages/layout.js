@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
         <MenuBtn />
         <div id="menu" className='main-menu-overlay'>
           <CloseBtn />
-          <div class='main-menu'>
+          <div class='main-menu' id="mainMenu">
             <Link to="/header">Headers</Link>
             <Link to="/socialproof">Social Proof</Link>
             <Link to="/apply">Apply</Link>
