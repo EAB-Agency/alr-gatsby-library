@@ -1,5 +1,5 @@
 import React from 'react';
-import AcquiaForm from '../../utils/AcquiaForm';
+import AcquiaForm from '../utils/AcquiaForm';
 
 const DefaultGive = () => (
     <section className="lp-intro-form">
@@ -37,7 +37,10 @@ const DefaultGive = () => (
                         </div>
 
                         <div className="lp-form-fields" id="form-form">
-                            <AcquiaForm src="//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=2" />
+                            <AcquiaForm
+                                src="//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=5"
+                                multiple
+                            />
                         </div>
 
                         <div className="lp-form-footer" />

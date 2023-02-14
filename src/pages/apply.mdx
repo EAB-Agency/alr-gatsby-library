@@ -1,15 +1,18 @@
-import ApplyOne from 'components/layouts/apply/apply1';
-import ApplyTwo from 'components/layouts/apply/apply2';
-import ApplyThree from 'components/layouts/apply/apply3';
-import ApplyThreeStyles from '!!raw-loader!../components/layouts/apply/style-apply-v3.scss';
+import ApplyOne from 'components/apply/apply1';
+import ApplyTwo from 'components/apply/apply2';
+import ApplyThree from 'components/apply/apply3';
+import ApplyThreeStyles from '!!raw-loader!../components/apply/style-apply-v3.scss';
 
-<main id="main">
+<main class="page-main">
+
 <div class="page-title">
 # Apply Layouts
 </div>
+
+{/* =========================== Layout 1 =========================== */}
+
 <div class="intro-wrap">
 ## Apply Layout 1
-
 Some descriptive copy about the layout. In eiusmod deserunt enim do aute aliqua sunt. Id in ad proident ullamco ut non amet. Tempor mollit est duis dolor reprehenderit cillum reprehenderit consequat qui. Incididunt incididunt sint cillum occaecat amet et ut aliqua qui commodo.
 </div>
 
@@ -23,10 +26,14 @@ Some descriptive copy about the layout. In eiusmod deserunt enim do aute aliqua 
 @use 'layouts' as layouts;
 #layout-a {
 }
+<code className="language-scss">{ApplyThreeStyles}</code>
+
 ```
+
+{/* =========================== Layout 2 =========================== */}
+
 <div class="intro-wrap">
 ## Apply Layout 2
-
 Some descriptive copy about the layout. In eiusmod deserunt enim do aute aliqua sunt. Id in ad proident ullamco ut non amet. Tempor mollit est duis dolor reprehenderit cillum reprehenderit consequat qui. Incididunt incididunt sint cillum occaecat amet et ut aliqua qui commodo.
 </div>
 
@@ -39,9 +46,11 @@ Some descriptive copy about the layout. In eiusmod deserunt enim do aute aliqua 
     @include layouts.layout-a();
   }
 ```
+
+{/* =========================== Layout 3 =========================== */}
+
 <div class="intro-wrap">
 ## Apply Layout 3
-
 Some descriptive copy about the layout. In eiusmod deserunt enim do aute aliqua sunt. Id in ad proident ullamco ut non amet. Tempor mollit est duis dolor reprehenderit cillum reprehenderit consequat qui. Incididunt incididunt sint cillum occaecat amet et ut aliqua qui commodo.
 </div>
 
@@ -54,8 +63,10 @@ Some descriptive copy about the layout. In eiusmod deserunt enim do aute aliqua 
   @include layouts.layout-b;
 }
 ```
+
+{/* =========================== Layout 4 =========================== */}
+
 </main>
 
-<script src="https://admiss.info/acquia-template/alr-plugins.js"></script>
-<script src="https://admiss.info/acquia-template/alr-global.js"></script>
-<script src="https://admiss.info/acquia-template/alr-landing-page.js"></script>
+
+
