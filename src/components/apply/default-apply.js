@@ -1,5 +1,5 @@
 import React from 'react';
-import AcquiaForm from '../../utils/AcquiaForm';
+import AcquiaForm from '../utils/AcquiaForm';
 
 const DefaultApply = () => (
     <section className="lp-apply">
