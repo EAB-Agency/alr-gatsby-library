@@ -28,10 +28,7 @@ const Nav = () => {
             >
                 <div className="main-menu" id="mainMenu">
                     <Link to="/header" onClick={closeMenu}>
-                        Headers
-                    </Link>
-                    <Link to="/socialproof" onClick={closeMenu}>
-                        Social Proof
+                        Header/Nav
                     </Link>
                     <Link to="/apply" onClick={closeMenu}>
                         Apply
@@ -47,6 +44,15 @@ const Nav = () => {
                     </Link>
                     <Link to="/school-tiles-static" onClick={closeMenu}>
                         Static School Tiles
+                    </Link>
+                    <Link to="/socialproof" onClick={closeMenu}>
+                        Social Proof
+                    </Link>
+                    <Link to="/contact" onClick={closeMenu}>
+                        Contact Us
+                    </Link>
+                    <Link to="/footer" onClick={closeMenu}>
+                        Footer
                     </Link>
                 </div>
             </div>
