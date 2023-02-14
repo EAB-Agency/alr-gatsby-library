@@ -82,7 +82,7 @@
 .lp-apply,
 .lp-apply-btm {
 	// @include applyFormInlineEmail("(min-width: #{$mq-500})");
-	
+
 	.apply-form {
 		position: relative;
 		margin: 1.5rem 0 0;
@@ -104,9 +104,14 @@
 			margin-bottom: 0;
 		 	white-space: nowrap;
 		}
-		
 	}
+}
 
+.lp-apply-footer,
+.lp-apply-btm-footer{
+	p:first-child{
+		margin-top:1rem;
+	}
 }
 
 .lp-apply-btm {
