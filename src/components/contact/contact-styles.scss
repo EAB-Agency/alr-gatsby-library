@@ -5,8 +5,9 @@
 @use 'styles/sass/foundation/components';
 @use 'styles/sass/shared';
 
-.header {
-    font-weight: normal;
+
+.contact-v1 {
+  .lp-intro-form {
+    @include layouts.layout-survey1;
+  }
 }
-
-
