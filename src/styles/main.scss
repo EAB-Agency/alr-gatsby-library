@@ -1,3 +1,7 @@
+// import partials used by all pages
+@use 'styles/sass/shared';
+
+// import partials only used here
 @import 'utilities/mixins';
 @import 'utilities/variables';
 

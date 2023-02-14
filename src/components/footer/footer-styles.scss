@@ -3,11 +3,8 @@
 @use 'styles/sass/foundation/global';
 @use 'styles/sass/foundation/config' as *;
 @use 'styles/sass/foundation/components';
-@use 'styles/sass/shared';
 
 
-.survey-v1 {
-  .lp-intro-form {
-    @include layouts.layout-survey1;
-  }
+.footer-v1 {
+
 }
