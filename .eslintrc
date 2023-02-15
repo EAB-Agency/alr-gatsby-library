@@ -1,15 +1,6 @@
 {
     "extends": ["wesbos"],
     "rules": {
-        "react/prop-types": 0,
-        "prettier/prettier": [
-            "error",
-            {
-                "singleQuote": true,
-                "endOfLine": "auto",
-                "tabWidth": 4
-            }
-        ]
-    },
-    "plugins": ["prettier"]
+        "react/prop-types": 0
+    }
 }
