@@ -8,12 +8,11 @@ const DefaultContact = () => (
                     <h3>Let’s Get Connected</h3>
 
                     <p>
-                        Earning your master’s degree is an important step in
-                        your career, and we are here to support you. Don’t
+                        Earning your master's degree is an important step in
+                        your career, and we are here to support you. Don't
                         hesitate to reach out to get answers to any questions
                         you may have!
                     </p>
-
                     <ul className="lp-school-contact-options">
                         <li className="lp-school-contact-phone">
                             <a href="tel:xxx-xxx-xxxx">xxx-xxx-xxxx</a>

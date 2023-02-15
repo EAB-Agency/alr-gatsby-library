@@ -5,7 +5,6 @@ const DefaultFooter = () => (
         <div className="school-footer-wrapper center">
             <div className="school-footer-content">
                 <div className="school-footer-name">the School Name</div>
-
                 <address className="school-footer-address">
                     Street Address
                     <br />

@@ -11,7 +11,7 @@ const DefaultApply = () => (
                     </h2>
                     <p>
                         Expand your professional potential with one of our
-                        highly-regarded master’s or doctoral degrees. We promise
+                        highly-regarded master's or doctoral degrees. We promise
                         a personalized, inclusive, and immersive learning
                         experience that prepares you for greater success. Submit
                         your application today with these benefits:

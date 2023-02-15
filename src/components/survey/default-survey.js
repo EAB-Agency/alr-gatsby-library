@@ -45,19 +45,19 @@ const DefaultSurvey = () => (
                             We'll be sure to keep in touch with important news
                             and updates.
                         </p>
-                        <hr />
-                        <p>
-                            Ready to apply to global-token=school-name-alt now?
-                            That's great! Simply{' '}
-                            <a
-                                href="global-token=application-url"
-                                id="link_apply_srv_thanks"
-                            >
-                                submit your application
-                            </a>{' '}
-                            and we'll consider you for admission soon.
-                            <br />
-                        </p>
+                        <div className="thanks-message">
+                            <p>
+                                Ready to apply to global-token=school-name-alt
+                                now? That's great! Simply{' '}
+                                <a
+                                    href="global-token=application-url"
+                                    id="link_apply_srv_thanks"
+                                >
+                                    submit your application
+                                </a>{' '}
+                                and we'll consider you for admission soon.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
