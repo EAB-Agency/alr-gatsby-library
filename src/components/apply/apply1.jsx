@@ -4,9 +4,9 @@ import './style-apply-v1.scss';
 
 const applyOne = () => (
 	<div className="apply-v1 layout-section">
-		<button className="button" type="button">
+		{/* <button className="button" type="button">
 			hello button
-		</button>
+		</button> */}
 		<DefaultApply />
 	</div>
 );
