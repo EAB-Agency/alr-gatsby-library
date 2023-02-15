@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import { Link } from 'gatsby';
 import './header-nav-styles.scss';
 
 const WithNav = () => (
@@ -7,16 +7,16 @@ const WithNav = () => (
         <div className="center">
             <ul>
                 <li>
-                    <a href="/apply">Apply</a>
+                    <Link to="/apply">Apply</Link>
                 </li>
                 <li>
-                    <a href="/discover">Download Guide</a>
+                    <Link to="/discover">Download Guide</Link>
                 </li>
                 <li>
-                    <a href="/start">Get Info</a>
+                    <Link to="/start">Get Info</Link>
                 </li>
                 <li>
-                    <a href="/explore">Explore</a>
+                    <Link to="/explore">Explore</Link>
                 </li>
             </ul>
         </div>
