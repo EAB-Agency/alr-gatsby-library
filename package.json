@@ -55,6 +55,7 @@
     },
     "devDependencies": {
         "eslint": "^8.0.0",
+        "eslint-plugin-prettier": "^4.2.1",
         "gatsby-plugin-root-import": "^2.0.9",
         "husky": "^8.0.0",
         "lint-staged": "^13.1.1",

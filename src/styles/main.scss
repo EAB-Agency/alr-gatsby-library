@@ -64,6 +64,7 @@ html {
         @include fluidRem('font-size', 1rem, 1.25rem);
 
         width: 100%;
+
         @media screen and (min-width: $mq-900) {
             width: 80%;
             margin: 0 auto;
@@ -115,7 +116,7 @@ html {
 
         &.show-menu {
             width: 35%;
-            max-width:  25rem;
+            max-width: 25rem;
         }
     }
 }
@@ -209,6 +210,6 @@ html {
 #mauticform_applyformformapp_qstn_hp_field,
 #mauticform_input_surveyformgeneralformsrv_qstn_hp_field,
 #mauticform_surveyformgeneralformsrv_c_sms_opt_in_ind,
-#mauticform_contentgiveformformcg_qstn_hp_field{
-    display:none;
+#mauticform_contentgiveformformcg_qstn_hp_field {
+    display: none;
 }
