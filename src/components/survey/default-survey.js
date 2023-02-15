@@ -41,7 +41,7 @@ const DefaultSurvey = () => (
             <hr />
             <p>
               Ready to apply to global-token=school-name-alt now? That's great!
-              Simply{' '}
+              Simply
               <a href="global-token=application-url" id="link_apply_srv_thanks">
                 submit your application
               </a>{' '}
