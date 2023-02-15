@@ -2,9 +2,9 @@
 // 				"acs",
 // 				"shared";
 
-@use 'foundation';
-@use 'acs';
-@use 'shared';
+@use "foundation";
+@use "acs";
+@use "shared";
 
 // ================
 // Apply Landing Page Styles
@@ -14,95 +14,95 @@
 // Apply
 
 .version-1 {
-	.lp-apply {
-		padding: 4vw 0;
+  .lp-apply {
+    padding: 4vw 0;
 
-		.lp-apply-wrapper {
-			&::after {
-				content: '';
-				display: block;
-				width: 100%;
-				height: 30vw;
-				background: url('../../assets/images/img-apply-sm.jpg') no-repeat center / cover;
-				margin-top: 4vw;
-			}
-		}
+    .lp-apply-wrapper {
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 30vw;
+        background: url("../../assets/images/img-apply-sm.jpg") no-repeat center / cover;
+        margin-top: 4vw;
+      }
+    }
 
-		@media (min-width: $mq-900) {
-			.lp-apply-wrapper {
-				display: grid;
-				grid-template-columns: 1fr 1.5fr;
-				grid-gap: 2rem;
+    @media (min-width: $mq-900) {
+      .lp-apply-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-gap: 2rem;
 
-				&::after {
-					display: none;
-				}
+        &::after {
+          display: none;
+        }
 
-				&::before {
-					content: '';
-					display: block;
-					width: 100%;
-					height: 100%;
-					background: url('../../assets/images/img-apply-lg.jpg') no-repeat center / cover;
-				}
-			}
-		}
-	}
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: url("../../assets/images/img-apply-lg.jpg") no-repeat center / cover;
+        }
+      }
+    }
+  }
 }
 
 .version-2 {
-	.lp-apply {
-		.lp-apply-content {
-			padding: 4vw 0;
-		}
+  .lp-apply {
+    .lp-apply-content {
+      padding: 4vw 0;
+    }
 
-		@media (max-width: maxMQ($mq-900)) {
-			.lp-apply-content {
-				max-width: $mq-600;
-				margin: auto;
-			}
+    @media (max-width: maxMQ($mq-900)) {
+      .lp-apply-content {
+        max-width: $mq-600;
+        margin: auto;
+      }
 
-			&::before {
-				background: url('../../assets/images/img-apply-sm.jpg') no-repeat top / cover;
-				content: '';
-				height: 40vw;
-				display: block;
-			}
-		}
+      &::before {
+        background: url("../../assets/images/img-apply-sm.jpg") no-repeat top / cover;
+        content: "";
+        height: 40vw;
+        display: block;
+      }
+    }
 
-		@media (min-width: $mq-900) {
-			display: flex;
-			position: relative;
+    @media (min-width: $mq-900) {
+      display: flex;
+      position: relative;
 
-			&::after {
-				background: url('../../assets/images/img-apply-lg.jpg') no-repeat left / cover;
-				content: '';
-				width: 50vw;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				right: 0;
-			}
+      &::after {
+        background: url("../../assets/images/img-apply-lg.jpg") no-repeat left / cover;
+        content: "";
+        width: 50vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
 
-			.lp-apply-content {
-				width: 50%;
-				padding-right: 2rem;
-			}
-		}
-	}
+      .lp-apply-content {
+        width: 50%;
+        padding-right: 2rem;
+      }
+    }
+  }
 }
 
 // ================
 // Deferral
 
 .lp-deferral {
-	padding: 4vw 0;
-	background: $c-lightGrey;
+  padding: 4vw 0;
+  background: $c-lightGrey;
 
-	.lp-deferral-content {
-		@include foundation.containerStyle;
+  .lp-deferral-content {
+    @include foundation.containerStyle;
 
-		max-width: $mq-800;
-		margin: auto;
-	}
+    max-width: $mq-800;
+    margin: auto;
+  }
 }

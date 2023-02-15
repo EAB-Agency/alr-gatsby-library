@@ -61,7 +61,7 @@ $x-ceebFormat: "autosuggest"; // 'modal' or 'autosuggest'
         right: 0;
         cursor: pointer;
       }
-      
+
       &:hover::after,
       &:focus::after {
         // Add x icon hover and focus state
@@ -141,7 +141,7 @@ $x-ceebFormat: "autosuggest"; // 'modal' or 'autosuggest'
       }
     }
   }
-} @else if $x-ceebFormat == 'modal' {
+} @else if $x-ceebFormat == "modal" {
   // ================
   // Modal Format
 
