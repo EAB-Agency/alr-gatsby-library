@@ -2,8 +2,10 @@
 @use 'styles/sass/shared';
 
 // import partials only used here
-@import 'utilities/mixins';
-@import 'utilities/variables';
+// Note: Changed here to use the new @use syntax
+@use 'utilities/mixins';
+@use 'utilities/variables';
+@use 'sass/foundation/config';
 
 // .helloworld {
 //     color: red;
@@ -33,39 +35,55 @@ html {
 .intro-wrap h4,
 .intro-wrap p,
 .code-block {
-    @include fluidRem('padding-right', 1rem, 4rem);
-    @include fluidRem('padding-left', 1rem, 4rem);
+    @include mixins.fluidRem('padding-right', 1rem, 4rem);
+    @include mixins.fluidRem('padding-left', 1rem, 4rem);
 }
 
 .page-title h1 {
     // $_f-fontFamily, $_f-fontWeight, $_f-lineHeight, $_f-letterSpacing, $_c-color
-    @include setFont('Roboto Slab', 700, 3rem, 0.02rem, $c-heading-color);
-    @include fluidRem('font-size', 2.5rem, 3.5rem);
-    @include fluidRem('padding-bottom', 2rem, 4rem);
+    @include mixins.setFont('Roboto Slab',
+        700,
+        3rem,
+        0.02rem,
+        variables.$c-heading-color );
+    @include mixins.fluidRem('font-size', 2.5rem, 3.5rem);
+    @include mixins.fluidRem('padding-bottom', 2rem, 4rem);
 }
 
 .intro-wrap {
-    @include fluidRem('padding-top', 2rem, 3rem);
-    @include fluidRem('padding-bottom', 2rem, 3rem);
+    @include mixins.fluidRem('padding-top', 2rem, 3rem);
+    @include mixins.fluidRem('padding-bottom', 2rem, 3rem);
 
     h2 {
-        @include setFont('Roboto Slab', 300, 3rem, 0.02rem, $c-heading-color);
-        @include fluidRem('font-size', 2.25rem, 3rem);
-        @include fluidRem('padding-bottom', 1.75rem, 2rem);
+        @include mixins.setFont('Roboto Slab',
+            300,
+            3rem,
+            0.02rem,
+            variables.$c-heading-color );
+        @include mixins.fluidRem('font-size', 2.25rem, 3rem);
+        @include mixins.fluidRem('padding-bottom', 1.75rem, 2rem);
     }
 
     h3 {
-        @include setFont('Roboto Slab', 700, 2.5rem, 0.02rem, $c-heading-color);
-        @include fluidRem('font-size', 2rem, 2.5rem);
+        @include mixins.setFont('Roboto Slab',
+            700,
+            2.5rem,
+            0.02rem,
+            variables.$c-heading-color );
+        @include mixins.fluidRem('font-size', 2rem, 2.5rem);
     }
 
     p {
-        @include setFont('Roboto', 300, 2rem, 0.02rem, $c-neutral-black);
-        @include fluidRem('font-size', 1rem, 1.25rem);
+        @include mixins.setFont('Roboto',
+            300,
+            2rem,
+            0.02rem,
+            variables.$c-neutral-black );
+        @include mixins.fluidRem('font-size', 1rem, 1.25rem);
 
         width: 100%;
 
-        @media screen and (min-width: $mq-900) {
+        @media screen and (min-width: config.$mq-900) {
             width: 80%;
             margin: 0 auto;
         }
@@ -74,8 +92,8 @@ html {
 
 .page-title,
 .intro-wrap {
-    @include fluidRem('padding-right', 1rem, 4rem);
-    @include fluidRem('padding-left', 1rem, 4rem);
+    @include mixins.fluidRem('padding-right', 1rem, 4rem);
+    @include mixins.fluidRem('padding-left', 1rem, 4rem);
 }
 
 // ----------
@@ -94,7 +112,7 @@ html {
         left: 0;
         height: 3.125rem;
         z-index: 5;
-        background-color: $c-btn-primary;
+        background-color: variables.$c-btn-primary;
         border: none;
         color: white;
         font-size: 1.5rem;
@@ -111,7 +129,7 @@ html {
         top: 0;
         left: 0;
         overflow-x: hidden;
-        background-color: $c-neutral-gray-dark;
+        background-color: variables.$c-neutral-gray-dark;
         transition: 0.5s;
 
         &.show-menu {
@@ -122,7 +140,7 @@ html {
 }
 
 .close-btn {
-    color: $c-neutral-black;
+    color: variables.$c-neutral-black;
     text-decoration: none;
     position: absolute;
     top: 1.5rem;
@@ -132,7 +150,7 @@ html {
 
     &:hover,
     &:focus {
-        color: $c-text-link;
+        color: variables.$c-text-link;
     }
 }
 
@@ -145,14 +163,18 @@ html {
     // margin-top: 2rem;
 
     a {
-        color: $c-neutral-black;
+        color: variables.$c-neutral-black;
         display: block;
         padding: 1rem 0.5rem;
         margin-bottom: 1rem;
         text-decoration: none;
         transition: 0.3s;
-        @include setFont('Roboto', 700, 1rem, 0.02rem, $c-neutral-black);
-        @include fluidRem('font-size', 1.125rem, 1.5rem);
+        @include mixins.setFont('Roboto',
+            700,
+            1rem,
+            0.02rem,
+            variables.$c-neutral-black );
+        @include mixins.fluidRem('font-size', 1.125rem, 1.5rem);
 
         &:visited {
             color: inherit;
@@ -160,12 +182,12 @@ html {
 
         &:hover,
         &:focus {
-            background-color: $c-text-link;
+            background-color: variables.$c-text-link;
             color: white;
         }
 
         &:active {
-            background-color: $c-btn-active;
+            background-color: variables.$c-btn-active;
         }
     }
 }
@@ -177,28 +199,28 @@ html {
 .code-block {
     button.code-toggle.code-toggle-style {
         border: none;
-        border-radius: $b-border-radius;
-        background-color: $c-btn-secondary;
+        border-radius: variables.$b-border-radius;
+        background-color: variables.$c-btn-secondary;
         margin-right: 1.5rem;
         transition: all 0.3s;
     }
 
     button.code-toggle.code-toggle-style:hover,
     button.code-toggle.code-toggle-style:focus {
-        background-color: $c-btn-secondary-hover;
+        background-color: variables.$c-btn-secondary-hover;
         color: white;
     }
 
     button[css='[object Object]'] {
-        border: 2px solid $c-btn-tertiary;
-        border-radius: $b-border-radius;
+        border: 2px solid variables.$c-btn-tertiary;
+        border-radius: variables.$b-border-radius;
         background-color: transparent;
-        color: $c-btn-tertiary;
+        color: variables.$c-btn-tertiary;
         vertical-align: middle;
     }
 
     button[css='[object Object]']:hover {
-        background-color: $c-btn-tertiary;
+        background-color: variables.$c-btn-tertiary;
         color: white;
     }
 }

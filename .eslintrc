@@ -8,6 +8,7 @@
             "error",
             {
                 "singleQuote": true,
+                "tabWidth": 2,
                 "endOfLine": "auto"
             }
         ]
