@@ -1,76 +1,76 @@
 {
-    "name": "alr-layout-library-gatsby",
-    "version": "1.0.0",
-    "private": true,
-    "description": "alr-layout-library-gatsby",
-    "author": "Bob_Smith",
-    "keywords": [
-        "gatsby"
-    ],
-    "scripts": {
-        "develop": "gatsby develop",
-        "start": "gatsby develop",
-        "build": "gatsby build",
-        "serve": "gatsby serve",
-        "clean": "gatsby clean",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix",
-        "lint:css": "npx stylelint **/*.scss",
-        "lint:css:fix": "npx stylelint **/*.scss --fix",
-        "stylelint-check": "stylelint-config-prettier-check",
-        "prepare": "husky install"
-    },
-    "lint-staged": {
-        "*.{js,jsx,ts,tsx}": [
-            "eslint --fix"
-        ],
-        "*.{scss,css}": [
-            "stylelint --fix"
-        ]
-    },
-    "dependencies": {
-        "@mdx-js/mdx": "^2.0.0-rc.2",
-        "@mdx-js/react": "^2.0.0-rc.2",
-        "alr-sass-utilities": "^0.0.12",
-        "eslint-config-wesbos": "3.2.3",
-        "gatsby": "^5.5.0",
-        "gatsby-design-tokens": "^5.5.0",
-        "gatsby-mdx": "^1.0.0",
-        "gatsby-plugin-mdx": "^5.5.0",
-        "gatsby-plugin-sass": "^6.5.0",
-        "gatsby-plugin-sitemap": "^6.5.0",
-        "gatsby-remark-code-buttons": "^2.0.7",
-        "gatsby-remark-code-titles": "^1.1.0",
-        "gatsby-remark-embed-figma": "^1.0.1",
-        "gatsby-source-filesystem": "^5.5.0",
-        "gatsby-transformer-remark": "^6.5.0",
-        "hamburger-react": "^2.5.0",
-        "prism-react-renderer": "^1.3.5",
-        "prismjs": "^1.29.0",
-        "raw-loader": "^4.0.2",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-live": "^3.1.1",
-        "sass": "^1.58.0"
-    },
-    "devDependencies": {
-        "eslint": "^8.0.0",
-        "gatsby-plugin-root-import": "^2.0.9",
-        "husky": "^8.0.0",
-        "lint-staged": "^13.1.1",
-        "postcss": "^8.4.21",
-        "postcss-scss": "^4.0.6",
-        "prettier": "^2.7.1",
-        "resolve-url-loader": "^5.0.0",
-        "stylelint": "14.16.1",
-        "stylelint-config-prettier": "^9.0.5",
-        "stylelint-config-standard-scss": "^6.1.0",
-        "stylelint-scss": "^4.3.0",
-        "typescript": "^4.8.4"
-    },
-    "eslintConfig": {
-        "extends": [
-            "wesbos"
-        ]
-    }
+	"name": "alr-layout-library-gatsby",
+	"version": "1.0.0",
+	"private": true,
+	"description": "alr-layout-library-gatsby",
+	"author": "Bob_Smith",
+	"keywords": [
+		"gatsby"
+	],
+	"scripts": {
+		"develop": "gatsby develop",
+		"start": "gatsby develop",
+		"build": "gatsby build",
+		"serve": "gatsby serve",
+		"clean": "gatsby clean",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"lint:css": "npx stylelint **/*.scss",
+		"lint:css:fix": "npx stylelint **/*.scss --fix",
+		"stylelint-check": "stylelint-config-prettier-check",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"eslint --fix"
+		],
+		"*.{scss,css}": [
+			"stylelint --fix"
+		]
+	},
+	"dependencies": {
+		"@mdx-js/mdx": "^2.0.0-rc.2",
+		"@mdx-js/react": "^2.0.0-rc.2",
+		"alr-sass-utilities": "^0.0.12",
+		"eslint-config-wesbos": "3.2.3",
+		"gatsby": "^5.5.0",
+		"gatsby-design-tokens": "^5.5.0",
+		"gatsby-mdx": "^1.0.0",
+		"gatsby-plugin-mdx": "^5.5.0",
+		"gatsby-plugin-sass": "^6.5.0",
+		"gatsby-plugin-sitemap": "^6.5.0",
+		"gatsby-remark-code-buttons": "^2.0.7",
+		"gatsby-remark-code-titles": "^1.1.0",
+		"gatsby-remark-embed-figma": "^1.0.1",
+		"gatsby-source-filesystem": "^5.5.0",
+		"gatsby-transformer-remark": "^6.5.0",
+		"hamburger-react": "^2.5.0",
+		"prism-react-renderer": "^1.3.5",
+		"prismjs": "^1.29.0",
+		"raw-loader": "^4.0.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-live": "^3.1.1",
+		"sass": "^1.58.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.0.0",
+		"gatsby-plugin-root-import": "^2.0.9",
+		"husky": "^8.0.0",
+		"lint-staged": "^13.1.1",
+		"postcss": "^8.4.21",
+		"postcss-scss": "^4.0.6",
+		"prettier": "^2.7.1",
+		"resolve-url-loader": "^5.0.0",
+		"stylelint": "14.16.1",
+		"stylelint-config-prettier": "^9.0.5",
+		"stylelint-config-standard-scss": "^6.1.0",
+		"stylelint-scss": "^4.3.0",
+		"typescript": "^4.8.4"
+	},
+	"eslintConfig": {
+		"extends": [
+			"wesbos"
+		]
+	}
 }
