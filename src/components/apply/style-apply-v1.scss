@@ -4,7 +4,6 @@
 @use 'styles/sass/foundation/config' as *;
 @use 'styles/sass/foundation/components';
 
-
 .apply-v1 {
   .button {
     @include alr.button-color(red, green, blue, purple, yellow);
@@ -12,6 +11,6 @@
 
   .lp-apply {
     @include layouts.layout-apply1;
-    @include applyFormInlineEmail("(min-width: #{$mq-500})");
+    @include applyFormInlineEmail('(min-width: #{$mq-500})');
   }
 }
