@@ -16,7 +16,7 @@ const delay = (duration) =>
   // eslint-disable-next-line no-promise-executor-return
   new Promise((resolve) => setTimeout(resolve, duration));
 
-function Copy({ className, content, duration, fileName, trim = false }) {
+function Copy({ content, duration, fileName, trim = false }) {
   const [copied, setCopied] = useState(false);
 
   const label = copied

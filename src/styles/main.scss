@@ -216,7 +216,8 @@ html {
 // ----------
 
 .code-block {
-  @include mixins.fluidRem("padding", 1rem 0, 2rem 0);
+  @include mixins.fluidRem("padding-top", 1rem, 2rem);
+  @include mixins.fluidRem("padding-bottom", 1rem, 2rem);
 
   border-bottom: 1px solid variables.$c-grey;
 
