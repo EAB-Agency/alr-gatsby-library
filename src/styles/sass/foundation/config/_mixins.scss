@@ -48,7 +48,7 @@
   }
 }
 
-// Use when pseudo image above section
+// Use when pseudo image above section on small screens
 @mixin stackedContentPadding($contentClass, $paddingSm, $paddingLg, $mq: $mq-800) {
   padding: 0;
 
@@ -61,6 +61,19 @@
 
     #{$contentClass} {
       padding: 0;
+    }
+  }
+}
+
+// Use when content gridded with image
+@mixin gridContentPadding($contentClass, $paddingSm, $paddingLg, $mq: $mq-800) {
+  padding: $paddingSm;
+
+  @media (min-width: $mq) {
+    padding: 0;
+
+    #{$contentClass} {
+      padding: $paddingLg;
     }
   }
 }
@@ -84,6 +97,30 @@
 
     &::before {
       display: none;
+    }
+  }
+}
+
+@mixin sectionImageStacked($imgPosition, $imgBgColor, $imgHeight, $imgMaxHeight, $imgBgPosition: center center, $fileName, $maxMQ, $imgAssetPath: "../../../../assets/images/") {
+  @media (max-width: maxMQ($maxMQ)) {
+    @if $imgPosition == "top" {
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: $imgHeight;
+        max-height: $imgMaxHeight;
+        background: $imgBgColor url(#{$imgAssetPath}#{$fileName}) no-repeat $imgBgPosition / cover;
+      }
+    } @else if $imgPosition == "bottom" {
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: $imgHeight;
+        max-height: $imgMaxHeight;
+        background: $imgBgColor url(#{$imgAssetPath}#{$fileName}) no-repeat $imgBgPosition / cover;
+      }
     }
   }
 }
