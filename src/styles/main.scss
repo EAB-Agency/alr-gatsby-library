@@ -192,7 +192,7 @@ html {
       1rem,
       0.02rem,
       variables.$c-neutral-black
-        );
+    );
     @include mixins.fluidRem("font-size", 1.125rem, 1.5rem);
 
     &:visited {
@@ -234,7 +234,6 @@ html {
   button {
     border: none;
     border-radius: variables.$b-border-radius;
-
 
     &.button-copy,
     &.button-code {
