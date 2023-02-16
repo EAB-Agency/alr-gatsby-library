@@ -35,6 +35,7 @@
   $_x-boxShadow: "null"
 ) {
   background: $_c-backgroundColor;
+
   @include fluidRem("padding", 1rem 1.25rem, 2rem 2.5rem);
 
   @if $_x-border == "yes" {
@@ -119,7 +120,6 @@
   }
 }
 
-
 // Mixin to Grid Items with Image and Color Accent on Image
 // as seen on https://go.cics.morgan.edu/apply top apply section (form, image, color behind image)
 // - Lara - can delete if too specific
@@ -131,7 +131,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: calc(100% - 1rem);
     height: calc(100% - 1rem);
@@ -152,7 +152,7 @@
     .#{$_x-contentClass} {
       grid-row: 1 / 2;
     }
-    
+
     &::before,
     &::after {
       grid-row: 2 / 3;
@@ -161,7 +161,7 @@
     .#{$_x-contentClass} {
       grid-row: 2 / 3;
     }
-    
+
     &::before,
     &::after {
       grid-row: 1 / 2;
@@ -177,7 +177,6 @@
       top: 1rem;
       right: 1rem;
     }
-
   } @else if $_x-accentColorPlacement == "right" {
     &::before {
       margin: 0 auto 0 0;
@@ -187,7 +186,6 @@
       top: 1rem;
       left: 1rem;
     }
-
   }
 
   @media (min-width: $_mq-small) {
@@ -220,7 +218,7 @@
       .#{$_x-contentClass} {
         grid-column: 1 / 2;
       }
-      
+
       &::before,
       &::after {
         grid-column: 2 / 3;
@@ -230,7 +228,7 @@
       .#{$_x-contentClass} {
         grid-column: 2 / 3;
       }
-      
+
       &::before,
       &::after {
         grid-column: 1 / 2;
@@ -240,12 +238,10 @@
   }
 }
 
-
 // Mixin to Add Accent Bars to One Element
 // as seen on https://go.cics.morgan.edu/discover around CG form
 // - Lara - can delete if too specific
 @mixin addAccentBars($_c-accentBarColor, $_c-accentBarSmall, $_c-accentBarLarge, $_x-contentClass, $_mq-small, $_mq-breakPoint) {
-	
   @media (min-width: $_mq-small) {
     display: grid;
     grid-template-columns: $_c-accentBarSmall 1fr $_c-accentBarSmall;
@@ -253,7 +249,7 @@
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       display: block;
       background: $_c-accentBarColor;
     }
@@ -280,7 +276,7 @@
     }
   }
 
-	@media (min-width: $_mq-breakPoint) {
+  @media (min-width: $_mq-breakPoint) {
     grid-template-columns: $_c-accentBarLarge 1fr $_c-accentBarLarge;
     grid-template-rows: $_c-accentBarLarge 1fr $_c-accentBarLarge;
 
@@ -293,36 +289,32 @@
     &::after {
       height: $_c-accentBarLarge;
     }
-
   }
 }
 
-
 // Mixin to Grid a Section into Two Columns Full Page Width
-// as seen on https://go.success.marybaldwin.edu/apply-refresh 
+// as seen on https://go.success.marybaldwin.edu/apply-refresh
 
 // Default is Apply Top Section on Apply LP
 @mixin fullWidthTwoColSection(
   $_x-wrapperClass: lp-apply-wrapper,
-  $_x-imagePositionStacked: "bottom", 
-  $_x-imagePositionHorz: "right", 
-  $_mq-breakpoint: $mq-800, 
-  $_mq-breakpointLg: $mq-1600, 
+  $_x-imagePositionStacked: "bottom",
+  $_x-imagePositionHorz: "right",
+  $_mq-breakpoint: $mq-800,
+  $_mq-breakpointLg: $mq-1600,
   $_f-imageName: "img-family-tablet.jpg",
-  $_x-imageBgPositionSm: center 52%, 
-  $_x-imageBgPositionMed: center 75%, 
-  $_x-imageBgPositionLg: center 52%, 
-  $_d-gridTempColumns: 5% 1fr 5% 1fr 5%, 
-  $_d-gridTempRows: 10vw 1fr 12vw, 
-  $_d-gridTempColumnsWide: 5% calc(#{$mq-1400} / 2) 5% calc(#{$mq-1400} / 2) auto 
-  ) {
-
-  
+  $_x-imageBgPositionSm: center 52%,
+  $_x-imageBgPositionMed: center 75%,
+  $_x-imageBgPositionLg: center 52%,
+  $_d-gridTempColumns: 5% 1fr 5% 1fr 5%,
+  $_d-gridTempRows: 10vw 1fr 12vw,
+  $_d-gridTempColumnsWide: 5% calc(#{$mq-1400} / 2) 5% calc(#{$mq-1400} / 2) auto
+) {
   @if $_x-imagePositionStacked == "bottom" {
     padding: 4vw 0 0;
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       width: 100%;
       height: 50vw;
@@ -333,7 +325,7 @@
     padding: 0 0 4vw;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       width: 100%;
       height: 50vw;
@@ -358,7 +350,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       height: 100%;
       background: url(#{$_f-imageName}) no-repeat $_x-imageBgPositionMed / cover;
@@ -369,10 +361,10 @@
     @if $_x-imagePositionHorz == "right" {
 
       .#{$_x-wrapperClass} {
-        grid-row: 2 / 3;   
+        grid-row: 2 / 3;
         grid-column: 2 / 3;
       }
-    
+
       &::after {
         grid-column: 4 / 6;
       }
@@ -381,10 +373,10 @@
     @if $_x-imagePositionHorz == "left" {
 
       .#{$_x-wrapperClass} {
-        grid-row: 2 / 3;   
+        grid-row: 2 / 3;
         grid-column: 4 / 5;
       }
-    
+
       &::after {
         grid-column: 1 / 3;
       }

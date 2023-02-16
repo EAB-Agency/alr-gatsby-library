@@ -1,9 +1,9 @@
-@use 'styles/sass/layouts';
-@use 'styles/sass/foundation/config' as *;
+@use "styles/sass/layouts";
+@use "styles/sass/foundation/config" as *;
 
 .version-3 {
   .lp-apply {
     @include layouts.layout-apply3;
-    @include applyFormInlineEmail('(min-width: #{$mq-500})');
+    @include applyFormInlineEmail("(min-width: #{$mq-500})");
   }
 }

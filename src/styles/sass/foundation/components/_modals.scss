@@ -8,8 +8,7 @@
 // ================
 // Modal Format Selection
 
-$x-modalFormat: 'acs'; // 'rms', 'acs', or 'rope'
-
+$x-modalFormat: "acs"; // 'rms', 'acs', or 'rope'
 
 // ================
 // Base Modal Styles
@@ -24,7 +23,7 @@ $x-modalFormat: 'acs'; // 'rms', 'acs', or 'rope'
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  background: rgba(#000, .8) !important;
+  background: rgba(#000, 0.8) !important;
 }
 
 %modal-wrap {
@@ -44,8 +43,8 @@ $x-modalFormat: 'acs'; // 'rms', 'acs', or 'rope'
 
 %modal-close {
   position: absolute;
-  top: .75rem;
-  right: .75rem;
+  top: 0.75rem;
+  right: 0.75rem;
   width: auto;
   height: auto;
   margin: 0;
@@ -62,7 +61,7 @@ $x-modalFormat: 'acs'; // 'rms', 'acs', or 'rope'
     font-size: 2rem;
     line-height: 1;
     box-shadow: none;
-    transition: all 0.25s ease-in-out
+    transition: all 0.25s ease-in-out;
   }
 
   &:hover,
@@ -81,7 +80,7 @@ $x-modalFormat: 'acs'; // 'rms', 'acs', or 'rope'
   }
 }
 
-@if $x-modalFormat == 'fancybox' {
+@if $x-modalFormat =="fancybox" {
   // ================
   // Fancybox Modals
 
@@ -105,8 +104,7 @@ $x-modalFormat: 'acs'; // 'rms', 'acs', or 'rope'
   .fancybox-close {
     @extend %modal-close;
   }
-
-} @else if $x-modalFormat == 'acs' {
+} @else if $x-modalFormat =="acs" {
   // ================
   // ACS - Fancybox Modals
 
@@ -127,14 +125,12 @@ $x-modalFormat: 'acs'; // 'rms', 'acs', or 'rope'
     .copyright {
       @extend %small;
     }
-
   }
 
-  [class*='fancybox-close'] {
+  [class*="fancybox-close"] {
     @extend %modal-close;
   }
-
-} @else if $x-modalFormat == 'rope' {
+} @else if $x-modalFormat =="rope" {
   // ================
   // ROPE Modals
 
@@ -148,16 +144,16 @@ $x-modalFormat: 'acs'; // 'rms', 'acs', or 'rope'
     @extend %modal-overlay;
 
     &.overlay-scale {
-      transform: scale(.9);
+      transform: scale(0.9);
       visibility: hidden;
       overflow: auto;
-      transition: transform .2s, opacity .2s, visibility 0s .2s;
+      transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
       opacity: 0;
 
       &.open {
         transform: scale(1);
         visibility: visible;
-        transition: transform .4s, opacity .4s;
+        transition: transform 0.4s, opacity 0.4s;
         opacity: 1;
       }
     }
@@ -173,7 +169,4 @@ $x-modalFormat: 'acs'; // 'rms', 'acs', or 'rope'
       @extend %modal-close;
     }
   }
-
-
-
 }

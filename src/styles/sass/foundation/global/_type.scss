@@ -14,8 +14,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 // ================
 // Root
 
@@ -27,7 +25,7 @@ html {
 
 body {
   font-size: 1rem;
-  
+
   @media (min-width: $mq-600) {
     font-size: 1.0625rem;
   }
@@ -36,7 +34,6 @@ body {
     font-size: 1.125rem;
   }
 }
-
 
 // ================
 // Headlines
@@ -73,8 +70,6 @@ h6 {
   @include fluidRem("font-size", 1rem, 1.15rem);
 }
 
-
-
 // ================
 // Body Copy
 
@@ -97,7 +92,7 @@ ol {
 
 a {
   color: $c-link;
-  transition:$t-transition;
+  transition: $t-transition;
 
   &:hover,
   &:focus {
@@ -109,11 +104,9 @@ a {
 %small,
 small,
 .copyright {
-  font-size: .875em;
+  font-size: 0.875em;
   font-style: italic;
 }
-
-
 
 // ================
 // Other Type Styles
@@ -123,8 +116,8 @@ small,
   color: $c-error;
 }
 
-hr{
-  margin-bottom:1rem;
+hr {
+  margin-bottom: 1rem;
 }
 
 .nobr {
