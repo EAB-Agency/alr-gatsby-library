@@ -8,6 +8,9 @@
         "editor.defaultFormatter": "dbaeumer.vscode-eslint",
         "editor.formatOnSave": false
     },
+    // "[css][scss]": {
+    //     "editor.defaultFormatter": "vscode.css-language-features"
+    // },
     "editor.codeActionsOnSave": {
         "source.organizeImports": false,
         "source.fixAll.eslint": true,

@@ -5,7 +5,6 @@
 @use "../config" as *;
 @use "sass:color";
 
-
 // ================
 // Viewport Rules
 
@@ -49,8 +48,8 @@
 
 .school-logo {
   @extend %logo;
-  @include fluidRem('width', 15rem, 18.75rem);
-  @include fluidRem('height', 3.2rem, 4rem);
+  @include fluidRem("width", 15rem, 18.75rem);
+  @include fluidRem("height", 3.2rem, 4rem);
 
   // background: url('img-logo.svg') no-repeat left center / contain;
 }
@@ -58,13 +57,13 @@
 // Header
 
 .school-header {
-  @include fluidRem('padding', 1rem 0, 1.5rem 0);
+  @include fluidRem("padding", 1rem 0, 1.5rem 0);
 }
 
 // Footer
 
 .school-footer {
-  @include fluidRem('padding', 1rem 0, 1.5rem 0);
+  @include fluidRem("padding", 1rem 0, 1.5rem 0);
 
   .school-footer-links {
     li {
