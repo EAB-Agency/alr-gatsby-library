@@ -1,7 +1,8 @@
-@use "sass:color";
-@use "sass:math";
-@use "../foundation/config" as *;
-@use "../foundation/components" as *;
+@use 'sass:color';
+@use 'sass:math';
+@use '../../foundation/config' as *;
+@use '../../foundation/components' as *;
+
 
 @mixin layout-survey1() {
     padding: 4vw 0;
@@ -11,7 +12,7 @@
       display: block;
       height: 40vw;
       margin-top: 4vw;
-      background: url('../../../assets/images/img-survey-sm.jpg') no-repeat
+      background: url('../../../../assets/images/img-survey-sm.jpg') no-repeat
         center 20% / cover;
       content: '';
     }

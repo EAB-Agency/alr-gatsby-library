@@ -1,7 +1,8 @@
 @use 'styles/sass/layouts';
 @use 'styles/sass/foundation/config' as *;
 
-
-.contact-v1 {
-    @include layouts.layout-contact1;
+.survey-v3 {
+  .lp-intro-form {
+    @include layouts.layout-survey3;
+  }
 }

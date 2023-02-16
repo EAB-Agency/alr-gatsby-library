@@ -103,6 +103,13 @@ html {
     @include mixins.fluidRem('padding-left', 1rem, 4rem);
 }
 
+
+//wraps each layout
+.layout-section{
+    box-shadow:0 0 7px rgb(0, 0, 0, .5);
+    margin:1rem;
+}
+
 // ----------
 // Navigation
 // ----------
