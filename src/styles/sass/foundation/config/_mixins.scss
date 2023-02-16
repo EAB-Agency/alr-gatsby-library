@@ -27,6 +27,10 @@
   }
 }
 
+// @mixin bgImage ($bgColor, $fileName, $bgPosition: center center, $bgSize: cover) {
+//   background: $bgColor url(#{$fileName}) no-repeat $bgPosition / $bgSize;
+// }
+
 // Container Style Mixin
 @mixin containerStyle(
   $_c-backgroundColor: white,
