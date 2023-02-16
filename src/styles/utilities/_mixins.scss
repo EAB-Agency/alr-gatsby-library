@@ -13,7 +13,7 @@
   $_d-minRem,
   $_d-maxRem,
   $_mq-min: config.$mq-300,
-    $_mq-max: config.$mq-1200
+  $_mq-max: config.$mq-1200
 ) {
   $_d-mid: "";
 
@@ -81,7 +81,7 @@
   $_f-fontWeight,
   $_f-lineHeight,
   $_f-letterSpacing,
-    $_c-color
+  $_c-color
 ) {
   font-family: $_f-fontFamily, Georgia, "Times New Roman", Times, serif;
   font-weight: $_f-fontWeight;

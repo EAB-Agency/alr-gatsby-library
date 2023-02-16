@@ -1,11 +1,7 @@
-@use "styles/sass/layouts";
-@use "alr-sass-utilities" as alr;
-@use "styles/sass/foundation/global";
-@use "styles/sass/foundation/config" as *;
-@use "styles/sass/foundation/components";
+@use 'styles/sass/layouts';
+@use 'styles/sass/foundation/config' as *;
+
 
 .contact-v3 {
-  .lp-intro-form {
-    // @include layouts.layout-survey1;
-  }
+    @include layouts.layout-contact3;
 }
