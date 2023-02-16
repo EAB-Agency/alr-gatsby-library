@@ -1,8 +1,6 @@
 @use "styles/sass/layouts";
-@use "alr-sass-utilities" as alr;
-@use "styles/sass/foundation/global";
 @use "styles/sass/foundation/config" as *;
-@use "styles/sass/foundation/components";
 
 .footer-v1 {
+  @include layouts.layout-footer1;
 }

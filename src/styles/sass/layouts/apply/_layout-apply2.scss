@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "sass:math";
-@use "../foundation/config" as *;
-@use "../foundation/components" as *;
+@use "../../foundation/config" as *;
+@use "../../foundation/components" as *;
 
 @mixin layout-apply2() {
   .lp-apply-content {
@@ -16,7 +16,7 @@
 
     &::before {
       background:
-        url("../../../assets/images/img-apply-sm.jpg") no-repeat
+        url("../../../../assets/images/img-apply-sm.jpg") no-repeat
         top / cover;
       content: "";
       height: 40vw;
@@ -30,7 +30,7 @@
 
     &::after {
       background:
-        url("../../../assets/images/img-apply-lg.jpg") no-repeat
+        url("../../../../assets/images/img-apply-lg.jpg") no-repeat
         left / cover;
       content: "";
       width: 50vw;
