@@ -5,15 +5,18 @@
 
 ;
 
-@mixin layout-apply1($sectionBgColor, $mq) {
+@mixin layout-apply1($sectionBgColor, $contentClass, $position, $mq) {
   background-color: $sectionBgColor;
 
   @media (min-width: $mq) {
-    .lp-apply-content {
-      @include containerStyle;
-
+    #{$contentClass} {
       width: 65%;
-      margin: 0 auto 0 0;
+
+      @if $position == "left" {
+        margin: 0 auto 0 0;
+      } @else if $position == "right" {
+        margin: 0 0 0 auto;
+      }
     }
 
     @content;
