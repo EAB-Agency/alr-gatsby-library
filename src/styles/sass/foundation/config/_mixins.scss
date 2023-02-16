@@ -27,9 +27,66 @@
   }
 }
 
-// @mixin bgImage ($bgColor, $fileName, $bgPosition: center center, $bgSize: cover) {
-//   background: $bgColor url(#{$fileName}) no-repeat $bgPosition / $bgSize;
+// @mixin pseudoImageAbove ($width: 100%, $height: 40vw) {
+//   &::before {
+//     content: '';
+//     display: block;
+//     width: $width;
+//     height: $height;
+
+//     @content;
+
+//   }
 // }
+
+// general padding mixin for section
+@mixin sectionPadding($paddingSm, $paddingLg) {
+  padding: $paddingSm;
+
+  @media (min-width: $mq) {
+    padding: $paddingLg;
+  }
+}
+
+// Use when pseudo image above section
+@mixin stackedContentPadding($contentClass, $paddingSm, $paddingLg, $mq: $mq-800) {
+  padding: 0;
+
+  #{$contentClass} {
+    padding: $paddingSm;
+  }
+
+  @media (min-width: $mq) {
+    padding: $paddingLg;
+
+    #{$contentClass} {
+      padding: 0;
+    }
+  }
+}
+
+@mixin bgImage($bgColor, $bgPosition: center center, $bgSize: cover, $fileName, $assetPath:"../../../../assets/images/") {
+  background: $bgColor url(#{$assetPath}#{$fileName}) no-repeat $bgPosition / $bgSize;
+}
+
+@mixin sectionImageStackedToBg($imgBgColor, $imgHeight, $imgMaxHeight, $imgSmPosition: center center, $imgLgPosition: center center, $imgFileSm, $imgFileLg, $mq: $mq-800, $imgAssetPath: "../../../../assets/images/") {
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: $imgHeight;
+    max-height: $imgMaxHeight;
+    background: $imgBgColor url(#{$imgAssetPath}#{$imgFileSm}) no-repeat $imgSmPosition / cover;
+  }
+
+  @media (min-width: $mq) {
+    background: $imgBgColor url(#{$imgAssetPath}#{$imgFileLg}) no-repeat $imgLgPosition / cover;
+
+    &::before {
+      display: none;
+    }
+  }
+}
 
 // Container Style Mixin
 @mixin containerStyle(

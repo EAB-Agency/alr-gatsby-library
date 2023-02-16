@@ -7,13 +7,17 @@ const IndexPage = () => (
   // TODO: build this page out as the home page
   <main className="hello">
     <div className="page-title">
-      <h1>Root Page</h1>
+      <h1>ALR Layout Library</h1>
     </div>
     <div className="intro-wrap">
-      <h2>About Guide</h2>
-      <p>Some descriptive copy about the layout...</p>
+      <h2>Let's Get Started</h2>
+      <p>
+        Navigate to different page elements using the menu in the top left
+        corner. When you find a layout you want to use, click the "Show Code for
+        Above" button and then copy the code to your files.
+      </p>
     </div>
-    <Testimonial />
+    {/* <Testimonial /> */}
   </main>
 );
 export default IndexPage;
