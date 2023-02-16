@@ -1,6 +1,6 @@
-@use 'styles/sass/layouts';
-@use 'styles/sass/foundation/config' as *;
+@use "styles/sass/layouts";
+@use "styles/sass/foundation/config" as *;
 
 .footer-v2 {
-    @include layouts.layout-footer2;
+  @include layouts.layout-footer2;
 }

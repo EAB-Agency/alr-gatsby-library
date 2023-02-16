@@ -1,7 +1,6 @@
-@use 'styles/sass/layouts';
-@use 'styles/sass/foundation/config' as *;
-
+@use "styles/sass/layouts";
+@use "styles/sass/foundation/config" as *;
 
 .contact-v2 {
-    @include layouts.layout-contact2;
+  @include layouts.layout-contact2;
 }

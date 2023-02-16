@@ -19,37 +19,46 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: variables.$c-lightGrey;
 }
 
 .wrapper {
   padding-bottom: 2rem;
 }
 
+.page-title,
+.intro-wrap {
+  max-width: config.$mq-1000;
+  width: 90%;
+  margin: auto;
+
+  p {
+    margin: auto;
+  }
+}
+
 .page-title {
-  padding-top: 4rem;
-}
+  padding: 0;
+  text-align: center;
 
-.page-title h1,
-.intro-wrap h2,
-.intro-wrap h3,
-.intro-wrap h4,
-.intro-wrap p,
-.code-block {
-  @include mixins.fluidRem("padding-right", 1rem, 4rem);
-  @include mixins.fluidRem("padding-left", 1rem, 4rem);
-}
+  h1 {
+    @include mixins.setFont("Roboto", 900, 3rem, 0.02rem, variables.$c-white );
+    @include mixins.fluidRem("font-size", 1rem, 2rem);
 
-.page-title h1 {
-  // $_f-fontFamily, $_f-fontWeight, $_f-lineHeight, $_f-letterSpacing, $_c-color
-  @include mixins.setFont(
-    "Roboto Slab",
-    700,
-    3rem,
-    0.02rem,
-    variables.$c-heading-color
-    );
-  @include mixins.fluidRem("font-size", 2.5rem, 3.5rem);
-  @include mixins.fluidRem("padding-bottom", 2rem, 4rem);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 1rem 2rem;
+    background: variables.$c-heading-color;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 500;
+
+    @media screen and (min-width: config.$mq-800) {
+      text-align: center;
+    }
+  }
 }
 
 .intro-wrap {
@@ -57,59 +66,51 @@ html {
   @include mixins.fluidRem("padding-bottom", 2rem, 3rem);
 
   h2 {
-    @include mixins.setFont(
-      "Roboto Slab",
-      300,
-      3rem,
-      0.02rem,
-      variables.$c-heading-color
-        );
-    @include mixins.fluidRem("font-size", 2.25rem, 3rem);
-    @include mixins.fluidRem("padding-bottom", 1.75rem, 2rem);
+    @include mixins.setFont("Roboto Slab", 300, 3rem, 0.02rem, variables.$c-heading-color);
+    @include mixins.fluidRem("font-size", 1.5rem, 2.5rem);
+
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
   }
 
   h3 {
-    @include mixins.setFont(
-      "Roboto Slab",
-      700,
-      2.5rem,
-      0.02rem,
-      variables.$c-heading-color
-        );
-    @include mixins.fluidRem("font-size", 2rem, 2.5rem);
+    @include mixins.setFont("Roboto Slab", 700, 2.5rem, 0.02rem, variables.$c-heading-color);
+    @include mixins.fluidRem("font-size", 1.65rem, 2.25rem);
+
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
   }
 
   p {
-    @include mixins.setFont(
-      "Roboto",
-      300,
-      2rem,
-      0.02rem,
-      variables.$c-neutral-black
-        );
-    @include mixins.fluidRem("font-size", 1rem, 1.25rem);
+    @include mixins.setFont("Roboto", 300, 2rem, 0.02rem, variables.$c-neutral-black);
+    @include mixins.fluidRem("font-size", 1rem, 1.15rem);
 
     width: 100%;
+    line-height: 1.4;
+  }
 
-    @media screen and (min-width: config.$mq-900) {
-      width: 80%;
-      margin: 0 auto;
+  @media screen and (min-width: config.$mq-800) {
+    h2,
+    h3,
+    h4 {
+      text-align: center;
+    }
+
+    p {
+      max-width: config.$mq-700;
+
+      ~ p {
+        margin-top: 1rem;
+      }
     }
   }
 }
 
-.page-title,
-.intro-wrap {
-  @include mixins.fluidRem("padding-right", 1rem, 4rem);
-  @include mixins.fluidRem("padding-left", 1rem, 4rem);
-}
-
-// wraps each layout
-
-.layout-section {
-  box-shadow: 0 0 7px rgb(0 0 0 / 50%);
-  margin: 1rem;
-}
+// .page-title,
+// .intro-wrap {
+//   @include mixins.fluidRem("padding-right", 1rem, 4rem);
+//   @include mixins.fluidRem("padding-left", 1rem, 4rem);
+// }
 
 // ----------
 // Navigation
@@ -119,7 +120,7 @@ html {
 }
 
 .top-nav {
-  position: relative;
+  position: fixed;
 
   .main-menu-btn {
     position: fixed;
@@ -191,7 +192,7 @@ html {
       1rem,
       0.02rem,
       variables.$c-neutral-black
-        );
+    );
     @include mixins.fluidRem("font-size", 1.125rem, 1.5rem);
 
     &:visited {
@@ -215,31 +216,69 @@ html {
 // ----------
 
 .code-block {
-  button.code-toggle.code-toggle-style {
+  @include mixins.fluidRem("padding-top", 1rem, 2rem);
+  @include mixins.fluidRem("padding-bottom", 1rem, 2rem);
+
+  border-bottom: 1px solid variables.$c-grey;
+
+  .code-block-wrapper {
+    max-width: config.$mq-1000;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  pre {
+    text-align: left;
+  }
+
+  button {
     border: none;
     border-radius: variables.$b-border-radius;
-    background-color: variables.$c-btn-secondary;
-    margin-right: 1.5rem;
-    transition: all 0.3s;
-  }
 
-  button.code-toggle.code-toggle-style:hover,
-  button.code-toggle.code-toggle-style:focus {
-    background-color: variables.$c-btn-secondary-hover;
-    color: white;
-  }
+    &.button-copy,
+    &.button-code {
+      transition: all 0.3s;
 
-  button[css="[object Object]"] {
-    border: 2px solid variables.$c-btn-tertiary;
-    border-radius: variables.$b-border-radius;
-    background-color: transparent;
-    color: variables.$c-btn-tertiary;
-    vertical-align: middle;
-  }
+      &:hover,
+      &:focus {
+        color: white;
+        border: none;
+      }
+    }
 
-  button[css="[object Object]"]:hover {
-    background-color: variables.$c-btn-tertiary;
-    color: white;
+    &.button-code {
+      background-color: variables.$c-btn-primary;
+
+      &:hover,
+      &:focus {
+        background-color: variables.$c-btn-primary-hover;
+      }
+    }
+
+    &.button-copy {
+      background-color: variables.$c-btn-secondary;
+      margin-left: 1.5rem;
+
+      &:hover,
+      &:focus {
+        background-color: variables.$c-btn-secondary-hover;
+      }
+    }
+
+    &[css="[object Object]"] {
+      border: 2px solid variables.$c-btn-tertiary;
+      border-radius: variables.$b-border-radius;
+      background-color: transparent;
+      color: variables.$c-btn-tertiary;
+      vertical-align: middle;
+
+      &:hover,
+      &:focus {
+        background-color: variables.$c-btn-tertiary;
+        color: white;
+      }
+    }
   }
 }
 
