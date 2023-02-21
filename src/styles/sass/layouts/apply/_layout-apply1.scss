@@ -1,16 +1,24 @@
 @use "sass:color";
 @use "sass:math";
 @use "../../foundation/config" as *;
-@use "../../foundation/components" as *;
+@use "../../foundation/components" as *
 
-@mixin layout-apply1($mq: $mq-900, $gridGap: 2rem, $marginTop: 4vw, $gridTemplateColumns: 1fr 1.5fr) {
-  background: $c-black url("../../../../assets/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-  padding: 6vw 0;
+;
 
-  .lp-apply-content {
-    @include containerStyle;
+@mixin layout-apply1($sectionBgColor, $contentClass, $position, $mq) {
+  background-color: $sectionBgColor;
 
-    width: 65%;
-    margin: 0 auto 0 0;
+  @media (min-width: $mq) {
+    #{$contentClass} {
+      width: 65%;
+
+      @if $position == "left" {
+        margin: 0 auto 0 0;
+      } @else if $position == "right" {
+        margin: 0 0 0 auto;
+      }
+    }
+
+    @content;
   }
 }

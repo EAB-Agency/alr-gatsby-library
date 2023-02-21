@@ -1,8 +1,15 @@
 @use "styles/sass/layouts";
 @use "styles/sass/foundation/config" as *;
 
-.version-2 {
+.apply-v2 {
   .lp-apply {
-    @include layouts.layout-apply2;
+    @include applyFormInlineEmail("(min-width: #{$mq-500}) and (max-width: #{$mq-800})");
+    @include applyFormInlineEmail("(min-width: #{$mq-1200})");
+    @include gridContentPadding(".lp-apply-content", 4vw 0, 6vw 0, $mq-800);
+    @include sectionImageStacked("top", $c-black, 35vw, 18rem, right center, "img-woman-cafe-lg.jpg", $mq-800);
+
+    @include layouts.layout-apply2($c-white, $mq-800, "right") {
+      @include bgImage($c-black, right center, cover, "img-woman-cafe-lg.jpg");
+    }
   }
 }
