@@ -50,8 +50,7 @@
   @extend %logo;
   @include fluidRem("width", 15rem, 18.75rem);
   @include fluidRem("height", 3.2rem, 4rem);
-
-  // background: url('img-logo.svg') no-repeat left center / contain;
+  background: url(../../../../assets/images/img-logo.svg) no-repeat left center / contain;
 }
 
 // Header
