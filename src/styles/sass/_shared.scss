@@ -4,7 +4,7 @@
 
 @use "foundation/config" as *;
 @use "foundation/global" as *;
-@use "foundation/components" as *;
+@use 'foundation/components' as *;
 
 // ================
 // Navigation
@@ -139,7 +139,7 @@
       width: auto;
       margin-right: 0.5rem;
 
-      ~ li {
+      ~li {
         margin-top: 0.75rem;
       }
 
@@ -189,7 +189,7 @@
       li {
         margin-right: 0;
 
-        ~ li {
+        ~li {
           margin-top: 0;
         }
       }

@@ -1,19 +1,16 @@
 {
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
     "extends": [
-        "wesbos"
+        "prettier"
+    ],
+    "plugins": [
+        "prettier"
     ],
     "rules": {
         "react/prop-types": 0,
-        "prettier/prettier": [
-            "error",
-            {
-                "singleQuote": true,
-                "tabWidth": 2,
-                "endOfLine": "auto"
-            }
-        ]
-    },
-    "plugins": [
-        "prettier"
-    ]
+        "prettier/prettier": "error"
+    }
 }
