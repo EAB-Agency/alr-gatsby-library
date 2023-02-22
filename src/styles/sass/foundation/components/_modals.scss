@@ -80,7 +80,7 @@ $x-modalFormat: "acs"; // 'rms', 'acs', or 'rope'
   }
 }
 
-@if $x-modalFormat == "fancybox" {
+@if $x-modalFormat =="fancybox" {
   // ================
   // Fancybox Modals
 
@@ -104,7 +104,7 @@ $x-modalFormat: "acs"; // 'rms', 'acs', or 'rope'
   .fancybox-close {
     @extend %modal-close;
   }
-} @else if $x-modalFormat == "acs" {
+} @else if $x-modalFormat =="acs" {
   // ================
   // ACS - Fancybox Modals
 
@@ -130,7 +130,7 @@ $x-modalFormat: "acs"; // 'rms', 'acs', or 'rope'
   [class*="fancybox-close"] {
     @extend %modal-close;
   }
-} @else if $x-modalFormat == "rope" {
+} @else if $x-modalFormat =="rope" {
   // ================
   // ROPE Modals
 

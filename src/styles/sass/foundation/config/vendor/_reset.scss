@@ -3,6 +3,7 @@
 *::after {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: inherit;
 }
 
 html,
@@ -62,12 +63,6 @@ html {
     "Segoe UI Emoji",
     "Segoe UI Symbol";
   text-size-adjust: 100%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
 
 img,

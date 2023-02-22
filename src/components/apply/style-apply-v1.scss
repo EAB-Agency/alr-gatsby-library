@@ -1,16 +1,24 @@
-@use "styles/sass/layouts";
-@use "alr-sass-utilities" as alr;
-@use "styles/sass/foundation/global";
+@use "sass:color";
+@use "sass:math";
 @use "styles/sass/foundation/config" as *;
-@use "styles/sass/foundation/components";
+@use "styles/sass/foundation/components" as *;
 
 .apply-v1 {
-  .button {
-    @include alr.button-color(red, green, blue, purple, yellow);
-  }
-
   .lp-apply {
-    @include layouts.layout-apply1;
     @include applyFormInlineEmail("(min-width: #{$mq-500})");
   }
 }
+
+// .apply-v1 {
+//   .lp-apply {
+//     @include applyFormInlineEmail("(min-width: #{$mq-500})");
+//     @include stackedContentPadding(".lp-apply-content", 4vw 0, 6vw 0, $mq-800);
+//     @include sectionImageStackedToBg($c-black, 35vw, 17rem, center 72%, right center, "img-woman-cafe.jpg", "img-woman-cafe-lg.jpg", $mq-800);
+
+//     @include layouts.layout-apply1($c-white, ".lp-apply-content", "left", $mq-800) {
+//       .lp-apply-content {
+//         @include containerStyle;
+//       }
+//     }
+//   }
+// }

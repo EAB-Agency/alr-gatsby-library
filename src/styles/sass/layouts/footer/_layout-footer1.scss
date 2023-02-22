@@ -1,0 +1,54 @@
+@use "sass:color";
+@use "sass:math";
+@use "../../foundation/config" as *;
+@use "../../foundation/components" as *;
+
+
+.school-footer {
+  @include fluidRem("padding", 1rem 0, 3rem 0);
+
+  .school-logo {
+    margin: auto;
+    background-position: center;
+    @include fluidRem("margin-bottom", 1rem, 1.5rem);
+  }
+
+  .school-footer-content {
+    @include fluidRem("padding", 1rem 0, 1.5rem 0);
+    border: 0 solid $c-black;
+    border-width: 2px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    text-align: center;
+
+    address {
+      margin: 0;
+    }
+  }
+
+  .school-footer-links {
+    margin: 0;
+
+    li {
+      list-style-type: none;
+
+      a {
+        font-weight: 400;
+        border-bottom: none;
+        color: $c-link;
+
+        &:hover,
+        &:focus {
+          color: darken($c-link, 10%);
+          text-decoration: underline;
+        }
+      }
+
+    ~ li {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

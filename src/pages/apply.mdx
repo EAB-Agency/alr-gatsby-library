@@ -1,42 +1,42 @@
-import ApplyOne from 'components/apply/apply1';
-import ApplyTwo from 'components/apply/apply2';
-import ApplyThree from 'components/apply/apply3';
-import ApplyThreeStyles from '!!raw-loader!../components/apply/style-apply-v3.scss';
+import ApplyOne from "components/apply/apply1";
+import ApplyTwo from "components/apply/apply2";
+import ApplyThree from "components/apply/apply3";
+import ApplyThreeStyles from "!!raw-loader!../components/apply/style-apply-v3.scss";
 
 <main class="page-main">
 
-<div class="page-title"># Apply Layouts</div>
+<div class="page-title">
+	# Apply Layouts
+</div>
 
 {/* =========================== Layout 1 =========================== */}
-
-<!-- prettier-ignore -->
 <div class="intro-wrap">
-	## Apply Layout 1 
-  Some descriptive copy about the layout. In eiusmod deserunt
-	enim do aute aliqua sunt. Id in ad proident ullamco ut non amet. Tempor mollit
-	est duis dolor reprehenderit cillum reprehenderit consequat qui. Incididunt
-	incididunt sint cillum occaecat amet et ut aliqua qui commodo.
+  ## Apply Layout 1
+  ### Apply Container Over Full Background Image 
+	This layout requires a strong background image that supports this layout. You will need enough negative space in the area that the apply container is placed. 
+
+	If you have a subject in your photo, make sure their eyes are directing towards the apply container, or their movement is gesturing towards the container.
 </div>
 
 <ApplyOne />
 
-[//]: # '<pre>'
+[//]: # "<pre>"
 [//]: # '<code className="language-scss">{ApplyThreeStyles}</code>'
-[//]: # '</pre>'
+[//]: # "</pre>"
 
 ```scss
-@use 'layouts' as layouts;
+@use "layouts" as layouts;
 #layout-a {
 }
 ```
 
 {/* =========================== Layout 2 =========================== */}
 
+
 <div class="intro-wrap">
-	## Apply Layout 2 Some descriptive copy about the layout. In eiusmod deserunt
-	enim do aute aliqua sunt. Id in ad proident ullamco ut non amet. Tempor mollit
-	est duis dolor reprehenderit cillum reprehenderit consequat qui. Incididunt
-	incididunt sint cillum occaecat amet et ut aliqua qui commodo.
+  ## Apply Layout 2
+  ### Two Column Layout
+	All apply content like copy and form are on one side and the image is on the other. This layout utilizes grids.
 </div>
 
 <ApplyTwo />
@@ -52,8 +52,9 @@ import ApplyThreeStyles from '!!raw-loader!../components/apply/style-apply-v3.sc
 {/* =========================== Layout 3 =========================== */}
 
 <div class="intro-wrap">
-	## Apply Layout 3 Some descriptive copy about the layout. In eiusmod deserunt
-	enim do aute aliqua sunt. Id in ad proident ullamco ut non amet.
+  ## Apply Layout 3 
+	Some descriptive copy about the layout. In eiusmod deserunt
+  enim do aute aliqua sunt. Id in ad proident ullamco ut non amet.
 </div>
 
 <ApplyThree />
