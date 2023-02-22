@@ -1,15 +1,25 @@
-@use "styles/sass/layouts";
+@use "sass:color";
+@use "sass:math";
 @use "styles/sass/foundation/config" as *;
+@use "styles/sass/foundation/components" as *;
 
 .apply-v2 {
   .lp-apply {
     @include applyFormInlineEmail("(min-width: #{$mq-500}) and (max-width: #{$mq-800})");
     @include applyFormInlineEmail("(min-width: #{$mq-1200})");
-    @include gridContentPadding(".lp-apply-content", 4vw 0, 6vw 0, $mq-800);
-    @include sectionImageStacked("top", $c-black, 35vw, 18rem, right center, "img-woman-cafe-lg.jpg", $mq-800);
-
-    @include layouts.layout-apply2($c-white, $mq-800, "right") {
-      @include bgImage($c-black, right center, cover, "img-woman-cafe-lg.jpg");
-    }
   }
 }
+
+// old code
+// .apply-v2 {
+//   .lp-apply {
+//     @include applyFormInlineEmail("(min-width: #{$mq-500}) and (max-width: #{$mq-800})");
+//     @include applyFormInlineEmail("(min-width: #{$mq-1200})");
+//     @include gridContentPadding(".lp-apply-content", 4vw 0, 6vw 0, $mq-800);
+//     @include sectionImageStacked("top", $c-black, 35vw, 18rem, right center, "img-woman-cafe-lg.jpg", $mq-800);
+
+//     @include layouts.layout-apply2($c-white, $mq-800, "right") {
+//       @include bgImage($c-black, right center, cover, "img-woman-cafe-lg.jpg");
+//     }
+//   }
+// }
