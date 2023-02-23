@@ -21,14 +21,9 @@ import ApplyThreeStyles from "!!raw-loader!../components/apply/style-apply-v3.sc
 
 <ApplyOne />
 
-[//]: # "<pre>"
-[//]: # '<code className="language-scss">{ApplyThreeStyles}</code>'
-[//]: # "</pre>"
+```scss:title=styles.scss
 
-```scss
-@use "layouts" as layouts;
-#layout-a {
-}
+
 ```
 
 {/* =========================== Layout 2 =========================== */}
@@ -44,11 +39,8 @@ import ApplyThreeStyles from "!!raw-loader!../components/apply/style-apply-v3.sc
 <ApplyTwo />
 
 ```scss:title=styles.scss
-@use 'layouts';
 
- .lp-apply {
-    @include layouts.layout-a();
-  }
+
 ```
 
 {/* =========================== Layout 3 =========================== */}
@@ -64,14 +56,25 @@ import ApplyThreeStyles from "!!raw-loader!../components/apply/style-apply-v3.sc
 <ApplyThree />
 
 ```scss:title=styles.scss
-@use 'layouts' as layouts;
 
-#layout-a {
-  @include layouts.layout-b;
-}
+
 ```
 
 {/* =========================== Layout 4 =========================== */}
+
+<div class="intro-wrap">
+  ## Apply Layout 4
+  ### Full Width Image with Overlapping Apply Content
+  #### Small Screens: Title Over Full Width Image
+	All apply content like copy and form are on one side and the image is on the other. This layout utilizes grids.
+</div>
+
+<ApplyFour />
+
+```scss:title=styles.scss
+
+
+```
 
 {/* =========================== Layout 5 =========================== */}
 
