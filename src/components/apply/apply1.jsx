@@ -11,7 +11,11 @@ const styleSheet = require('!!raw-loader!./style-apply-v1.scss');
 const applyOne = () => (
   <div className="apply-v1 layout-section">
     <DefaultApply />
-    <SnippetToggler fileName="style-apply-v1.scss" code={styleSheet.default} />
+    <SnippetToggler
+      fileName="style-apply-v1.scss"
+      code={styleSheet.default}
+      lineNumbersToHide="1-3"
+    />
   </div>
 );
 
