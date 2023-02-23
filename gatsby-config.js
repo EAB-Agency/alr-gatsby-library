@@ -32,6 +32,7 @@ module.exports = {
         pages: path.join(__dirname, 'src', 'pages'),
         images: path.join(__dirname, 'src', 'assets', 'images'),
         fonts: path.join(__dirname, 'src', 'assets', 'fonts'),
+        utils: path.join(__dirname, 'src', 'components', 'utils'),
         library: path.join(__dirname, 'src', 'styles', 'sass'),
       },
     },
