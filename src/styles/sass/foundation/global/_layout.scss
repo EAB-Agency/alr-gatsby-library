@@ -32,6 +32,11 @@
   @include center;
 }
 
+@mixin fullWidth () {
+  max-width: none;
+  width: 100%;
+}
+
 // ================
 // Major Layout Elements
 

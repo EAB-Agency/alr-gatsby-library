@@ -3,47 +3,54 @@
 @use "styles/sass/foundation/config" as *;
 @use "styles/sass/foundation/components" as *;
 
+
 .apply-v3 {
-  .lp-apply {
-    @include applyFormInlineEmail("(min-width: #{$mq-500})");
-  }
-}
 
-@mixin layout-apply3() {
-  padding: 4vw 0;
-
-  .lp-apply-wrapper {
+  .lp-apply {	
+    padding: 4vw 0 0;
+    background: $c-white;
+  
     &::after {
-      content: "";
+      content: '';
       display: block;
       width: 100%;
       height: 30vw;
-      background:
-        url("/assets/images/img-apply-sm.jpg") no-repeat center /
-        cover;
-      margin-top: 4vw;
+      background: url(#{$x-imgAssetPath}img-woman-cafe-lg.jpg) no-repeat right 55% / cover;
     }
-  }
-
-  @media (min-width: $mq-900) {
-    .lp-apply-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      grid-gap: 2rem;
-
+  
+    @media (min-width: $mq-900) {
+      padding: 4vw 0;
+  
       &::after {
         display: none;
       }
 
-      &::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background:
-          url("/assets/images/img-apply-lg.jpg") no-repeat center /
-          cover;
+      .lp-apply-wrapper {
+        padding-bottom: 0;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "image content";
+        grid-gap: 3rem;
+        align-items: center;
+        
+        &::before {
+          content: '';
+          display: block;
+          background: url(#{$x-imgAssetPath}img-woman-cafe.jpg) no-repeat 60% center / cover;
+          transform: scaleX(-1);
+          height: 100%;
+          width: 100%;
+          grid-area: image;
+        }
+
+        .lp-apply-content {
+          padding: 2vw 0;
+        }
       }
+      
     }
   }
 }
+
+

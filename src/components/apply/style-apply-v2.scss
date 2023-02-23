@@ -3,10 +3,8 @@
 @use "styles/sass/foundation/config" as *;
 @use "styles/sass/foundation/components" as *;
 
-
-$d-gridCalc: calc(#{math.div((100% - $d-centerWidth), 2)});
-$d-gridMaxWidth: math.div($d-centerMaxWidth, 1.8);
-
+$d-titleMargin: calc(((#{math.div((100% - $d-centerWidth), 2)}) + 1%) * -1);
+$d-titlePadding: calc((#{math.div((100% - $d-centerWidth), 2)}) + 1%);
 
 .apply-v2 {
   .lp-apply {
@@ -16,22 +14,21 @@ $d-gridMaxWidth: math.div($d-centerMaxWidth, 1.8);
     padding: 0;
 
     .lp-apply-content {
-      padding: 4vw 0;
+      padding: 0 0 4vw;
     }
 
     @media (max-width: maxMQ($mq-800)) {
-      &::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 35vw;
-        max-height: 18rem;
-        background: $c-black url(#{$x-imgAssetPath}img-woman-cafe.jpg) no-repeat right center / cover;
+      
+      .lp-apply-title {
+        padding: 20vw $d-titlePadding 2vw;
+        margin: 0 $d-titleMargin 4vw;
+        background: $c-black url(#{$x-imgAssetPath}img-woman-cafe.jpg) no-repeat center 60% / cover;
+        color: $c-white;
       }
     }
     
     @media (min-width: $mq-800) {
-      >.center {
+      .lp-apply-wrapper {
         width: 100%;
         max-width: none;
         display: grid;
@@ -58,7 +55,7 @@ $d-gridMaxWidth: math.div($d-centerMaxWidth, 1.8);
     }
 
     @media (min-width: $mq-1600) {
-      >.center {
+      .lp-apply-wrapper {
         // adjust math.div formula at top for different widths
         grid-template-columns: auto $d-gridMaxWidth 3% $d-gridMaxWidth auto;
       }

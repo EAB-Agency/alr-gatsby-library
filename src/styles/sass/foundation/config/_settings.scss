@@ -2,6 +2,8 @@
 // Settings
 // ================
 
+@use "sass:math";
+
 // ================
 // Fonts
 
@@ -52,6 +54,8 @@ $d-centerWidth: 90%;
 $d-sectionPaddingSm: 4vw 0;
 $d-sectionPaddingLg: 6vw 0;
 
+$d-gridCalc: calc(#{math.div((100% - $d-centerWidth), 2)});
+$d-gridMaxWidth: math.div($d-centerMaxWidth, 1.8);
 
 $t-transition: all 0.25s ease-in-out;
 
