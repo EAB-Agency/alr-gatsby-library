@@ -78,11 +78,11 @@
   }
 }
 
-@mixin bgImage($bgColor, $bgPosition: center center, $bgSize: cover, $fileName, $assetPath:"../../../../assets/images/") {
+@mixin bgImage($bgColor, $bgPosition: center center, $bgSize: cover, $fileName, $assetPath:"/images/") {
   background: $bgColor url(#{$assetPath}#{$fileName}) no-repeat $bgPosition / $bgSize;
 }
 
-@mixin sectionImageStackedToBg($imgBgColor, $imgHeight, $imgMaxHeight, $imgSmPosition: center center, $imgLgPosition: center center, $imgFileSm, $imgFileLg, $mq: $mq-800, $imgAssetPath: "../../../../assets/images/") {
+@mixin sectionImageStackedToBg($imgBgColor, $imgHeight, $imgMaxHeight, $imgSmPosition: center center, $imgLgPosition: center center, $imgFileSm, $imgFileLg, $mq: $mq-800, $imgAssetPath: "/images/") {
   &::before {
     content: "";
     display: block;
@@ -101,7 +101,7 @@
   }
 }
 
-@mixin sectionImageStacked($imgPosition, $imgBgColor, $imgHeight, $imgMaxHeight, $imgBgPosition: center center, $fileName, $maxMQ, $imgAssetPath: "../../../../assets/images/") {
+@mixin sectionImageStacked($imgPosition, $imgBgColor, $imgHeight, $imgMaxHeight, $imgBgPosition: center center, $fileName, $maxMQ, $imgAssetPath: "/images/") {
   @media (max-width: maxMQ($maxMQ)) {
     @if $imgPosition == "top" {
       &::before {

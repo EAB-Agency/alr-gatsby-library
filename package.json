@@ -37,6 +37,7 @@
         "gatsby": "^5.5.0",
         "gatsby-design-tokens": "^5.5.0",
         "gatsby-mdx": "^1.0.0",
+        "gatsby-plugin-alias-imports": "^1.0.5",
         "gatsby-plugin-mdx": "^5.5.0",
         "gatsby-plugin-sass": "^6.5.0",
         "gatsby-plugin-sitemap": "^6.5.0",
@@ -52,27 +53,22 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-live": "^3.1.1",
-        "sass": "^1.58.0"
+        "sass": "^1.58.0",
+        "stylelint-config-standard": "^30.0.1"
     },
     "devDependencies": {
         "eslint": "^8.0.0",
-        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-config-react-app": "^7.0.1",
         "gatsby-plugin-root-import": "^2.0.9",
         "husky": "^8.0.0",
-        "lint-staged": "^13.1.1",
+        "lint-staged": "^13.1.2",
         "postcss": "^8.4.21",
         "postcss-scss": "^4.0.6",
+        "prettier": "^2.8.4",
         "resolve-url-loader": "^5.0.0",
-        "stylelint": "14.16.1",
-        "stylelint-config-prettier": "^9.0.5",
-        "stylelint-config-standard": "^30.0.1",
+        "stylelint": "^15.1.0",
         "stylelint-config-standard-scss": "^6.1.0",
         "stylelint-scss": "^4.3.0",
         "typescript": "^4.8.4"
-    },
-    "eslintConfig": {
-        "extends": [
-            "wesbos"
-        ]
     }
 }

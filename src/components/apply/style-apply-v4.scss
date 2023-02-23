@@ -1,51 +1,45 @@
 @use "sass:color";
 @use "sass:math";
-@use "styles/sass/foundation/config" as *;
-@use "styles/sass/foundation/components" as *;
-
+@use "library/foundation/config" as *;
+@use "library/foundation/components" as *;
 
 .apply-v4 {
-
   .lp-apply {
     padding: 0 0 4vw;
     background: $c-lightGrey;
     position: relative;
-  
+
     &::before {
-      content: '';
+      content: "";
       display: block;
       background: $c-white url(#{$x-imgAssetPath}img-woman-cafe-lg.jpg) no-repeat 80% 57% / cover;
       width: 100%;
       height: 30vw;
       max-height: 25rem;
     }
-  
+
     .lp-apply-content {
       position: relative;
       margin: 0 auto;
       max-width: $mq-700;
-      @include containerStyle();
+
+      @include containerStyle;
     }
-  
-  
+
     @media (max-width: maxMQ($mq-800)) {
       .lp-apply-wrapper {
         @include fullWidth;
       }
     }
-  
+
     @media (min-width: $mq-800) {
       padding: 12rem 0 4vw;
-  
+
       &::before {
         position: absolute;
         left: 0;
         top: 0;
       }
-  
     }
-  
   }
 }
-
-

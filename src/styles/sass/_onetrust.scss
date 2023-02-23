@@ -39,7 +39,9 @@ $c-bannerFontColor: $c-white;
 
 @mixin onetrust-close {
   &::after {
+    // stylelint-disable-next-line
     content: ; // Your close icon
+    // stylelint-disable-next-line
     font-family: ; // Your icon font family
     // Your styles here
   }
