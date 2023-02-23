@@ -26,6 +26,7 @@ $_f-fontStyle: normal) {
 // More info: https://wiki.eab.com/display/RWD/mres%28%29+mixin
 
 @mixin mres($_mq-density: 1.1) {
+  /* stylelint-disable-next-line media-feature-name-no-unknown */
   @media (min-device-pixel-ratio: $_mq-density),
     (min-resolution: $_mq-density + "dppx") {
     @content;
@@ -254,7 +255,7 @@ $_x-stackClass: ".question-stacked"
 $_d-minRem,
 $_d-maxRem,
 $_mq-min: settings.$mq-300,
-  $_mq-max: settings.$mq-1200) {
+$_mq-max: settings.$mq-1200) {
   $_d-mid: "";
 
   @for $_x-i from 1 through length($_d-maxRem) {

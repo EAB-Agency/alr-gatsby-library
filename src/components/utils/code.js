@@ -1,18 +1,18 @@
 /* eslint-disable react/destructuring-assignment */
-import React from 'react';
-import Highlight, { defaultProps } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/nightOwl';
-import Copy from './copy';
+import React from 'react'
+import Highlight, { defaultProps } from 'prism-react-renderer'
+import theme from 'prism-react-renderer/themes/nightOwl'
+import Copy from './copy'
 
 const Code = (props) => {
-  const className = props.children.props.className || '';
-  const code = props.children.props.children.trim();
-  const language = className.replace(/language-/, '');
-  const { file } = props.children.props;
+  const className = props.children.props.className || ''
+  const code = props.children.props.children.trim()
+  const language = className.replace(/language-/, '')
+  const { file } = props.children.props
 
   // create a show/hide button for the code block
-  const [showCode, setShowCode] = React.useState(false);
-  const toggleCode = () => setShowCode(!showCode);
+  const [showCode, setShowCode] = React.useState(false)
+  const toggleCode = () => setShowCode(!showCode)
 
   return (
     <div className="code-block">
@@ -34,12 +34,7 @@ const Code = (props) => {
               }}
               content={code}
             />
-            <Highlight
-              {...defaultProps}
-              code={code}
-              language={language}
-              theme={theme}
-            >
+            <Highlight {...defaultProps} code={code} language={language} theme={theme}>
               {({ style, tokens, getLineProps, getTokenProps }) => (
                 <pre className={className} style={style}>
                   <div>{`Language: ${language}`}</div>
@@ -63,7 +58,7 @@ const Code = (props) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Code;
+export default Code

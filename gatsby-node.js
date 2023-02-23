@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -8,5 +8,5 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         '@styles': path.resolve(__dirname, 'src/styles'),
       },
     },
-  });
-};
+  })
+}

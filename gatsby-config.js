@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -27,11 +27,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
-        components: path.join(__dirname, 'src/components'),
-        layouts: path.join(__dirname, 'src/layouts'),
-        templates: path.join(__dirname, 'src/templates'),
-        styles: path.join(__dirname, 'src/styles'),
-        pages: path.join(__dirname, 'src/pages'),
+        components: path.join(__dirname, 'src', 'components'),
+        styles: path.join(__dirname, 'src', 'images'),
+        pages: path.join(__dirname, 'src', 'pages'),
+        images: path.join(__dirname, 'src', 'images'),
       },
     },
     {
@@ -53,4 +52,4 @@ module.exports = {
       },
     },
   ],
-};
+}
