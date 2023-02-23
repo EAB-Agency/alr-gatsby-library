@@ -18,7 +18,7 @@
       background: url(#{$x-imgAssetPath}img-woman-cafe-lg.jpg) no-repeat right 55% / cover;
     }
   
-    @media (min-width: $mq-900) {
+    @media (min-width: $mq-800) {
       padding: 4vw 0;
   
       &::after {
