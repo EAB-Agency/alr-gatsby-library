@@ -1,20 +1,20 @@
-import React, { useRef } from 'react'
-import useScript from '../../hooks/useScript'
+import React, { useRef } from 'react';
+import useScript from '../../hooks/useScript';
 
 //* ==========
 //* EAB Acquia Form
 // const x = `//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=2`;
 
 const AcquiaForm = ({ src, multiple }) => {
-  const scriptRef = useRef(null)
-  const status = useScript(src, scriptRef, multiple)
+  const scriptRef = useRef(null);
+  const status = useScript(src, scriptRef, multiple);
 
   return (
     <div ref={scriptRef} id="mauticform">
       {status === 'loading' && 'Loading...'}
       {status === 'error' && 'Error'}
     </div>
-  )
-}
+  );
+};
 
-export default AcquiaForm
+export default AcquiaForm;

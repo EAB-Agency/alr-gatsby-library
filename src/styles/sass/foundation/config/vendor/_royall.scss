@@ -276,7 +276,7 @@ $_mq-max: settings.$mq-1200) {
       $_d-mid: $_d-mid (+" ");
     }
 
-    $_d-mid: $_d-mid + $_d-iMid;
+    $_d-mid: calc(#{$_d-mid} + #{$_d-iMid});
   }
 
   #{$_x-prop}: #{$_d-minRem};

@@ -1,22 +1,29 @@
-import React, { useState } from 'react'
-import { Link } from 'gatsby'
-import { Divide as Hamburger } from 'hamburger-react'
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
+import { Divide as Hamburger } from 'hamburger-react';
 
 const Nav = () => {
   // this sets a variable (isOpen) that you can use to determine if the menu is open or closed
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
   const closeMenu = () => {
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
 
   return (
     <nav className="top-nav" id="topNav">
-      <Hamburger toggled={isOpen} toggle={toggleMenu} className="toggle main-menu-btn" />
-      <div id="menu" className={`main-menu-overlay menu-nav${isOpen ? ' show-menu' : ''}`}>
+      <Hamburger
+        toggled={isOpen}
+        toggle={toggleMenu}
+        className="toggle main-menu-btn"
+      />
+      <div
+        id="menu"
+        className={`main-menu-overlay menu-nav${isOpen ? ' show-menu' : ''}`}
+      >
         <div className="main-menu" id="mainMenu">
           <Link to="/header" onClick={closeMenu}>
             Header/Nav
@@ -48,7 +55,7 @@ const Nav = () => {
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

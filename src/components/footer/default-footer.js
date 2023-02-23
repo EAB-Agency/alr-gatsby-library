@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const DefaultFooter = () => (
   <footer className="school-footer">
@@ -15,18 +15,28 @@ const DefaultFooter = () => (
 
       <ul className="school-footer-links">
         <li>
-          <a data-fancybox="help-modal" data-modal="true" data-src="#help-modal" href="/">
+          <a
+            data-fancybox="help-modal"
+            data-modal="true"
+            data-src="#help-modal"
+            href="/"
+          >
             Technical Help
           </a>
         </li>
         <li>
-          <a data-fancybox="privacy-modal" data-modal="true" data-src="#privacy-modal" href="/">
+          <a
+            data-fancybox="privacy-modal"
+            data-modal="true"
+            data-src="#privacy-modal"
+            href="/"
+          >
             Privacy Policy
           </a>
         </li>
       </ul>
     </div>
   </footer>
-)
+);
 
-export default DefaultFooter
+export default DefaultFooter;

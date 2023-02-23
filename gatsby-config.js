@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -19,7 +19,7 @@ module.exports = {
         },
         useResolveUrlLoader: {
           options: {
-            sourceMap: true, //default is false
+            sourceMap: true, // default is false
           },
         },
       },
@@ -27,10 +27,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
+        hooks: path.join(__dirname, 'src', 'hooks'),
         components: path.join(__dirname, 'src', 'components'),
-        styles: path.join(__dirname, 'src', 'images'),
         pages: path.join(__dirname, 'src', 'pages'),
-        images: path.join(__dirname, 'src', 'images'),
+        images: path.join(__dirname, 'src', 'assets', 'images'),
+        fonts: path.join(__dirname, 'src', 'assets', 'fonts'),
+        library: path.join(__dirname, 'src', 'styles', 'sass'),
       },
     },
     {
@@ -52,4 +54,4 @@ module.exports = {
       },
     },
   ],
-}
+};

@@ -1,5 +1,5 @@
-import React from 'react'
-import AcquiaForm from '../utils/AcquiaForm'
+import React from 'react';
+import AcquiaForm from '../utils/AcquiaForm';
 
 const DefaultSurvey = () => (
   <section className="lp-intro-form">
@@ -9,8 +9,8 @@ const DefaultSurvey = () => (
           <h2 className="lp-intro-title">Let us know your future plans!</h2>
           <div className="intro-copy">
             <p>
-              Thank the prospect and encourage them to fill out the survey. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit.
+              Thank the prospect and encourage them to fill out the survey.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>
         </div>
@@ -29,12 +29,19 @@ const DefaultSurvey = () => (
             <div className="lp-form-footer" />
           </div>
 
-          <div className="lp-form-thanks form-thanks" id="form-thanks" style={{ display: 'none' }}>
+          <div
+            className="lp-form-thanks form-thanks"
+            id="form-thanks"
+            style={{ display: 'none' }}
+          >
             <h3 className="lp-form-thanks-title">Thank you!</h3>
-            <p>We'll be sure to keep in touch with important news and updates.</p>
+            <p>
+              We'll be sure to keep in touch with important news and updates.
+            </p>
             <hr />
             <p>
-              Ready to apply to global-token=school-name-alt now? That's great! Simply
+              Ready to apply to global-token=school-name-alt now? That's great!
+              Simply
               <a href="global-token=application-url" id="link_apply_srv_thanks">
                 submit your application
               </a>{' '}
@@ -46,6 +53,6 @@ const DefaultSurvey = () => (
       </div>
     </div>
   </section>
-)
+);
 
-export default DefaultSurvey
+export default DefaultSurvey;

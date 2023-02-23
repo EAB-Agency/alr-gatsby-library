@@ -1,27 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const copyToClipboard = (content) => {
-  const el = document.createElement(`textarea`)
-  el.value = content
-  el.setAttribute(`readonly`, ``)
-  el.style.position = `absolute`
-  el.style.left = `-9999px`
-  document.body.appendChild(el)
-  el.select()
-  document.execCommand(`copy`)
-  document.body.removeChild(el)
-}
+  const el = document.createElement(`textarea`);
+  el.value = content;
+  el.setAttribute(`readonly`, ``);
+  el.style.position = `absolute`;
+  el.style.left = `-9999px`;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand(`copy`);
+  document.body.removeChild(el);
+};
 
 const delay = (duration) =>
   // eslint-disable-next-line no-promise-executor-return
-  new Promise((resolve) => setTimeout(resolve, duration))
+  new Promise((resolve) => setTimeout(resolve, duration));
 
 function Copy({ content, duration, fileName, trim = false }) {
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false);
 
   const label = copied
     ? `${fileName ? `${fileName} ` : ``}copied to clipboard`
-    : `${fileName ? `${fileName}: ` : ``}copy code to clipboard`
+    : `${fileName ? `${fileName}: ` : ``}copy code to clipboard`;
 
   return (
     <button
@@ -38,17 +38,17 @@ function Copy({ content, duration, fileName, trim = false }) {
         ':active': {},
       }}
       onClick={async () => {
-        copyToClipboard(trim ? content.trim() : content)
+        copyToClipboard(trim ? content.trim() : content);
 
-        setCopied(true)
+        setCopied(true);
 
-        await delay(duration)
+        await delay(duration);
 
-        setCopied(false)
+        setCopied(false);
       }}
     >
       {copied ? `Copied` : `Copy`}
     </button>
-  )
+  );
 }
-export default Copy
+export default Copy;
