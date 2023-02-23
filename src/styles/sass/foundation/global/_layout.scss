@@ -21,7 +21,7 @@
 // ================
 // Layout Modules
 
-@mixin center($_maxWidth: $mq-1200, $_width: 90%) {
+@mixin center($_maxWidth: $d-centerMaxWidth, $_width: $d-centerWidth) {
   width: $_width;
   max-width: $_maxWidth;
   margin: auto;
