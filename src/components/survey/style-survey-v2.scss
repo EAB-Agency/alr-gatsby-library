@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "sass:math";
-@use "styles/sass/foundation/config" as *;
-@use "styles/sass/foundation/components" as *;
+@use "library/foundation/config" as *;
+@use "library/foundation/components" as *;
 
 .survey-v2 {
   .lp-intro-form {

@@ -5,7 +5,7 @@
         "titleBar.activeForeground": "#F2FDF0"
     },
     "[javascript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.defaultFormatter": "vscode.typescript-language-features",
         "editor.formatOnSave": false
     },
     // "[css][scss]": {

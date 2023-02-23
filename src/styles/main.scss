@@ -1,5 +1,5 @@
 // import partials used by all pages
-@use "styles/sass/shared";
+@use "library/shared";
 
 // import partials only used here
 // Note: Changed here to use the new @use syntax
@@ -120,12 +120,6 @@ html {
     }
   }
 }
-
-// .page-title,
-// .intro-wrap {
-//   @include mixins.fluidRem("padding-right", 1rem, 4rem);
-//   @include mixins.fluidRem("padding-left", 1rem, 4rem);
-// }
 
 // ----------
 // Navigation

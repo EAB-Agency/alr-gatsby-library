@@ -1,4 +1,3 @@
-/* stylelint-disable */
 // ================
 // Royall Mixins
 // ================
@@ -10,12 +9,10 @@
 // Mixin: Outputs a @font-face rule
 // More info: https://wiki.eab.com/display/RWD/fontFace%28%29+mixin
 
-@mixin fontFace(
-  $_p-fileName,
-  $_f-fontFamily: $_fileName,
-  $_f-fontWeight: normal,
-  $_f-fontStyle: normal
-) {
+@mixin fontFace($_p-fileName,
+$_f-fontFamily: $_fileName,
+$_f-fontWeight: normal,
+$_f-fontStyle: normal) {
   @font-face {
     font-family: "#{$_f-fontFamily}";
     font-weight: $_f-fontWeight;
@@ -29,7 +26,8 @@
 // More info: https://wiki.eab.com/display/RWD/mres%28%29+mixin
 
 @mixin mres($_mq-density: 1.1) {
-  @media (-webkit-min-device-pixel-ratio: $_mq-density),
+  /* stylelint-disable-next-line media-feature-name-no-unknown */
+  @media (min-device-pixel-ratio: $_mq-density),
     (min-resolution: $_mq-density + "dppx") {
     @content;
   }
@@ -39,12 +37,10 @@
 // Mixin: Outputs two background images, one normal, and one optimized for hi-res screens
 // More info: https://wiki.eab.com/display/RWD/backgroundImage%28%29+mixin
 
-@mixin backgroundImage(
-  $_p-img,
-  $_p-ext: "png",
-  $_p-hiRes: "-2x",
-  $_mq-hiResMin: 1.1
-) {
+@mixin backgroundImage($_p-img,
+$_p-ext: "png",
+$_p-hiRes: "-2x",
+$_mq-hiResMin: 1.1) {
   background: {
     image: url($_p-img + "." + $_p-ext);
     size: contain;
@@ -60,11 +56,11 @@
 // Mixin: Formats RMS forms for wide viewports using inline-block layout
 // More info: https://wiki.eab.com/display/RWD/wideForm%28%29+mixin
 
-@mixin wideForm(
-  $_mq-breakpoint: settings.$mq-900,
-  $_d-formLabelWidth: 33.333%,
-  $_d-formLabelPad: 0.5em,
-  $_x-stackClass: ".question-stacked"
+@mixin wideForm($_mq-breakpoint: settings.$mq-900,
+$_d-formLabelWidth: 33.333%,
+$_d-formLabelPad: 0.5em,
+$_x-stackClass: ".question-stacked"
+
 ) {
   @media (min-width: #{$_mq-breakpoint}) {
     .type_date,
@@ -107,6 +103,7 @@
         padding-left: calc(#{$_d-formLabelWidth} + 0.375em);
       }
     }
+
     @content;
   }
 }
@@ -115,11 +112,11 @@
 // Mixin: Formats RMS forms for wide viewports using Flexbox layout
 // More info: https://wiki.eab.com/display/RWD/wideFormFlex%28%29+mixin
 
-@mixin wideFormFlex(
-  $_mq-breakpoint: settings.$mq-900,
-  $_d-formLabelWidth: 33.333%,
-  $_d-formLabelPad: 0.5em,
-  $_x-stackClass: ".question-stacked"
+@mixin wideFormFlex($_mq-breakpoint: settings.$mq-900,
+$_d-formLabelWidth: 33.333%,
+$_d-formLabelPad: 0.5em,
+$_x-stackClass: ".question-stacked"
+
 ) {
   @media (min-width: #{$_mq-breakpoint}) {
     .type_date,
@@ -166,6 +163,7 @@
         }
       }
     }
+
     @content;
   }
 }
@@ -180,7 +178,7 @@
   #{$_x-item} {
     counter-increment: $_x-counterName;
 
-    @if $_x-number == null {
+    @if $_x-number ==null {
       &::before {
         content: counter(#{$_x-counterName});
       }
@@ -253,35 +251,36 @@
 // More info: https://wiki.eab.com/display/RWD/fluidRem%28%29+mixin
 // Sass Dart Updated
 
-@mixin fluidRem(
-  $_x-prop,
-  $_d-minRem,
-  $_d-maxRem,
-  $_mq-min: settings.$mq-300,
-  $_mq-max: settings.$mq-1200
-) {
+@mixin fluidRem($_x-prop,
+$_d-minRem,
+$_d-maxRem,
+$_mq-min: settings.$mq-300,
+$_mq-max: settings.$mq-1200) {
   $_d-mid: "";
 
   @for $_x-i from 1 through length($_d-maxRem) {
     $_d-iMin: nth($_d-minRem, $_x-i);
     $_d-iMax: nth($_d-maxRem, $_x-i);
 
-    @if $_d-iMin == 0 {
-      $_d-iMin: 0rem;
+    @if $_d-iMin ==0 {
+      $_d-iMin: 0;
     }
 
-    @if $_d-iMax == 0 {
-      $_d-iMax: 0rem;
+    @if $_d-iMax ==0 {
+      $_d-iMax: 0;
     }
 
-    $_d-iMid: calc(#{$_d-iMin} + #{math.div(($_d-iMax - $_d-iMin), 1rem)} *((100vw - #{$_mq-min}) / #{math.div(($_mq-max - $_mq-min), 1rem)})
+    $_d-iMid: calc(
+      #{$_d-iMin} + #{math.div(($_d-iMax - $_d-iMin), 1)} * ((100vw - #{$_mq-min}) / #{math.div(($_mq-max - $_mq-min), 1)})
     );
 
-    @if ($_x-i > 1) {
-      $_d-mid: $_d-mid + " ";
+    @if $_x-i > 1 {
+      $_d-mid: $_d-mid (+" ");
     }
-    $_d-mid: $_d-mid + $_d-iMid;
+
+    $_d-mid: calc(#{$_d-mid} + #{$_d-iMid});
   }
+
   #{$_x-prop}: #{$_d-minRem};
 
   @media (min-width: #{$_mq-min}) {
@@ -326,33 +325,25 @@
 // More info: https://wiki.eab.com/display/RWD/brightness%28%29+function
 
 @function brightness($_c-color) {
-  @return (
-      (red($_c-color) * 0.299) + (green($_c-color) * 0.587) +
-        (blue($_c-color) * 0.114)
-    ) / 255 * 100%;
+  @return ((red($_c-color) * 0.299) + (green($_c-color) * 0.587) + (blue($_c-color) * 0.114)) / 255 * 100%;
 }
 
 // ================
 // Function: Returns a light text color for dark backgrounds, and vice versa
 // More info: https://wiki.eab.com/display/RWD/textContrast%28%29+function
 
-@function textContrast(
-  $_c-bgColor,
-  $_c-darkTextColor: #000,
-  $_c-lightTextColor: #fff
-) {
-  @if $_c-bgColor == null {
+@function textContrast($_c-bgColor,
+$_c-darkTextColor: #000,
+$_c-lightTextColor: #fff) {
+  @if $_c-bgColor ==null {
     @return null;
   } @else {
     $_c-colorBrightness: brightness($_c-bgColor);
     $_c-lightTextColorBrightness: brightness($_c-lightTextColor);
     $_c-darkTextColorBrightness: brightness($_c-darkTextColor);
 
-    @return if(
-      abs($_c-colorBrightness - $_c-lightTextColorBrightness) >
-        abs($_c-colorBrightness - $_c-darkTextColorBrightness),
-      $_c-lightTextColor,
-      $_c-darkTextColor
-    );
+    @return if(abs($_c-colorBrightness - $_c-lightTextColorBrightness) > abs($_c-colorBrightness - $_c-darkTextColorBrightness),
+    $_c-lightTextColor,
+    $_c-darkTextColor );
   }
 }
