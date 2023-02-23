@@ -14,89 +14,9 @@
       background: url(#{$x-imgAssetPath}img-woman-cafe-lg.jpg) no-repeat right 30% / cover;
       height: 40vw;
       width: 100%;
+      max-height: 22rem;
     }
-  
-    .lp-apply-copy {
-      @include containerStyle($c-black);
-      position: relative;
-      margin-top: -2rem;
-  
-      * {
-        color: $c-white;
-      }
-  
-      p {
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-      }
-    }
-  
-    .lp-apply-content {
-      padding: 0 0 6vw;
-    }
-  
-    .lp-apply-copy-form {
-      margin-top: 1.5rem;
-    }
-  
-    @media (min-width: $mq-600) {
-      .lp-apply-copy {
-  
-        p {
-          padding-right: 3rem;
-        }
-      }
-    }
-  
-    @media (min-width: $mq-800) {
-      &::before {
-        background: url(#{$x-imgAssetPath}img-woman-cafe-lg.jpg) no-repeat center / cover;
-        height: 25vw;
-        max-height: 18rem;
-      }
-  
-      .lp-apply-title {
-        margin-bottom: 2rem;
-      }
-  
-      .lp-apply-copy {
-        margin-top: 0;
-  
-        p {
-          padding-right: 0;
-        }
-      }
-  
-      .lp-apply-content {
-        padding: 4vw 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 2rem;
-        justify-content: center;
-  
-        .lp-apply-copy-form {
-          margin-top: 0;
-  
-          &::before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 15vw;
-            max-height: 12rem;
-            margin-bottom: 1.5rem;
-            background: url(#{$x-imgAssetPath}img-apply-sm.jpg) no-repeat right 30% / cover;
-          }
-        }
-      }
-    }
-  
-    @media (min-width: $mq-1000) {
-      .lp-apply-content {
-        grid-template-columns: 1fr 1.25fr;
-        grid-gap: 3rem;
-      }
-    }
+
   }
 }
 
