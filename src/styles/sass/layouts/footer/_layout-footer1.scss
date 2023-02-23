@@ -4,17 +4,17 @@
 @use "../../foundation/components" as *;
 
 .school-footer {
-  @include fluidRem("padding", 1rem 0, 3rem 0);
+  // @include fluidRem("padding", 1rem 0, 3rem 0);
 
   .school-logo {
     margin: auto;
     background-position: center;
 
-    @include fluidRem("margin-bottom", 1rem, 1.5rem);
+    // @include fluidRem("margin-bottom", 1rem, 1.5rem);
   }
 
   .school-footer-content {
-    @include fluidRem("padding", 1rem 0, 1.5rem 0);
+    // @include fluidRem("padding", 1rem 0, 1.5rem 0);
 
     border: 0 solid $c-black;
     border-width: 2px 0;

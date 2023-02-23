@@ -1,20 +1,8 @@
 {
-    "globals": {
-        "__PATH_PREFIX__": true
-    },
-    "parserOptions": {
-        "ecmaVersion": 2020,
-        "sourceType": "module"
-    },
     "extends": [
-        "react-app",
-        "prettier"
-    ],
-    "plugins": [
-        "prettier"
+        "wesbos"
     ],
     "rules": {
-        "react/prop-types": 0,
-        "prettier/prettier": "error"
+        "react/prop-types": 0
     }
 }

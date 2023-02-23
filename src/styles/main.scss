@@ -43,7 +43,8 @@ html {
 
   h1 {
     @include mixins.setFont("Roboto", 900, 3rem, 0.02rem, variables.$c-white );
-    @include mixins.fluidRem("font-size", 1rem, 2rem);
+
+    // @include mixins.fluidRem("font-size", 1rem, 2rem);
 
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -62,12 +63,13 @@ html {
 }
 
 .intro-wrap {
-  @include mixins.fluidRem("padding-top", 2rem, 3rem);
-  @include mixins.fluidRem("padding-bottom", 2rem, 3rem);
+  // @include mixins.fluidRem("padding-top", 2rem, 3rem);
+  // @include mixins.fluidRem("padding-bottom", 2rem, 3rem);
 
   h2 {
     @include mixins.setFont("Roboto Slab", 300, 3rem, 0.02rem, variables.$c-heading-color);
-    @include mixins.fluidRem("font-size", 1.5rem, 2.5rem);
+
+    // @include mixins.fluidRem("font-size", 1.5rem, 2.5rem);
 
     margin-bottom: 1.5rem;
     line-height: 1.2;
@@ -75,7 +77,8 @@ html {
 
   h3 {
     @include mixins.setFont("Roboto Slab", 700, 2.5rem, 0.02rem, variables.$c-heading-color);
-    @include mixins.fluidRem("font-size", 1.65rem, 2.25rem);
+
+    // @include mixins.fluidRem("font-size", 1.65rem, 2.25rem);
 
     margin-bottom: 1.5rem;
     line-height: 1.2;
@@ -83,7 +86,8 @@ html {
 
   p {
     @include mixins.setFont("Roboto", 300, 2rem, 0.02rem, variables.$c-neutral-black);
-    @include mixins.fluidRem("font-size", 1rem, 1.15rem);
+
+    // @include mixins.fluidRem("font-size", 1rem, 1.15rem);
 
     width: 100%;
     line-height: 1.4;
@@ -105,12 +109,6 @@ html {
     }
   }
 }
-
-// .page-title,
-// .intro-wrap {
-//   @include mixins.fluidRem("padding-right", 1rem, 4rem);
-//   @include mixins.fluidRem("padding-left", 1rem, 4rem);
-// }
 
 // ----------
 // Navigation
@@ -193,7 +191,8 @@ html {
       0.02rem,
       variables.$c-neutral-black
     );
-    @include mixins.fluidRem("font-size", 1.125rem, 1.5rem);
+
+    // @include mixins.fluidRem("font-size", 1.125rem, 1.5rem);
 
     &:visited {
       color: inherit;
@@ -216,8 +215,8 @@ html {
 // ----------
 
 .code-block {
-  @include mixins.fluidRem("padding-top", 1rem, 2rem);
-  @include mixins.fluidRem("padding-bottom", 1rem, 2rem);
+  // @include mixins.fluidRem("padding-top", 1rem, 2rem);
+  // @include mixins.fluidRem("padding-bottom", 1rem, 2rem);
 
   background: darken(variables.$c-lightGrey, 10%);
 
