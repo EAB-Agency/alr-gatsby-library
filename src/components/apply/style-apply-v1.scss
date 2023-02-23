@@ -3,22 +3,37 @@
 @use "styles/sass/foundation/config" as *;
 @use "styles/sass/foundation/components" as *;
 
-.apply-v1 {
-  .lp-apply {
-    @include applyFormInlineEmail("(min-width: #{$mq-500})");
+
+@mixin layout-apply1($sectionBgColor, $contentClass, $position, $mq) {
+  background-color: $sectionBgColor;
+
+  @media (min-width: $mq) {
+    #{$contentClass} {
+      width: 65%;
+
+      @if $position == "left" {
+        margin: 0 auto 0 0;
+      } @else if $position == "right" {
+        margin: 0 0 0 auto;
+      }
+    }
+
+    @content;
   }
 }
 
-// .apply-v1 {
-//   .lp-apply {
-//     @include applyFormInlineEmail("(min-width: #{$mq-500})");
-//     @include stackedContentPadding(".lp-apply-content", 4vw 0, 6vw 0, $mq-800);
-//     @include sectionImageStackedToBg($c-black, 35vw, 17rem, center 72%, right center, "img-woman-cafe.jpg", "img-woman-cafe-lg.jpg", $mq-800);
+.apply-v1 {
+  .lp-apply {
+    @include applyFormInlineEmail("(min-width: #{$mq-500})");
+    @include stackedContentPadding(".lp-apply-content", 4vw 0, 6vw 0, $mq-800);
+    @include sectionImageStackedToBg($c-black, 35vw, 17rem, center 72%, right center, "img-woman-cafe.jpg", "img-woman-cafe-lg.jpg", $mq-800);
 
-//     @include layouts.layout-apply1($c-white, ".lp-apply-content", "left", $mq-800) {
-//       .lp-apply-content {
-//         @include containerStyle;
-//       }
-//     }
-//   }
-// }
+    @include layout-apply1($c-white, ".lp-apply-content", "left", $mq-800) {
+      .lp-apply-content {
+        @include containerStyle;
+      }
+    }
+  }
+}
+
+
