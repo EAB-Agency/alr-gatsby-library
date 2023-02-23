@@ -1,13 +1,13 @@
 @use "sass:color";
 @use "sass:math";
-@use "styles/sass/foundation/config" as *;
-@use "styles/sass/foundation/components" as *;
-
+@use "library/foundation/config" as *;
+@use "library/foundation/components" as *;
 
 .apply-v1 {
   .lp-apply {
     background: $c-white;
     padding: 0;
+
     @include applyFormInlineEmail("(min-width: #{$mq-500})");
 
     &::before {
@@ -33,7 +33,9 @@
         // Change margin to right align box
         // Keep max width to help with character lengths
         padding: 0;
+
         @include containerStyle;
+
         width: 65%;
         max-width: $mq-700;
         margin: 0 auto 0 0;
@@ -44,11 +46,8 @@
         display: none;
       }
     }
-
   }
 
   .test {
   }
 }
-
-

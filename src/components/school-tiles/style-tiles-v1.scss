@@ -1,7 +1,6 @@
-@use "styles/sass/layouts";
-@use "styles/sass/foundation/global";
-@use "styles/sass/foundation/config" as *;
-@use "styles/sass/foundation/components";
+@use "library/foundation/global";
+@use "library/foundation/config" as *;
+@use "library/foundation/components";
 
 .version-1 {
   font-weight: normal;
