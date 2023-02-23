@@ -1,7 +1,9 @@
 import ApplyOne from "components/apply/apply1";
 import ApplyTwo from "components/apply/apply2";
 import ApplyThree from "components/apply/apply3";
-import ApplyThreeStyles from "!!raw-loader!../components/apply/style-apply-v3.scss";
+import ApplyFour from "components/apply/apply4";
+import ApplyFive from "components/apply/apply5";
+
 
 <main class="page-main">
 
@@ -12,22 +14,16 @@ import ApplyThreeStyles from "!!raw-loader!../components/apply/style-apply-v3.sc
 {/* =========================== Layout 1 =========================== */}
 <div class="intro-wrap">
   ## Apply Layout 1
-  ### Apply Container Over Full Background Image 
-	This layout requires a strong background image that supports this layout. You will need enough negative space in the area that the apply container is placed. 
-
-	If you have a subject in your photo, make sure their eyes are directing towards the apply container, or their movement is gesturing towards the container.
+  ### Apply Content Over Full Background Image
+  #### Small Screens: Stacked Image and Content
+	
 </div>
 
 <ApplyOne />
 
-[//]: # "<pre>"
-[//]: # '<code className="language-scss">{ApplyThreeStyles}</code>'
-[//]: # "</pre>"
+```scss:title=styles.scss
 
-```scss
-@use "layouts" as layouts;
-#layout-a {
-}
+
 ```
 
 {/* =========================== Layout 2 =========================== */}
@@ -35,41 +31,66 @@ import ApplyThreeStyles from "!!raw-loader!../components/apply/style-apply-v3.sc
 
 <div class="intro-wrap">
   ## Apply Layout 2
-  ### Two Column Layout
-	All apply content like copy and form are on one side and the image is on the other. This layout utilizes grids.
+  ### Two Column Layout (Full Width)
+  #### Small Screens: Title Over Full Width Image
+	
 </div>
 
 <ApplyTwo />
 
 ```scss:title=styles.scss
-@use 'layouts';
 
- .lp-apply {
-    @include layouts.layout-a();
-  }
+
 ```
 
 {/* =========================== Layout 3 =========================== */}
 
 <div class="intro-wrap">
   ## Apply Layout 3 
-	Some descriptive copy about the layout. In eiusmod deserunt
-  enim do aute aliqua sunt. Id in ad proident ullamco ut non amet.
+  ### Two Column Layout (Fixed Width)
+  #### Small Screens: Stacked Image Over Content
+	
 </div>
 
 <ApplyThree />
 
 ```scss:title=styles.scss
-@use 'layouts' as layouts;
 
-#layout-a {
-  @include layouts.layout-b;
-}
+
 ```
 
 {/* =========================== Layout 4 =========================== */}
 
+<div class="intro-wrap">
+  ## Apply Layout 4
+  ### Full Width Image with Overlapping Apply Content
+  #### Small Screens: Title Over Full Width Image
+	
+</div>
+
+<ApplyFour />
+
+```scss:title=styles.scss
+
+
+```
+
 {/* =========================== Layout 5 =========================== */}
+
+<div class="intro-wrap">
+  ## Apply Layout 5
+  ### Split Content 2 Column (Custom HTML)
+  #### Small Screens: Stacked
+  This layout is useful for organizing a lot of copy. The image over the benefits can be removed if it creates an imbalance.
+	
+</div>
+
+<ApplyFive />
+
+```scss:title=styles.scss
+
+
+```
 
 {/* =========================== Layout 6 =========================== */}
 

@@ -489,3 +489,9 @@
     }
   }
 }
+
+
+@mixin fullWidth () {
+  max-width: none;
+  width: 100%;
+}

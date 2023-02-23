@@ -270,7 +270,9 @@ $_mq-max: settings.$mq-1200) {
       $_d-iMax: 0;
     }
 
-    $_d-iMid: calc(#{$_d-iMin} + #{math.div(($_d-iMax - $_d-iMin), 1)} * ((100vw - #{$_mq-min}) / #{math.div(($_mq-max - $_mq-min), 1)}));
+    $_d-iMid: calc(
+      #{$_d-iMin} + #{math.div(($_d-iMax - $_d-iMin), 1rem)} * ((100vw - #{$_mq-min}) / #{math.div(($_mq-max - $_mq-min), 1rem)})
+    );
 
     @if $_x-i > 1 {
       $_d-mid: $_d-mid (+" ");
