@@ -35,7 +35,7 @@ html {
 
 .page-title,
 .intro-wrap {
-  max-width: config.$mq-1000;
+  max-width: config.$mq-1200;
   width: 90%;
   margin: auto;
 
@@ -51,20 +51,14 @@ html {
   h1 {
     @include mixins.setFont("Roboto", 900, 3rem, 0.02rem, variables.$c-white );
     @include mixins.fluidRem("font-size", 1rem, 2rem);
-
     text-transform: uppercase;
     letter-spacing: 0.04em;
     padding: 1rem 2rem;
     background: variables.$c-heading-color;
     display: inline-block;
-    text-align: center;
     margin: 0;
     line-height: 1.2;
     font-weight: 500;
-
-    @media screen and (min-width: config.$mq-800) {
-      text-align: center;
-    }
   }
 }
 
@@ -75,8 +69,7 @@ html {
   h2 {
     @include mixins.setFont("Roboto Slab", 300, 3rem, 0.02rem, variables.$c-heading-color);
     @include mixins.fluidRem("font-size", 1.5rem, 2.5rem);
-
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.2;
   }
 
@@ -99,7 +92,6 @@ html {
   p {
     @include mixins.setFont("Roboto", 300, 2rem, 0.02rem, variables.$c-neutral-black);
     @include mixins.fluidRem("font-size", 1rem, 1.15rem);
-
     width: 100%;
     line-height: 1.4;
   }
@@ -108,11 +100,12 @@ html {
     h2,
     h3,
     h4 {
-      text-align: center;
+      // text-align: center;
     }
 
     p {
       max-width: config.$mq-700;
+      margin: 0 auto 0 0;
 
       ~ p {
         margin-top: 1rem;
@@ -183,7 +176,7 @@ html {
   position: relative;
   top: 18%;
   width: 100%;
-  text-align: center;
+  // text-align: center;
 
   // margin-top: 2rem;
 
