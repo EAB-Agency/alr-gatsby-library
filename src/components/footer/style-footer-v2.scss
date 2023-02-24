@@ -5,4 +5,35 @@
 
 .footer-v2 {
 
+  .school-footer {
+    @include fluidRem("padding", 1rem 0, 1.5rem 0);
+ 
+    .school-footer-name {
+      margin-bottom: 1rem;
+    }
+  
+    .school-footer-address {
+      margin-bottom: 0;
+    }
+  
+    .school-footer-links {
+      margin: 1rem 0 0;
+  
+      li {
+        list-style-type: none;
+      }
+    }
+  
+    @media (min-width: $mq-800) {
+      .school-footer-content {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 3fr 1fr;
+      }
+
+      .school-footer-links {
+        margin-top: 0;
+      }
+    }  
+  }
 }
