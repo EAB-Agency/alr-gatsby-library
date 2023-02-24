@@ -26,7 +26,8 @@
       .lp-apply-wrapper {
         padding-bottom: 0;
         display: grid;
-        grid-template: 1fr 1.5fr 1fr "image content";
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-areas: "image content";
         grid-gap: 3rem;
         align-items: center;
 
