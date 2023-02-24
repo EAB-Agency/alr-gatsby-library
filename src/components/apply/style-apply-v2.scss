@@ -2,6 +2,8 @@
 @use "sass:math";
 @use "library/foundation/config" as *;
 @use "library/foundation/components" as *;
+@use "library/foundation/utilities" as *;
+
 
 $d-titleMargin: calc(((#{math.div((100% - $d-centerWidth), 2)}) + 1%) * -1);
 $d-titlePadding: calc((#{math.div((100% - $d-centerWidth), 2)}) + 1%);

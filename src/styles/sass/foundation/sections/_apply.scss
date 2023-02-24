@@ -1,0 +1,59 @@
+// ================
+// Styles used by all ACS landing pages
+// ================
+
+@use "sass:color";
+@use "sass:math";
+@use "../config" as *;
+@use "../utilities" as *;
+@use "../components" as *;
+
+
+// ================
+// Apply CTA
+
+.lp-apply,
+.lp-apply-btm {
+  // @include applyFormInlineEmail("(min-width: #{$mq-500})");
+
+  .apply-form {
+    position: relative;
+    margin: 1.5rem 0 0;
+    padding: 0 !important;
+
+    label {
+      @extend .visuallyhidden;
+    }
+
+    .mauticform-button-wrapper {
+      margin-top: 0.75rem;
+    }
+
+    a,
+    button {
+      @extend %major-button !optional;
+
+      width: 100%;
+      margin-bottom: 0;
+      white-space: nowrap;
+    }
+  }
+}
+
+.lp-apply-footer,
+.lp-apply-btm-footer {
+  p:first-child {
+    margin-top: 1rem;
+  }
+}
+
+.lp-apply-btm {
+  padding: 5vw 0;
+
+  .lp-apply-btm-content {
+    @include containerStyle;
+
+    max-width: $mq-700;
+    margin: auto;
+  }
+}

@@ -2,8 +2,10 @@
 // Layout
 // ================
 
-@use "../config" as *;
 @use "sass:color";
+@use "sass:math";
+@use "variables" as *;
+@use "../utilities" as *;
 
 // ================
 // Viewport Rules
@@ -38,7 +40,7 @@
 }
 
 // ================
-// Major Layout Elements
+// Logos
 
 %logo {
   display: block;
@@ -57,22 +59,4 @@
   @include fluidRem("height", 3.2rem, 4rem);
 
   background: url("/images/img-logo.svg") no-repeat left center / contain;
-}
-
-// Header
-
-.school-header {
-  @include fluidRem("padding", 1rem 0, 1.5rem 0);
-}
-
-// Footer
-
-.school-footer {
-  @include fluidRem("padding", 1rem 0, 1.5rem 0);
-
-  .school-footer-links {
-    li {
-      list-style-type: none;
-    }
-  }
 }

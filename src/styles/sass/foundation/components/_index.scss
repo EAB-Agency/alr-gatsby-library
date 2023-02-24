@@ -2,7 +2,7 @@
 // Sass Index
 // ================
 
-@forward "forms";
-@forward "buttons";
-@forward "ceeb";
-@forward "modals";
+@use "buttons";
+@use "ceeb";
+@use "forms";
+@use "modals";

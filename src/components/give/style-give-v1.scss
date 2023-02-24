@@ -2,6 +2,7 @@
 @use "sass:math";
 @use "library/foundation/config" as *;
 @use "library/foundation/components" as *;
+@use "library/foundation/utilities" as *;
 
 .lp-intro-form {
   padding: 4vw 0;

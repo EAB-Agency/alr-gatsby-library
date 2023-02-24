@@ -1,11 +1,11 @@
 // import partials used by all pages
-@use "library/shared";
+// @use "library/shared";
+@use "library/foundation/sections";
 
 // import partials only used here
 // Note: Changed here to use the new @use syntax
 @use "utilities/mixins";
 @use "utilities/variables";
-@use "sass/foundation/config";
 
 // .helloworld {
 //     color: red;
@@ -35,7 +35,7 @@ html {
 
 .page-title,
 .intro-wrap {
-  max-width: config.$mq-1200;
+  max-width: variables.$mq-1200;
   width: 90%;
   margin: auto;
 
@@ -96,7 +96,7 @@ html {
     line-height: 1.4;
   }
 
-  @media screen and (min-width: config.$mq-800) {
+  @media screen and (min-width: variables.$mq-800) {
     h2,
     h3,
     h4 {
@@ -104,7 +104,7 @@ html {
     }
 
     p {
-      max-width: config.$mq-700;
+      max-width: variables.$mq-700;
       margin: 0 auto 0 0;
 
       ~ p {
@@ -224,7 +224,7 @@ html {
   background: darken(variables.$c-lightGrey, 10%);
 
   .code-block-wrapper {
-    max-width: config.$mq-1000;
+    max-width: variables.$mq-1000;
     width: 90%;
     margin: 0 auto;
     text-align: center;
@@ -267,7 +267,7 @@ html {
         background-color: variables.$c-btn-secondary-hover;
       }
 
-      @media (min-width: config.$mq-500) {
+      @media (min-width: variables.$mq-500) {
         margin-left: 1.5rem;
         margin-top: 0;
       }

@@ -1,5 +1,5 @@
 @use "sass:list";
-@use "../sass/foundation/config";
+@use "variables" as *;
 
 // ----------
 // Mixins
@@ -12,8 +12,8 @@
   $_x-prop,
   $_d-minRem,
   $_d-maxRem,
-  $_mq-min: config.$mq-300,
-  $_mq-max: config.$mq-1200
+  $_mq-min: $mq-300,
+  $_mq-max: $mq-1200
 ) {
   $_d-mid: "";
 

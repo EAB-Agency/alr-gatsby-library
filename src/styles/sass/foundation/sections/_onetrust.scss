@@ -1,6 +1,12 @@
 // ================
 // Customize These Settings
 
+@use "sass:color";
+@use "sass:math";
+@use "../config" as *;
+@use "../utilities" as *;
+@use "../components" as *;
+
 // OneTrust Banner
 
 $c-bannerBG: $c-black;
@@ -39,10 +45,8 @@ $c-bannerFontColor: $c-white;
 
 @mixin onetrust-close {
   &::after {
-    // stylelint-disable-next-line
-    content: ; // Your close icon
-    // stylelint-disable-next-line
-    font-family: ; // Your icon font family
+    content: $i-close; // Your close icon
+    font-family: $f-iconFont; // Your icon font family
     // Your styles here
   }
 

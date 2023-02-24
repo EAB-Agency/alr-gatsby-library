@@ -3,6 +3,8 @@
 // ================
 
 // imports below partials into any file that calls this folder
-@use "type";
-@use "layout";
-@use "otherinfo";
+@use "apply";
+@use "contact";
+@use "footer";
+@use "header-nav";
+@use "onetrust";
