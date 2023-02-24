@@ -3,7 +3,7 @@
 // ================
 
 @use "sass:math";
-@use "../settings";
+@use "breakpoints" as *;
 
 // ================
 // Mixin: Outputs a @font-face rule
@@ -52,143 +52,6 @@ $_mq-hiResMin: 1.1) {
   }
 }
 
-// ================
-// Mixin: Formats RMS forms for wide viewports using inline-block layout
-// More info: https://wiki.eab.com/display/RWD/wideForm%28%29+mixin
-
-@mixin wideForm($_mq-breakpoint: settings.$mq-900,
-$_d-formLabelWidth: 33.333%,
-$_d-formLabelPad: 0.5em,
-$_x-stackClass: ".question-stacked"
-
-) {
-  @media (min-width: #{$_mq-breakpoint}) {
-    .type_date,
-    .type_multicheck,
-    .type_radio,
-    .type_select,
-    .type_ssn,
-    .type_telephone,
-    .type_text,
-    .type_textarea {
-      &:not(#{$_x-stackClass}) {
-        & > label,
-        & > .rte-q-label,
-        & > .desc {
-          display: inline-block;
-          width: $_d-formLabelWidth;
-          padding: $_d-formLabelPad 5% $_d-formLabelPad 0;
-          vertical-align: top;
-
-          & ~ * {
-            display: inline-block;
-            width: calc(#{100% - $_d-formLabelWidth} - 0.375em);
-            vertical-align: top;
-
-            &.choice {
-              margin: #{$_d-formLabelPad * 0.75} 0;
-            }
-          }
-
-          & ~ .help {
-            width: 100%;
-          }
-        }
-      }
-    }
-
-    .type_checkbox,
-    .type_readonly_webcopy {
-      &.related-question {
-        padding-left: calc(#{$_d-formLabelWidth} + 0.375em);
-      }
-    }
-
-    @content;
-  }
-}
-
-// ================
-// Mixin: Formats RMS forms for wide viewports using Flexbox layout
-// More info: https://wiki.eab.com/display/RWD/wideFormFlex%28%29+mixin
-
-@mixin wideFormFlex($_mq-breakpoint: settings.$mq-900,
-$_d-formLabelWidth: 33.333%,
-$_d-formLabelPad: 0.5em,
-$_x-stackClass: ".question-stacked"
-
-) {
-  @media (min-width: #{$_mq-breakpoint}) {
-    .type_date,
-    .type_multicheck,
-    .type_radio,
-    .type_select,
-    .type_ssn,
-    .type_telephone,
-    .type_text,
-    .type_textarea {
-      &:not(#{$_x-stackClass}) {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-
-        & > label,
-        & > .rte-q-label,
-        & > .desc {
-          width: $_d-formLabelWidth;
-          padding: $_d-formLabelPad 5% $_d-formLabelPad 0;
-
-          & ~ * {
-            width: calc(100% - #{$_d-formLabelWidth});
-
-            &.choice {
-              margin: #{$_d-formLabelPad * 0.75} 0;
-            }
-          }
-
-          & ~ .help {
-            width: 100%;
-          }
-        }
-      }
-
-      &.related-question {
-        padding-left: $_d-formLabelWidth;
-      }
-
-      .type_checkbox,
-      .type_readonly_webcopy {
-        &.related-question {
-          padding-left: $_d-formLabelWidth;
-        }
-      }
-    }
-
-    @content;
-  }
-}
-
-// ================
-// Mixin: Adds a CSS counter to any element
-// More info: https://wiki.eab.com/display/RWD/counter%28%29+mixin
-
-@mixin counter($_x-counterName, $_x-item, $_x-number: null) {
-  counter-reset: $_x-counterName;
-
-  #{$_x-item} {
-    counter-increment: $_x-counterName;
-
-    @if $_x-number ==null {
-      &::before {
-        content: counter(#{$_x-counterName});
-      }
-    } @else {
-      #{$_x-number}::before {
-        content: counter(#{$_x-counterName});
-      }
-    }
-  }
-}
 
 // ================
 // Mixin: Creates a Flexbox-based "sticky" footer
@@ -210,42 +73,6 @@ $_x-stackClass: ".question-stacked"
   }
 }
 
-// // ================
-// // Mixin: Fluidly scales a property from a minimum to a maximum size
-// // More info: https://wiki.eab.com/display/RWD/fluidRem%28%29+mixin
-
-// @mixin fluidRem($_x-prop, $_d-minRem, $_d-maxRem, $_mq-min: settings.$mq-300, $_mq-max: settings.$mq-1200) {
-//   $_d-mid: "";
-
-//   @for $_x-i from 1 through length($_d-maxRem) {
-//     $_d-iMin: nth($_d-minRem, $_x-i);
-//     $_d-iMax: nth($_d-maxRem, $_x-i);
-
-//     @if $_d-iMin == 0 {
-//       $_d-iMin: 0rem;
-//     }
-
-//     @if $_d-iMax == 0 {
-//       $_d-iMax: 0rem;
-//     }
-//     $_d-iMid: calc(#{$_d-iMin} + #{($_d-iMax - $_d-iMin) / 1rem} * ((100vw - #{$_mq-min}) / #{($_mq-max - $_mq-min) / 1rem}));
-
-//     @if ($_x-i > 1) {
-//       $_d-mid: $_d-mid + " ";
-//     }
-//     $_d-mid: $_d-mid + $_d-iMid;
-//   }
-//   #{$_x-prop}: #{$_d-minRem};
-
-//   @media (min-width: #{$_mq-min}) {
-//     #{$_x-prop}: #{$_d-mid};
-//   }
-
-//   @media (min-width: #{$_mq-max}) {
-//     #{$_x-prop}: #{$_d-maxRem};
-//   }
-// }
-
 // ================
 // Mixin: Fluidly scales a property from a minimum to a maximum size
 // More info: https://wiki.eab.com/display/RWD/fluidRem%28%29+mixin
@@ -254,8 +81,8 @@ $_x-stackClass: ".question-stacked"
 @mixin fluidRem($_x-prop,
 $_d-minRem,
 $_d-maxRem,
-$_mq-min: settings.$mq-300,
-$_mq-max: settings.$mq-1200) {
+$_mq-min: $mq-300,
+$_mq-max: $mq-1200) {
   $_d-mid: "";
 
   @for $_x-i from 1 through length($_d-maxRem) {

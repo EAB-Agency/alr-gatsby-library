@@ -2,7 +2,10 @@
 // Typography
 // ================
 
-@use "../config" as *;
+@use "sass:color";
+@use "sass:math";
+@use "variables" as *;
+@use "../utilities" as *;
 
 // ================
 // Universal Elements

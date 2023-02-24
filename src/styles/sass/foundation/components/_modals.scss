@@ -2,8 +2,10 @@
 // Modal Windows (ACS)
 // ================
 
+@use "sass:color";
+@use "sass:math";
 @use "../config" as *;
-@use "../global/type" as *;
+@use "../utilities" as *;
 
 // ================
 // Modal Format Selection
