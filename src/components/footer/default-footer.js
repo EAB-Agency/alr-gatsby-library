@@ -19,7 +19,7 @@ const DefaultFooter = () => (
             data-fancybox="help-modal"
             data-modal="true"
             data-src="#help-modal"
-            href="#"
+            href="/"
           >
             Technical Help
           </a>
@@ -29,7 +29,7 @@ const DefaultFooter = () => (
             data-fancybox="privacy-modal"
             data-modal="true"
             data-src="#privacy-modal"
-            href="#"
+            href="/"
           >
             Privacy Policy
           </a>

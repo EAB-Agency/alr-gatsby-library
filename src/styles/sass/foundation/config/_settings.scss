@@ -2,10 +2,12 @@
 // Settings
 // ================
 
+@use "sass:math";
+
 // ================
 // Fonts
 
-// @include fontFace("../../assets/fonts/fontawesome-webfont", "Icons");
+// @include fontFace("/fonts/fontawesome-webfont", "Icons");
 
 // Use the below for Adobe Fonts. Replace the URL with the font(s) you're planning to use.
 // @import url("https://use.typekit.net/pyn1ykk.css");
@@ -47,8 +49,14 @@ $mq-400: 25rem;
 $mq-300: 18.75rem;
 
 // Common Dimensions
+$d-centerMaxWidth: $mq-1200;
+$d-centerWidth: 90%;
 $d-sectionPaddingSm: 4vw 0;
 $d-sectionPaddingLg: 6vw 0;
+
+$d-gridCalc: calc(#{math.div((100% - $d-centerWidth), 2)});
+$d-gridMaxWidth: math.div($d-centerMaxWidth, 1.8);
+
 $t-transition: all 0.25s ease-in-out;
 
 // Icons
@@ -59,3 +67,5 @@ $i-check: "\f00c";
 $i-lightBulb: "\f0eb";
 $i-phone: "\f095";
 $i-email: "\f0e0";
+
+$x-imgAssetPath: "../../assets/images/";

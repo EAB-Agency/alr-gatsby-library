@@ -19,7 +19,7 @@ module.exports = {
         },
         useResolveUrlLoader: {
           options: {
-            sourceMap: true, //default is false
+            sourceMap: true, // default is false
           },
         },
       },
@@ -27,11 +27,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
-        components: path.join(__dirname, 'src/components'),
-        layouts: path.join(__dirname, 'src/layouts'),
-        templates: path.join(__dirname, 'src/templates'),
-        styles: path.join(__dirname, 'src/styles'),
-        pages: path.join(__dirname, 'src/pages'),
+        hooks: path.join(__dirname, 'src', 'hooks'),
+        components: path.join(__dirname, 'src', 'components'),
+        pages: path.join(__dirname, 'src', 'pages'),
+        images: path.join(__dirname, 'src', 'assets', 'images'),
+        fonts: path.join(__dirname, 'src', 'assets', 'fonts'),
+        utils: path.join(__dirname, 'src', 'components', 'utils'),
+        library: path.join(__dirname, 'src', 'styles', 'sass'),
       },
     },
     {

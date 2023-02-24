@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "sass:math";
-@use "styles/sass/foundation/config" as *;
-@use "styles/sass/foundation/components" as *;
+@use "library/foundation/config" as *;
+@use "library/foundation/components" as *;
 
 .give-v1 {
   .lp-intro-form {
@@ -28,7 +28,7 @@
           max-width: 17rem;
           margin: auto;
           margin-top: 2rem;
-          background: url("../../assets/images/img-cg-prev-sm.jpg") no-repeat top /cover;
+          background: url("/images/img-cg-prev-sm.jpg") no-repeat top /cover;
         }
       }
     }
@@ -47,7 +47,7 @@
           display: block;
           height: auto;
           margin-left: 1rem;
-          background: url("../../assets/images/img-cg-prev.jpg") center top 0/100% auto no-repeat;
+          background: url("/images/img-cg-prev.jpg") center top 0/100% auto no-repeat;
           content: "";
         }
       }

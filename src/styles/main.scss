@@ -1,5 +1,5 @@
 // import partials used by all pages
-@use "styles/sass/shared";
+@use "library/shared";
 
 // import partials only used here
 // Note: Changed here to use the new @use syntax
@@ -20,6 +20,13 @@ html {
   padding: 0;
   box-sizing: border-box;
   background: variables.$c-lightGrey;
+}
+
+#measure-counter-extension {
+  position: relative;
+  width: 100%;
+  left: 0 !important;
+  top: 0 !important;
 }
 
 .wrapper {
@@ -77,8 +84,16 @@ html {
     @include mixins.setFont("Roboto Slab", 700, 2.5rem, 0.02rem, variables.$c-heading-color);
     @include mixins.fluidRem("font-size", 1.65rem, 2.25rem);
 
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.2;
+  }
+
+  h4 {
+    @include mixins.setFont("Roboto", 500, 2.5rem, 0.02rem, variables.$c-heading-color);
+    @include mixins.fluidRem("font-size", 1.4rem, 1.75rem);
+
+    margin-bottom: 1.5rem;
+    line-height: 1;
   }
 
   p {
@@ -105,12 +120,6 @@ html {
     }
   }
 }
-
-// .page-title,
-// .intro-wrap {
-//   @include mixins.fluidRem("padding-right", 1rem, 4rem);
-//   @include mixins.fluidRem("padding-left", 1rem, 4rem);
-// }
 
 // ----------
 // Navigation

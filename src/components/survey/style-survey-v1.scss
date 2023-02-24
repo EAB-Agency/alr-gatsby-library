@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "sass:math";
-@use "styles/sass/foundation/config" as *;
-@use "styles/sass/foundation/components" as *;
+@use "library/foundation/config" as *;
+@use "library/foundation/components" as *;
 
 .survey-v1 {
   .lp-intro-form {
@@ -13,7 +13,7 @@
       height: 40vw;
       margin-top: 4vw;
       background:
-        url("../../assets/images/img-survey-sm.jpg") no-repeat
+        url("/images/img-survey-sm.jpg") no-repeat
         center 20% / cover;
       content: "";
     }
@@ -41,7 +41,7 @@
         height: 40vw;
         margin-top: 4vw;
         background:
-          url("../../assets/images/img-survey-sm.jpg") no-repeat
+          url("/images/img-survey-sm.jpg") no-repeat
           center 20% / cover;
         content: "";
       }
@@ -53,7 +53,7 @@
           content: "";
           display: block;
           background:
-            url("../../assets/images/img-survey-lg.jpg") no-repeat
+            url("/images/img-survey-lg.jpg") no-repeat
             65% center / cover;
           flex-grow: 0.6;
         }
