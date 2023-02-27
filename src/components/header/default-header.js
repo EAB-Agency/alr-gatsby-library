@@ -1,7 +1,6 @@
 import React from 'react';
-import './header-styles.scss';
 
-const Header = () => (
+const DefaultHeader = () => (
   <header className="school-header">
     <div className="center school-header-wrapper">
       <h1 className="school-logo">The School Name</h1>
@@ -9,4 +8,4 @@ const Header = () => (
   </header>
 );
 
-export default Header;
+export default DefaultHeader;
