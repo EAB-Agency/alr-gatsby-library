@@ -1,6 +1,7 @@
 import FooterOne from 'components/footer/footer1';
 import FooterTwo from 'components/footer/footer2';
 import FooterThree from 'components/footer/footer3';
+import FooterFour from 'components/footer/footer4';
 
 <main className="page-main">
 
@@ -19,13 +20,6 @@ Content does not stack on mobile. Borders and content alignment can be modified 
 
 <FooterOne />
 
-```scss
-@use "layouts" as layouts;
-#layout-a {
-}
-```
-
-
 {/* =========================== Layout 2 =========================== */}
 
 <div className="intro-wrap">
@@ -41,12 +35,21 @@ Content stacks on mobile.\
 
 <div className="intro-wrap">
 ## Footer Layout 3
-Some descriptive copy about the layout.
+### Centered Logo and Content
+Stacks across all screen sizes.
 </div>
 
 <FooterThree />
 
 {/* =========================== Layout 4 =========================== */}
+
+<div className="intro-wrap">
+## Footer Layout 4
+### Logo and Content in One Row
+*Note: This layout requires customizing the default HTML markup in the SJ template.*
+</div>
+
+<FooterFour />
 
 {/* =========================== Layout 5 =========================== */}
 
