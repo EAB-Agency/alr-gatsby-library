@@ -6,7 +6,7 @@ const FooterOne = () => (
   <div className="footer-v1 layout-section">
     <footer className="school-footer">
       <div className="school-footer-wrapper center">
-        <div className="school-footer-name school-logo">the School Name</div>
+        <div className="school-footer-name">the School Name</div>
 
         <div className="school-footer-content">
           <address className="school-footer-address">Street Address<br />
