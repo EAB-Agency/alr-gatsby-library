@@ -14,7 +14,7 @@
       display: block;
       width: 100%;
       height: 30vw;
-      background: url(#{$x-imgAssetPath}img-woman-cafe-lg.jpg) no-repeat right 55% / cover;
+      background: url("/images/img-woman-cafe-lg.jpg") no-repeat right 55% / cover;
     }
 
     @media (min-width: $mq-800) {
@@ -35,7 +35,7 @@
         &::before {
           content: "";
           display: block;
-          background: url(#{$x-imgAssetPath}img-woman-cafe.jpg) no-repeat 60% center / cover;
+          background: url("/images/img-woman-cafe.jpg") no-repeat 60% center / cover;
           transform: scaleX(-1);
           height: 100%;
           width: 100%;

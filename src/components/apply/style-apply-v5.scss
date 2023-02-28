@@ -9,7 +9,7 @@
     &::before {
       content: "";
       display: block;
-      background: url(#{$x-imgAssetPath}img-woman-cafe-lg.jpg) no-repeat right 30% / cover;
+      background: url("/images/img-woman-cafe-lg.jpg") no-repeat right 30% / cover;
       height: 40vw;
       width: 100%;
     }
@@ -49,7 +49,7 @@
 
     @media (min-width: $mq-800) {
       &::before {
-        background: url(#{$x-imgAssetPath}img-woman-cafe-lg.jpg) no-repeat center / cover;
+        background: url("/images/img-woman-cafe-lg.jpg") no-repeat center / cover;
         height: 25vw;
         max-height: 18rem;
       }
@@ -79,7 +79,7 @@
             height: 15vw;
             max-height: 12rem;
             margin-bottom: 1.5rem;
-            background: url(#{$x-imgAssetPath}img-apply-sm.jpg) no-repeat right 30% / cover;
+            background: url("/images/img-apply-sm.jpg") no-repeat right 30% / cover;
           }
         }
       }

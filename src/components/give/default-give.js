@@ -8,7 +8,6 @@ const DefaultGive = () => (
         <div className="lp-intro">
           <h2 className="lp-intro-title">
             Download <strong>global-token=content-give-title!</strong>
-            <br />
           </h2>
           <div className="intro-copy">
             <p>

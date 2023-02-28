@@ -22,7 +22,7 @@
       width: 100%;
       height: 35vw;
       max-height: 17rem;
-      background: $c-black url(#{$x-imgAssetPath}img-woman-cafe.jpg) no-repeat center 72% / cover;
+      background: $c-black url("/images/img-woman-cafe.jpg") no-repeat center 72% / cover;
     }
   
     .lp-apply-content {
@@ -31,7 +31,7 @@
   
     @media (min-width: $mq-800) {
       @include boxSpacing(4rem, 4rem);
-      background: $c-black url(#{$x-imgAssetPath}img-woman-cafe-lg.jpg) no-repeat right center / cover;
+      background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
   
       .lp-apply-content {
         // Change margin to right align box
