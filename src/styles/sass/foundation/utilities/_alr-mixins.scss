@@ -8,145 +8,19 @@
 @use "royall" as *;
 @use "../config/variables" as *;
 
-// Button Color Mixin - (used on _buttons.scss)
-// -- Update Colors with Brand Colors -- //
-@mixin buttonColor(
-  $_c-buttonColor: black,
-  $_c-buttonHoverColor: white,
-  $_c-buttonTextColor: white,
-  $_c-buttonTextColorHover: black,
-  $_c-buttonBorderColorIntial: black,
-  $_c-buttonBorderColorHover: black
-) {
-  background: $_c-buttonColor;
-  color: $_c-buttonTextColor;
-  border: 1px solid $_c-buttonBorderColorIntial;
 
-  &:hover,
-  &:focus {
-    background: $_c-buttonHoverColor;
-    color: $_c-buttonTextColorHover;
-    border: 1px solid $_c-buttonBorderColorHover;
+// Returns a rem units from pixel value
+// Ex. font-size: rem(16); 
+@function rem($pixels, $context: 16px) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
   }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1rem;
 }
 
-// @mixin pseudoImageAbove ($width: 100%, $height: 40vw) {
-//   &::before {
-//     content: '';
-//     display: block;
-//     width: $width;
-//     height: $height;
-
-//     @content;
-
-//   }
-// }
-
-// general padding mixin for section
-@mixin sectionPadding($paddingSm, $paddingLg) {
-  padding: $paddingSm;
-
-  @media (min-width: $mq) {
-    padding: $paddingLg;
-  }
-}
-
-// Use when pseudo image above section on small screens
-@mixin stackedContentPadding($contentClass, $paddingSm, $paddingLg, $mq: $mq-800) {
-  padding: 0;
-
-  #{$contentClass} {
-    padding: $paddingSm;
-  }
-
-  @media (min-width: $mq) {
-    padding: $paddingLg;
-
-    #{$contentClass} {
-      padding: 0;
-    }
-  }
-}
-
-// Use when content gridded with image
-@mixin gridContentPadding($contentClass, $paddingSm, $paddingLg, $mq: $mq-800) {
-  padding: $paddingSm;
-
-  @media (min-width: $mq) {
-    padding: 0;
-
-    #{$contentClass} {
-      padding: $paddingLg;
-    }
-  }
-}
-
-@mixin bgImage($bgColor, $bgPosition: center center, $bgSize: cover, $fileName, $assetPath:"/images/") {
-  background: $bgColor url(#{$assetPath}#{$fileName}) no-repeat $bgPosition / $bgSize;
-}
-
-@mixin sectionImageStackedToBg($imgBgColor, $imgHeight, $imgMaxHeight, $imgSmPosition: center center, $imgLgPosition: center center, $imgFileSm, $imgFileLg, $mq: $mq-800, $imgAssetPath: "/images/") {
-  &::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: $imgHeight;
-    max-height: $imgMaxHeight;
-    background: $imgBgColor url(#{$imgAssetPath}#{$imgFileSm}) no-repeat $imgSmPosition / cover;
-  }
-
-  @media (min-width: $mq) {
-    background: $imgBgColor url(#{$imgAssetPath}#{$imgFileLg}) no-repeat $imgLgPosition / cover;
-
-    &::before {
-      display: none;
-    }
-  }
-}
-
-@mixin sectionImageStacked($imgPosition, $imgBgColor, $imgHeight, $imgMaxHeight, $imgBgPosition: center center, $fileName, $maxMQ, $imgAssetPath: "/images/") {
-  @media (max-width: maxMQ($maxMQ)) {
-    @if $imgPosition == "top" {
-      &::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: $imgHeight;
-        max-height: $imgMaxHeight;
-        background: $imgBgColor url(#{$imgAssetPath}#{$fileName}) no-repeat $imgBgPosition / cover;
-      }
-    } @else if $imgPosition == "bottom" {
-      &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: $imgHeight;
-        max-height: $imgMaxHeight;
-        background: $imgBgColor url(#{$imgAssetPath}#{$fileName}) no-repeat $imgBgPosition / cover;
-      }
-    }
-  }
-}
-
-// Container Style Mixin
-@mixin containerStyle(
-  $_c-backgroundColor: white,
-  $_x-border: "null",
-  $_c-borderColor: "null",
-  $_x-boxShadow: "null"
-) {
-  background: $_c-backgroundColor;
-
-  @include fluidRem("padding", 1rem 1.25rem, 2rem 2.5rem);
-
-  @if $_x-border == "yes" {
-    border: 1px solid $_c-borderColor;
-  }
-
-  @if $_x-boxShadow == "yes" {
-    box-shadow: 0 0 15px rgba($c-black, 0.2);
-  }
-}
 
 // Grid Items Mixin (School Content Section)
 @mixin gridItems(
@@ -389,106 +263,6 @@
     // Bottom Bar
     &::after {
       height: $_c-accentBarLarge;
-    }
-  }
-}
-
-// Mixin to Grid a Section into Two Columns Full Page Width
-// as seen on https://go.success.marybaldwin.edu/apply-refresh
-
-// Default is Apply Top Section on Apply LP
-@mixin fullWidthTwoColSection(
-  $_x-wrapperClass: lp-apply-wrapper,
-  $_x-imagePositionStacked: "bottom",
-  $_x-imagePositionHorz: "right",
-  $_mq-breakpoint: $mq-800,
-  $_mq-breakpointLg: $mq-1600,
-  $_f-imageName: "img-family-tablet.jpg",
-  $_x-imageBgPositionSm: center 52%,
-  $_x-imageBgPositionMed: center 75%,
-  $_x-imageBgPositionLg: center 52%,
-  $_d-gridTempColumns: 5% 1fr 5% 1fr 5%,
-  $_d-gridTempRows: 10vw 1fr 12vw,
-  $_d-gridTempColumnsWide: 5% calc(#{$mq-1400} / 2) 5% calc(#{$mq-1400} / 2) auto
-) {
-  @if $_x-imagePositionStacked == "bottom" {
-    padding: 4vw 0 0;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 50vw;
-      background: url(#{$_f-imageName}) no-repeat $_x-imageBgPositionSm / cover;
-      margin-top: 2rem;
-    }
-  } @else if $_x-imagePositionStacked == "top" {
-    padding: 0 0 4vw;
-
-    &::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 50vw;
-      background: url(#{$_f-imageName}) no-repeat $_x-imageBgPositionSm / cover;
-      margin-bottom: 2rem;
-    }
-  }
-
-  @media (min-width: $_mq-breakpoint) {
-    padding: 0;
-    display: grid;
-    grid-template-columns: $_d-gridTempColumns;
-    grid-template-rows: $_d-gridTempRows;
-
-    #{$_x-wrapperClass} {
-      max-width: none;
-      width: 100%;
-    }
-
-    &::before {
-      display: none;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      height: 100%;
-      background: url(#{$_f-imageName}) no-repeat $_x-imageBgPositionMed / cover;
-      grid-row: span 3;
-      margin-top: 0;
-    }
-
-    @if $_x-imagePositionHorz == "right" {
-
-      .#{$_x-wrapperClass} {
-        grid-row: 2 / 3;
-        grid-column: 2 / 3;
-      }
-
-      &::after {
-        grid-column: 4 / 6;
-      }
-    }
-
-    @if $_x-imagePositionHorz == "left" {
-
-      .#{$_x-wrapperClass} {
-        grid-row: 2 / 3;
-        grid-column: 4 / 5;
-      }
-
-      &::after {
-        grid-column: 1 / 3;
-      }
-    }
-  }
-
-  @media (min-width: $_mq-breakpointLg) {
-    grid-template-columns: $_d-gridTempColumnsWide;
-
-    &::after {
-      background-position: $_x-imageBgPositionLg;
     }
   }
 }
