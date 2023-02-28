@@ -9,12 +9,33 @@ const FooterOne = () => (
         <div className="school-footer-name">the School Name</div>
 
         <div className="school-footer-content">
-          <address className="school-footer-address">Street Address<br />
-          TBD, 2-digit state code #####</address>
+          <address className="school-footer-address">
+            Street Address
+            <br />
+            TBD, 2-digit state code #####
+          </address>
 
           <ul className="school-footer-links">
-            <li><a data-fancybox="help-modal" data-modal="true" data-src="#help-modal" href="#">Technical Help</a></li>
-            <li><a data-fancybox="privacy-modal" data-modal="true" data-src="#privacy-modal" href="#">Privacy Policy</a></li>
+            <li>
+              <a
+                data-fancybox="help-modal"
+                data-modal="true"
+                data-src="#help-modal"
+                href="#"
+              >
+                Technical Help
+              </a>
+            </li>
+            <li>
+              <a
+                data-fancybox="privacy-modal"
+                data-modal="true"
+                data-src="#privacy-modal"
+                href="#"
+              >
+                Privacy Policy
+              </a>
+            </li>
           </ul>
         </div>
       </div>
