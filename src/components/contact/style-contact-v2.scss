@@ -6,4 +6,89 @@
 
 .contact-v2 {
 
+  .lp-school-contact {
+    padding: 4vw 0;
+
+    .lp-school-contact-info {
+      @include containerStyle
+    }
+  
+    .lp-school-contact-options {
+      list-style: none;
+      margin: 0;
+  
+      li {
+  
+        ~ li {
+          margin-top: 1rem
+        }
+
+        &.lp-school-contact-phone {
+          a {
+            &::before {
+              content: $i-phone;
+            }
+          }
+        }
+
+        &.lp-school-contact-email {
+          a {
+            &::before {
+              content: $i-email;
+            }
+          }
+        }
+      }
+    }
+  
+    a {
+      @extend button;
+      @extend %minor-button;
+      
+      &::before {
+        display: inline-block;
+        font-family: $f-iconFont;
+        margin-right: 0.35rem;
+        font-weight: normal;
+      }
+    }
+  
+    @media(min-width: $mq-500) and (max-width: maxMQ($mq-600)) {
+  
+      .lp-school-contact-options {
+        
+        li {
+          display: inline-block;
+  
+          ~ li {
+            margin-top: 0;
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  
+    @media(min-width: $mq-600) {
+      max-width: $mq-900;
+      margin: auto;
+  
+      .lp-school-contact-info {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-column-gap: 2.5rem;
+        align-items: center;
+      }
+  
+      p {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+  
+      a {
+        width: 100%;
+      }
+    }
+  }
+
 }
