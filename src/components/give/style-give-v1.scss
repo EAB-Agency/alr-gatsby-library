@@ -7,54 +7,64 @@
 
 .give-1 {
 
-  .lp-intro-form-content {
-    @include fluidRem("padding", 1rem 0, 1.75rem 0);
+  .lp-intro-form {
+    @include boxSpacing;
 
-    .lp-intro {
-      &::after {
-        content: '';
-        display: block;
-        background: url("/images/img-contentgive.png") no-repeat center top / cover;
-        width: 80%;
-        max-width: 25rem;
-        height: 30vw;
-        margin: auto;
-      }
-    }
+    .lp-intro-form-content {
 
-    .lp-form {
-      @include containerStyle();
-    }
-    
-    @media (min-width: $mq-800) {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      grid-template-rows: auto auto;
-      grid-gap: 2rem;
-      min-height: 42rem;
-      
       .lp-intro {
-        // control for character lengths with max-width
-        max-width: $mq-700;
-        margin: auto;
-        grid-column: 1 / 3;
-        
-        
+
         &::after {
-          display: none;
+          // CG image above form
+          content: '';
+          display: block;
+          background: url("/images/img-contentgive.png") no-repeat center top / cover;
+          width: 80%;
+          max-width: 25rem;
+          min-height: 10rem;
+          height: 30vw;
+          margin: auto;
         }
       }
 
-      &::after {
-        content: '';
-        display: block;
-        background: url("/images/img-contentgive.png") no-repeat center / contain;
-        width: 100%;
-        height: 100%;
-        grid-row: 2 / 3;
-        grid-column: 2 / 3;
+      .lp-form {
+        @include containerStyle();
       }
       
+      @media (min-width: $mq-800) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+        grid-gap: 2rem;
+        min-height: 42rem;
+        
+        .lp-intro {
+          // control for character lengths with max-width
+          max-width: $mq-600;
+          margin: auto;
+          grid-column: 1 / 3;
+
+          .lp-intro-title {
+            text-align: center;
+          }
+          
+          &::after {
+            display: none;
+          }
+        }
+
+        &::after {
+          // CG image next to form
+          content: '';
+          display: block;
+          background: url("/images/img-contentgive.png") no-repeat center / contain;
+          width: 100%;
+          height: 100%;
+          grid-row: 2 / 3;
+          grid-column: 2 / 3;
+        }
+        
+      }
     }
   }
 }
