@@ -21,37 +21,6 @@ $_f-fontStyle: normal) {
   }
 }
 
-// ================
-// Mixin: Applies specific styles on hi-res displays
-// More info: https://wiki.eab.com/display/RWD/mres%28%29+mixin
-
-@mixin mres($_mq-density: 1.1) {
-  /* stylelint-disable-next-line media-feature-name-no-unknown */
-  @media (min-device-pixel-ratio: $_mq-density),
-    (min-resolution: $_mq-density + "dppx") {
-    @content;
-  }
-}
-
-// ================
-// Mixin: Outputs two background images, one normal, and one optimized for hi-res screens
-// More info: https://wiki.eab.com/display/RWD/backgroundImage%28%29+mixin
-
-@mixin backgroundImage($_p-img,
-$_p-ext: "png",
-$_p-hiRes: "-2x",
-$_mq-hiResMin: 1.1) {
-  background: {
-    image: url($_p-img + "." + $_p-ext);
-    size: contain;
-    repeat: no-repeat;
-  }
-
-  @include mres($_mq-hiResMin) {
-    background-image: url($_p-img + $_p-hiRes + "." + $_p-ext);
-  }
-}
-
 
 // ================
 // Mixin: Creates a Flexbox-based "sticky" footer
@@ -145,32 +114,4 @@ $_mq-max: $mq-1200) {
 
 @function maxMQ($_mq-breakpoint) {
   @return $_mq-breakpoint - 0.0625rem;
-}
-
-// ================
-// Function: Returns the WCAG brightness of a color
-// More info: https://wiki.eab.com/display/RWD/brightness%28%29+function
-
-@function brightness($_c-color) {
-  @return ((red($_c-color) * 0.299) + (green($_c-color) * 0.587) + (blue($_c-color) * 0.114)) / 255 * 100%;
-}
-
-// ================
-// Function: Returns a light text color for dark backgrounds, and vice versa
-// More info: https://wiki.eab.com/display/RWD/textContrast%28%29+function
-
-@function textContrast($_c-bgColor,
-$_c-darkTextColor: #000,
-$_c-lightTextColor: #fff) {
-  @if $_c-bgColor ==null {
-    @return null;
-  } @else {
-    $_c-colorBrightness: brightness($_c-bgColor);
-    $_c-lightTextColorBrightness: brightness($_c-lightTextColor);
-    $_c-darkTextColorBrightness: brightness($_c-darkTextColor);
-
-    @return if(abs($_c-colorBrightness - $_c-lightTextColorBrightness) > abs($_c-colorBrightness - $_c-darkTextColorBrightness),
-    $_c-lightTextColor,
-    $_c-darkTextColor );
-  }
 }

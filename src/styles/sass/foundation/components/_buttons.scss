@@ -7,6 +7,29 @@
 @use "../utilities" as *;
 @use "../config" as *;
 
+
+// Button Color Mixin - (used on _buttons.scss)
+// -- Update Colors with Brand Colors -- //
+@mixin buttonColor(
+  $_c-buttonColor: black,
+  $_c-buttonHoverColor: white,
+  $_c-buttonTextColor: white,
+  $_c-buttonTextColorHover: black,
+  $_c-buttonBorderColorIntial: black,
+  $_c-buttonBorderColorHover: black
+) {
+  background: $_c-buttonColor;
+  color: $_c-buttonTextColor;
+  border: 1px solid $_c-buttonBorderColorIntial;
+
+  &:hover,
+  &:focus {
+    background: $_c-buttonHoverColor;
+    color: $_c-buttonTextColorHover;
+    border: 1px solid $_c-buttonBorderColorHover;
+  }
+}
+
 // ================
 // Extendable Placeholders
 
