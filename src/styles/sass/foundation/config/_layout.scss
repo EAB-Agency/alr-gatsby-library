@@ -23,7 +23,7 @@
 // ================
 // Layout Modules
 
-@mixin center($_maxWidth: $d-centerMaxWidth, $_width: $d-centerWidth) {
+@mixin center ($_maxWidth: $d-centerMaxWidth, $_width: $d-centerWidth) {
   width: $_width;
   max-width: $_maxWidth;
   margin: auto;
@@ -40,7 +40,7 @@
 }
 
 // Container Style Mixin
-@mixin containerStyle(
+@mixin containerStyle (
   $_c-backgroundColor: white,
   $_x-border: "null",
   $_c-borderColor: "null",
@@ -59,7 +59,22 @@
   }
 }
 
-//section mixins allow you to zero-out either top or bottom spacing while scaling fluidly. // Spacing (*2 for large screens)
-@mixin section($_spacingType: padding, $_padding-top: 2rem, $_padding-bottom: 2rem){
-  @include fluidRem($_spacingType, $_padding-top 0 $_padding-bottom, ($_padding-top * 2) 0 ($_padding-bottom * 2), $mq-300, $mq-1200);
+// //section mixins allow you to zero-out either top or bottom spacing while scaling fluidly. // Spacing (*2 for large screens)
+// @mixin section (
+//   $_spacingType: padding, 
+//   $_padding-top: 2rem, 
+//   $_padding-bottom: 2rem
+//   ) {
+
+//   @include fluidRem($_spacingType, $_padding-top 0 $_padding-bottom, ($_padding-top * 2) 0 ($_padding-bottom * 2), $mq-300, $mq-1200);
+// }
+
+// CSS Box Model - add padding or margin spacing. 2x spacing on larger screens.
+@mixin boxSpacing (
+  $_padding-top: 2rem, 
+  $_padding-bottom: 2rem,
+  $_spacingType: "padding"
+  ) {
+    
+  @include fluidRem($_spacingType, $_padding-top 0 $_padding-bottom, ($_padding-top * 2) 0 ($_padding-bottom * 2));
 }
