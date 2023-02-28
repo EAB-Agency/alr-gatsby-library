@@ -9,10 +9,11 @@
 // Apply CTA Format Mixin
 // Note: The styles below are to achieve a fluid layout with the email field inline to the left of the apply button.
 
-@mixin applyFormInlineEmail(
+@mixin applyFormInlineEmail (
   $_mq-inlineEmail: "(min-width: #{$mq-500})",
-  $_field-button-gap: 0
+  $_d-field-button-gap: 0
 ) {
+
   @media #{$_mq-inlineEmail} {
     .apply-form {
       .mauticform-page-wrapper {
@@ -22,7 +23,7 @@
         flex-wrap: nowrap;
         width: 100%;
         margin-top: 1rem;
-        gap: $_field-button-gap;
+        gap: $_d-field-button-gap;
       }
 
       .mauticform-email {
@@ -70,7 +71,7 @@
 @mixin applyFormInlineFields(
 	$_mq-inlineFields: "(min-width: #{$mq-500})",
 	$_x-number: "2",
-  $_field-button-gap: 0
+  $_d-field-button-gap: 0
 	) {
 
 	@media #{$_mq-inlineFields} {
@@ -106,7 +107,7 @@
 			.mauticform-field-email_address {
 				display: flex;
 				flex: 1 1 45%;
-				margin: 0 $_field-button-gap 0 0;
+				margin: 0 $_d-field-button-gap 0 0;
 
 				input {
 					width: 100%;

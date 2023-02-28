@@ -89,7 +89,10 @@ html {
     line-height: 1;
   }
 
-  p {
+  p,
+  ul,
+  li,
+  a {
     @include mixins.setFont("Roboto", 300, 2rem, 0.02rem, variables.$c-neutral-black);
     @include mixins.fluidRem("font-size", 1rem, 1.15rem);
     width: 100%;
