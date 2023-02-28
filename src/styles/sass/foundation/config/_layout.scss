@@ -39,24 +39,27 @@
   width: 100%;
 }
 
-// ================
-// Logos
+// Container Style Mixin
+@mixin containerStyle(
+  $_c-backgroundColor: white,
+  $_x-border: "null",
+  $_c-borderColor: "null",
+  $_x-boxShadow: "null"
+) {
+  background: $_c-backgroundColor;
 
-%logo {
-  display: block;
-  margin: 0;
-  text-indent: -9999em;
-  color: black;
+  @include fluidRem("padding", 1rem 1.25rem, 2rem 2.5rem);
 
-  &::after {
-    display: none;
+  @if $_x-border == "yes" {
+    border: 1px solid $_c-borderColor;
+  }
+
+  @if $_x-boxShadow == "yes" {
+    box-shadow: 0 0 15px rgba($c-black, 0.2);
   }
 }
 
-.school-logo {
-  @extend %logo;
-  @include fluidRem("width", 15rem, 18.75rem);
-  @include fluidRem("height", 3.2rem, 4rem);
-
-  background: url("/images/img-logo.svg") no-repeat left center / contain;
+//section mixins allow you to zero-out either top or bottom spacing while scaling fluidly. // Spacing (*2 for large screens)
+@mixin section($_spacingType: padding, $_padding-top: 2rem, $_padding-bottom: 2rem){
+  @include fluidRem($_spacingType, $_padding-top 0 $_padding-bottom, ($_padding-top * 2) 0 ($_padding-bottom * 2), $mq-300, $mq-1200);
 }

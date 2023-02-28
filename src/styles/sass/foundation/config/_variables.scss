@@ -5,11 +5,12 @@
 @use "sass:color";
 @use "sass:math";
 @use "../utilities/breakpoints" as *;
+@use "../utilities/royall" as *;
 
 // ================
 // Fonts
 
-// @include fontFace("/fonts/fontawesome-webfont", "Icons");
+@include fontFace("/fonts/fontawesome-webfont", "Icons");
 
 // Use the below for Adobe Fonts. Replace the URL with the font(s) you're planning to use.
 // @import url("https://use.typekit.net/pyn1ykk.css");

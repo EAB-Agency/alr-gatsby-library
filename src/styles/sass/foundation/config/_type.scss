@@ -93,6 +93,29 @@ ol {
   }
 }
 
+// @include fancyList on ul element. Use to add extra styling to list elements.
+@mixin fancyList{
+  margin:0;
+
+  li{
+    list-style: none;
+    display:flex;
+    gap:.5rem;
+  
+    &:before{
+      content:$i-check;
+      font-family: $f-iconFont;
+      display:inline-block;
+      position:relative;
+    }
+
+    &~li{
+      margin-top:.5rem;
+    }
+  }
+}
+
+
 a {
   color: $c-link;
   transition: $t-transition;
@@ -101,6 +124,16 @@ a {
   &:focus {
     text-decoration: none;
     color: darken($c-link, 20%);
+  }
+}
+
+// @include reversed-link on <a> element
+@mixin reversed-link{
+  color:white;
+
+  &:hover,
+  &:focus {
+    color: $c-lightBlue;
   }
 }
 
@@ -126,3 +159,5 @@ hr {
 .nobr {
   white-space: nowrap;
 }
+
+

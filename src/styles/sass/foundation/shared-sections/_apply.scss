@@ -14,7 +14,7 @@
 
 .lp-apply,
 .lp-apply-btm {
-  // @include applyFormInlineEmail("(min-width: #{$mq-500})");
+  @include applyFormInlineEmail("(min-width: #{$mq-500})");
 
   .apply-form {
     position: relative;
@@ -46,6 +46,9 @@
     margin-top: 1rem;
   }
 }
+
+
+// Copy paste bottom apply code from Layout Library here
 
 .lp-apply-btm {
   padding: 5vw 0;

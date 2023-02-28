@@ -1,0 +1,85 @@
+// ================
+// Styles used by all ACS landing pages
+// ================
+
+@use "sass:color";
+@use "sass:math";
+@use "../config" as *;
+@use "../utilities" as *;
+@use "../components" as *;
+
+
+// ================
+// School Contact Section
+
+// Copy paste code from Layout Library here
+
+// .lp-school-contact {
+//   padding: 4vw 0;
+
+//   .lp-school-contact-options {
+//     margin: 0;
+
+//     li {
+//       list-style-type: none;
+//       display: inline-block;
+//       width: auto;
+//       margin-right: 0.5rem;
+
+//       ~ li {
+//         margin-top: 0.75rem;
+//       }
+
+//       a {
+//         @extend %button;
+//         @extend %minor-button;
+
+//         &::before {
+//           display: inline-block;
+//           font-family: $f-iconFont;
+//           margin-right: 0.35rem;
+//           font-weight: normal;
+//         }
+//       }
+
+//       &.lp-school-contact-phone {
+//         a {
+//           &::before {
+//             content: $i-phone;
+//           }
+//         }
+//       }
+
+//       &.lp-school-contact-email {
+//         a {
+//           &::before {
+//             content: $i-email;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   @media (min-width: calc(#{$mq-400} + 2rem)) {
+//     .lp-school-contact-info {
+//       max-width: $mq-600;
+//       margin: auto;
+//       text-align: center;
+//     }
+
+//     .lp-school-contact-options {
+//       display: grid;
+//       grid-template-columns: auto auto;
+//       justify-content: center;
+//       grid-gap: 1.5rem;
+
+//       li {
+//         margin-right: 0;
+
+//         ~ li {
+//           margin-top: 0;
+//         }
+//       }
+//     }
+//   }
+// }
