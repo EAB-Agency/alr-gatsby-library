@@ -24,7 +24,7 @@ $d-titlePadding: calc((#{math.div((100% - $d-centerWidth), 2)}) + 1%);
       .lp-apply-title {
         padding: 20vw $d-titlePadding 2vw;
         margin: 0 $d-titleMargin 4vw;
-        background: $c-black url(#{$x-imgAssetPath}img-woman-cafe.jpg) no-repeat center 60% / cover;
+        background: $c-black url("/images/img-woman-cafe.jpg") no-repeat center 60% / cover;
         color: $c-white;
       }
     }
@@ -48,7 +48,7 @@ $d-titlePadding: calc((#{math.div((100% - $d-centerWidth), 2)}) + 1%);
           display: block;
           width: 100%;
           height: 100%;
-          background: $c-black url(#{$x-imgAssetPath}img-woman-cafe-lg.jpg) no-repeat right center / cover;
+          background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
           grid-area: image;
         }
       }
