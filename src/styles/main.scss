@@ -4,8 +4,11 @@
 
 // import partials only used here
 // Note: Changed here to use the new @use syntax
+@use "sass:color";
+@use "sass:math";
 @use "utilities/mixins";
 @use "utilities/variables";
+
 
 // .helloworld {
 //     color: red;
@@ -27,10 +30,6 @@ html {
   width: 100%;
   left: 0 !important;
   top: 0 !important;
-}
-
-.wrapper {
-  // padding-bottom: 2rem;
 }
 
 .page-title,
@@ -120,42 +119,45 @@ html {
 // ----------
 // Navigation
 // ----------
+
 .hamburger-react {
-  z-index: 5;
+  position:fixed !important;
+  z-index:5;
 }
 
 .top-nav {
-  position: fixed;
-
-  .main-menu-btn {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 3.125rem;
-    z-index: 5;
-    background-color: variables.$c-btn-primary;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    padding: 0 1rem;
-    width: auto;
-    text-align: left;
-  }
+  position: relative;
+  
+  // .main-menu-btn {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   height: 3.125rem;
+  //   z-index: 5;
+  //   background-color: variables.$c-btn-primary;
+  //   border: none;
+  //   color: white;
+  //   font-size: 1.5rem;
+  //   padding: 0 1rem;
+  //   width: auto;
+  //   text-align: left;
+  // }
 
   .main-menu-overlay {
     height: 100%;
     width: 0;
+    max-width: 20rem;
     position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
     overflow-x: hidden;
     background-color: variables.$c-neutral-gray-dark;
-    transition: 0.5s;
-
+    transition: .5s;
+    box-shadow: 0 0 10px black;
+    
     &.show-menu {
       width: 35%;
-      max-width: 25rem;
     }
   }
 }
@@ -179,9 +181,6 @@ html {
   position: relative;
   top: 18%;
   width: 100%;
-  // text-align: center;
-
-  // margin-top: 2rem;
 
   a {
     color: variables.$c-neutral-black;
@@ -198,7 +197,7 @@ html {
       0.02rem,
       variables.$c-neutral-black
     );
-    @include mixins.fluidRem("font-size", 1.125rem, 1.5rem);
+    @include mixins.fluidRem("font-size", 1rem, 1.5rem);
 
     &:visited {
       color: inherit;

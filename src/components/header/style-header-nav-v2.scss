@@ -1,0 +1,69 @@
+@use "sass:color";
+@use "sass:math";
+@use "library/foundation/config" as *;
+@use "library/foundation/components" as *;
+@use "library/foundation/utilities" as *;
+
+.header-nav-v2 {
+
+  .header-nav{
+
+    .school-header-nav-wrapper{
+      @include center;
+    }
+
+    .school-header,
+    .main-nav{
+      .center{
+        @include fullWidth;
+      }
+    }
+    
+    @media (min-width: $mq-700){
+      .school-header-nav-wrapper{
+        display:flex;
+        gap:1rem;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+      }
+    }
+  }
+
+  // ================
+  // Navigation
+
+  .main-nav {
+
+    ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      display:flex;
+      list-style: none;
+      gap:1rem; //controls spacing between nav items
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      padding-bottom:.25rem;
+      text-align: center;
+      text-decoration: none;
+      border-bottom: 1px solid black;
+
+      &:hover,
+      &:focus {
+
+      }
+
+      &.active {
+        transition:none;
+        color:white;
+      }
+    }
+  }
+
+}
