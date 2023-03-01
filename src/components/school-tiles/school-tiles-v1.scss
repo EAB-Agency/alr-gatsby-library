@@ -11,19 +11,12 @@
        
     .lp-school-content {
       .lp-school-link-list {
+        @include gridItems("4");
         list-style: none;
         margin: 0;
-
-        @include gridItems("4");
-        // display: grid;
-        // gap: 1rem;
-        // place-content: stretch; // combines justify and align content.
-
-        // grid-auto-rows: auto; // controls height of boxes
       }
     
       li{
-  
         a{
           height: 100%;
           width: 100%;
@@ -55,27 +48,32 @@
       
         &:nth-child(1) { 
           a:before {
-            background: url(#{$x-imgAssetPath}img-woman-cafe.jpg) no-repeat center / cover;
+            background: url(/images/img-woman-cafe.jpg) no-repeat center / cover;
           }
         }
   
         &:nth-child(2) { 
           a:before {
-            background: url(#{$x-imgAssetPath}img-woman-cafe.jpg) no-repeat center / cover;
+            background: url(/images/img-woman-cafe.jpg) no-repeat center / cover;
           }
         }
   
         &:nth-child(3) { 
           a:before {
-            background: url(#{$x-imgAssetPath}img-woman-cafe.jpg) no-repeat center / cover;
+            background: url(/images/img-woman-cafe.jpg) no-repeat center / cover;
           }
         }
   
         &:nth-child(4) { 
           a:before {
-            background: url(#{$x-imgAssetPath}img-woman-cafe.jpg) no-repeat center / cover;
+            background: url(/images/img-woman-cafe.jpg) no-repeat center / cover;
           }
         }
+      }
+
+      @media (max-width: maxMQ($mq-600)){
+        // The breakpoint should match the value used for $_mq-small in the gridItems() mixin
+        margin-bottom: 1rem;
       }
     }
   }
