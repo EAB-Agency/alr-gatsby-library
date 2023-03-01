@@ -7,7 +7,7 @@
 .contact-v3 {
 
   .lp-school-contact {
-    background: $c-black url(#{$x-imgAssetPath}img-woman-cafe.jpg) no-repeat center / cover;
+    background: $c-black url("/images/img-woman-cafe.jpg") no-repeat center / cover;
     padding: 20vw 0;
 
     .lp-school-contact-info {
@@ -54,7 +54,7 @@
     }
 
     @media (min-width: $mq-500) {
-      background: $c-black url(#{$x-imgAssetPath}img-woman-cafe-lg.jpg) no-repeat center / cover;
+      background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat center / cover;
       padding: 12vw 0;
 
       .lp-school-contact-info {
