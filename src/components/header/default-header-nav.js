@@ -1,20 +1,20 @@
 import React from 'react';
 
 const DefaultHeaderNav = () => (
-  <div class="header-nav">
-    <div class="center school-header-nav-wrapper">
-      <header class="school-header">
-        <div class="center school-header-wrapper">
-          <h1 class="school-logo">The School Name</h1>
+  <div className="header-nav">
+    <div className="school-header-nav-wrapper">
+      <header className="school-header">
+        <div className="center school-header-wrapper">
+          <h1 className="school-logo">The School Name</h1>
         </div>
       </header>
-      <nav class="main-nav" id="main-nav">
-        <div class="center">
+      <nav className="main-nav" id="main-nav">
+        <div className="center">
           <ul>
-            <li><a href="/apply">Apply</a></li>
-            <li><a href="/discover">Download Guide</a></li>
-            <li><a href="/start">Get Info</a></li>
-            <li><a href="/explore">Explore</a></li>
+            <li><a href="#apply">Apply</a></li>
+            <li><a href="#discover">Download Guide</a></li>
+            <li><a href="#start">Get Info</a></li>
+            <li><a href="#explore">Explore</a></li>
           </ul>
         </div>
       </nav>
