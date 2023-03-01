@@ -5,10 +5,6 @@
 @use "library/foundation/utilities" as *;
 
 .header-nav-v1 {
-
-  .school-header-nav-wrapper{
-    @include fullWidth;
-  }
   
   .main-nav {
     border-bottom: 8px solid black;
@@ -36,18 +32,7 @@
     ul {
       list-style: none;
       display: flex;
-    }
-  
-    li {
-      margin: 0 1px;
-  
-      &:last-child {
-        margin-right: 0;
-      }
-  
-      &:first-child {
-        margin-left: 0;
-      }
+      gap:1px;
     }
   
     a {
