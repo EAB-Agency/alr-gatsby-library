@@ -217,6 +217,16 @@ html {
 }
 
 // ----------
+// Layout Section
+// ----------
+
+.layout-section{
+  border-top: 5px solid variables.$c-border-info;
+  border-bottom: 5px solid variables.$c-border-info;
+  // box-shadow: 0 0 10px black;
+}
+
+// ----------
 // Code Block
 // ----------
 

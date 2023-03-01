@@ -26,11 +26,13 @@
       }
     }
   
-    @media (min-width: $mq-800) {
-      .school-footer-content {
-        display: grid;
-        grid-template-rows: auto auto;
-        grid-template-columns: 3fr 1fr;
+    @media (min-width: $mq-600) {
+      .school-footer-wrapper{
+        display:grid;
+        grid-template-columns: auto auto;
+        align-items:flex-end;
+        justify-content:space-between;
+        column-gap: 1rem;
       }
 
       .school-footer-links {
