@@ -221,9 +221,8 @@ html {
 // ----------
 
 .layout-section{
-  border-top: 5px solid variables.$c-border-info;
-  border-bottom: 5px solid variables.$c-border-info;
-  // box-shadow: 0 0 10px black;
+  border-top: 5px solid variables.$c-heading-color;
+  // border-bottom: 5px solid variables.$c-border-info;
 }
 
 // ----------
@@ -234,7 +233,8 @@ html {
   @include mixins.fluidRem("padding-top", 1rem, 2rem);
   @include mixins.fluidRem("padding-bottom", 1rem, 2rem);
 
-  background: darken(variables.$c-lightGrey, 10%);
+  // background: darken(variables.$c-lightGrey, 10%);
+  background: variables.$c-heading-color;
 
   .code-block-wrapper {
     max-width: variables.$mq-1000;
@@ -248,7 +248,7 @@ html {
   }
 
   button {
-    border: none;
+    border: 1px solid white;
     border-radius: variables.$b-border-radius;
 
     &.button-copy,
@@ -258,7 +258,7 @@ html {
       &:hover,
       &:focus {
         color: white;
-        border: none;
+        border: 1px solid white;
       }
     }
 
