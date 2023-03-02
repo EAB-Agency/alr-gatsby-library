@@ -42,16 +42,31 @@ $d-gridMaxWidth: math.div($d-centerMaxWidth, 1.8);
 
 $t-transition: all 0.25s ease-in-out;
 
-// Icons - Font Awesome
+// ================
+// Icons 
+
+// Arrows
 $i-chevronRight: "\f054";
 $i-arrowRight: "\e903";
 $i-angle_right: "\f105";
 $i-circleArrowRight: "\e909";
-$i-errorCircle: "\f06a";
+
+// Check/Close
 $i-close: "\f00d";
+$i-closeCircle: "\f057";
+$i-closeCircleOutline: "\f05c";
 $i-check: "\f00c";
+$i-checkCircle: "\f058";
+$i-checkCircleOutline: "\f05d";
+
+// Other
+$i-errorCircle: "\f06a";
 $i-lightBulb: "\f0eb";
-$i-map_marker: "\f041";
+$i-mapMarker: "\f041";
+$i-quoteLeft: "\f10d";
+$i-quoteRight: "\f10e";
+
+// Contact
 $i-phone: "\f095";
 $i-phoneSign: "\f098";
 $i-mobilePhone: "\f10b";

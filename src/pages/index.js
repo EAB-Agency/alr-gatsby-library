@@ -16,7 +16,6 @@ const IndexPage = () => (
         Above" button and then copy the code to your files.
       </p>
     </div>
-    {/* <Testimonial /> */}
   </main>
 );
 export default IndexPage;
