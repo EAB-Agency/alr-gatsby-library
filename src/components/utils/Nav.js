@@ -31,11 +31,11 @@ const Nav = () => {
           <Link to="/apply" onClick={closeMenu}>
             Apply
           </Link>
-          <Link to="/survey" onClick={closeMenu}>
-            Survey
-          </Link>
           <Link to="/give" onClick={closeMenu}>
             Guide
+          </Link>
+          <Link to="/survey" onClick={closeMenu}>
+            Survey
           </Link>
           <Link to="/school-tiles" onClick={closeMenu}>
             School Tiles
