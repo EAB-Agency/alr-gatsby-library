@@ -48,7 +48,7 @@
 ) {
 
   background: $_c-backgroundColor;
-  @include fluidRem("padding", 1.25rem 1.5rem, 2rem 2.5rem, $mq-300, $mq-800);
+  @include fluidRem("padding", 1.25rem 1.5rem, 2rem 2.25rem, $mq-300, $mq-800);
 
   @if $_x-border == "yes" {
     border: 1px solid $_c-borderColor;
