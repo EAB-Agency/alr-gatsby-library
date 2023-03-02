@@ -42,13 +42,20 @@ $d-gridMaxWidth: math.div($d-centerMaxWidth, 1.8);
 
 $t-transition: all 0.25s ease-in-out;
 
-// Icons
-$i-arrowRight: "\f054";
+// Icons - Font Awesome
+$i-chevronRight: "\f054";
+$i-arrowRight: "\e903";
+$i-angle_right: "\f105";
+$i-circleArrowRight: "\e909";
 $i-errorCircle: "\f06a";
 $i-close: "\f00d";
 $i-check: "\f00c";
 $i-lightBulb: "\f0eb";
+$i-map_marker: "\f041";
 $i-phone: "\f095";
+$i-phoneSign: "\f098";
+$i-mobilePhone: "\f10b";
 $i-email: "\f0e0";
+$i-emailOutline: "\f003";
 
 $x-imgAssetPath: "../../assets/images/";
