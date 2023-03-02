@@ -34,8 +34,8 @@ const Nav = () => {
           <Link to="/survey" onClick={closeMenu}>
             Survey
           </Link>
-          <Link to="/guide" onClick={closeMenu}>
-            Give
+          <Link to="/give" onClick={closeMenu}>
+            Guide
           </Link>
           <Link to="/school-tiles" onClick={closeMenu}>
             School Tiles
