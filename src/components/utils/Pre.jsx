@@ -31,8 +31,15 @@ const CodeHighlightGroup = ({ codeFiles }) => {
   );
 };
 
-const CodeHighlight = ({ fileName, code, language, lineNumbersToHide }) => {
+const CodeHighlight = ({
+  fileName,
+  code,
+  language,
+  lineNumbersToHide,
+  lineNumbersToDelete,
+}) => {
   const shouldHideLine = calculateLinesToHide(lineNumbersToHide);
+  const codeWithDeletedLines = deleteCodeLines(lineNumbersToDelete, code);
 
   return (
     <>
@@ -40,7 +47,7 @@ const CodeHighlight = ({ fileName, code, language, lineNumbersToHide }) => {
         css={{
           position: `absolute`,
         }}
-        content={code}
+        content={codeWithDeletedLines || code}
         fileName={fileName}
         duration={2000}
       >
@@ -49,7 +56,7 @@ const CodeHighlight = ({ fileName, code, language, lineNumbersToHide }) => {
 
       <Highlight
         {...defaultProps}
-        code={code}
+        code={codeWithDeletedLines || code}
         language={language}
         theme={theme}
       >
@@ -91,87 +98,6 @@ const CodeHighlight = ({ fileName, code, language, lineNumbersToHide }) => {
   );
 };
 
-const Pre = ({ codeFiles }) => {
-  // create a show/hide button for the code block
-  const [showCode, setShowCode] = React.useState(false);
-  const toggleCode = () => setShowCode(!showCode);
-
-  // map over codeFiles and return a new array of code blocks
-  const allFiles = codeFiles.map((codeFile, index) => {
-    const { code, language, fileName, lineNumbersToHide } = codeFile;
-    const shouldHideLine = calculateLinesToHide(lineNumbersToHide);
-
-    return (
-      <>
-        {' '}
-        <Copy
-          css={{
-            position: `absolute`,
-          }}
-          content={code}
-          fileName={fileName}
-          duration={2000}
-        />
-        <Highlight
-          {...defaultProps}
-          code={code}
-          language={language}
-          theme={theme}
-          key={index}
-        >
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre
-              className={className}
-              style={{
-                ...style,
-                padding: '2rem',
-                position: 'relative',
-                overflowX: 'scroll',
-              }}
-            >
-              {tokens.map((line, i) => {
-                const lineProps = getLineProps({ line, key: i });
-                if (shouldHideLine(i)) {
-                  lineProps.className = `${lineProps.className} hide-line`;
-                }
-                return (
-                  <div
-                    {...getLineProps({ line, key: i })}
-                    {...lineProps}
-                    style={style}
-                    key={i}
-                  >
-                    <span className="line-number">{i + 1}</span>
-                    <span className="line-content">
-                      {line.map((token, key) => (
-                        <span {...getTokenProps({ token, key })} />
-                      ))}
-                    </span>
-                  </div>
-                );
-              })}
-            </pre>
-          )}
-        </Highlight>
-      </>
-    );
-  });
-  return (
-    <div className="code-block">
-      <div className="code-block-wrapper line-numbers">
-        <button
-          type="button"
-          onClick={toggleCode}
-          className="button-code code-toggle code-toggle-style"
-        >
-          {showCode ? 'Hide Code' : 'Show Code for Above'}
-        </button>
-        <allFiles />
-      </div>
-    </div>
-  );
-};
-
 const calculateLinesToHide = (lineNumbersToHighlight) => {
   const RE = /([\d,-]+)/;
   if (RE.test(lineNumbersToHighlight)) {
@@ -180,6 +106,19 @@ const calculateLinesToHide = (lineNumbersToHighlight) => {
     return (i) => lineNumbers.includes(i + 1);
   }
   return () => false;
+};
+const deleteCodeLines = (lineNumbersToDelete, code) => {
+  const RE = /([\d,-]+)/;
+  if (RE.test(lineNumbersToDelete)) {
+    const strLineNumbers = RE.exec(lineNumbersToDelete)[1];
+    const lineNumbers = rangeParser(strLineNumbers);
+    const lines = code.split('\n');
+    const filteredLines = lines.filter(
+      (line, i) => !lineNumbers.includes(i + 1)
+    );
+    return filteredLines.join('\n');
+  }
+  return code;
 };
 
 export default CodeHighlightGroup;
