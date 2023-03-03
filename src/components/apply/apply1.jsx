@@ -9,11 +9,29 @@ import * as styles from './style-apply-v1.scss';
 const styleSheet = require('!!raw-loader!./style-apply-v1.scss');
 const html = require('!!raw-loader!./apply1.html');
 
+const codeFiles = [
+  {
+    fileName: 'style-apply-v1.scss',
+    code: styleSheet.default,
+    language: 'scss',
+    lineNumbersToHide: '1-2',
+  },
+  {
+    fileName: 'apply1.html',
+    code: html.default,
+    language: 'html',
+  },
+];
+
 const applyOne = () => (
   // <div className={styles.lpApply}>
   <div className="apply-v1 layout-section">
     <DefaultApply />
-    <SnippetToggler fileName="style-apply-v1.scss" code={html.default} />
+    <SnippetToggler
+      fileName="style-apply-v1.scss"
+      code={html.default}
+      files={codeFiles}
+    />
   </div>
 );
 
