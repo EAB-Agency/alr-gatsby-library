@@ -1,13 +1,6 @@
 import * as React from 'react';
-import Pre from './Pre';
+import CodeHighlightGroup from './Pre';
 
-const SnippetToggler = ({ code, fileName, lineNumbersToHide }) => (
-  <Pre
-    codeString={code}
-    language="css"
-    fileName={fileName}
-    lineNumbersToHide={lineNumbersToHide}
-  />
-);
+const SnippetToggler = ({ files }) => <CodeHighlightGroup codeFiles={files} />;
 
 export default SnippetToggler;
