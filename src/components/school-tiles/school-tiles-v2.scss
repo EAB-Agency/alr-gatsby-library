@@ -4,6 +4,9 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
+$x-imgHeightSm: 12rem;
+$x-imgHeightLg: 15rem;
+
 .school-tiles-v2 {
 
   .lp-school {
@@ -13,15 +16,12 @@
     .lp-school-link-list {
       list-style: none;
       margin: 0;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, auto);
-      grid-gap: 2rem;
+      @include gridItems("2", $mq-700, $mq-700, 2rem, 2rem);
   
       li {
         a {
           display: grid;
-          grid-template-rows: 12rem auto;
+          grid-template-rows: $x-imgHeightSm auto;
           text-decoration: none;
           position: relative;
           transition: 0.25s all ease-in-out;
@@ -33,7 +33,7 @@
             height: 0;
             position: absolute;
             opacity: 0;
-            top: 12rem;
+            top: $x-imgHeightSm;
             left: 0;
             transition: all 0.3s ease-in-out;
           }
@@ -45,6 +45,7 @@
             color: $c-white;
             grid-row: 2 / 3;
             @include fluidRem("font-size", 1rem, 1.25rem);
+            transition: all 0.25s ease-in-out;
   
             &::after {
               content: $i-chevronRight;
@@ -57,11 +58,18 @@
   
           &:hover,
           &:focus {
+
             &::before {
               opacity: 1;
               background: hsla(0, 0%, 0%, 0.7);
               top: 0;
-              height: 12rem;
+              height: $x-imgHeightSm;
+            }
+
+            .link-wrap {
+              &::after {
+                margin-left: 0.75rem;
+              }
             }
           }
         }
@@ -92,35 +100,25 @@
       }
     }
   
-    @media (min-width: $mq-700) {
-      .lp-school-link-list {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 2rem;
-      }
-    }
-  
     @media (min-width: $mq-900) {
       .lp-school-link-list {
         li {
           a {
-            grid-template-rows: 15rem auto;
+            grid-template-rows: $x-imgHeightLg auto;
   
             &::before {
-              top: 15rem;
+              top: $x-imgHeightLg;
             }
   
             &:hover,
             &:focus {
               &::before {
-                height: 15rem;
+                height: $x-imgHeightLg;
               }
             }
           }
         }
       }
     }
-  
   }
-
 }
