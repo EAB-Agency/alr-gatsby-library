@@ -16,7 +16,7 @@ const delay = (duration) =>
   // eslint-disable-next-line no-promise-executor-return
   new Promise((resolve) => setTimeout(resolve, duration));
 
-function Copy({ content, duration, fileName, trim = false }) {
+function Copy({ content, duration, fileName, trim = false, children }) {
   const [copied, setCopied] = useState(false);
 
   const label = copied
@@ -47,7 +47,8 @@ function Copy({ content, duration, fileName, trim = false }) {
         setCopied(false);
       }}
     >
-      {copied ? `Copied` : `Copy`}
+      {copied ? `Copied ` : `Copy `}
+      {children && <span className="button-copy__children">{children}</span>}
     </button>
   );
 }
