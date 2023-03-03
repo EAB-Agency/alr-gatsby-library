@@ -47,7 +47,7 @@
             @include fluidRem("font-size", 1rem, 1.25rem);
   
             &::after {
-              content: $i-arrowRight;
+              content: $i-chevronRight;
               font-family: $f-iconFont;
               margin-left: 0.5rem;
               position: absolute;
