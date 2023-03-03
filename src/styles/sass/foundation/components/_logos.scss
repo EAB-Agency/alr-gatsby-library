@@ -28,3 +28,10 @@
 
   background: url("/images/img-logo.svg") no-repeat left center / contain;
 }
+
+
+%logo-reversed {
+  @extend .school-logo;
+  background: url("/images/img-logo-rev.svg") no-repeat left center / contain;
+  color:white;
+}
