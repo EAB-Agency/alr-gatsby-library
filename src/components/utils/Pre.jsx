@@ -24,7 +24,7 @@ const Pre = (props) => {
   const toggleCode = () => setShowCode(!showCode);
   return (
     <div className="code-block">
-      <div className="code-block-wrapper">
+      <div className="code-block-wrapper line-numbers">
         <button
           type="button"
           onClick={toggleCode}
@@ -70,9 +70,12 @@ const Pre = (props) => {
                         style={style}
                         key={i}
                       >
-                        {line.map((token, key) => (
-                          <span {...getTokenProps({ token, key })} />
-                        ))}
+                        <span className="line-number">{i + 1}</span>
+                        <span className="line-content">
+                          {line.map((token, key) => (
+                            <span {...getTokenProps({ token, key })} />
+                          ))}
+                        </span>
                       </div>
                     );
                   })}
