@@ -24,15 +24,15 @@
       }
   
       .lp-form {
-        @include containerStyle(white);
+        @include containerStyle();
       }
     }
       
     @media (min-width: $mq-800) {
   
       .center{
-        display:flex;
-        justify-content:flex-end;
+        display: flex;
+        justify-content: center;
   
         &::before {
           // CG image next to form
@@ -57,7 +57,7 @@
           flex: 0 1 50%;
   
           p:last-child{
-            margin-bottom:0;
+            margin-bottom: 0;
           }
           
           &::after {
