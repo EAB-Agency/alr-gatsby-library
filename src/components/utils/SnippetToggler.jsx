@@ -4,7 +4,7 @@ import Pre from './Pre';
 const SnippetToggler = ({ code, fileName, lineNumbersToHide }) => (
   <Pre
     codeString={code}
-    language="css"
+    language="html"
     fileName={fileName}
     lineNumbersToHide={lineNumbersToHide}
   />

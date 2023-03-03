@@ -46,6 +46,8 @@ const Code = (props) => {
                   <div>{file && `File: ${file}`}</div>
                   {tokens.map((line, i) => (
                     <div {...getLineProps({ line, key: i })}>
+                      <h2>hello world</h2>
+                      <span className="line-number">{i + 1}</span>
                       {line.map((token, key) => (
                         <span
                           {...getTokenProps({
