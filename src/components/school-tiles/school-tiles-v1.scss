@@ -69,12 +69,16 @@
             background: url(/images/img-woman-cafe.jpg) no-repeat center / cover;
           }
         }
+
+        @media (max-width: maxMQ($mq-600)){
+          // The breakpoint should match the value used for $_mq-small in the gridItems() mixin
+          ~ li{
+            margin-top: 1rem;
+          }
+        }
       }
 
-      @media (max-width: maxMQ($mq-600)){
-        // The breakpoint should match the value used for $_mq-small in the gridItems() mixin
-        margin-bottom: 1rem;
-      }
+      
     }
   }
 
