@@ -20,6 +20,7 @@ const codeFiles = [
     fileName: 'apply1.html',
     code: html.default,
     language: 'html',
+    lineNumbersToDelete: '1-10',
   },
 ];
 
