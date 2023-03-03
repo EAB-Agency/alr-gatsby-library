@@ -27,11 +27,7 @@ const applyOne = () => (
   // <div className={styles.lpApply}>
   <div className="apply-v1 layout-section">
     <DefaultApply />
-    <SnippetToggler
-      fileName="style-apply-v1.scss"
-      code={html.default}
-      files={codeFiles}
-    />
+    <SnippetToggler files={codeFiles} />
   </div>
 );
 
