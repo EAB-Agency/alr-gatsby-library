@@ -93,7 +93,8 @@ ol {
   }
 }
 
-// @include fancyList on ul element. Use to add extra styling to list elements.
+// @include fancyList on ul element. 
+// Use to add extra styling to list elements.
 @mixin fancyList{
   margin:0;
 
@@ -133,7 +134,7 @@ a {
 
   &:hover,
   &:focus {
-    color: $c-lightBlue;
+    color: white;
   }
 }
 

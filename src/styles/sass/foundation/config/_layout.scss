@@ -5,6 +5,7 @@
 @use "sass:color";
 @use "sass:math";
 @use "variables" as *;
+@use "type" as *;
 @use "../utilities" as *;
 
 // ================
@@ -59,15 +60,18 @@
   }
 }
 
-// //section mixins allow you to zero-out either top or bottom spacing while scaling fluidly. // Spacing (*2 for large screens)
-// @mixin section (
-//   $_spacingType: padding, 
-//   $_padding-top: 2rem, 
-//   $_padding-bottom: 2rem
-//   ) {
+// Add after containerStyle Mixin
+@mixin reversed-container{
 
-//   @include fluidRem($_spacingType, $_padding-top 0 $_padding-bottom, ($_padding-top * 2) 0 ($_padding-bottom * 2), $mq-300, $mq-1200);
-// }
+  a{
+    @include reversed-link;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p, li, ul, label, address, div {
+    color:white;
+  }
+}
+
 
 // CSS Box Model - add padding or margin spacing. 2x spacing on larger screens.
 @mixin boxSpacing (
