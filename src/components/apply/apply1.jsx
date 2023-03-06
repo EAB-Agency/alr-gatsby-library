@@ -2,7 +2,7 @@
 import React from 'react';
 import SnippetToggler from '../utils/SnippetToggler';
 import DefaultApply from './default-apply';
-import './style-apply-v2.scss';
+// import './style-apply-v1.scss';
 import * as styles from './style-apply-v1.scss';
 
 // eslint-disable-next-line import/no-unresolved

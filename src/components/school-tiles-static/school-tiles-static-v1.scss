@@ -4,4 +4,62 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
-.school-tiles-static-v1 {}
+.school-tiles-static-v1 {
+
+  .lp-school {
+    @include boxSpacing;
+        
+    .lp-school-content {
+
+      .lp-school-link-list {
+        @include gridItems("4");
+        list-style: none;
+        margin: 0;
+      }
+    
+      li {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: block;
+        
+        &::before{
+          content:'';
+          width: 100%;
+          height: 12rem;
+          display: block;
+        }
+
+        // .link-wrap {
+        //   display: block;
+        //   background: $c-white;
+        //   padding: 1rem 1.25rem;
+        // }
+      
+        &:nth-child(1) { 
+          &::before {
+            background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+          }
+        }
+  
+        &:nth-child(2) { 
+          &::before {
+            background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+          }
+        }
+  
+        &:nth-child(3) { 
+          &::before {
+            background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+          }
+        }
+  
+        &:nth-child(4) { 
+          &::before {
+            background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+          }
+        }
+      }
+    }
+  }
+}
