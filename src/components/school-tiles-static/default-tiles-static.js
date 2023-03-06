@@ -8,24 +8,28 @@ const DefaultTilesStatic = () => (
           Learn more about the School Name.
         </h3>
         <ul className="lp-school-link-list">
-          <li className="lp-school-link-item">
-            <div>
-              <span className="link-wrap">School link #1</span>
+          <li className="lp-school-tile-item">
+            <div className="link-wrap">
+              <h5 className="tile-title">School link #1</h5>
+              <p className="tile-copy">School link text. Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
             </div>
           </li>
-          <li className="lp-school-link-item">
-            <div>
-              <span className="link-wrap">School link #2</span>
+          <li className="lp-school-tile-item">
+            <div className="link-wrap">
+              <h5 className="tile-title">School link #2</h5>
+              <p className="tile-copy">School link text. Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
             </div>
           </li>
-          <li className="lp-school-link-item">
-            <div>
-              <span className="link-wrap">School link #3</span>
+          <li className="lp-school-tile-item">
+            <div className="link-wrap">
+              <h5 className="tile-title">School link #3</h5>
+              <p className="tile-copy">School link text. Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
             </div>
           </li>
-          <li className="lp-school-link-item">
-            <div>
-              <span className="link-wrap">School link #4</span>
+          <li className="lp-school-tile-item">
+            <div className="link-wrap">
+              <h5 className="tile-title">School link #4</h5>
+              <p className="tile-copy">School link text. Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
             </div>
           </li>
         </ul>

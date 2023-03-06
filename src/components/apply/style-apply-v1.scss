@@ -8,7 +8,7 @@
   .lp-apply {
     background: $c-white;
     padding: 0;
-    @include applyFormInlineEmail("(min-width: #{$mq-500})", 0.5rem);
+    @include applyFormInlineEmail("(min-width: #{$mq-500})");
   
     &::before {
       // Image above content on small screens
