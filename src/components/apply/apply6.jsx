@@ -1,6 +1,25 @@
 import React from 'react';
+import SnippetToggler from '../utils/SnippetToggler';
 import AcquiaForm from '../utils/AcquiaForm';
 import './style-apply-v6.scss';
+
+// eslint-disable-next-line import/no-unresolved
+const styleSheet = require('!!raw-loader!./style-apply-v6.scss');
+const html = require('!!raw-loader!./apply1.html');
+
+const codeFiles = [
+  {
+    fileName: 'style-apply-v6.scss',
+    code: styleSheet.default,
+    language: 'scss',
+    lineNumbersToDelete: '1-6',
+  },
+  {
+    fileName: 'apply1.html',
+    code: html.default,
+    language: 'html',
+  },
+];
 
 const applySix = () => (
   <div className="apply-v6 layout-section">
@@ -50,6 +69,9 @@ const applySix = () => (
         </div>
       </div>
     </section>
+
+    <SnippetToggler files={codeFiles} />
+    
   </div>
 );
 

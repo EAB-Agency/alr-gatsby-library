@@ -30,23 +30,19 @@
     .link-wrap{
       padding:1rem;
       // background:rgba($c-black, .35);
-
-      p:last-child{
-        margin:0;
-      }
     }
   
     li:nth-child(1){ 
-      background: $c-black url('/images/img-woman-cafe.jpg') no-repeat center / cover;
+      background: $c-black url('/images/img-tile-1.jpg') no-repeat center / cover;
     }
     li:nth-child(2){ 
-      background: $c-black url('/images/img-woman-cafe.jpg') no-repeat center / cover;
+      background: $c-black url('/images/img-tile-1.jpg') no-repeat center / cover;
     }
     li:nth-child(3){ 
-      background: $c-black url('/images/img-woman-cafe.jpg') no-repeat center / cover;
+      background: $c-black url('/images/img-tile-1.jpg') no-repeat center / cover;
     }
     li:nth-child(4){ 
-      background: $c-black url('/images/img-woman-cafe.jpg') no-repeat center / cover;
+      background: $c-black url('/images/img-tile-1.jpg') no-repeat center / cover;
     }
   
     @media (min-width: $mq-500) {

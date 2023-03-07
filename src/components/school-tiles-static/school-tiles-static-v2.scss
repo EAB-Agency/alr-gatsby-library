@@ -5,5 +5,178 @@
 @use "library/foundation/utilities" as *;
 
 .school-tiles-static-v2 {
-  
+
+  .lp-school{
+    @include boxSpacing;
+
+    .center{
+      max-width: $mq-1000;
+    }
+
+    .lp-school-content-title{
+
+    }
+
+    ul{
+      display:grid;
+      place-content:stretch;
+      grid-template-columns: repeat(2, 1fr);
+      margin:0;
+      list-style:none;
+    }
+
+    li {
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      // grid-gap: 1rem;
+      place-content:stretch;
+      background:black;
+
+      &:before{
+        content:'';
+        grid-column: span 1;
+      }
+
+      *{
+        color:white;
+      }
+    }
+
+    .link-wrap{
+      padding: 1rem;
+    }
+
+    .tile-title{
+      display:block;
+      margin-bottom:.5rem;
+      border-bottom:1px solid;
+      padding-bottom:.5rem;
+    }
+
+    // grid-column: <start-line> / <end-line> | <start-line> / span <value>;
+    // grid-row: <start-line> / <end-line> | <start-line> / span <value>;
+    li:nth-child(1){
+      grid-column: span 2;
+
+      &:before{
+        background: url("/images/img-tile-1.jpg") no-repeat center /cover;
+        grid-column: 2/ span 1;
+        grid-row: 1;
+      }
+    }
+
+    li:nth-child(2){
+      grid-column: span 2;
+
+      .tile-title{
+        color:white;
+      }
+
+      &:before{
+        background: url("/images/img-tile-1.jpg") no-repeat center /cover;
+      }
+    }
+
+    li:nth-child(3){
+      grid-column: span 2;
+
+      &:before{
+        background: url("/images/img-tile-1.jpg") no-repeat 30% /cover;
+        grid-column: 2/ span 1;
+        grid-row: 1;
+      }
+    }
+
+    li:nth-child(4){
+      grid-column: span 2;
+
+      &:before{
+        background: url("/images/img-tile-1.jpg") no-repeat 30% 0% /cover;
+      }
+
+    }
+
+    // US News
+    li:nth-child(5){
+      grid-template-columns: repeat(2, 1fr);
+      grid-column: span 2;
+      grid-row: span 1;
+
+      &:before{
+        content:'';
+        background: url("/images/img-usnews.svg") no-repeat center /contain;
+        grid-column: span 1;
+        margin-top:1rem;
+      }
+    }
+
+    //quote
+    li:nth-child(6){
+      @include fluidRem("font-size", 1rem, 1.15rem);
+      display:block;
+      grid-column: span 2;
+
+      &:before{
+        display:none;
+      }
+
+      blockquote{
+        font-style:italic;
+      }
+
+      cite{
+
+      }
+    }
+
+    @media (min-width: $mq-500){
+
+      li:nth-child(5){
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns:auto;
+      }
+
+      li:nth-child(5),
+      li:nth-child(6){
+        grid-column:span 1;
+        grid-row:span 2;
+
+        &:before{
+          grid-row: span 1;
+        }
+      }
+    }
+
+    @media (max-width: $mq-800){
+      padding-bottom:0;
+
+      .center{
+        width:100%;
+      }
+
+      .lp-school-content-title{
+        width: 92%;
+        margin: 0 auto 1rem;
+      }
+    }
+
+    @media (min-width: $mq-700){
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-flow: dense;
+      }
+
+      li:nth-child(5){
+        grid-column: 1;
+        grid-row: 1 / span 2;
+      }
+    }
+
+    @media (min-width: $mq-1000){
+      ul{
+        grid-gap: 1rem;
+      }
+    }
+  }
 }
