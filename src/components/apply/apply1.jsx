@@ -14,13 +14,12 @@ const codeFiles = [
     fileName: 'style-apply-v1.scss',
     code: styleSheet.default,
     language: 'scss',
-    lineNumbersToHide: '1-2',
+    lineNumbersToDelete: '1-6',
   },
   {
     fileName: 'apply1.html',
     code: html.default,
     language: 'html',
-    lineNumbersToDelete: '1-10',
   },
 ];
 
