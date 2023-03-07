@@ -127,21 +127,6 @@ html {
 
 .top-nav {
   position: relative;
-  
-  // .main-menu-btn {
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   height: 3.125rem;
-  //   z-index: 5;
-  //   background-color: variables.$c-btn-primary;
-  //   border: none;
-  //   color: white;
-  //   font-size: 1.5rem;
-  //   padding: 0 1rem;
-  //   width: auto;
-  //   text-align: left;
-  // }
 
   .main-menu-overlay {
     height: 100%;
@@ -236,19 +221,28 @@ html {
   background: variables.$c-heading-color;
 
   .code-block-wrapper {
-    max-width: variables.$mq-1000;
-    width: 90%;
-    margin: 0 auto;
     text-align: center;
+    max-width:none;
+    display:grid;
+    gap:1rem;
+  }
+
+  .pre-wrapper{
+    gap:1rem; 
   }
 
   pre {
     text-align: left;
+    border:none !important;
+    padding:1rem !important;
+    font-size:1rem;
+    margin:0;
   }
 
   button {
     border: 1px solid white;
     border-radius: variables.$b-border-radius;
+    margin:0 auto !important;
 
     &.button-copy,
     &.button-code {
@@ -272,17 +266,15 @@ html {
 
     &.button-copy {
       background-color: variables.$c-btn-secondary;
-      margin-top: 1rem;
 
       &:hover,
       &:focus {
         background-color: variables.$c-btn-secondary-hover;
       }
+    }
 
-      @media (min-width: variables.$mq-500) {
-        margin-left: 1.5rem;
-        margin-top: 0;
-      }
+    & + button{
+      margin-left:1rem;
     }
 
     &[css="[object Object]"] {
@@ -296,6 +288,36 @@ html {
       &:focus {
         background-color: variables.$c-btn-tertiary;
         color: white;
+      }
+    }
+  }
+
+  @media (min-width: variables.$mq-1200){
+    .pre-wrapper{
+      display:grid;
+      grid-template-columns: auto auto;
+      grid-template-areas:  
+                            "sass-button html-button"
+                            "sass-code html-code";
+      .code-toggle{
+        grid-area:code-toggle;
+      }
+
+      .button-copy:nth-of-type(1){
+        grid-area: sass-button
+      }
+  
+      .button-copy:nth-of-type(2){
+        grid-area: html-button
+      }
+  
+      pre.language-scss{
+        grid-area: sass-code;
+        justify-self:stretch;
+      }
+  
+      pre.language-html{
+        grid-area: html-code;
       }
     }
   }
