@@ -11,7 +11,7 @@ const CodeHighlightGroup = ({ codeFiles }) => {
   const toggleCode = () => setShowCode(!showCode);
   return (
     <div className="code-block">
-      <div className="code-block-wrapper line-numbers">
+      <div className=" center code-block-wrapper line-numbers">
         <button
           type="button"
           onClick={toggleCode}
@@ -19,6 +19,7 @@ const CodeHighlightGroup = ({ codeFiles }) => {
         >
           {showCode ? 'Hide Code' : 'Show Code for Above'}
         </button>
+        <div className="pre-wrapper">
         {showCode && (
           <>
             {codeFiles.map((file, i) => (
@@ -26,6 +27,7 @@ const CodeHighlightGroup = ({ codeFiles }) => {
             ))}
           </>
         )}
+        </div>
       </div>
     </div>
   );
@@ -62,6 +64,7 @@ const CodeHighlight = ({
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre
+            tabindex="0"
             className={className}
             style={{
               ...style,
