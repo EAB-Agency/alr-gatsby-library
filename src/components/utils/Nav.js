@@ -43,8 +43,14 @@ const Nav = () => {
           <Link to="/school-tiles-static" onClick={closeMenu}>
             Static School Tiles
           </Link>
-          <Link to="/socialproof" onClick={closeMenu}>
-            Social Proof
+          <Link to="/testimonial" onClick={closeMenu}>
+            Testimonials
+          </Link>
+          <Link to="/video" onClick={closeMenu}>
+            Videos
+          </Link>
+          <Link to="/stats" onClick={closeMenu}>
+            Stats
           </Link>
           <Link to="/contact" onClick={closeMenu}>
             Contact Us

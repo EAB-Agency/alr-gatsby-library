@@ -62,20 +62,39 @@
             transition: all 0.25s ease-in-out;
           }
   
+          // absolute position approach
+          // .link-wrap {
+          //   &::after {
+          //     content: $i-chevronRight;
+          //     display: inline-block;
+          //     font-family: $f-iconFont;
+          //     color: $c-black;
+          //     position: absolute;
+          //     margin-top: 0.25rem;
+          //     margin-left: 0.5rem;
+          //     font-size: 0.9em;
+          //     line-height: 1.2;
+          //     transition: all 0.25s ease-in-out;
+          //   }
+          // }
+
+          // flex approach. Icon stays centered even when copy breaks to second line. Icon will also never leave container.
+          // you can also use justify-content:space-between; to quickly push icon all the way to the edge of the span.
           .link-wrap {
+            display:flex;
+            align-items:center;
+            gap: .5rem;
+
             &::after {
               content: $i-chevronRight;
-              display: inline-block;
               font-family: $f-iconFont;
               color: $c-black;
-              position: absolute;
               margin-top: 0.25rem;
-              margin-left: 0.5rem;
               font-size: 0.9em;
-              line-height: 1.2;
               transition: all 0.25s ease-in-out;
             }
           }
+
   
           &:hover,
           &:focus {
