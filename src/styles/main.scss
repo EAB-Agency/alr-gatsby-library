@@ -228,6 +228,7 @@ html {
   }
 
   .pre-wrapper{
+    display:grid;
     gap:1rem; 
   }
 
@@ -293,12 +294,18 @@ html {
   }
 
   @media (min-width: variables.$mq-1200){
+
+    .center{
+      width:95%;
+    }
+    
     .pre-wrapper{
-      display:grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: 50% 50%;
       grid-template-areas:  
                             "sass-button html-button"
                             "sass-code html-code";
+      justify-content:center;
+
       .code-toggle{
         grid-area:code-toggle;
       }

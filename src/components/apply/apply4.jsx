@@ -14,11 +14,6 @@ const codeFiles = [
     language: 'scss',
     lineNumbersToDelete: '1-6',
   },
-  {
-    fileName: 'apply1.html',
-    code: html.default,
-    language: 'html',
-  },
 ];
 
 const applyFour = () => (

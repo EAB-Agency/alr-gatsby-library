@@ -1,6 +1,25 @@
 import React from 'react';
 import DefaultFooter from './default-footer';
+import SnippetToggler from '../utils/SnippetToggler';
 import './style-footer-v4.scss';
+
+// eslint-disable-next-line import/no-unresolved
+const styleSheet = require('!!raw-loader!./style-footer-v2.scss');
+// const html = require('!!raw-loader!./apply1.html');
+
+const codeFiles = [
+  {
+    fileName: 'style-footer-v2.scss',
+    code: styleSheet.default,
+    language: 'scss',
+    lineNumbersToDelete: '1-6',
+  },
+  // {
+  //   fileName: 'apply1.html',
+  //   code: html.default,
+  //   language: 'html',
+  // },
+];
 
 const FooterFour = () => (
   <div className="footer-v4 layout-section">
@@ -20,6 +39,9 @@ const FooterFour = () => (
         </div>
       </div>
     </footer>
+
+    <SnippetToggler files={codeFiles} />
+    
   </div>
 );
 

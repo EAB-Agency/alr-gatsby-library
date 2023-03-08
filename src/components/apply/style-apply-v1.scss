@@ -5,11 +5,12 @@
 @use "library/foundation/utilities" as *;
 
 .apply-v1{
+
   .lp-apply {
     background: $c-white;
     padding: 0;
     @include applyFormInlineEmail("(min-width: #{$mq-500})");
-  
+
     &::before {
       // Image above content on small screens
       // For image below - change to ::after here and again after media query
