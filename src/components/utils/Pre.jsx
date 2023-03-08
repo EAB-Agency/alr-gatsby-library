@@ -40,8 +40,17 @@ const CodeHighlight = ({
   lineNumbersToHide,
   lineNumbersToDelete,
 }) => {
+  console.log(
+    '🚀 ~ file: Pre.jsx:41 ~ lineNumbersToDelete:',
+    lineNumbersToDelete
+  );
+  const updatedCode = code.replace(/\bclassName\b/g, 'class');
+
   const shouldHideLine = calculateLinesToHide(lineNumbersToHide);
-  const codeWithDeletedLines = deleteCodeLines(lineNumbersToDelete, code);
+  const codeWithDeletedLines = deleteCodeLines(
+    lineNumbersToDelete,
+    updatedCode
+  );
 
   return (
     <>
@@ -111,15 +120,33 @@ const calculateLinesToHide = (lineNumbersToHighlight) => {
   return () => false;
 };
 const deleteCodeLines = (lineNumbersToDelete, code) => {
+  console.log(
+    '🚀 ~ file: Pre.jsx:120 ~ deleteCodeLines ~ lineNumbersToDelete:',
+    lineNumbersToDelete
+  );
   const RE = /([\d,-]+)/;
+  // const RE = /^([\d,-]+)(,\s*[\d,-]+)*$/;
+  // const RE = /^[\d,-]+(?:,[\d,-]+)*$/;
+  // const RE = /^[\d,-]+(?:\s*,\s*[\d,-]+)*$/;
+
   if (RE.test(lineNumbersToDelete)) {
     const strLineNumbers = RE.exec(lineNumbersToDelete)[1];
-    const lineNumbers = rangeParser(strLineNumbers);
-    const lines = code.split('\n');
-    const filteredLines = lines.filter(
-      (line, i) => !lineNumbers.includes(i + 1)
+    console.log(
+      '🚀 ~ file: Pre.jsx:131 ~ deleteCodeLines ~ strLineNumbers:',
+      strLineNumbers
     );
-    return filteredLines.join('\n');
+    if (strLineNumbers) {
+      // const lineNumbers = rangeParser(strLineNumbers);
+      // const lineNumbers = rangeParser(strLineNumbers, { expand: true });
+      const lineNumbers = rangeParser(strLineNumbers.replace(/\s+/g, ''), {
+        expand: true,
+      });
+      const lines = code.split('\n');
+      const filteredLines = lines.filter(
+        (line, i) => !lineNumbers.includes(i + 1)
+      );
+      return filteredLines.join('\n');
+    }
   }
   return code;
 };

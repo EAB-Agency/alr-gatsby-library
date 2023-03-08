@@ -7,7 +7,7 @@ import * as styles from './style-apply-v1.scss';
 
 // eslint-disable-next-line import/no-unresolved
 const styleSheet = require('!!raw-loader!./style-apply-v1.scss');
-const html = require('!!raw-loader!./apply1.html');
+const html = require('!!raw-loader!./default-apply.js');
 
 const codeFiles = [
   {
@@ -20,6 +20,7 @@ const codeFiles = [
     fileName: 'apply1.html',
     code: html.default,
     language: 'html',
+    lineNumbersToDelete: '1-4,41-44',
   },
 ];
 
