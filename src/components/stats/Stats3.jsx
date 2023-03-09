@@ -1,7 +1,7 @@
 import React from 'react';
 import DefaultStats from './default-stats';
 import SnippetToggler from '../utils/SnippetToggler';
-import './style-stats-v1.scss';
+import './style-stats-v3.scss';
 
 // eslint-disable-next-line import/no-unresolved
 const styleSheet = require('!!raw-loader!./style-stats-v1.scss');
@@ -9,7 +9,7 @@ const styleSheet = require('!!raw-loader!./style-stats-v1.scss');
 
 const codeFiles = [
   {
-    fileName: 'style-stats-v1.scss',
+    fileName: 'style-stats-v3.scss',
     code: styleSheet.default,
     language: 'scss',
     lineNumbersToDelete: '1-6',
@@ -22,7 +22,7 @@ const codeFiles = [
 ];
 
 const StatsThree = () => (
-  <div className="stats-v1 layout-section">
+  <div className="stats-v3 layout-section">
     <DefaultStats />
     <SnippetToggler files={codeFiles} />
   </div>

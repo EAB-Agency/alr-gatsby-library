@@ -16,8 +16,11 @@
 
       li {
         list-style-type: none;
-        @include containerStyle($c-white);
-        text-align: center;
+        display: grid;
+        grid-template-rows: 7rem 1fr;
+        align-items: center;
+        position: relative;
+        @include fluidRem("grid-template-rows", 4rem 1fr, 7rem 1fr);
 
         ~ li {
           margin-top: 1.5rem;
@@ -33,6 +36,51 @@
           font-style: normal;
           line-height: 1.2;
           margin: 0;
+        }
+
+        .lp-stats-item-wrapper {
+          @include containerStyle($c-white);
+          text-align: center;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          @include fluidRem("height", 5rem, 7rem);
+          @include fluidRem("width", 8rem, 14rem);
+          @include fluidRem("border-radius", 4rem 4rem 0 0 , 8rem 8rem 0 0);
+          background-color: $c-white;
+          margin: auto;
+        }
+
+        &::after {
+          display: block;
+          font-family: $f-iconFont;
+          color: $c-black;
+          position: absolute;
+          left: 50%;
+          line-height: 1;
+          transform: translateX(-50%);
+          @include fluidRem("top", 1rem, 1.5rem);
+          @include fluidRem("font-size", 3rem, 6rem);
+        }
+
+        &:nth-child(1) {
+          &::after {
+            content: $i-star;
+          }
+        }
+
+        &:nth-child(2) {
+          &::after {
+            content: $i-star;
+          }
+        }
+
+        &:nth-child(3) {
+          &::after {
+            content: $i-star;
+          }
         }
       }
     }
@@ -68,7 +116,7 @@
           grid-column: span 1;
 
           &:nth-child(3) {
-            grid-column: span 1;
+            grid-column: 3/4;
             grid-row: 1/2;
           }
         }
