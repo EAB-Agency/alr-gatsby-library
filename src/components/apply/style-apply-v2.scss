@@ -4,66 +4,70 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
+.🚀-apply-v2 {
+// ================
+// Apply Layout 2
 
 $d-titleMargin: calc(((#{math.div((100% - $d-centerWidth), 2)}) + 1%) * -1);
 $d-titlePadding: calc((#{math.div((100% - $d-centerWidth), 2)}) + 1%);
 
-.apply-v2 {
-  .lp-apply {
-    @include applyFormInlineEmail("(min-width: #{$mq-500}) and (max-width: #{$mq-800})");
-    @include applyFormInlineEmail("(min-width: #{$mq-1200})");
+.lp-apply {
+  @include applyFormInlineEmail("(min-width: #{$mq-500}) and (max-width: #{$mq-800})");
+  @include applyFormInlineEmail("(min-width: #{$mq-1200})");
 
-    background: $c-white;
-    padding: 0;
+  background: $c-white;
+  padding: 0;
 
-    .lp-apply-content {
-      padding: 0 0 4vw;
-    }
+  .lp-apply-content {
+    padding: 0 0 4vw;
+  }
 
-    @media (max-width: maxMQ($mq-800)) {
-      .lp-apply-title {
-        padding: 20vw $d-titlePadding 2vw;
-        margin: 0 $d-titleMargin 4vw;
-        background: $c-black url("/images/img-woman-cafe.jpg") no-repeat center 60% / cover;
-        color: $c-white;
-      }
-    }
-
-    @media (min-width: $mq-800) {
-      .lp-apply-wrapper {
-        width: 100%;
-        max-width: none;
-        display: grid;
-
-        // Change % in variable at top to match your .center width being used throughout
-        grid-template-columns: $d-gridCalc 1fr 3% 1fr $d-gridCalc;
-
-        // Two layout options (grid area) - comment out what you do want
-        grid-template-areas: "space apply gap image image";
-
-        // grid-template-areas: "image image gap apply space";
-
-        &::after {
-          content: "";
-          display: block;
-          width: 100%;
-          height: 100%;
-          background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-          grid-area: image;
-        }
-      }
-
-      .lp-apply-content {
-        padding: 6vw 0;
-        grid-area: apply;
-      }
-    }
-
-    @media (min-width: $mq-1600) {
-      .lp-apply-wrapper {
-        // adjust math.div formula at top for different widths
-        grid-template-columns: auto $d-gridMaxWidth 3% $d-gridMaxWidth auto;
-      }
+  @media (max-width: maxMQ($mq-800)) {
+    .lp-apply-title {
+      padding: 20vw $d-titlePadding 2vw;
+      margin: 0 $d-titleMargin 4vw;
+      background: $c-black url("/images/img-woman-cafe.jpg") no-repeat center 60% / cover;
+      color: $c-white;
     }
   }
+
+  @media (min-width: $mq-800) {
+    .lp-apply-wrapper {
+      width: 100%;
+      max-width: none;
+      display: grid;
+
+      // Change % in variable at top to match your .center width being used throughout
+      grid-template-columns: $d-gridCalc 1fr 3% 1fr $d-gridCalc;
+
+      // Two layout options (grid area) - comment out what you do want
+      grid-template-areas: "space apply gap image image";
+
+      // grid-template-areas: "image image gap apply space";
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
+        grid-area: image;
+      }
+    }
+
+    .lp-apply-content {
+      padding: 6vw 0;
+      grid-area: apply;
+    }
+  }
+
+  @media (min-width: $mq-1600) {
+    .lp-apply-wrapper {
+      // adjust math.div formula at top for different widths
+      grid-template-columns: auto $d-gridMaxWidth 3% $d-gridMaxWidth auto;
+    }
+  }
+}
+
+
 }

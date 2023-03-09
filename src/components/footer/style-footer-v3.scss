@@ -4,41 +4,44 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
-.footer-v3 {
+.🚀-footer-v3 {
+// ================
+// Footer Layout 3
 
-  .school-footer{
-    color: $c-black;
-    font-size: 1rem;
-    @include fluidRem("padding", 1rem 0, 1.5rem 0);
+.school-footer{
+  color: $c-black;
+  font-size: 1rem;
+  @include fluidRem("padding", 1rem 0, 1.5rem 0);
+
+  .school-footer-wrapper{
+    text-align: center;
   }
 
-    .school-footer-wrapper{
-      text-align: center;
+  .school-footer-name{
+    @extend .school-logo;
+    background-position: center;
+    margin: 0 auto 1rem;
+  }
+
+  .school-footer-address{
+    margin: 0;
+  }
+
+  .school-footer-links{
+    margin: 1rem 0 0;
+
+    li{
+      display: inline-block;
+      list-style: none;
+
+      ~ li{
+        border-left: 1px solid $c-black;
+        margin-left: 1em;
+        padding-left: 1em;
+      }
     }
+  }
+}
 
-        .school-footer-name{
-          @extend .school-logo;
-          background-position: center;
-          margin: 0 auto 1rem;
-        }
-
-        .school-footer-address{
-          margin: 0;
-        }
-
-        .school-footer-links{
-          margin: 1rem 0 0;
-
-          li{
-            display: inline-block;
-            list-style: none;
-  
-            ~ li{
-              border-left: 1px solid $c-black;
-              margin-left: 1em;
-              padding-left: 1em;
-            }
-          }
-        }
 
 }

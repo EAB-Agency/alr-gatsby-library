@@ -4,48 +4,53 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
-.apply-v3 {
-  .lp-apply {
-    padding: 4vw 0 0;
-    background: $c-white;
+.🚀-apply-v3 {
+// ================
+// Apply Layout 3
+
+.lp-apply {
+  padding: 4vw 0 0;
+  background: $c-white;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 30vw;
+    background: url("/images/img-woman-cafe-lg.jpg") no-repeat right 55% / cover;
+  }
+
+  @media (min-width: $mq-800) {
+    padding: 4vw 0;
 
     &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 30vw;
-      background: url("/images/img-woman-cafe-lg.jpg") no-repeat right 55% / cover;
+      display: none;
     }
 
-    @media (min-width: $mq-800) {
-      padding: 4vw 0;
+    .lp-apply-wrapper {
+      padding-bottom: 0;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      grid-template-areas: "image content";
+      grid-gap: 3rem;
+      align-items: center;
 
-      &::after {
-        display: none;
+      &::before {
+        content: "";
+        display: block;
+        background: url("/images/img-woman-cafe.jpg") no-repeat 60% center / cover;
+        transform: scaleX(-1);
+        height: 100%;
+        width: 100%;
+        grid-area: image;
       }
 
-      .lp-apply-wrapper {
-        padding-bottom: 0;
-        display: grid;
-        grid-template-columns: 1fr 1.5fr;
-        grid-template-areas: "image content";
-        grid-gap: 3rem;
-        align-items: center;
-
-        &::before {
-          content: "";
-          display: block;
-          background: url("/images/img-woman-cafe.jpg") no-repeat 60% center / cover;
-          transform: scaleX(-1);
-          height: 100%;
-          width: 100%;
-          grid-area: image;
-        }
-
-        .lp-apply-content {
-          padding: 2vw 0;
-        }
+      .lp-apply-content {
+        padding: 2vw 0;
       }
     }
   }
+}
+
+
 }

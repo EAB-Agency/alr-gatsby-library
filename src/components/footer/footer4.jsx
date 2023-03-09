@@ -4,12 +4,12 @@ import SnippetToggler from '../utils/SnippetToggler';
 import './style-footer-v4.scss';
 
 // eslint-disable-next-line import/no-unresolved
-const styleSheet = require('!!raw-loader!./style-footer-v2.scss');
+const styleSheet = require('!!raw-loader!./style-footer-v4.scss');
 // const html = require('!!raw-loader!./apply1.html');
 
 const codeFiles = [
   {
-    fileName: 'style-footer-v2.scss',
+    fileName: 'style-footer-v4.scss',
     code: styleSheet.default,
     language: 'scss',
     lineNumbersToDelete: '1-6',
@@ -22,7 +22,7 @@ const codeFiles = [
 ];
 
 const FooterFour = () => (
-  <div className="footer-v4 layout-section">
+  <div className="🚀-footer-v4 layout-section">
     <footer className="school-footer">
       <div className="school-footer-wrapper center">
         <div className="school-footer-content">

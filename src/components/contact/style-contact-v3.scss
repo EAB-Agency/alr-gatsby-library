@@ -4,75 +4,79 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
-.contact-v3 {
+.🚀-contact-v3 {
+// ================
+// Contact Us Layout 1
 
-  .lp-school-contact {
-    background: $c-black url("/images/img-woman-cafe.jpg") no-repeat center / cover;
-    padding: 20vw 0;
+.lp-school-contact {
+  background: $c-black url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+  padding: 20vw 0;
+
+  .lp-school-contact-info {
+    @include containerStyle
+  }
+
+  .lp-school-contact-options {
+    list-style: none;
+    margin: 0;
+
+    li {
+      ~ li {
+        margin-top: 1rem;
+      }
+
+      &.lp-school-contact-phone {
+        a {
+          &::before {
+            content: $i-phone;
+          }
+        }
+      }
+
+      &.lp-school-contact-email {
+        a {
+          &::before {
+            content: $i-email;
+          }
+        }
+      }
+    }
+
+    a {
+      @extend %button;
+      @extend %minor-button;
+
+      &::before {
+        display: inline-block;
+        font-family: $f-iconFont;
+        margin-right: 0.35rem;
+        font-weight: normal;
+      }
+    }
+  }
+
+  @media (min-width: $mq-500) {
+    background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat center / cover;
+    padding: 12vw 0;
 
     .lp-school-contact-info {
-      @include containerStyle
+      max-width: $mq-600;
+      margin-right: auto;
     }
 
     .lp-school-contact-options {
-      list-style: none;
-      margin: 0;
-
+      
       li {
+        display: inline-block;
+
         ~ li {
-          margin-top: 1rem;
-        }
-
-        &.lp-school-contact-phone {
-          a {
-            &::before {
-              content: $i-phone;
-            }
-          }
-        }
-
-        &.lp-school-contact-email {
-          a {
-            &::before {
-              content: $i-email;
-            }
-          }
-        }
-      }
-
-      a {
-        @extend %button;
-        @extend %minor-button;
-
-        &::before {
-          display: inline-block;
-          font-family: $f-iconFont;
-          margin-right: 0.35rem;
-          font-weight: normal;
-        }
-      }
-    }
-
-    @media (min-width: $mq-500) {
-      background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat center / cover;
-      padding: 12vw 0;
-
-      .lp-school-contact-info {
-        max-width: $mq-600;
-        margin-right: auto;
-      }
-
-      .lp-school-contact-options {
-        
-        li {
-          display: inline-block;
-  
-          ~ li {
-            margin-top: 0;
-            margin-left: 1rem;
-          }
+          margin-top: 0;
+          margin-left: 1rem;
         }
       }
     }
   }
+}
+
+
 }

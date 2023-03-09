@@ -4,40 +4,44 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
-.footer-v2 {
+.🚀-footer-v2 {
+// ================
+// Footer Layout 2
 
-  .school-footer {
-    @include fluidRem("padding", 1rem 0, 1.5rem 0);
- 
-    .school-footer-name {
-      @extend .school-logo;
-      margin-bottom: 1rem;
-    }
-  
-    .school-footer-address {
-      margin-bottom: 0;
-    }
-  
-    .school-footer-links {
-      margin: 1rem 0 0;
-  
-      li {
-        list-style-type: none;
-      }
-    }
-  
-    @media (min-width: $mq-600) {
-      .school-footer-wrapper{
-        display:grid;
-        grid-template-columns: auto auto;
-        align-items:flex-end;
-        justify-content:space-between;
-        column-gap: 1rem;
-      }
+.school-footer {
+  @include fluidRem("padding", 1rem 0, 1.5rem 0);
 
-      .school-footer-links {
-        margin-top: 0;
-      }
-    }  
+  .school-footer-name {
+    @extend .school-logo;
+    margin-bottom: 1rem;
   }
+
+  .school-footer-address {
+    margin-bottom: 0;
+  }
+
+  .school-footer-links {
+    margin: 1rem 0 0;
+
+    li {
+      list-style-type: none;
+    }
+  }
+
+  @media (min-width: $mq-600) {
+    .school-footer-wrapper{
+      display:grid;
+      grid-template-columns: auto auto;
+      align-items:flex-end;
+      justify-content:space-between;
+      column-gap: 1rem;
+    }
+
+    .school-footer-links {
+      margin-top: 0;
+    }
+  }  
+}
+
+
 }

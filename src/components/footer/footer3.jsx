@@ -22,7 +22,7 @@ const codeFiles = [
 ];
 
 const FooterThree = () => (
-  <div className="footer-v3 layout-section">
+  <div className="🚀-footer-v3 layout-section">
     <DefaultFooter />;
     <SnippetToggler files={codeFiles} />
   </div>

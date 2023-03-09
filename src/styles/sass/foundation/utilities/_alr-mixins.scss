@@ -1,13 +1,12 @@
-// ================
-// ALR Supported Mixins
-// ================
-
 @use "sass:color";
 @use "sass:math";
 @use "breakpoints" as *;
 @use "royall" as *;
 @use "../config/variables" as *;
 
+// ================
+// ALR Supported Mixins
+// ================
 
 // Returns a rem units from pixel value
 // Ex. font-size: rem(16); 

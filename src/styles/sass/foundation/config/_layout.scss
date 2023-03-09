@@ -1,12 +1,12 @@
-// ================
-// Layout
-// ================
-
 @use "sass:color";
 @use "sass:math";
 @use "variables" as *;
 @use "type" as *;
 @use "../utilities" as *;
+
+// ================
+// Layout
+// ================
 
 // ================
 // Viewport Rules
@@ -61,7 +61,7 @@
 }
 
 // Add after containerStyle Mixin
-@mixin reversed-container{
+@mixin containerReversed{
 
   a{
     @include reversed-link;
