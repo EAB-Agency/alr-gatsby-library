@@ -13,50 +13,47 @@
     .lp-stats-list {
       margin: 0;
       padding: 0;
-      @include gridItems("2", $mq-400, $mq-700, 1.5rem, 2rem);
+      @include gridItems("2", $mq-700, $mq-900, 1.5rem, 4rem);
 
       li {
         list-style-type: none;
+        display: grid;
+        grid-template: 1fr / 0.2fr 1fr;
+        grid-gap: 0 1rem;
+        align-items: center;
 
         &::before {
           content: '';
           display: block;
           font-family: $f-iconFont;
-          color: $c-white;
-          background: $c-black;
-          border: 2px solid $c-black;
-          width: 5rem;
-          height: 5rem;
-          border-radius: 50%;            
-          padding: 1rem;
+          color: $c-black;
           text-align: center;
-          font-size: 2.5rem;
+          @include fluidRem("font-size", 3rem, 4rem);
           line-height: 1.1;
-          transition: all 0.25s ease-in-out;
         }
 
         &:nth-child(1) {
           
           &::before {
-            content: $i-bookmark;
+            content: $i-star;
           }
         }
   
         &:nth-child(2) {
           &::before {
-            content: $i-users;
+            content: $i-bookmark;
           }
         }
   
         &:nth-child(3) {
           &::before {
-            content: $i-university;
+            content: $i-heart;
           }
         }
   
         &:nth-child(4) {
           &::before {
-            content: $i-laptop;
+            content: $i-flag;
           }
         }
 
@@ -64,8 +61,13 @@
           display: block;
         }
 
+        .lp-stats-item-wrapper {
+          border-left: 1px solid $c-black;
+          padding: 0 2rem;
+        }
+
         .emphasis {
-          @include fluidRem("font-size", 3rem, 6rem);
+          @include fluidRem("font-size", 2rem, 4rem);
           font-weight: 900;
           font-style: normal;
           line-height: 1.2;

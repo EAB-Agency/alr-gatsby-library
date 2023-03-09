@@ -21,10 +21,10 @@ const codeFiles = [
   // },
 ];
 
-const StatsOne = () => (
+const StatsThree = () => (
   <div className="stats-v1 layout-section">
     <DefaultStats />
     <SnippetToggler files={codeFiles} />
   </div>
 );
-export default StatsOne;
+export default StatsThree;
