@@ -1,13 +1,15 @@
-// ================
-// Customize These Settings
-
 @use "sass:color";
 @use "sass:math";
 @use "../config" as *;
 @use "../utilities" as *;
 @use "../components" as *;
 
+// ================
 // OneTrust Banner
+// ================
+
+// ================
+// Customize These Settings
 
 $c-bannerBG: $c-black;
 $c-bannerFontColor: $c-white;

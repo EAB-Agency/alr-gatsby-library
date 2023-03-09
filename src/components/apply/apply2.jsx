@@ -17,10 +17,10 @@ const codeFiles = [
 ];
 
 const applyTwo = () => (
-  <div className="apply-v2 layout-section">
-    <DefaultApply />
+  <>
+    <DefaultApply className="🚀-apply-v2 layout-section" />
     <SnippetToggler files={codeFiles} />
-  </div>
+  </>
 );
 
 export default applyTwo;

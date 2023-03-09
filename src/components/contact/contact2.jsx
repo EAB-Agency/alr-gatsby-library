@@ -1,9 +1,12 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax */
 import React from 'react';
+import SnippetToggler from '../utils/SnippetToggler';
 import DefaultContact from './default-contact';
 import './style-contact-v2.scss';
 
 const contactTwo = () => (
-  <div className="contact-v2 layout-section">
+  <div className="🚀-contact-v2 layout-section">
     <section className="lp-school-contact">
       <div className="center lp-school-wrapper">
         <div className="lp-school-contact-info">
@@ -27,6 +30,9 @@ const contactTwo = () => (
         </div>
       </div>
     </section>
+
+    <SnippetToggler files={codeFiles} />
+
   </div>
 );
 

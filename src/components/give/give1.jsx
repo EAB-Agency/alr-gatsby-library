@@ -1,13 +1,32 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-webpack-loader-syntax */
 import React from 'react';
-import DefaultGive from './default-give';
 import SnippetToggler from '../utils/SnippetToggler';
-import './style-give-v2.scss';
-import * as styles from './style-give-v1.scss';
+import DefaultGive from './default-give';
+import './style-give-v1.scss';
+
+const styleSheet = require('!!raw-loader!./style-give-v1.scss');
+// const html = require('!!raw-loader!./default-apply.js');
+
+const codeFiles = [
+  {
+    fileName: 'style-give-v1.scss',
+    code: styleSheet.default,
+    language: 'scss',
+    lineNumbersToDelete: '1-6',
+  },
+  // {
+  //   fileName: 'apply1.html',
+  //   code: html.default,
+  //   language: 'html',
+  //   lineNumbersToDelete: '1-5,43-47',
+  // },
+];
 
 const GiveOne = () => (
-  <div className="give-1 layout-section">
+  <div className="🚀-give-1 layout-section">
     <DefaultGive />;
-    {/* <SnippetToggler fileName="style-give-v1.scss" code={styleSheet.default} /> */}
+    <SnippetToggler files={codeFiles} />
   </div>
 );
 

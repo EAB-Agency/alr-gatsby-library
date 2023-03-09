@@ -3,13 +3,15 @@ import DefaultFooter from './default-footer';
 import SnippetToggler from '../utils/SnippetToggler';
 import './style-footer-v1.scss';
 
+const scssPath = './style-footer-v1.scss';
+
 // eslint-disable-next-line import/no-unresolved
 const styleSheet = require('!!raw-loader!./style-footer-v1.scss');
 // const html = require('!!raw-loader!./apply1.html');
 
 const codeFiles = [
   {
-    fileName: 'style-footer-v1.scss',
+    fileName: './style-footer-v1.scss',
     code: styleSheet.default,
     language: 'scss',
     lineNumbersToDelete: '1-6',
@@ -22,7 +24,7 @@ const codeFiles = [
 ];
 
 const FooterOne = () => (
-  <div className="footer-v1 layout-section">
+  <div className="🚀-footer-v1 layout-section">
     <footer className="school-footer">
       <div className="school-footer-wrapper center">
         <div className="school-footer-name">the School Name</div>

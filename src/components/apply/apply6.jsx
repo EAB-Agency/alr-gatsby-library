@@ -22,7 +22,7 @@ const codeFiles = [
 ];
 
 const applySix = () => (
-  <div className="apply-v6 layout-section">
+  <div className="🚀-apply-v6 layout-section">
     <section className="lp-apply">
       <div className="center lp-apply-wrapper">
         <div className="content-container lp-apply-content">

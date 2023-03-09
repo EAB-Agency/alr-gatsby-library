@@ -17,10 +17,10 @@ const codeFiles = [
 ];
 
 const applyThree = () => (
-  <div className="apply-v3 layout-section">
-    <DefaultApply />
+  <>
+    <DefaultApply className="🚀-apply-v3 layout-section" />
     <SnippetToggler files={codeFiles} />
-  </div>
+  </>
 );
 
 export default applyThree;
