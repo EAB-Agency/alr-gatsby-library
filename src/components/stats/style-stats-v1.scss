@@ -5,7 +5,21 @@
 @use "library/foundation/utilities" as *;
 
 
-.stats-v1{
+.stats-v1 {
 
+  .lp-stats-list {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+
+      .emphasis {
+        @include fluidRem("font-size", 3rem, 4rem);
+        font-weight: bold;
+        font-style: normal;
+      }
+    }
+  }
 
 }
