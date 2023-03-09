@@ -23,8 +23,49 @@ const codeFiles = [
 
 const StatsTwo = () => (
   <div className="stats-v2 layout-section">
-      <DefaultStats />
-      <SnippetToggler files={codeFiles} />
+    <div className="lp-stats-section">
+      <div className="center">
+        <ul className="lp-stats-list">
+          <li className="lp-stats-item">
+            <div className="lp-stats-item-wrapper">
+              <span className="emphasis">XXX</span>
+              <span className="description">Best Business School</span>
+              <span className="source">
+                <em>U.S. News & World Report</em>
+              </span>
+            </div>
+          </li>
+          <li className="lp-stats-item">
+            <div className="lp-stats-item-wrapper">
+              <span className="emphasis">XXX</span>
+              <span className="description">Best Business School</span>
+              <span className="source">
+                <em>U.S. News & World Report</em>
+              </span>
+            </div>
+          </li>
+          <li className="lp-stats-item">
+            <div className="lp-stats-item-wrapper">
+              <span className="emphasis">XXX</span>
+              <span className="description">Best Business School</span>
+              <span className="source">
+                <em>U.S. News & World Report</em>
+              </span>
+            </div>
+          </li>
+          <li className="lp-stats-item">
+            <div className="lp-stats-item-wrapper">
+              <span className="emphasis">XXX</span>
+              <span className="description">Best Business School</span>
+              <span className="source">
+                <em>U.S. News & World Report</em>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <SnippetToggler files={codeFiles} />
   </div>
 );
 export default StatsTwo;

@@ -5,7 +5,85 @@
 @use "library/foundation/utilities" as *;
 
 
-.stats-v2{
+.stats-v2 {
 
+  .lp-stats-section {
+    @include boxSpacing(2rem, 2rem);
+
+    .lp-stats-list {
+      margin: 0;
+      padding: 0;
+      @include gridItems("2", $mq-700, $mq-900, 1.5rem, 4rem);
+
+      li {
+        list-style-type: none;
+        display: grid;
+        grid-template: 1fr / 0.2fr 1fr;
+        grid-gap: 0 1rem;
+        align-items: center;
+
+        &::before {
+          content: '';
+          display: block;
+          font-family: $f-iconFont;
+          color: $c-black;
+          text-align: center;
+          @include fluidRem("font-size", 3rem, 4rem);
+          line-height: 1.1;
+        }
+
+        &:nth-child(1) {
+          
+          &::before {
+            content: $i-star;
+          }
+        }
+  
+        &:nth-child(2) {
+          &::before {
+            content: $i-bookmark;
+          }
+        }
+  
+        &:nth-child(3) {
+          &::before {
+            content: $i-heart;
+          }
+        }
+  
+        &:nth-child(4) {
+          &::before {
+            content: $i-flag;
+          }
+        }
+
+        span {
+          display: block;
+        }
+
+        .lp-stats-item-wrapper {
+          border-left: 1px solid $c-black;
+          padding: 0 2rem;
+        }
+
+        .emphasis {
+          @include fluidRem("font-size", 2rem, 4rem);
+          font-weight: 900;
+          font-style: normal;
+          line-height: 1.2;
+          margin: 0;
+        }
+      }
+    }
+
+    @media (min-width: $mq-700) {
+      .lp-stats-list {
+       
+        li {
+        
+        }
+      }
+    }
+  }
 
 }
