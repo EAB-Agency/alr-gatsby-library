@@ -40,7 +40,6 @@ const CodeHighlight = ({
   lineNumbersToHide,
   lineNumbersToDelete,
 }) => {
-  console.log('🚀 ~ file: Pre.jsx:43 ~ language:', language);
   const updatedCode = code.replace(/\bclassName\b/g, 'class');
 
   const shouldHideLine = calculateLinesToHide(lineNumbersToHide);
@@ -141,16 +140,9 @@ const deleteCodeLines = (lineNumbersToDelete, code) => {
 };
 
 const deleteRocketLines = (code, language) => {
-  console.log(
-    '🚀 ~ file: Pre.jsx:144 ~ deleteRocketLines ~ language:',
-    language
-  );
   if (language !== 'scss' && language !== 'css') {
-    console.log('not scss or css');
     return code;
   }
-  console.log('IS scss or css');
-
   const lines = code.split('\n');
   const filteredLines = lines.filter((line) => !line.trim().startsWith('.🚀'));
   const lastLine = filteredLines.pop();
