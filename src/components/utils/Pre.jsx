@@ -20,13 +20,13 @@ const CodeHighlightGroup = ({ codeFiles }) => {
           {showCode ? 'Hide Code' : 'Show Code for Above'}
         </button>
         <div className="pre-wrapper">
-        {showCode && (
-          <>
-            {codeFiles.map((file, i) => (
-              <CodeHighlight key={i} {...file} />
-            ))}
-          </>
-        )}
+          {showCode && (
+            <>
+              {codeFiles.map((file, i) => (
+                <CodeHighlight key={i} {...file} />
+              ))}
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -40,16 +40,17 @@ const CodeHighlight = ({
   lineNumbersToHide,
   lineNumbersToDelete,
 }) => {
-  console.log(
-    '🚀 ~ file: Pre.jsx:41 ~ lineNumbersToDelete:',
-    lineNumbersToDelete
-  );
+  console.log('🚀 ~ file: Pre.jsx:43 ~ language:', language);
   const updatedCode = code.replace(/\bclassName\b/g, 'class');
 
   const shouldHideLine = calculateLinesToHide(lineNumbersToHide);
-  const codeWithDeletedLines = deleteCodeLines(
+  const codeWithDeletedLinesTemp = deleteCodeLines(
     lineNumbersToDelete,
     updatedCode
+  );
+  const codeWithDeletedLines = deleteRocketLines(
+    codeWithDeletedLinesTemp,
+    language
   );
 
   return (
@@ -73,7 +74,6 @@ const CodeHighlight = ({
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre
-            tabindex="0"
             className={className}
             style={{
               ...style,
@@ -120,21 +120,10 @@ const calculateLinesToHide = (lineNumbersToHighlight) => {
   return () => false;
 };
 const deleteCodeLines = (lineNumbersToDelete, code) => {
-  console.log(
-    '🚀 ~ file: Pre.jsx:120 ~ deleteCodeLines ~ lineNumbersToDelete:',
-    lineNumbersToDelete
-  );
   const RE = /([\d,-]+)/;
-  // const RE = /^([\d,-]+)(,\s*[\d,-]+)*$/;
-  // const RE = /^[\d,-]+(?:,[\d,-]+)*$/;
-  // const RE = /^[\d,-]+(?:\s*,\s*[\d,-]+)*$/;
 
   if (RE.test(lineNumbersToDelete)) {
     const strLineNumbers = RE.exec(lineNumbersToDelete)[1];
-    console.log(
-      '🚀 ~ file: Pre.jsx:131 ~ deleteCodeLines ~ strLineNumbers:',
-      strLineNumbers
-    );
     if (strLineNumbers) {
       // const lineNumbers = rangeParser(strLineNumbers);
       // const lineNumbers = rangeParser(strLineNumbers, { expand: true });
@@ -149,6 +138,24 @@ const deleteCodeLines = (lineNumbersToDelete, code) => {
     }
   }
   return code;
+};
+
+const deleteRocketLines = (code, language) => {
+  console.log(
+    '🚀 ~ file: Pre.jsx:144 ~ deleteRocketLines ~ language:',
+    language
+  );
+  if (language !== 'scss' && language !== 'css') {
+    console.log('not scss or css');
+    return code;
+  }
+  console.log('IS scss or css');
+
+  const lines = code.split('\n');
+  const filteredLines = lines.filter((line) => !line.trim().startsWith('.🚀'));
+  const lastLine = filteredLines.pop();
+  const withoutLastBracket = filteredLines.join('\n').replace(/\s+$/, '');
+  return withoutLastBracket + (lastLine.trim() === '}' ? '' : lastLine);
 };
 
 export default CodeHighlightGroup;

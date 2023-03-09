@@ -4,11 +4,11 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
-.apply-v1{
-
+.🚀-apply-v1 {
   .lp-apply {
     background: $c-white;
     padding: 0;
+
     @include applyFormInlineEmail("(min-width: #{$mq-500})");
 
     &::before {
@@ -21,25 +21,28 @@
       max-height: 17rem;
       background: $c-black url("/images/img-woman-cafe.jpg") no-repeat center 72% / cover;
     }
-  
+
     .lp-apply-content {
       padding: 4vw 0;
     }
-  
+
     @media (min-width: $mq-800) {
       @include boxSpacing(4rem, 4rem);
+
       background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-  
+
       .lp-apply-content {
         // Change margin to right align box
         // Keep max width to help with character lengths
         padding: 0;
-        @include containerStyle;  
+
+        @include containerStyle;
+
         width: 65%;
         max-width: $mq-700;
         margin: 0 auto 0 0;
       }
-  
+
       &::before {
         // Remove image above content
         display: none;
@@ -47,4 +50,3 @@
     }
   }
 }
-
