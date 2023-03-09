@@ -7,19 +7,72 @@
 
 .stats-v1 {
 
-  .lp-stats-list {
-    margin: 0;
-    padding: 0;
+  .lp-stats-section {
+    @include boxSpacing(2rem, 2rem);
 
-    li {
-      list-style-type: none;
+    .lp-stats-list {
+      margin: 0;
+      padding: 0;
 
-      .emphasis {
-        @include fluidRem("font-size", 3rem, 4rem);
-        font-weight: bold;
-        font-style: normal;
+      li {
+        list-style-type: none;
+        @include containerStyle($c-white);
+        text-align: center;
+
+        ~ li {
+          margin-top: 1.5rem;
+        }
+
+        span {
+          display: block;
+        }
+
+        .emphasis {
+          @include fluidRem("font-size", 3rem, 6rem);
+          font-weight: 900;
+          font-style: normal;
+          line-height: 1.2;
+          margin: 0;
+        }
+      }
+    }
+
+    @media (min-width: $mq-400) {
+      .lp-stats-list {
+        display: grid;
+        grid-template: 1fr 1fr / repeat(4, 1fr);
+        grid-gap: 1rem;
+  
+        li {
+          grid-column: span 2;
+
+          ~ li {
+            margin-top: 0;
+          }
+  
+          &:nth-child(3) {
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+            align-self: center;
+          }
+        }
+      }
+    }
+
+    @media (min-width: $mq-700) {
+      .lp-stats-list {
+        grid-template: 1fr / repeat(3, 1fr);
+        grid-gap: 2rem;
+
+        li {
+          grid-column: span 1;
+
+          &:nth-child(3) {
+            grid-column: span 1;
+            grid-row: 1/2;
+          }
+        }
       }
     }
   }
-
 }

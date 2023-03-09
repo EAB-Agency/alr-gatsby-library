@@ -140,12 +140,9 @@
       }
   
       @media (min-width: $mq-700) {
-        // display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4, 1fr);
         grid-gap: 1rem 2rem;
-        // column-gap: 2rem;
-        // row-gap: 1rem;
         align-items: center;
   
         &::after {

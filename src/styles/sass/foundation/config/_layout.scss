@@ -45,7 +45,8 @@
   $_c-backgroundColor: white,
   $_x-border: "null",
   $_c-borderColor: "null",
-  $_x-boxShadow: "null"
+  $_x-boxShadow: "null",
+  $_x-boxShadowColor: rgba($c-black, 0.2)
 ) {
 
   background: $_c-backgroundColor;
@@ -56,7 +57,7 @@
   }
 
   @if $_x-boxShadow == "yes" {
-    box-shadow: 0 0 15px rgba($c-black, 0.2);
+    box-shadow: 0 0 15px $_x-boxShadowColor;
   }
 }
 
