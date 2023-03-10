@@ -24,7 +24,7 @@ const codeFiles = [
 const SchoolTilesStaticOne = () => (
   <div className="🚀-school-tiles-static-v1 layout-section">
     <DefaultContact />
-    <SnippetToggler fileName="school-tiles-static-v1.scss" code={styleSheet.default} />
+    <SnippetToggler files={codeFiles} />
   </div>
 );
 

@@ -74,7 +74,7 @@ const SchoolTilesStaticTwo = () => (
     </div>
   </section>
 
-  <SnippetToggler fileName="school-tiles-static-v2.scss" code={styleSheet.default} />
+  <SnippetToggler files={codeFiles} />
 
   </div>
 );
