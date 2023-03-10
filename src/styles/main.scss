@@ -22,7 +22,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: variables.$c-lightGrey;
+  background: variables.$c-lightTeal;
 }
 
 #measure-counter-extension {
@@ -114,6 +114,22 @@ html {
       }
     }
   }
+
+  &.custom-html{
+    position:relative;
+    
+    &:after{
+      content:'Custom HTML';
+      padding: .25rem .5rem 0 .5rem;
+      color:white;
+      font-size:.75em;
+      font-style:italic;
+      bottom:0;
+      background:variables.$c-heading-color;
+      display:inline-block;
+      position:absolute;
+    }
+  }
 }
 
 // ----------
@@ -122,7 +138,7 @@ html {
 
 .hamburger-react {
   position:fixed !important;
-  z-index:5;
+  z-index:1001;
 }
 
 .top-nav {
@@ -133,7 +149,7 @@ html {
     width: 0;
     max-width: 20rem;
     position: fixed;
-    z-index: 2;
+    z-index: 1000;
     top: 0;
     left: 0;
     overflow-x: hidden;
@@ -206,7 +222,7 @@ html {
 
 .layout-section{
   border-top: 5px solid variables.$c-heading-color;
-  // border-bottom: 5px solid variables.$c-border-info;
+  background: variables.$c-lightGrey;
 }
 
 // ----------
@@ -252,7 +268,7 @@ html {
       &:hover,
       &:focus {
         color: white;
-        border: 1px solid white;
+        border-color:white;
       }
     }
 
@@ -267,6 +283,8 @@ html {
 
     &.button-copy {
       background-color: variables.$c-btn-secondary;
+      border:none;
+      text-shadow: 0px 1px 1px rgba(0,0,0, .5);
 
       &:hover,
       &:focus {

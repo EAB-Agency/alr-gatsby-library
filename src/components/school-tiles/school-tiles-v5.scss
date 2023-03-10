@@ -102,248 +102,247 @@ $c-link1: #1d1d4a;
 $c-link2: #1b3273;
 $c-link3: #470b4a;
 
-
+.🚀-school-tiles-v5 {
 // ================
+// School Tiles 5
 
-.school-tiles-v5 {
-
-  .lp-school {
-    @include boxSpacing;
-    
-    .lp-school-content-title {
-      color: $c-black;
-      font-weight: 600;
+.lp-school {
+  @include boxSpacing;
   
-      @media (min-width: $mq-900) {
-        text-align: center;
-      }
+  .lp-school-content-title {
+    color: $c-black;
+    font-weight: 600;
+
+    @media (min-width: $mq-900) {
+      text-align: center;
     }
-  
-    .lp-school-link-list {
-      margin: 0;
-  
-      li {
-        list-style-type: none;
+  }
+
+  .lp-school-link-list {
+    margin: 0;
+
+    li {
+      list-style-type: none;
+      
+      a {
+        display: block;
+        color: $c-white;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+
+        &:hover,
+        &:focus {
+          .headline {
+            text-decoration: underline;
+          }
+
+          .more {
+            &::after {
+              margin-left: 0.75rem;
+            }
+          }
+        }
+
+        .headline,
+        .description,
+        .more,
+        .lp-school-link-wrapper {
+          display: block;
+        }
+
+        .headline {
+          font-family: $f-headlineFont;
+          margin-bottom: 1rem;
+          margin-top: 0.5rem;
+          @include fluidRem("font-size", 1.25rem, 1.65rem);
+          line-height: 1.2;
+        }
+
+        .description {
+          @include fluidRem("font-size", 0.975rem, 1rem);
+        }
+
+        .more {
+          @include fluidRem("margin-top", 0.65rem, 2rem, $mq-300, $mq-800);
+          font-size: 0.85em;
+
+          &::after {
+            display: inline-block;
+            content: $i-triangleRight;
+            font-family: $f-iconFont;
+            margin-left: 0.5rem;
+            position: absolute;
+            line-height: 1.6;
+          }
+        }
+
+        .lp-school-link-wrapper {
+          margin: auto;
+        }
+      }
+
+      &:nth-child(1) {				
+        a {
+          @include contentStyle($c-link1);
+        }
+      }
+
+      &:nth-child(2) {
+
+        a {
+          @include contentStyle($c-link2);
+        }
+      }
+
+      &:nth-child(3) {
         
         a {
-          display: block;
-          color: $c-white;
-          text-decoration: none;
-          width: 100%;
-          height: 100%;
-  
-          &:hover,
-          &:focus {
-            .headline {
-              text-decoration: underline;
-            }
-  
-            .more {
-              &::after {
-                margin-left: 0.75rem;
-              }
-            }
-          }
-  
-          .headline,
-          .description,
-          .more,
-          .lp-school-link-wrapper {
+          @include contentStyle($c-link3);
+        }
+      }
+    
+    }
+
+    @media (min-width: $mq-500) and (max-width: maxMQ($mq-900)) {
+
+      li {
+        display: grid;
+
+        &:nth-child(odd) {
+          grid-template-columns: 1.65fr 1fr;
+
+          &::after {
+            content: '';
             display: block;
-          }
-  
-          .headline {
-            font-family: $f-headlineFont;
-            margin-bottom: 1rem;
-            margin-top: 0.5rem;
-            @include fluidRem("font-size", 1.25rem, 1.65rem);
-            line-height: 1.2;
-          }
-  
-          .description {
-            @include fluidRem("font-size", 0.975rem, 1rem);
-          }
-  
-          .more {
-            @include fluidRem("margin-top", 0.65rem, 2rem, $mq-300, $mq-800);
-            font-size: 0.85em;
-  
-            &::after {
-              display: inline-block;
-              content: $i-triangleRight;
-              font-family: $f-iconFont;
-              margin-left: 0.5rem;
-              position: absolute;
-              line-height: 1.6;
-            }
-          }
-  
-          .lp-school-link-wrapper {
-            margin: auto;
+            height: 100%;
+            width: 100%;
           }
         }
-  
-        &:nth-child(1) {				
-          a {
-            @include contentStyle($c-link1);
+
+        &:nth-child(even) {
+          grid-template-columns: 1fr 1.65fr;
+
+          &::before {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
           }
         }
-  
-        &:nth-child(2) {
-  
-          a {
-            @include contentStyle($c-link2);
+      }
+
+      li {
+        &:nth-child(1) {
+            
+          &::after {
+            background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
           }
-        }
-  
-        &:nth-child(3) {
           
           a {
-            @include contentStyle($c-link3);
-          }
-        }
-      
-      }
-  
-      @media (min-width: $mq-500) and (max-width: maxMQ($mq-900)) {
-
-        li {
-          display: grid;
-
-          &:nth-child(odd) {
-            grid-template-columns: 1.65fr 1fr;
-
-            &::after {
-              content: '';
-              display: block;
-              height: 100%;
-              width: 100%;
-            }
-          }
-
-          &:nth-child(even) {
-            grid-template-columns: 1fr 1.65fr;
-
-            &::before {
-              content: '';
-              display: block;
-              height: 100%;
-              width: 100%;
-            }
-          }
-        }
-
-        li {
-          &:nth-child(1) {
-              
-            &::after {
-              background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-            }
-            
-            a {
-              @include addTriangle ($c-link1, "topRight");
-            }
-          }
-        }
-  
-        li {
-          &:nth-child(2) {
-  
-            &::before {
-              background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-            }
-            
-            a {
-              @include addTriangle ($c-link2, "topLeft");
-            }
-          }
-        }
-  
-        li {
-          &:nth-child(3) {
-  
-            &::after {
-              background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-            }
-            
-            a {
-              @include addTriangle ($c-link3, "topRight");
-            }
+            @include addTriangle ($c-link1, "topRight");
           }
         }
       }
-  
-      @media (min-width: $mq-900) {
-        display: grid;
-        grid-template: 1fr 1fr / repeat(6, 1fr);
-        grid-template-areas:  "link1 link1 link2 link2 link2 link2"
-                              "link3 link3 link3 link3 link3 link3";
-        margin: 1.5rem 0 0;
-        justify-content: stretch;
-  
-        li {
-  
+
+      li {
+        &:nth-child(2) {
+
+          &::before {
+            background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
+          }
+          
           a {
-            display: flex;
+            @include addTriangle ($c-link2, "topLeft");
           }
-  
-          &:nth-child(1) {
-            grid-area: link1;
-  
-            a {
-              @include addTriangle ($c-link1, "topRight");
-            }
+        }
+      }
+
+      li {
+        &:nth-child(3) {
+
+          &::after {
+            background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
           }
-  
-          &:nth-child(2) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-area: link2;
-  
-            a {
-              @include addTriangle ($c-link2, "bottomRight");
-            }
-  
-            &::before {
-              content: '';
-              display: block;
-              background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-              height: 100%;
-              width: 100%;
-            }
-          }
-  
-          &:nth-child(3) {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-area: link3;
-  
-            a {
-              @include addTriangle ($c-link3, "topLeft");
-            }
-  
-            &::before,
-            &::after {
-              content: '';
-              display: block;
-              height: 100%;
-              width: 100%;
-            }
-  
-            &::before {
-              // Image related to Link3 (bottom)
-              background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-            }
-  
-            &::after {
-              // Image related to Link2 (top right)
-              background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-            }
+          
+          a {
+            @include addTriangle ($c-link3, "topRight");
           }
         }
       }
     }
-    
+
+    @media (min-width: $mq-900) {
+      display: grid;
+      grid-template: 1fr 1fr / repeat(6, 1fr);
+      grid-template-areas:  "link1 link1 link2 link2 link2 link2"
+                            "link3 link3 link3 link3 link3 link3";
+      margin: 1.5rem 0 0;
+      justify-content: stretch;
+
+      li {
+
+        a {
+          display: flex;
+        }
+
+        &:nth-child(1) {
+          grid-area: link1;
+
+          a {
+            @include addTriangle ($c-link1, "topRight");
+          }
+        }
+
+        &:nth-child(2) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-area: link2;
+
+          a {
+            @include addTriangle ($c-link2, "bottomRight");
+          }
+
+          &::before {
+            content: '';
+            display: block;
+            background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        &:nth-child(3) {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-area: link3;
+
+          a {
+            @include addTriangle ($c-link3, "topLeft");
+          }
+
+          &::before,
+          &::after {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+          }
+
+          &::before {
+            // Image related to Link3 (bottom)
+            background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
+          }
+
+          &::after {
+            // Image related to Link2 (top right)
+            background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
+          }
+        }
+      }
+    }
   }
+}
+
 
 }

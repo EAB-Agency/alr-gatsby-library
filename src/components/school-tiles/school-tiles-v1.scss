@@ -4,86 +4,89 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
-.school-tiles-v1 {
+.🚀-school-tiles-v1 {
+// ================
+// School Tiles 1
 
-  .lp-school {
-    @include boxSpacing;
-       
-    .lp-school-content {
+.lp-school {
+  @include boxSpacing;
+      
+  .lp-school-content {
 
-      .lp-school-link-list {
-        @include gridItems("4");
-        list-style: none;
-        margin: 0;
-      }
-    
-      li {
-        a {
-          height: 100%;
-          width: 100%;
-          position: relative;
-          display: block;
-          
-          &::before, 
-          &::after {
-            content:'';
-            width: 100%;
-            height: 12rem;
-            display: block;
-            transition: background-color 0.25s ease-in-out
-          }
+    .lp-school-link-list {
+      @include gridItems("4");
+      list-style: none;
+      margin: 0;
+    }
   
-          &::after {
-            position: absolute;
-            top: 0;
-            left: 0;
-          }
+    li {
+      a {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: block;
+        
+        &::before, 
+        &::after {
+          content:'';
+          width: 100%;
+          height: 12rem;
+          display: block;
+          transition: background-color 0.25s ease-in-out
+        }
+
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        .link-wrap {
+          display: block;
+          background: $c-white;
+          padding: 1rem 1.25rem;
+        }
+    
+        &:hover,
+        &:focus {
+          color: $c-white;
 
           .link-wrap {
-            display: block;
-            background: $c-white;
-            padding: 1rem 1.25rem;
+            background-color: rgba($c-black, .5);
           }
-      
-          &:hover,
-          &:focus {
-            color: $c-white;
+          
+          &:after{
+            background-color: rgba($c-black, .25);
+          }
+        }
+      }
+    
+      &:nth-child(1) { 
+        a::before {
+          background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+        }
+      }
 
-            .link-wrap {
-              background-color: rgba($c-black, .5);
-            }
-            
-            &:after{
-              background-color: rgba($c-black, .25);
-            }
-          }
+      &:nth-child(2) { 
+        a::before {
+          background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
         }
-      
-        &:nth-child(1) { 
-          a::before {
-            background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
-          }
+      }
+
+      &:nth-child(3) { 
+        a::before {
+          background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
         }
-  
-        &:nth-child(2) { 
-          a::before {
-            background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
-          }
-        }
-  
-        &:nth-child(3) { 
-          a::before {
-            background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
-          }
-        }
-  
-        &:nth-child(4) { 
-          a::before {
-            background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
-          }
+      }
+
+      &:nth-child(4) { 
+        a::before {
+          background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
         }
       }
     }
   }
+}
+
 
 }

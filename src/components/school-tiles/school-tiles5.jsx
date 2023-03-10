@@ -1,9 +1,28 @@
 import React from 'react';
+import SnippetToggler from '../utils/SnippetToggler';
 import DefaultTiles from './default-tiles';
 import './school-tiles-v5.scss';
 
+const styleSheet = require('!!raw-loader!./school-tiles-v5.scss');
+// const html = require('!!raw-loader!./default-apply.js');
+
+const codeFiles = [
+  {
+    fileName: 'school-tiles-v5.scss',
+    code: styleSheet.default,
+    language: 'scss',
+    lineNumbersToDelete: '1-6',
+  },
+  // {
+  //   fileName: 'apply1.html',
+  //   code: html.default,
+  //   language: 'html',
+  //   lineNumbersToDelete: '1-5,43-47',
+  // },
+];
+
 const SchoolTilesFive = () => (
-  <div className="school-tiles-v5 layout-section">
+  <div className="🚀-school-tiles-v5 layout-section">
     <section className="lp-school">
       <div className="center lp-school-wrapper">
         <div className="lp-school-content">
@@ -72,6 +91,9 @@ const SchoolTilesFive = () => (
         </div>
       </div>
     </section>
+
+    <SnippetToggler files={codeFiles} />
+
   </div>
 );
 
