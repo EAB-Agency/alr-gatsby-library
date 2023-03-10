@@ -4,53 +4,57 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
-.survey-v2 {
+.🚀-survey-v2 {
+// ================
+// Survey Layout 2
 
-  .lp-intro-form {
-    background: $c-black;
-    @include boxSpacing(0, 3rem);
+.lp-intro-form {
+  background: $c-black;
+  @include boxSpacing(0, 3rem);
 
-    &::before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 35vw;
-      max-height: 25rem;
-      background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right 60% / cover;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 35vw;
+    max-height: 25rem;
+    background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right 60% / cover;
+  }
+
+  .lp-intro {
+    @include boxSpacing(1.5rem, 1rem);
+
+    * {
+      color: $c-white;
+    }
+  }
+
+  .lp-form {
+    @include containerStyle;
+  }
+
+
+  @media (min-width: $mq-800) {
+    .lp-intro-form-content {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      align-items: center;
+      @include fluidRem("column-gap", 2rem, 3rem);
     }
 
     .lp-intro {
-      @include boxSpacing(1.5rem, 1rem);
-
-      * {
-        color: $c-white;
-      }
+      @include boxSpacing(2rem, 2rem);
+      
+      
     }
 
     .lp-form {
-      @include containerStyle;
-    }
-
-
-    @media (min-width: $mq-800) {
-      .lp-intro-form-content {
-        display: grid;
-        grid-template-columns: 1fr 1.5fr;
-        align-items: center;
-        @include fluidRem("column-gap", 2rem, 3rem);
-      }
-
-      .lp-intro {
-        @include boxSpacing(2rem, 2rem);
-        
-        
-      }
-
-      .lp-form {
-        
-        margin-top: -8rem;
-        min-height: 25rem;
-      }
+      
+      margin-top: -8rem;
+      min-height: 25rem;
     }
   }
+}
+
+
 }
