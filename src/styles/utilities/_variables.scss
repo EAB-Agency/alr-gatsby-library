@@ -9,26 +9,49 @@
 // Variables
 // ----------
 
-// Colors
+// EAB Brand Colors
+$c-blue: #004b87;
+$c-medBlue: #00365f;
+$c-darkBlue: #002746;
+$c-orange: #ed8b00;
+$c-lightTeal:#e0f1f1;
 $c-lightGrey: #eee;
 $c-grey: #6d6e71;
-$c-heading-color: #242a56;
-$c-border-info: #5cd6d6;
-$c-border-alert: #d65c79;
-$c-btn-primary: #3d4791;
-$c-btn-primary-hover: #272f61;
-$c-btn-active: #ed8b00;
+$c-heading-color: $c-darkBlue;
 
-// $c-btn-secondary: #00b1b0;
-// $c-btn-secondary-hover: #007878;
-$c-btn-secondary: #527f9c;
-$c-btn-secondary-hover: #3a5b70;
+$c-btn-primary: $c-blue;
+$c-btn-primary-hover: $c-medBlue;
+$c-btn-active: #ed8b00;
+$c-btn-secondary: $c-orange;
+$c-btn-secondary-hover: darken($c-orange, 20%);
 $c-btn-tertiary: #7a82b8;
+
 $c-neutral-black: #343434;
 $c-neutral-gray-light: #f8f9fa;
 $c-neutral-gray-dark: #f1f5f5;
 $c-text-link: #0072ce;
 $c-white: #fff;
+
+// Old colors
+// $c-lightGrey: #eee;
+// $c-grey: #6d6e71;
+// $c-heading-color: #242a56;
+// $c-border-info: #5cd6d6;
+// $c-border-alert: #d65c79;
+// $c-btn-primary: #3d4791;
+// $c-btn-primary-hover: #272f61;
+// $c-btn-active: #ed8b00;
+
+// // $c-btn-secondary: #00b1b0;
+// // $c-btn-secondary-hover: #007878;
+// $c-btn-secondary: #527f9c;
+// $c-btn-secondary-hover: #3a5b70;
+// $c-btn-tertiary: #7a82b8;
+// $c-neutral-black: #343434;
+// $c-neutral-gray-light: #f8f9fa;
+// $c-neutral-gray-dark: #f1f5f5;
+// $c-text-link: #0072ce;
+// $c-white: #fff;
 
 // Border-radius
 $b-border-radius: 0.5rem;

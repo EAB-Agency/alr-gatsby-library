@@ -25,7 +25,7 @@ const codeFiles = [
 
 const GiveOne = () => (
   <div className="🚀-give-1 layout-section">
-    <DefaultGive />;
+    <DefaultGive />
     <SnippetToggler files={codeFiles} />
   </div>
 );

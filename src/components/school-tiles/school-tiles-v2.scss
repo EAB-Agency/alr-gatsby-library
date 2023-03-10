@@ -4,121 +4,125 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
+.🚀-school-tiles-v2 {
+// ================
+// School Tiles 2
+
 $x-imgHeightSm: 12rem;
 $x-imgHeightLg: 15rem;
 
-.school-tiles-v2 {
+.lp-school {
+  @include boxSpacing;
+  position: relative;
 
-  .lp-school {
-    @include boxSpacing;
-    position: relative;
-  
-    .lp-school-link-list {
-      list-style: none;
-      margin: 0;
-      @include gridItems("2", $mq-700, $mq-700, 2rem, 2rem);
-  
-      li {
-        a {
-          display: grid;
-          grid-template-rows: $x-imgHeightSm auto;
-          text-decoration: none;
-          position: relative;
-          transition: 0.25s all ease-in-out;
-  
-          &::before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 0;
+  .lp-school-link-list {
+    list-style: none;
+    margin: 0;
+    @include gridItems("2", $mq-700, $mq-700, 2rem, 2rem);
+
+    li {
+      a {
+        display: grid;
+        grid-template-rows: $x-imgHeightSm auto;
+        text-decoration: none;
+        position: relative;
+        transition: 0.25s all ease-in-out;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 0;
+          position: absolute;
+          opacity: 0;
+          top: $x-imgHeightSm;
+          left: 0;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .link-wrap {
+          display: block;
+          background: hsla(0, 0%, 0%, 0.7);
+          padding: 1rem 2.5rem 1rem 1.5rem;
+          color: $c-white;
+          grid-row: 2 / 3;
+          @include fluidRem("font-size", 1rem, 1.25rem);
+          transition: all 0.25s ease-in-out;
+
+          &::after {
+            content: $i-chevronRight;
+            font-family: $f-iconFont;
+            margin-left: 0.5rem;
             position: absolute;
-            opacity: 0;
-            top: $x-imgHeightSm;
-            left: 0;
-            transition: all 0.3s ease-in-out;
+            display: inline-block;
           }
-  
-          .link-wrap {
-            display: block;
+        }
+
+        &:hover,
+        &:focus {
+
+          &::before {
+            opacity: 1;
             background: hsla(0, 0%, 0%, 0.7);
-            padding: 1rem 2.5rem 1rem 1.5rem;
-            color: $c-white;
-            grid-row: 2 / 3;
-            @include fluidRem("font-size", 1rem, 1.25rem);
-            transition: all 0.25s ease-in-out;
-  
+            top: 0;
+            height: $x-imgHeightSm;
+          }
+
+          .link-wrap {
             &::after {
-              content: $i-chevronRight;
-              font-family: $f-iconFont;
-              margin-left: 0.5rem;
-              position: absolute;
-              display: inline-block;
+              margin-left: 0.75rem;
             }
-          }
-  
-          &:hover,
-          &:focus {
-
-            &::before {
-              opacity: 1;
-              background: hsla(0, 0%, 0%, 0.7);
-              top: 0;
-              height: $x-imgHeightSm;
-            }
-
-            .link-wrap {
-              &::after {
-                margin-left: 0.75rem;
-              }
-            }
-          }
-        }
-  
-        &:nth-child(1) {
-          a {
-            background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
-          }
-        }
-  
-        &:nth-child(2) {
-          a {
-            background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
-          }
-        }
-  
-        &:nth-child(3) {
-          a {
-            background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
-          }
-        }
-  
-        &:nth-child(4) {
-          a {
-            background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
           }
         }
       }
+
+      &:nth-child(1) {
+        a {
+          background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+        }
+      }
+
+      &:nth-child(2) {
+        a {
+          background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+        }
+      }
+
+      &:nth-child(3) {
+        a {
+          background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+        }
+      }
+
+      &:nth-child(4) {
+        a {
+          background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+        }
+      }
     }
-  
-    @media (min-width: $mq-900) {
-      .lp-school-link-list {
-        li {
-          a {
-            grid-template-rows: $x-imgHeightLg auto;
-  
+  }
+
+  @media (min-width: $mq-900) {
+    .lp-school-link-list {
+      li {
+        a {
+          grid-template-rows: $x-imgHeightLg auto;
+
+          &::before {
+            top: $x-imgHeightLg;
+          }
+
+          &:hover,
+          &:focus {
             &::before {
-              top: $x-imgHeightLg;
-            }
-  
-            &:hover,
-            &:focus {
-              &::before {
-                height: $x-imgHeightLg;
-              }
+              height: $x-imgHeightLg;
             }
           }
         }
       }
     }
   }
+}
+
+
 }
