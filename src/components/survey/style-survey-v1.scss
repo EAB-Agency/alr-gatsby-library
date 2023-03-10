@@ -5,102 +5,40 @@
 @use "library/foundation/utilities" as *;
 
 
-.survey-v1 {
+.🚀-survey-v1 {
+// ================
+// Survey Layout 1
 
-  .lp-intro-form {
-    background: $c-white;
+.lp-intro-form {
+  background: $c-white;
 
-    &::before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 35vw;
-      background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-    }
-    
-    .lp-intro-form-content {
-      @include boxSpacing(1rem, 2rem);
-    }
-
-    @media (min-width: $mq-800) {
-      @include boxSpacing(4rem, 4rem);
-      background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-
-      &::before {
-        display: none;
-      }
-
-      .lp-intro-form-content {
-        @include containerStyle;
-        max-width: $mq-700;
-        margin: auto;
-      }
-    }
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 35vw;
+    background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
+  }
+  
+  .lp-intro-form-content {
+    @include boxSpacing(1rem, 2rem);
   }
 
-  // .lp-intro-form {
-  //   padding: 4vw 0;
+  @media (min-width: $mq-800) {
+    @include boxSpacing(4rem, 4rem);
+    background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
 
-  //   // mobile image
-  //   &::after {
-  //     display: block;
-  //     height: 40vw;
-  //     margin-top: 4vw;
-  //     background: url("/images/img-survey-sm.jpg") no-repeat center 20% / cover;
-  //     content: "";
-  //   }
+    &::before {
+      display: none;
+    }
 
-  //   .lp-form {
-  //     border-top: 3px solid $c-lightGrey;
-  //     padding-top: 1rem;
-  //   }
+    .lp-intro-form-content {
+      @include containerStyle;
+      max-width: $mq-700;
+      margin: auto;
+    }
+  }
+}
 
-  //   // med screen layout - edge to edge
-  //   @media (min-width: $mq-800) and (max-width: $mq-1000) {
-  //     .center {
-  //       width: 100%;
-  //     }
 
-  //     .lp-intro-form-content {
-  //       padding: 0 1rem;
-  //     }
-  //   }
-
-  //   @media (min-width: $mq-800) {
-  //     // hide mobile image
-  //     &::after {
-  //       display: none;
-  //       height: 40vw;
-  //       margin-top: 4vw;
-  //       background:
-  //         url("/images/img-survey-sm.jpg") no-repeat
-  //         center 20% / cover;
-  //       content: "";
-  //     }
-
-  //     .center {
-  //       display: flex;
-
-  //       &::after {
-  //         content: "";
-  //         display: block;
-  //         background:
-  //           url("/images/img-survey-lg.jpg") no-repeat
-  //           65% center / cover;
-  //         flex-grow: 0.6;
-  //       }
-  //     }
-
-  //     .lp-intro-form-content {
-  //       max-width: $mq-500;
-  //       flex: 1;
-  //     }
-  //   }
-
-  //   @media (min-width: $mq-900) {
-  //     .lp-intro-form-content {
-  //       margin-right: 2rem;
-  //     }
-  //   }
-  // }
 }

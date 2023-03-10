@@ -7,68 +7,72 @@
 
 $d-sideSmPadding: calc((#{math.div((100% - $d-centerWidth), 2)}));
 
-.survey-v3 {
+.🚀-survey-v3 {
+// ================
+// Survey Layout 3
 
-  .lp-intro-form {
-    @include boxSpacing(0, 2rem);
+.lp-intro-form {
+  @include boxSpacing(0, 2rem);
+
+  &::before {
+    content: '';
+    display: block;
+    background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
+    height: 35vw;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  
+  @media (max-width: maxMQ($mq-800)) {
+    .lp-intro-form-content {
+      @include containerStyle($_x-boxShadow: "yes");
+    }
+
+  }
+
+  @media (min-width: $mq-800) {
+    @include boxSpacing(4rem, 4rem);
 
     &::before {
-      content: '';
-      display: block;
-      background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-      height: 35vw;
-      width: 100%;
-      margin-bottom: 2rem;
+      display: none;
     }
 
+    .lp-intro-form-content {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      grid-template-rows: 3rem auto 1fr 3rem;
+      grid-template-areas:  ". form"
+                            "intro form"
+                            "image form"
+                            ". form";
+
+      &::after {
+        content: '';
+        display: block;
+        background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
+        height: 100%;
+        width: 100%;
+        grid-area: image;
+      }
+    }
     
-    @media (max-width: maxMQ($mq-800)) {
-      .lp-intro-form-content {
-        @include containerStyle($_x-boxShadow: "yes");
+    .lp-intro {
+      @include containerStyle($c-black);
+      grid-area: intro;
+      
+      * {
+        color: $c-white;
+        justify-content: center;
       }
-  
     }
 
-    @media (min-width: $mq-800) {
-      @include boxSpacing(4rem, 4rem);
-
-      &::before {
-        display: none;
-      }
-
-      .lp-intro-form-content {
-        display: grid;
-        grid-template-columns: 1fr 1.2fr;
-        grid-template-rows: 3rem auto 1fr 3rem;
-        grid-template-areas:  ". form"
-                              "intro form"
-                              "image form"
-                              ". form";
-
-        &::after {
-          content: '';
-          display: block;
-          background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-          height: 100%;
-          width: 100%;
-          grid-area: image;
-        }
-      }
-      
-      .lp-intro {
-        @include containerStyle($c-black);
-        grid-area: intro;
-        
-        * {
-          color: $c-white;
-          justify-content: center;
-        }
-      }
-
-      .lp-form {
-        @include containerStyle;
-        grid-area: form;
-      }
+    .lp-form {
+      @include containerStyle;
+      grid-area: form;
     }
   }
+}
+
+
 }
