@@ -10,25 +10,33 @@
 
 .header-nav{
 
+  @include fluidRem("padding", 1rem 0, 1.5rem 0);
+
   .school-header-nav-wrapper{
     @include center;
-  }
 
-  .school-header,
-  .main-nav{
-    .center{
-      @include fullWidth;
-    }
-  }
-  
-  @media (min-width: $mq-700){
-    .school-header-nav-wrapper{
+    @media (min-width: $mq-700){
       display:flex;
       gap:1rem;
       flex-direction:row;
       align-items:center;
       justify-content:space-between;
     }
+  }
+
+  .school-header,
+  .main-nav{
+
+    .center{
+      @include fullWidth;
+    }
+  }
+
+  .school-header {
+    
+    @media (max-width: maxMQ($mq-700)){
+      @include fluidRem("padding-bottom", 1rem, 1.5rem);
+   }
   }
 }
 
@@ -49,6 +57,7 @@
   }
 
   a {
+    @include fluidRem("font-size", 0.875rem, 1.0625rem);
     width: 100%;
     height: 100%;
     padding-bottom:.25rem;
