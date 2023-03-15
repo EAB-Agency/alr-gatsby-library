@@ -93,7 +93,6 @@ const SchoolTilesFive = () => (
     </section>
 
     <SnippetToggler files={codeFiles} />
-
   </div>
 );
 
