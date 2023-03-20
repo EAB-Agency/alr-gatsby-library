@@ -24,7 +24,7 @@ const codeFiles = [
 ];
 
 const HeaderWithNavThree = () => (
-  <div class="🚀-header-nav-v3 layout-section">
+  <div className="🚀-header-nav-v3 layout-section">
     <DefaultHeaderNav />
     <SnippetToggler files={codeFiles} />
   </div>
