@@ -23,7 +23,7 @@ const codeFiles = [
 
 const SurveyThree = () => (
   <div className="🚀-survey-v3 layout-section">
-    <DefaultSurvey />;
+    <DefaultSurvey />
     <SnippetToggler files={codeFiles} />
   </div>
 );

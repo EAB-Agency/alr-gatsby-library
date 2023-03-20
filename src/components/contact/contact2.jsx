@@ -36,7 +36,7 @@ const contactTwo = () => (
               answers to any questions you may have!
             </p>
           </div>
-          
+
           <ul className="lp-school-contact-options">
             <li className="lp-school-contact-phone">
               <a href="tel:xxx-xxx-xxxx">xxx-xxx-xxxx</a>
@@ -50,7 +50,6 @@ const contactTwo = () => (
     </section>
 
     <SnippetToggler files={codeFiles} />
-
   </div>
 );
 
