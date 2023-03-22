@@ -64,7 +64,6 @@ const applyFive = () => (
     </section>
 
     <SnippetToggler files={codeFiles} />
-    
   </div>
 );
 

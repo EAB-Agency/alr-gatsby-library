@@ -23,7 +23,68 @@ const codeFiles = [
 
 const StatsThree = () => (
   <div className="stats-v3 layout-section">
-    <DefaultStats />
+    <div className="lp-stats-section">
+      <div className="center">
+        <ul className="lp-stats-list">
+          <li className="lp-stats-item">
+            <div className="lp-stats-item-wrapper">
+              <span className="emphasis">8</span>
+              <span className="title">Top-Ranked Programs</span>
+              <span className="description">
+                Supporting copy with enough verbiage to provide context and
+                value. Supporting copy with enough verbiage to provide context
+                and value.
+              </span>
+              <span className="source">
+                - <i>U.S. News & World Report</i>
+              </span>
+            </div>
+          </li>
+          <li className="lp-stats-item">
+            <div className="lp-stats-item-wrapper">
+              <span className="emphasis">R1</span>
+              <span className="title">Research University</span>
+              <span className="description">
+                Supporting copy with enough verbiage to provide context and
+                value. Supporting copy with enough verbiage to provide context
+                and value.
+              </span>
+              <span className="source">
+                - <i>U.S. News & World Report</i>
+              </span>
+            </div>
+          </li>
+          <li className="lp-stats-item">
+            <div className="lp-stats-item-wrapper">
+              <span className="emphasis">#13</span>
+              <span className="title">Best Value</span>
+              <span className="description">
+                Supporting copy with enough verbiage to provide context and
+                value. Supporting copy with enough verbiage to provide context
+                and value.
+              </span>
+              <span className="source">
+                - <i>U.S. News & World Report</i>
+              </span>
+            </div>
+          </li>
+          <li className="lp-stats-item">
+            <div className="lp-stats-item-wrapper">
+              <span className="emphasis">Top 20</span>
+              <span className="title">Salary-Boosting School</span>
+              <span className="description">
+                Supporting copy with enough verbiage to provide context and
+                value. Supporting copy with enough verbiage to provide context
+                and value.
+              </span>
+              <span className="source">
+                - <i>U.S. News & World Report</i>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
     <SnippetToggler files={codeFiles} />
   </div>
 );
