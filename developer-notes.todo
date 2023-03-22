@@ -11,6 +11,7 @@ LL MARKUP:
   ☐ Make top and bottom apply HTML the same
     ☐ Distinquish apply bottom with additonal class, .lp-apply-bottom
     ☐ Make .lp-apply-footer class the same
+  ☐ Testimonials aren't a global token, they are unique content and different layouts. Need to make more atomic where testimonial style is separate from layout. Dont assume it's in social proof container, it may be in thanks intro.
    
   
   LL LAYOUTS (for MVP):
@@ -38,10 +39,6 @@ LL MARKUP:
     ☐ Default LL HTML includes containers vs. ACS tokens that do not - Should we make sure the HTML copied from LL can be easily pasted in 1 spot vs. template & token
     ☐ Add new markup to SJ 2.0 templates/global token, Ex: span.link-wrap
   ☐ Update style-give.css to new convention in LL, style-guide.css
-  
-  
-  SANDBOX OBSERVATIONS:
-  ☐ Testimonials aren't a global token, they are unique content and different layouts. Need to make more atomic where testimonial style is separate from layout. Dont assume it's in social proof container, it may be in thanks intro.
   
   
   S.J 2.0 LP STRATEGY FEEDBACK FOR WHITNEY:
