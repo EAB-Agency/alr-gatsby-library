@@ -5,6 +5,11 @@
 // imports below partials into any file that calls this folder
 @use "apply";
 @use "contact";
+@use "deadline-reminder";
 @use "footer";
 @use "header-nav";
 @use "onetrust";
+@use "school-content";
+@use "stats";
+@use "testimonials";
+@use "video-tour";
