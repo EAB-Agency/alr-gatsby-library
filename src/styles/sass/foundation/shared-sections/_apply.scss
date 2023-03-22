@@ -8,8 +8,23 @@
 // Styles used by all ACS landing pages
 // ================
 
+
+// Copy paste bottom apply code from Layout Library here
+
+.lp-apply-btm {
+  padding: 5vw 0;
+
+  .lp-apply-btm-content {
+    @include containerStyle;
+
+    max-width: $mq-700;
+    margin: auto;
+  }
+}
+
+
 // ================
-// Apply CTA
+// Apply CTA - Default form styles
 
 .lp-apply,
 .lp-apply-btm {
@@ -43,19 +58,5 @@
 .lp-apply-btm-footer {
   p:first-child {
     margin-top: 1rem;
-  }
-}
-
-
-// Copy paste bottom apply code from Layout Library here
-
-.lp-apply-btm {
-  padding: 5vw 0;
-
-  .lp-apply-btm-content {
-    @include containerStyle;
-
-    max-width: $mq-700;
-    margin: auto;
   }
 }

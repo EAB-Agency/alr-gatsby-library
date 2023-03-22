@@ -6,7 +6,7 @@ import DefaultApply from './default-apply';
 import './style-apply-v1.scss';
 
 const styleSheet = require('!!raw-loader!./style-apply-v1.scss');
-const html = require('!!raw-loader!./default-apply.js');
+const html = require('!!raw-loader!./apply1.html');
 
 const codeFiles = [
   {
@@ -19,7 +19,6 @@ const codeFiles = [
     fileName: 'apply1.html',
     code: html.default,
     language: 'html',
-    lineNumbersToDelete: '1-5,43-47',
   },
 ];
 

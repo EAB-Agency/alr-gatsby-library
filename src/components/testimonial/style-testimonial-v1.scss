@@ -61,14 +61,11 @@
           }
         }
     
-        footer {
+        cite {
+          font-style: normal;
           margin-top: 1.5rem;
-    
-          cite {
-            font-style: normal;
-            @include fluidRem("font-size", 0.875rem, 0.975rem);
-            display:block;
-          }
+          @include fluidRem("font-size", 0.875rem, 0.975rem);
+          display:block;
         }
       }
     }
