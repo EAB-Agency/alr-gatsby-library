@@ -8,33 +8,33 @@
 // ================
 // Header Layout 2
 
-.header-nav{
+.header-nav {
 
   @include fluidRem("padding", 1rem 0, 1.5rem 0);
 
-  .school-header-nav-wrapper{
+  .school-header-nav-wrapper {
     @include center;
 
-    @media (min-width: $mq-700){
-      display:flex;
-      gap:1rem;
-      flex-direction:row;
-      align-items:center;
-      justify-content:space-between;
+    @media (min-width: $mq-700) {
+      display: flex;
+      gap: 1rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 
   .school-header,
-  .main-nav{
+  .main-nav { 
 
-    .center{
+    .center {
       @include fullWidth;
     }
   }
 
   .school-header {
     
-    @media (max-width: maxMQ($mq-700)){
+    @media (max-width: maxMQ($mq-700)) {
       @include fluidRem("padding-bottom", 1rem, 1.5rem);
    }
   }
@@ -51,16 +51,16 @@
   }
 
   ul {
-    display:flex;
+    display: flex;
     list-style: none;
-    gap:1rem; //controls spacing between nav items
+    gap: 1rem; //controls spacing between nav items
   }
 
   a {
     @include fluidRem("font-size", 0.875rem, 1.0625rem);
     width: 100%;
     height: 100%;
-    padding-bottom:.25rem;
+    padding-bottom: 0.25rem;
     text-align: center;
     text-decoration: none;
     border-bottom: 1px solid black;
@@ -71,8 +71,8 @@
     }
 
     &.active {
-      transition:none;
-      color:white;
+      transition: none;
+      color: white;
     }
   }
 }

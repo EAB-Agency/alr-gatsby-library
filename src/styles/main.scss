@@ -62,7 +62,7 @@ html {
 }
 
 .intro-wrap {
-  @include mixins.fluidRem("padding-top", 2rem, 3rem);
+  @include mixins.fluidRem("padding-top", 4rem, 6rem);
   @include mixins.fluidRem("padding-bottom", 2rem, 3rem);
 
   h2 {
@@ -130,6 +130,19 @@ html {
       position:absolute;
     }
   }
+
+  //used on intro page
+  span.custom-html{
+    position:relative;
+    padding: .25rem .5rem 0 .5rem;
+    color:white;
+    font-size:.75em;
+    font-style:italic;
+    background:variables.$c-heading-color;
+    display:inline-block;
+  }
+
+  
 }
 
 // ----------

@@ -22,7 +22,7 @@ const codeFiles = [
 ];
 
 const VideoTwo = () => (
-  <div className="video-v2 layout-section">
+  <div className="🚀-video-v2 layout-section">
       <DefaultVideo />
       <SnippetToggler files={codeFiles} />
   </div>

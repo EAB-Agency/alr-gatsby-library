@@ -25,7 +25,7 @@ const codeFiles = [
 
 const contactOne = () => (
   <div className="🚀-contact-v1 layout-section">
-    <DefaultContact />;
+    <DefaultContact />
     <SnippetToggler files={codeFiles} />
   </div>
 );
