@@ -7,119 +7,101 @@
 
 .stats-v3 {
 
-  .lp-stats-section {
-    @include boxSpacing(2rem, 2rem);
+.lp-stats-section {
+  @include boxSpacing(2rem, 2rem);
 
+  .lp-stats-list {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+
+      ~ li {
+        margin-top: 2rem;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+
+      &:nth-child(1) {
+        &::before {
+          background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+        }
+      }
+
+      &:nth-child(3) {
+        &::before {
+          background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+        }
+      }
+
+      &:nth-child(4) {
+        &::before {
+          background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+        }
+      }
+
+      .lp-stats-item-wrapper {
+        background: $c-white;
+        padding: 1.5rem;
+      }
+
+      span {
+        display: block;
+
+        ~ span {
+          margin-top: 1rem;
+        }
+      }
+
+      .emphasis,
+      .title {
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      .emphasis {
+        @include fluidRem("font-size", 2rem, 3rem);
+        line-height: 1;
+      }
+
+      .title {
+        @include fluidRem("font-size", 1.25rem, 1.5rem); 
+      }
+
+      .source {
+        @extend small;
+      }
+    }
+  }
+
+  @media (min-width: $mq-1000) {
+    // Change media queries based on content
     .lp-stats-list {
-      margin: 0;
-      padding: 0;
+      display: grid;
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+      grid-gap: 2rem;
 
       li {
-        list-style-type: none;
-        display: grid;
-        grid-template-rows: auto 1fr;
-        align-items: center;
-        position: relative;
-
         ~ li {
-          margin-top: 1.5rem;
-        }
-
-        span {
-          display: block;
-        }
-
-        .emphasis {
-          @include fluidRem("font-size", 3rem, 6rem);
-          font-weight: 900;
-          font-style: normal;
-          line-height: 1.2;
-          margin: 0;
-        }
-
-        .lp-stats-item-wrapper {
-          @include containerStyle($c-white);
-          text-align: center;
-        }
-
-        &::before {
-          content: '';
-          display: block;
-          @include fluidRem("height", 5rem, 7rem);
-          @include fluidRem("width", 8rem, 14rem);
-          @include fluidRem("border-radius", 4rem 4rem 0 0 , 8rem 8rem 0 0);
-          background-color: $c-white;
-          margin: auto;
-        }
-
-        &::after {
-          display: block;
-          font-family: $f-iconFont;
-          color: $c-black;
-          position: absolute;
-          left: 50%;
-          line-height: 1;
-          transform: translateX(-50%);
-          @include fluidRem("top", 1rem, 1.5rem);
-          @include fluidRem("font-size", 3rem, 6rem);
-        }
-
-        &:nth-child(1) {
-          &::after {
-            content: $i-star;
-          }
-        }
-
-        &:nth-child(2) {
-          &::after {
-            content: $i-star;
-          }
-        }
-
-        &:nth-child(3) {
-          &::after {
-            content: $i-star;
-          }
-        }
-      }
-    }
-
-    @media (min-width: $mq-400) {
-      .lp-stats-list {
-        display: grid;
-        grid-template: 1fr 1fr / repeat(4, 1fr);
-        grid-gap: 1rem;
-  
-        li {
-          grid-column: span 2;
-
-          ~ li {
-            margin-top: 0;
-          }
-  
-          &:nth-child(3) {
-            grid-column: 2 / 4;
-            grid-row: 2 / 3;
-            align-self: center;
-          }
-        }
-      }
-    }
-
-    @media (min-width: $mq-700) {
-      .lp-stats-list {
-        grid-template: 1fr / repeat(3, 1fr);
-        grid-gap: 2rem;
-
-        li {
-          grid-column: span 1;
-
-          &:nth-child(3) {
-            grid-column: 3/4;
-            grid-row: 1/2;
-          }
+          margin-top: 0;
         }
       }
     }
   }
+}
+
 }

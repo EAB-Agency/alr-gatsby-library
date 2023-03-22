@@ -7,72 +7,82 @@
 
 .stats-v1 {
 
-  .lp-stats-section {
-    @include boxSpacing(2rem, 2rem);
+.lp-stats-section {
+  @include boxSpacing(2rem, 2rem);
 
+  .lp-stats-list {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      @include containerStyle($c-white);
+      text-align: center;
+
+      ~ li {
+        margin-top: 1.5rem;
+      }
+
+      span {
+        display: block;
+      }
+
+      .emphasis,
+      .title {
+        font-weight: 900;
+        font-style: normal;
+        margin-bottom: 1rem;
+      }
+
+      .emphasis {
+        @include fluidRem("font-size", 3rem, 5rem);
+        line-height: 1;
+      }
+
+      .title {
+        @include fluidRem("font-size", 1.25rem, 1.5rem); 
+      }
+    }
+  }
+
+  @media (min-width: $mq-600) {
+    // Change media queries based on content
     .lp-stats-list {
-      margin: 0;
-      padding: 0;
+      display: grid;
+      grid-template: 1fr 1fr / repeat(4, 1fr);
+      grid-gap: 1rem;
 
       li {
-        list-style-type: none;
-        @include containerStyle($c-white);
-        text-align: center;
+        grid-column: span 2;
 
         ~ li {
-          margin-top: 1.5rem;
+          margin-top: 0;
         }
 
-        span {
-          display: block;
+        &:nth-child(3) {
+          grid-column: 2 / 4;
+          grid-row: 2 / 3;
         }
-
-        .emphasis {
-          @include fluidRem("font-size", 3rem, 6rem);
-          font-weight: 900;
-          font-style: normal;
-          line-height: 1.2;
-          margin: 0;
-        }
+      
       }
     }
+  }
 
-    @media (min-width: $mq-400) {
-      .lp-stats-list {
-        display: grid;
-        grid-template: 1fr 1fr / repeat(4, 1fr);
-        grid-gap: 1rem;
-  
-        li {
-          grid-column: span 2;
+  @media (min-width: $mq-1000) {
+    // Change media queries based on content
+    .lp-stats-list {
+      grid-template: 1fr / repeat(3, 1fr);
+      grid-gap: 2rem;
 
-          ~ li {
-            margin-top: 0;
-          }
-  
-          &:nth-child(3) {
-            grid-column: 2 / 4;
-            grid-row: 2 / 3;
-            align-self: center;
-          }
-        }
-      }
-    }
+      li {
+        grid-column: span 1;
 
-    @media (min-width: $mq-700) {
-      .lp-stats-list {
-        grid-template: 1fr / repeat(3, 1fr);
-        grid-gap: 2rem;
-
-        li {
-          grid-column: span 1;
-
-          &:nth-child(3) {
-            grid-column: 3/4;
-            grid-row: 1/2;
-          }
+        &:nth-child(3) {
+          grid-column: 3/4;
+          grid-row: 1/2;
         }
       }
     }
   }
+}
 }
