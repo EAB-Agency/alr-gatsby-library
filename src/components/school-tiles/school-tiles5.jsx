@@ -4,7 +4,7 @@ import DefaultTiles from './default-tiles';
 import './school-tiles-v5.scss';
 
 const styleSheet = require('!!raw-loader!./school-tiles-v5.scss');
-// const html = require('!!raw-loader!./default-apply.js');
+const html = require('!!raw-loader!./school-tiles-v5.html');
 
 const codeFiles = [
   {
@@ -13,12 +13,11 @@ const codeFiles = [
     language: 'scss',
     lineNumbersToDelete: '1-6',
   },
-  // {
-  //   fileName: 'apply1.html',
-  //   code: html.default,
-  //   language: 'html',
-  //   lineNumbersToDelete: '1-5,43-47',
-  // },
+  {
+    fileName: 'school-tiles-v5.html',
+    code: html.default,
+    language: 'html',
+  },
 ];
 
 const SchoolTilesFive = () => (

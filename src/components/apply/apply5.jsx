@@ -5,7 +5,7 @@ import './style-apply-v5.scss';
 
 // eslint-disable-next-line import/no-unresolved
 const styleSheet = require('!!raw-loader!./style-apply-v5.scss');
-const html = require('!!raw-loader!./apply1.html');
+const html = require('!!raw-loader!./apply5.html');
 
 const codeFiles = [
   {
@@ -15,7 +15,7 @@ const codeFiles = [
     lineNumbersToDelete: '1-6',
   },
   {
-    fileName: 'apply1.html',
+    fileName: 'apply5.html',
     code: html.default,
     language: 'html',
   },

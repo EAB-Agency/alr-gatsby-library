@@ -1,13 +1,16 @@
 LL MARKUP:
-  ☐ Create separate html files (see apply 1 version as reference)
+  ☐ Create separate html files (see apply 1 version as reference) Nathan: Will do once SJ 2.0 is a little more solid. 
     ☐ Remove className from markup
     ☐ Include global tokens and form tokens
+
   ☐ SCSS Code to copy
     ☐ Confirm container classes (ex: stats-v1) do not show
     ☐ Confirm open and closing brackets are correct
   ☐ _header-nav.scss move .school-header{} into layout partial
+
   ☐ Testimonials
     ☐ Confirm best semantic markup for all elements of a testimonal (quote, multi paragraph quote, quote source, pseudo elements for quote characters, image or not)
+
   ☐ Make top and bottom apply HTML the same
     ☐ Distinquish apply bottom with additonal class, .lp-apply-bottom
     ☐ Make .lp-apply-footer class the same
@@ -19,6 +22,7 @@ LL MARKUP:
       ☐ Simple hero + page title?
       ☐ Simple page intro (title + copy)
       ☐ School content with no images, longer copy, and button
+
   ☐ Testimonials aren't a global token used across LPs with the same layout or same content, they are unique content and different layouts. Need to make more atomic where testimonial style is separate from layout. Dont assume it's in social proof container, it may be in thanks intro.
   
 
@@ -27,6 +31,7 @@ LL MARKUP:
     ☐ Foundation files > remove /library from @use -- LEAVE ALONE. This will be in the future for local compile
     ☐ '/images' path needs to be 'images'
     ☐ '/fonts' path needs to be 'fonts'
+
   ✔ Add new shared partials for 2.0 @done
     ✔ Deadline reminder @done
     ✔ Stats @done
@@ -34,15 +39,19 @@ LL MARKUP:
   
   
   ACS:
-  ☐ Identify new global tokens for shared content across SJ 2.0 LPs (ex: social proof token should be broken out in SJ 2.0)
+  ☐ Identify new global tokens for shared content across SJ 2.0 LPs (ex: social proof token should be broken out in SJ 2.0). 
+    ☐ All new and curent global tokens need to be added to this list on the wiki: https://wiki.eab.com/pages/viewpage.action?spaceKey=RPM&title=Global+Tokens+SJ+2.0. 
+
   ☐ Need to make sure SJ 2.0 template/global token code matches default HTML in LL
     ☐ Default LL HTML includes containers vs. ACS tokens that do not - Should we make sure the HTML copied from LL can be easily pasted in 1 spot vs. template & token
     ☐ Add new markup to SJ 2.0 templates/global token, Ex: span.link-wrap
+
   ☐ Update style-give.css to new convention in LL, style-guide.css
   
   
   S.J 2.0 LP STRATEGY FEEDBACK FOR WHITNEY:
     ☐ In mult-version instances, partners won't want generic images. JS utility needs to aAdd class to body
+    ☐ Field and button text is too long, breaks on mobile and looks bad. - Nathan
     ☐ Multiple headlines may not work for all partners and will limit layout choices, do they always need to be visible? It will push the content down on mobile until first form appears.
   
   
