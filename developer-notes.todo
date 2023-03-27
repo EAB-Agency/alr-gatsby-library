@@ -8,6 +8,7 @@ GATSBY LIBRARY:
       ☐ .lp-intro (note: is it's own section on /explore, /discover-thanks, /start-thanks; is a child of .lp-intro-form on /discover, /start; not on apply )
   ☐ HTML code to copy
   (See apply 1 version as reference. Edits include: remove className from markup, add global tokens, and form placeholders)
+  Nathan: Will do once SJ 2.0 is a little more solid.
     Completed components:
     ✔ header @done
     ✔ apply @done
@@ -34,9 +35,12 @@ GATSBY LIBRARY:
   
   LL LAYOUTS (for MVP):
   ☐ Additional bands/layouts
-    ☐ Confirm new bands in SJ 2.0 Strategy are accounted for in Figjam
+    ☐ Confirm new bands in SJ 2.0 Strategy are accounted for in Figjam and Code Library
+      ☐ Simple hero + page title?
+      ☐ Simple page intro (title + copy)
       ✔ School content with no images, longer copy, and button @done
-    ☐ Testimonials aren't a global token used across LPs with the same layout or same content, they are unique content and different layouts. Need to make more atomic where testimonial style is separate from layout. Dont assume it's in social proof container, it may be in thanks intro.
+
+  ☐ Testimonials aren't a global token used across LPs with the same layout or same content, they are unique content and different layouts. Need to make more atomic where testimonial style is separate from layout. Dont assume it's in social proof container, it may be in thanks intro.
   
 
   FOUNDATION:
@@ -44,6 +48,7 @@ GATSBY LIBRARY:
     ☐ Foundation files > remove /library from @use -- LEAVE ALONE. This will be in the future for local compile
     ☐ '/images' path needs to be 'images'
     ☐ '/fonts' path needs to be 'fonts'
+
   ✔ Add new shared partials for 2.0 @done
     ✔ Deadline reminder @done
     ✔ Stats @done
@@ -53,6 +58,7 @@ GATSBY LIBRARY:
 
   ACS:
   ☐ Identify new global tokens for shared content across SJ 2.0 LPs (ex: social proof token should be broken out in SJ 2.0)
+    ☐ All new and curent global tokens need to be added to this list on the wiki: https://wiki.eab.com/pages/viewpage.action?spaceKey=RPM&title=Global+Tokens+SJ+2.0. 
   ☐ Ensure SJ 2.0 template/global token code matches default HTML in LL
   ☐ Default LL HTML includes containers vs. ACS tokens that do not - Should we make sure the HTML copied from LL can be easily pasted in 1 spot vs. template & token
   ☐ Add new markup to SJ 2.0 templates/global token, Ex: span.link-wrap
