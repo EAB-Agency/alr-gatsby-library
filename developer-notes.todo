@@ -1,19 +1,36 @@
-LL MARKUP:
-  ☐ Create separate html files (see apply 1 version as reference) Nathan: Will do once SJ 2.0 is a little more solid. 
-    ☐ Remove className from markup
-    ☐ Include global tokens and form tokens
-
-  ☐ SCSS Code to copy
-    ☐ Confirm container classes (ex: stats-v1) do not show
+GATSBY LIBRARY:
+  ☐ Additional layouts needed:
+    ☐ Testimonials
+      Research best markup for elements of a testimonal (multi paragraph quote, source, curley quote pseudo elements, photo)
+    ☐ Video
+    ☐ Examples for 2.0 components
+      ☐ .lp-page-intro
+      ☐ .lp-intro (note: is it's own section on /explore, /discover-thanks, /start-thanks; is a child of .lp-intro-form on /discover, /start; not on apply )
+  ☐ HTML code to copy
+  (See apply 1 version as reference. Edits include: remove className from markup, add global tokens, and form placeholders)
+  Nathan: Will do once SJ 2.0 is a little more solid.
+    Completed components:
+    ✔ header @done
+    ✔ apply @done
+    ✔ school tiles @done
+    ☐ content give
+    ☐ survey
+    ☐ static school tiles
+    ☐ testimonials
+    ☐ videos
+    ☐ stats
+    ☐ contact
+    ☐ footer
+  ☐ SCSS code to copy
+    ☐ Confirm container classes do not show (ex: stats-v1)
     ☐ Confirm open and closing brackets are correct
-  ☐ _header-nav.scss move .school-header{} into layout partial
-
-  ☐ Testimonials
-    ☐ Confirm best semantic markup for all elements of a testimonal (quote, multi paragraph quote, quote source, pseudo elements for quote characters, image or not)
-
-  ☐ Make top and bottom apply HTML the same
-    ☐ Distinquish apply bottom with additonal class, .lp-apply-bottom
-    ☐ Make .lp-apply-footer class the same
+  ☐ In _header-nav.scss partial, move .school-header{} into layout partial
+  ☐ Top and bottom apply
+    ☐ Make HTML match
+    ☐ Distinquish apply bottom with additional class, .lp-apply-btm
+    ☐ Make .lp-apply-footer the same class
+  ☐ Revert naming convention style-guide.css to style-give.css for consistency w/ 1.2
+  ☐ DISCUSS: Where to put shared campaign-level styles that dont have a specific partial, but we may not want to be global (ie: shared-sj, shared-diq, shared-app?)
    
   
   LL LAYOUTS (for MVP):
@@ -21,7 +38,7 @@ LL MARKUP:
     ☐ Confirm new bands in SJ 2.0 Strategy are accounted for in Figjam and Code Library
       ☐ Simple hero + page title?
       ☐ Simple page intro (title + copy)
-      ☐ School content with no images, longer copy, and button
+      ✔ School content with no images, longer copy, and button @done
 
   ☐ Testimonials aren't a global token used across LPs with the same layout or same content, they are unique content and different layouts. Need to make more atomic where testimonial style is separate from layout. Dont assume it's in social proof container, it may be in thanks intro.
   
@@ -36,29 +53,33 @@ LL MARKUP:
     ✔ Deadline reminder @done
     ✔ Stats @done
     ✔ Testimonials @done
+  ✔ fluidRem mixin and Dart Sass bug @done
   
-  
+
   ACS:
-  ☐ Identify new global tokens for shared content across SJ 2.0 LPs (ex: social proof token should be broken out in SJ 2.0). 
+  ☐ Identify new global tokens for shared content across SJ 2.0 LPs (ex: social proof token should be broken out in SJ 2.0)
     ☐ All new and curent global tokens need to be added to this list on the wiki: https://wiki.eab.com/pages/viewpage.action?spaceKey=RPM&title=Global+Tokens+SJ+2.0. 
-
-  ☐ Need to make sure SJ 2.0 template/global token code matches default HTML in LL
-    ☐ Default LL HTML includes containers vs. ACS tokens that do not - Should we make sure the HTML copied from LL can be easily pasted in 1 spot vs. template & token
-    ☐ Add new markup to SJ 2.0 templates/global token, Ex: span.link-wrap
-
-  ☐ Update style-give.css to new convention in LL, style-guide.css
+  ☐ Ensure SJ 2.0 template/global token code matches default HTML in LL
+  ☐ Default LL HTML includes containers vs. ACS tokens that do not - Should we make sure the HTML copied from LL can be easily pasted in 1 spot vs. template & token
+  ☐ Add new markup to SJ 2.0 templates/global token, Ex: span.link-wrap
+  ☐ Contact token > add class .lp-school-contact-title to h3 for consistency with other section titles
+  ☐ Need to update JS to show active nav states for thanks pages
   
   
   S.J 2.0 LP STRATEGY FEEDBACK FOR WHITNEY:
-    ☐ In mult-version instances, partners won't want generic images. JS utility needs to aAdd class to body
-    ☐ Field and button text is too long, breaks on mobile and looks bad. - Nathan
-    ☐ Multiple headlines may not work for all partners and will limit layout choices, do they always need to be visible? It will push the content down on mobile until first form appears.
+    ✔ In mult-version instances, partners won't want generic images. JS utility needs to add class to body @done
+      Whitney says there will be situations where a separate instance is still needed for branding
+    ✔ Multiple headlines may not work for all partners and will limit layout choices, do they always need to be visible? It will push the content down on mobile until first form appears. @done
+      Dana confirmed teams will have flexibility with partners, page header will be the h1 defining the purpose of the page 
+    ✔ There are a lot of buttons which makes the visual hierarchy of CTAs overwhelming. Can we reserve buttons for data collection and links/tertiary buttons for CTAs? 
+      Dana confirmed teams will have flexility with partners.
+    ✔ Apply section - Input labels are lengthy @done
+      Dana revised
   
   
-  LL NEXT STEPS:
+  LAYOUT LIBRRARY NEXT STEPS:
   ☐ Starter project repo
-    Bob needs to do 2 things first ... move sass in own repo, then reference inside of here, can also reference instead of starter project
-    That will take about 
+    Bob needs to do 2 things first: Move sass in own repo, then reference inside of Gatsby Library and Starter project repo
   ✔ Eric add addtional partials for shared bands @done
   ✔ FOUNDATION / MOVE FONTS FOLDER INSIDE OF SASS @done
   
