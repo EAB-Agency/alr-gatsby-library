@@ -77,10 +77,9 @@ GATSBY LIBRARY:
       Dana revised
   
   
-  LL NEXT STEPS:
+  LAYOUT LIBRRARY NEXT STEPS:
   ☐ Starter project repo
-    Bob needs to do 2 things first ... move sass in own repo, then reference inside of here, can also reference instead of starter project
-    That will take about 
+    Bob needs to do 2 things first: Move sass in own repo, then reference inside of Gatsby Library and Starter project repo
   ✔ Eric add addtional partials for shared bands @done
   ✔ FOUNDATION / MOVE FONTS FOLDER INSIDE OF SASS @done
   
