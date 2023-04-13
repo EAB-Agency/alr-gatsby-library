@@ -5,7 +5,7 @@ import './style-testimonial-v1.scss';
 
 // eslint-disable-next-line import/no-unresolved
 const styleSheet = require('!!raw-loader!./style-testimonial-v1.scss');
-// const html = require('!!raw-loader!./apply1.html');
+const html = require('!!raw-loader!./default-testimonial.html');
 
 const codeFiles = [
   {
@@ -14,15 +14,15 @@ const codeFiles = [
     language: 'scss',
     lineNumbersToDelete: '1-6',
   },
-  // {
-  //   fileName: 'apply1.html',
-  //   code: html.default,
-  //   language: 'html',
-  // },
+  {
+    fileName: 'default-testimonial.html',
+    code: html.default,
+    language: 'html',
+  },
 ];
 
 const TestimonialOne = () => (
-  <div className="testimonial-v1 layout-section">
+  <div className="🚀-testimonial-v1 layout-section">
       <DefaultTestimonial />
       <SnippetToggler files={codeFiles} />
   </div>
