@@ -17,7 +17,7 @@
   @if (unitless($context)) {
     $context: $context * 1px;
   }
-  @return $pixels / $context * 1rem;
+  @return math.div($pixels, $context) * 1rem;
 }
 
 
