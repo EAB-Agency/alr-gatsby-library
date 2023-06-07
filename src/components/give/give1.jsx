@@ -6,21 +6,19 @@ import DefaultGive from './default-give';
 import './style-give-v1.scss';
 
 const styleSheet = require('!!raw-loader!./style-give-v1.scss');
-// const html = require('!!raw-loader!./default-apply.js');
+const html = require('!!raw-loader!./default-give.html');
 
 const codeFiles = [
   {
-    fileName: 'style-give-v1.scss',
     code: styleSheet.default,
     language: 'scss',
     lineNumbersToDelete: '1-6',
   },
-  // {
-  //   fileName: 'apply1.html',
-  //   code: html.default,
-  //   language: 'html',
-  //   lineNumbersToDelete: '1-5,43-47',
-  // },
+  {
+    code: html.default,
+    language: 'html',
+    // lineNumbersToDelete: '1-5,43-47',
+  },
 ];
 
 const GiveOne = () => (
