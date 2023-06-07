@@ -62,7 +62,7 @@ const CodeHighlight = ({
         fileName={fileName}
         duration={2000}
       >
-        {fileName}
+        {language}
       </Copy>
 
       <Highlight
