@@ -5,7 +5,49 @@
 @use "library/foundation/utilities" as *;
 
 
+<<<<<<< Updated upstream
 .testimonial-v2{
+=======
+.lp-testimonial{
+	@include boxSpacing;
+
+  .testimonial-container {
+		max-width: $mq-800;
+		margin:auto;
+    padding: 0 0 0 1.5rem;
+  
+    blockquote {
+      position: relative;
+
+      &::before{
+        content: $i-quoteLeft;
+        top: 0;
+        left: -1.5rem;
+        font-family: $f-iconFont;
+        @include fluidRem("font-size", 1rem, 1.25rem);
+        color: $c-black;
+        position: absolute;
+        display: inline-block;
+      }
+    }
+
+    .img-cite{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+      margin-top:1rem;
+      padding-top:1rem;
+      border-top:1px solid black;
+    }
+
+    img {
+      object-fit: cover; // image-size
+      object-position: 50% 25%; // image-position
+      width: clamp(5rem, 15%, 7rem);
+    }
+  }
+}
+>>>>>>> Stashed changes
 
   //sass goes here
 
