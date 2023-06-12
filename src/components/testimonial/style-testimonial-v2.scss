@@ -4,9 +4,81 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
+.🚀-testimonial-v2 {
+// ================
+// Testimonial Layout 2
 
-.testimonial-v2{
+.lp-testimonial{
+	@include boxSpacing;
 
-  //sass goes here
+  .testimonial-container {
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+		max-width: $mq-800;
+		margin:auto;
+
+    .testimonial-quote{
+      padding: 0 0 0 1.5rem;
+    }
+  
+    blockquote {
+      p {
+        position: relative;
+  
+        &::before{
+          font-family: $f-iconFont;
+          @include fluidRem("font-size", 1rem, 1.25rem);
+          color: $c-black;
+          position: absolute;
+          display: inline-block;
+        }
+  
+        &::before {
+          content: $i-quoteLeft;
+          top: 0;
+          left: -1.5rem;
+        }
+      }
+    }
+
+    .img-cite{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+      margin-top:1rem;
+      padding-top:1rem;
+      border-top:1px solid black;
+    }
+
+    img {
+      object-fit: cover; // image-size
+      object-position: 50% 25%; // image-position
+      width: clamp(5rem, 15%, 7rem);
+    }
+  }
+
+
+  // @media (min-width: $mq-500){
+  //   &:not(.two-col){
+        
+  //     .center{
+  //       display:flex;
+  //       gap:.5rem;
+  //     }
+
+  //     .testimonial-container{
+  //       flex-direction:row;
+  //       align-items:stretch;
+			
+  //       .testimonial-quote{
+  //         flex: 1 0 70%;
+	// 				align-self:center;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
 
 }

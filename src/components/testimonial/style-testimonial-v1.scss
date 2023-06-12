@@ -8,10 +8,10 @@
 // ================
 // Testimonial Layout 1
 
-.lp-social-proof{
+.lp-testimonial{
 	@include boxSpacing;
 
-  .social-proof-container {
+  .testimonial-container {
     display:flex;
     flex-direction:column;
     gap:1rem;
@@ -27,7 +27,7 @@
       text-align: center;
     }
 
-    .social-proof-quote{
+    .testimonial-quote{
       padding: 0 1.5rem;
     }
   
@@ -62,7 +62,7 @@
       }
     }
 
-    figcaption {
+    cite {
       font-style: normal;
       margin-top: 1.5rem;
       @include fluidRem("font-size", 0.875rem, 0.975rem);
@@ -79,7 +79,7 @@
         gap:.5rem;
       }
 
-      .social-proof-container{
+      .testimonial-container{
         flex-direction:row;
         align-items:stretch;
 				
@@ -92,7 +92,7 @@
 					width:0;
         }
 
-        .social-proof-quote{
+        .testimonial-quote{
           flex: 1 0 70%;
 					align-self:center;
         }
