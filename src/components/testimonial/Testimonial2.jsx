@@ -20,12 +20,6 @@ const codeFiles = [
   // },
 ];
 
-<<<<<<< Updated upstream
-const TestimonialTwo = () => (
-  <div className="testimonial-v2 layout-section">
-      <DefaultTestimonial />
-      <SnippetToggler files={codeFiles} />
-=======
 const TestimonialTwo= () => (
   <div className="🚀-testimonial-v2 layout-section">
     <div className="lp-testimonial">
@@ -42,7 +36,6 @@ const TestimonialTwo= () => (
       </div>
     </div>
     <SnippetToggler files={codeFiles} />
->>>>>>> Stashed changes
   </div>
 );
 export default TestimonialTwo;
