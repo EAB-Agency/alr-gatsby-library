@@ -4,12 +4,11 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
-
-$d-sideSmPadding: calc((#{math.div((100% - $d-centerWidth), 2)}));
-
 .🚀-survey-v3 {
 // ================
 // Survey Layout 3
+
+$d-sideSmPadding: calc((#{math.div((100% - $d-centerWidth), 2)}));
 
 .lp-intro-form {
   @include boxSpacing(0, 2rem);

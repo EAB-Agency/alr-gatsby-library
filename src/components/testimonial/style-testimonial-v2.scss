@@ -4,10 +4,10 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
+.🚀-testimonial-v2{
+// ================
+// Testimonial Layout 2
 
-<<<<<<< Updated upstream
-.testimonial-v2{
-=======
 .lp-testimonial{
 	@include boxSpacing;
 
@@ -47,8 +47,5 @@
     }
   }
 }
->>>>>>> Stashed changes
-
-  //sass goes here
 
 }

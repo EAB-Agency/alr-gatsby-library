@@ -4,25 +4,23 @@ import SnippetToggler from '../utils/SnippetToggler';
 import './style-stats-v3.scss';
 
 // eslint-disable-next-line import/no-unresolved
-const styleSheet = require('!!raw-loader!./style-stats-v1.scss');
-// const html = require('!!raw-loader!./apply1.html');
+const styleSheet = require('!!raw-loader!./style-stats-v3.scss');
+const html = require('!!raw-loader!./default-stats.html');
 
 const codeFiles = [
   {
-    fileName: 'style-stats-v3.scss',
     code: styleSheet.default,
     language: 'scss',
     lineNumbersToDelete: '1-6',
   },
-  // {
-  //   fileName: 'apply1.html',
-  //   code: html.default,
-  //   language: 'html',
-  // },
+  {
+    code: html.default,
+    language: 'html',
+  },
 ];
 
 const StatsThree = () => (
-  <div className="stats-v3 layout-section">
+  <div className="🚀-stats-v3 layout-section">
     <div className="lp-stats-section">
       <div className="center">
         <ul className="lp-stats-list">
