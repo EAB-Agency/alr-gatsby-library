@@ -1,0 +1,77 @@
+@use "sass:color";
+@use "sass:math";
+@use "library/foundation/config" as *;
+@use "library/foundation/components" as *;
+@use "library/foundation/utilities" as *;
+
+.🚀-inquiry-v1 {
+// ================
+// Inquiry Layout 1
+
+.lp-intro-form {
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 40vw;
+    max-height: 35rem;
+    background: url("/images/img-woman-cafe.jpg") no-repeat 0% 20% / cover;
+
+    // Add other PS version images here
+    .lp-type-inquiry-version-1 &{
+      // background: url("images/img-ps-mba-lg.jpg") no-repeat 0% 20% / cover;
+    }
+    .lp-type-inquiry-version-2 & {
+      // background: url("images/img-ps-mba-lg.jpg") no-repeat 0% 20% / cover;
+    }
+  }
+
+  .lp-intro-form-content {
+    @include boxSpacing;
+  }
+
+  .lp-intro {
+    padding:2rem 0;
+    max-width: 75ch;
+    margin:auto;
+  }
+
+  .lp-form {
+    @include containerStyle;
+  }
+
+  @media (min-width: $mq-900) {
+
+    &:before{
+      background: url("/images/img-woman-cafe-lg.jpg") no-repeat 0% 20% / cover;
+
+      // Add other PS version images here
+      .lp-type-inquiry-version-1 &{
+        // background: url("images/img-ps-mba-lg.jpg") no-repeat 0% 20% / cover;
+      }
+      .lp-type-inquiry-version-2 & {
+        // background: url("images/img-ps-mba-lg.jpg") no-repeat 0% 20% / cover;
+      }
+    }
+
+    .lp-intro-form-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-end;
+      @include fluidRem("column-gap", 1rem, 3rem);
+    }
+
+    .lp-intro {
+      padding:0;
+      
+      p:last-child{
+        margin-bottom:0;
+      }
+      
+    }
+  }
+}
+
+
+}
