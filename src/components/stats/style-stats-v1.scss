@@ -4,8 +4,9 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
-
-.stats-v1 {
+.🚀-stats-v1 {
+  // ================
+  // Stats Layout 1
 
 .lp-stats-section {
   @include boxSpacing(2rem, 2rem);
@@ -85,4 +86,6 @@
     }
   }
 }
+
+
 }
