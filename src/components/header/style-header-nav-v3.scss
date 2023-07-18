@@ -85,6 +85,20 @@
 			box-shadow: inset 0 -2px 0 0 $c-white;
 		}
 	}
+
+	// Request and Apply Links
+	li:nth-child(n+3) a {
+		background: #3f3f3f;
+
+		&:hover,
+		&:focus {
+
+		}
+
+		&.active {
+			
+		}
+	}
 }
 
 }

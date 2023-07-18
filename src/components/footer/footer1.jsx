@@ -7,7 +7,7 @@ const scssPath = './style-footer-v1.scss';
 
 // eslint-disable-next-line import/no-unresolved
 const styleSheet = require('!!raw-loader!./style-footer-v1.scss');
-// const html = require('!!raw-loader!./apply1.html');
+const html = require('!!raw-loader!./default-footer.html');
 
 const codeFiles = [
   {
@@ -16,11 +16,10 @@ const codeFiles = [
     language: 'scss',
     lineNumbersToDelete: '1-6',
   },
-  // {
-  //   fileName: 'footer.html',
-  //   code: html.default,
-  //   language: 'html',
-  // },
+  {
+    code: html.default,
+    language: 'html',
+  },
 ];
 
 const FooterOne = () => (

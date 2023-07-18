@@ -5,7 +5,7 @@ import './style-footer-v4.scss';
 
 // eslint-disable-next-line import/no-unresolved
 const styleSheet = require('!!raw-loader!./style-footer-v4.scss');
-// const html = require('!!raw-loader!./apply1.html');
+const html = require('!!raw-loader!./default-footer.html');
 
 const codeFiles = [
   {
@@ -14,11 +14,10 @@ const codeFiles = [
     language: 'scss',
     lineNumbersToDelete: '1-6',
   },
-  // {
-  //   fileName: 'apply1.html',
-  //   code: html.default,
-  //   language: 'html',
-  // },
+  {
+    code: html.default,
+    language: 'html',
+  },
 ];
 
 const FooterFour = () => (
@@ -33,8 +32,8 @@ const FooterFour = () => (
           </address>
 
           <ul className="school-footer-links">
-            <li><a data-fancybox="help-modal" data-modal="true" data-src="#help-modal" href="#">Technical Help</a></li>
-            <li><a data-fancybox="privacy-modal" data-modal="true" data-src="#privacy-modal" href="#">Privacy Policy</a></li>
+          <li><a href="/help">Technical Help</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>  
           </ul>
         </div>
       </div>
