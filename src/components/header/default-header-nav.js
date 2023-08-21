@@ -21,7 +21,7 @@ const DefaultHeaderNav = () => (
               <a href="#request">Get Info</a>
             </li>
             <li>
-              <a href="#apply">Apply</a>
+              <a href="#apply" className="active">Apply</a>
             </li>
           </ul>
         </div>

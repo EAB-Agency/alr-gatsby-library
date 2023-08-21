@@ -92,7 +92,7 @@
         display: none;
       }
 
-      .intro-copy {
+      .lp-intro-copy {
         display: grid;
         grid-template-rows: auto 1fr;
         grid-gap: 2rem;
@@ -116,7 +116,6 @@
       grid-row: span 4;
       grid-column: 2 / 3;
       @include containerStyle();
-      min-height: 30rem;
     }
   }
 
