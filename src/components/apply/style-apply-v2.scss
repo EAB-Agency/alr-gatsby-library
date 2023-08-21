@@ -12,8 +12,8 @@ $d-titleMargin: calc(((#{math.div((100% - $d-centerWidth), 2)}) + 1%) * -1);
 $d-titlePadding: calc((#{math.div((100% - $d-centerWidth), 2)}) + 1%);
 
 .lp-apply {
-  @include applyFormInlineEmail("(min-width: #{$mq-500}) and (max-width: #{$mq-800})");
-  @include applyFormInlineEmail("(min-width: #{$mq-1200})");
+  @include applyFormInlineEmail("(min-width: #{$mq-600}) and (max-width: #{$mq-800})", "2");
+  @include applyFormInlineEmail("(min-width: #{$mq-1200})", "2");
 
   background: $c-white;
   padding: 0;

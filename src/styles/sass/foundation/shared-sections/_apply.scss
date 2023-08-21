@@ -28,7 +28,6 @@
 
 .lp-apply,
 .lp-apply-btm {
-  @include applyFormInlineEmail("(min-width: #{$mq-500})");
 
   .apply-form {
     position: relative;

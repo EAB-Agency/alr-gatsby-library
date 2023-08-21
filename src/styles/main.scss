@@ -9,11 +9,6 @@
 @use "utilities/mixins";
 @use "utilities/variables";
 
-
-// .helloworld {
-//     color: red;
-// }
-
 // ----------
 // General Settings
 // ----------
@@ -372,3 +367,8 @@ html {
 #mauticform_surveyformgeneralformsrv_qstn_hp_field {
   display: none;
 }
+
+// Honeypot fields
+#mauticform_studentjourneyapplyformv1general_nickname_bhpot{
+	display:none !important; //Do not delete
+ }

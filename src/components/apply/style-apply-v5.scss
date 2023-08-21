@@ -9,6 +9,8 @@
 // Apply Layout 5
 
 .lp-apply {
+  @include applyFormInlineEmail("(min-width: #{$mq-600}) and (max-width: #{$mq-800})", "2");
+
   &::before {
     content: "";
     display: block;

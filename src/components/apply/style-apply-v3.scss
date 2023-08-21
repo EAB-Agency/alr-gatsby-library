@@ -9,6 +9,7 @@
 // Apply Layout 3
 
 .lp-apply {
+  @include applyFormInlineEmail("(min-width: #{$mq-600})", "2");
   padding: 4vw 0 0;
   background: $c-white;
 
