@@ -9,7 +9,7 @@ const DefaultGive = () => (
           <h2 className="lp-intro-title">
             Download <strong>global-token=content-give-title!</strong>
           </h2>
-          <div className="intro-copy">
+          <div className="lp-intro-copy">
             <p>
               Copy that introduces the content give and highlights what it's all
               about. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -30,7 +30,7 @@ const DefaultGive = () => (
 
             <div className="lp-form-fields" id="form-form">
               <AcquiaForm
-                src="//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=5"
+                src="//alr-student-journey-2-0-do-not-delete-please.contact-server.com/form/generate.js?id=32"
                 multiple
               />
             </div>

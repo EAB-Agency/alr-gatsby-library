@@ -17,7 +17,6 @@ const codeFiles = [
   {
     code: html.default,
     language: 'html',
-    // lineNumbersToDelete: '1-5,43-47',
   },
 ];
 

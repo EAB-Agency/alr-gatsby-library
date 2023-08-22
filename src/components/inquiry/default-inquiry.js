@@ -20,15 +20,10 @@ const DefaultInquiry = () => (
         </div>
 
         <div className="lp-form">            
-          {/* <div className="lp-form-intro">
-            <h3 className="lp-form-intro-title"></h3>
-            <div className="lp-form-intro-copy"></p>
-            </div>
-          </div> */}
 
           <div className="lp-form-fields" id="form-form">
             <AcquiaForm
-              src="//alr-wd-layout-library-sandbox-sj-1-2.contact-server.com/form/generate.js?id=4"
+              src="//alr-student-journey-2-0-do-not-delete-please.contact-server.com/form/generate.js?id=48"
               multiple
             />
           </div>

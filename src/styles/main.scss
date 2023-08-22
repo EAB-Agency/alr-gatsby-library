@@ -368,7 +368,11 @@ html {
   display: none;
 }
 
-// Honeypot fields
-#mauticform_studentjourneyapplyformv1general_nickname_bhpot{
+// Honeypot fields - 2.0
+#mauticform_studentjourneyapplyformv1general_nickname_bhpot,
+#mauticform_studentjourneycontentgivev1getguide_nickname_bhpot,
+#mauticform_studentjourneysurveyv1general_nickname_bhpot,
+#mauticform_studentjourneysurveyv1general_sms_opt_in,
+#mauticform_studentjourneyinquiryv1changemeprogramversion_nickname_bhpot{
 	display:none !important; //Do not delete
  }
