@@ -23,12 +23,14 @@
         flex-wrap: nowrap;
         width: 100%;
         margin-top: 1rem;
+        column-gap:$_d-field-button-gap;
+        row-gap:1rem;
       }
 
       .mauticform-email {
         display: flex;
         width: 100%;
-				margin: 0 $_d-field-button-gap 0 0;
+        margin:0;
 
         input {
           width: 100%;
@@ -60,7 +62,8 @@
 				.mauticform-field-1{
 					display: block;
 					width: 100%;
-					margin: 0 0 0.5rem 0;
+          margin:0;
+					// margin: 0 0 0.5rem 0;
 				}
 	
 				.mauticform-page-wrapper {
@@ -69,7 +72,6 @@
 	
 				.mauticform-email {
 					flex: 1 1 45%;
-					margin: 0 $_d-field-button-gap 0 0;
 				}
 	
 			} 
@@ -79,7 +81,8 @@
 				.mauticform-field-2{
 					display: block;
 					width: 100%;
-					margin: 0 0 0.5rem 0;
+					// margin: 0 0 0.5rem 0;
+          margin:0;
 				}
 	
 				.mauticform-page-wrapper {
@@ -88,7 +91,6 @@
 	
 				.mauticform-email {
 					flex: 1 1 45%;
-					margin: 0 $_d-field-button-gap 0 0;
 				}
 			} 
     }
