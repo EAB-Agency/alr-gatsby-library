@@ -21,7 +21,7 @@ const DefaultSurvey = () => (
 
             <div className="lp-form-fields" id="form-form">
               <AcquiaForm
-                src="//alr-student-journey-2-0-do-not-delete-please.contact-server.com/form/generate.js?id=39"
+                src="//alr-student-journey-2-0-please-do-not-delete.contact-server.com/form/generate.js?id=39"
                 multiple
               />
             </div>
