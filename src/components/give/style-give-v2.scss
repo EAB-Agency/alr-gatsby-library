@@ -5,82 +5,81 @@
 @use "library/foundation/utilities" as *;
 
 .🚀-give-v2 {
-// ================
-// Guide Layout 2
+  // ================
+  // Guide Layout 2
 
-.lp-intro-form {
-  @include boxSpacing;
-
-  .lp-intro-form-content {
-
-    .lp-intro {
-
-      &::after {
-        // CG image above form
-        content: '';
-        display: block;
-        background: url("/images/img-contentgive.png") no-repeat center top / cover;
-        width: 80%;
-        max-width: 25rem;
-        min-height: 10rem;
-        height: 30vw;
-        margin: auto;
-      }
-    }
-
-    .lp-form {
-      @include containerStyle();
-    }
-  }
-    
-  @media (min-width: $mq-800) {
-    >.center {
-      max-width: $mq-1000;
-      margin: auto;
-    }
+  .lp-intro-form {
+    @include boxSpacing;
 
     .lp-intro-form-content {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      grid-template-rows: auto auto;
-      align-items: center;
-      row-gap: 2rem;
-      min-height: 42rem;
-      
       .lp-intro {
-        // control for character lengths with max-width
-        max-width: $mq-700;
-        margin: auto;
-        grid-column: 1 / 3;
-
-        .lp-intro-title {
-          text-align: center;
-        }
-        
         &::after {
-          display: none;
+          // CG image above form
+          content: "";
+          display: block;
+          background: url("/images/img-contentgive.png") no-repeat center top / cover;
+          width: 80%;
+          max-width: 25rem;
+          min-height: 10rem;
+          height: 30vw;
+          margin: auto;
         }
       }
 
       .lp-form {
-        grid-column: 2 / 3;
-        margin-left: -4rem;
+        @include containerStyle;
+
+        #mauticform_studentjourneycontentgivev1emailgetguide_nickname_bhpot {
+          display: none;
+        }
+      }
+    }
+
+    @media (min-width: $mq-800) {
+      >.center {
+        max-width: $mq-1000;
+        margin: auto;
       }
 
-      &::before {
-        // CG image next to form
-        content: '';
-        display: block;
-        background: url("/images/img-contentgive.png") no-repeat right center / contain;
-        width: 100%;
-        height: 90%;
-        grid-row: 2 / 3;
-        grid-column: 1 / 2;
+      .lp-intro-form-content {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: auto auto;
+        align-items: center;
+        row-gap: 2rem;
+        min-height: 42rem;
+
+        .lp-intro {
+          // control for character lengths with max-width
+          max-width: $mq-700;
+          margin: auto;
+          grid-column: 1 / 3;
+
+          .lp-intro-title {
+            text-align: center;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+
+        .lp-form {
+          grid-column: 2 / 3;
+          margin-left: -4rem;
+        }
+
+        &::before {
+          // CG image next to form
+          content: "";
+          display: block;
+          background: url("/images/img-contentgive.png") no-repeat right center / contain;
+          width: 100%;
+          height: 90%;
+          grid-row: 2 / 3;
+          grid-column: 1 / 2;
+        }
       }
-      
     }
   }
-}
-
-
 }
