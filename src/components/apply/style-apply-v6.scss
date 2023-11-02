@@ -4,62 +4,64 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
-
 .🚀-apply-v6 {
-// ================
-// Apply Layout 6
+  // ================
+  // Apply Layout 6
 
-.lp-apply {
-  background: $c-white;
+  .lp-apply {
+    background: $c-white;
 
-  &::before {
-    content: '';
-    display: block;
-    background: url("/images/img-woman-cafe-lg.jpg") no-repeat right 55% / cover;
-    height: 40vw;
-    width: 100%;
-    min-height: 14rem;
-    max-height: 25rem;
-  }
+    &::before {
+      content: "";
+      display: block;
+      background: url("/images/img-woman-cafe-lg.jpg") no-repeat right 55% / cover;
+      height: 40vw;
+      width: 100%;
+      min-height: 14rem;
+      max-height: 25rem;
+    }
 
-  .lp-apply-content {
-    padding: 0 0 6vw;
-    @include fluidRem("margin-top", -10rem, -13rem);
-  }
+    .lp-apply-content {
+      padding: 0 0 6vw;
 
-  .lp-apply-copy {
-    .lp-apply-title {
-      color: $c-white;
-      text-align: center;
-      margin-bottom: 2rem;
+      @include fluidRem("margin-top", -10rem, -13rem);
+
+      #mauticform_studentjourneyapplyformv1emailgeneral_nickname_bhpot {
+        display: none;
+      }
+    }
+
+    .lp-apply-copy {
+      .lp-apply-title {
+        color: $c-white;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .copy-wrap {
+      @include containerStyle($c-lightGrey);
+    }
+
+    .apply-form-wrap {
+      @include containerStyle(#ccc);
     }
   }
 
-  .copy-wrap {
-    @include containerStyle($c-lightGrey);
+  @media (min-width: $mq-800) {
+    .lp-apply-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr;
+    }
+
+    .lp-apply-copy {
+      grid-row: 1/2;
+      grid-column: span 2;
+    }
+
+    .apply-form {
+      margin: 0;
+    }
   }
-
-  .apply-form-wrap {
-    @include containerStyle(#ccc);
-  }
-}
-
-@media (min-width: $mq-800) {
-  .lp-apply-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-  }
-
-  .lp-apply-copy {
-    grid-row: 1/2;
-    grid-column: span 2;
-  }
-
-  .apply-form {
-    margin: 0;
-  }
-}
-
-
 }
