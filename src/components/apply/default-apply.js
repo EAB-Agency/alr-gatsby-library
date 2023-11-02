@@ -29,7 +29,7 @@ const DefaultApply = ({ className }) => (
 
           <div className="apply-form lp-apply-form">
             <AcquiaForm
-              src="https://alr-student-journey-2-0-do-not-delete-please.contact-server.com/form/generate.js?id=34"
+              src="https://alr-creative-sj-2-0-sandbox-v2.contact-server.com/form/generate.js?id=34"
               multiple
             />
           </div>
