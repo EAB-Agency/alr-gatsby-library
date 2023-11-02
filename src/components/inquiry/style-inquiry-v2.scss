@@ -4,14 +4,17 @@
 @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
-
 .🚀-inquiry-v2 {
-// ================
-// Inquiry Layout 1
+  // ================
+  // Inquiry Layout 1
 
-.lp-intro-form {
+  .lp-intro-form {
 
-}
+  }
 
-
+  .lp-form {
+    #mauticform_studentjourneyinquiryv1emailxprogramversionx_nickname_bhpot {
+      display: none;
+    }
+  }
 }
