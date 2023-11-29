@@ -5,55 +5,53 @@
 @use "library/foundation/utilities" as *;
 
 .🚀-apply-v1 {
-  // ================
-  // Apply Layout 1
+// ================
+// Apply Layout 1
 
-  .lp-apply {
-    background: $c-white;
-    padding: 0;
+.lp-apply {
+  background: $c-white;
+  padding: 0;
 
-    @include applyFormInlineEmail("(min-width: #{$mq-600})", "2");
+  @include applyFormInlineEmail("(min-width: #{$mq-600})", "2");
 
-    &::before {
-      // Image above content on small screens
-      // For image below - change to ::after here and again after media query
-      content: "";
-      display: block;
-      width: 100%;
-      height: 35vw;
-      max-height: 17rem;
-      background: $c-black url("/images/img-woman-cafe.jpg") no-repeat center 72% / cover;
-    }
+  &::before {
+    // Image above content on small screens
+    // For image below - change to ::after here and again after media query
+    content: "";
+    display: block;
+    width: 100%;
+    height: 35vw;
+    max-height: 17rem;
+    background: $c-black url("/images/img-woman-cafe.jpg") no-repeat center 72% / cover;
+  }
+
+  .lp-apply-content {
+    padding: 4vw 0;
+  }
+
+  @media (min-width: $mq-800) {
+    @include boxSpacing(4rem, 4rem);
+
+    background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
 
     .lp-apply-content {
-      padding: 4vw 0;
+      // Change margin to right align box
+      // Keep max width to help with character lengths
+      padding: 0;
 
-      #mauticform_studentjourneyapplyformv1emailgeneral_nickname_bhpot {
-        display: none;
-      }
+      @include containerStyle;
+
+      width: 65%;
+      max-width: $mq-700;
+      margin: 0 auto 0 0;
     }
 
-    @media (min-width: $mq-800) {
-      @include boxSpacing(4rem, 4rem);
-
-      background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat right center / cover;
-
-      .lp-apply-content {
-        // Change margin to right align box
-        // Keep max width to help with character lengths
-        padding: 0;
-
-        @include containerStyle;
-
-        width: 65%;
-        max-width: $mq-700;
-        margin: 0 auto 0 0;
-      }
-
-      &::before {
-        // Remove image above content
-        display: none;
-      }
+    &::before {
+      // Remove image above content
+      display: none;
     }
   }
+}
+
+
 }

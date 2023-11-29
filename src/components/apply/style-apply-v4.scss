@@ -5,52 +5,48 @@
 @use "library/foundation/utilities" as *;
 
 .🚀-apply-v4 {
-  // ================
-  // Apply Layout 4
+// ================
+// Apply Layout 4
 
-  .lp-apply {
-    @include applyFormInlineEmail("(min-width: #{$mq-600})", "2");
+.lp-apply {
+  @include applyFormInlineEmail("(min-width: #{$mq-600})", "2");
+  padding: 0 0 4vw;
+  background: $c-lightGrey;
+  position: relative;
 
-    padding: 0 0 4vw;
-    background: $c-lightGrey;
+  &::before {
+    content: "";
+    display: block;
+    background: $c-white url("/images/img-woman-cafe-lg.jpg") no-repeat 80% 57% / cover;
+    width: 100%;
+    height: 30vw;
+    max-height: 25rem;
+  }
+
+  .lp-apply-content {
     position: relative;
+    margin: 0 auto;
+    max-width: $mq-700;
+    @include containerStyle;
+  }
 
-    &::before {
-      content: "";
-      display: block;
-      background: $c-white url("/images/img-woman-cafe-lg.jpg") no-repeat 80% 57% / cover;
-      width: 100%;
-      height: 30vw;
-      max-height: 25rem;
-    }
-
-    .lp-apply-content {
-      position: relative;
-      margin: 0 auto;
-      max-width: $mq-700;
-
-      @include containerStyle;
-
-      #mauticform_studentjourneyapplyformv1emailgeneral_nickname_bhpot {
-        display: none;
-      }
-    }
-
-    @media (max-width: maxMQ($mq-800)) {
-      .lp-apply-wrapper {
-        @include fullWidth;
-      }
-    }
-
-    @media (min-width: $mq-800) {
-      // Amount of overlap dictated by top padding and image height
-      padding: 12rem 0 4vw;
-
-      &::before {
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
+  @media (max-width: maxMQ($mq-800)) {
+    .lp-apply-wrapper {
+      @include fullWidth;
     }
   }
+
+  @media (min-width: $mq-800) {
+    // Amount of overlap dictated by top padding and image height
+    padding: 12rem 0 4vw;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+
 }
