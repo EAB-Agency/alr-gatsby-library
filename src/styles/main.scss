@@ -360,19 +360,9 @@ html {
 // Form Override
 // ----------
 
-#mauticform_applyformformapp_qstn_hp_field,
-#mauticform_input_surveyformgeneralformsrv_qstn_hp_field,
-#mauticform_surveyformgeneralformsrv_c_sms_opt_in_ind,
-#mauticform_contentgiveformformcg_qstn_hp_field,
-#mauticform_surveyformgeneralformsrv_qstn_hp_field {
+#mauticform_studentjourneyapplyformv1emailgeneral_nickname_bhpot,
+#mauticform_studentjourneycontentgivev1emailgetguide_nickname_bhpot,
+#mauticform_studentjourneyinquiryv1emailxprogramversionx_nickname_bhpot,
+#mauticform_studentjourneysurveyv1emailgeneral_nickname_bhpot{
   display: none;
 }
-
-// Honeypot fields - 2.0
-#mauticform_studentjourneyapplyformv1general_nickname_bhpot,
-#mauticform_studentjourneycontentgivev1getguide_nickname_bhpot,
-#mauticform_studentjourneysurveyv1general_nickname_bhpot,
-#mauticform_studentjourneysurveyv1general_sms_opt_in,
-#mauticform_studentjourneyinquiryv1changemeprogramversion_nickname_bhpot{
-	display:none !important; //Do not delete
- }
