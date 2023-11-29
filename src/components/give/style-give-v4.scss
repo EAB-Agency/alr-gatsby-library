@@ -5,72 +5,71 @@
 @use "library/foundation/utilities" as *;
 
 .🚀-give-v4 {
-  // ================
-  // Guide Layout 4
+// ================
+// Guide Layout 4
 
-  .lp-intro-form {
-    @include boxSpacing;
+.lp-intro-form {
+  @include boxSpacing;
+
+  .lp-intro-form-content {
+
+    .lp-intro {
+      &::after {
+        // CG image above form
+        content: '';
+        display: block;
+        background: url("/images/img-contentgive.png") no-repeat center top / 100% auto;
+        width: 80%;
+        max-width: 25rem;
+        min-height: 10rem;
+        margin: auto;
+      }
+    }
+
+    .lp-form {
+      @include containerStyle();
+    }
+  }
+    
+  @media (min-width: $mq-800) {
+
+    .center{
+      display: flex;
+      justify-content: center;
+
+      &::before {
+        // CG image next to form
+        content: '';
+        display: block;
+        background: url("/images/img-contentgive.png") no-repeat right center / contain;
+        width: 100%;
+        max-width: 20rem;
+        min-width: 18rem;
+        margin-right: -4rem;
+      }
+    }
 
     .lp-intro-form-content {
+      align-items: center;
+      min-height: 40rem;
+      max-width: $mq-700;
+      
       .lp-intro {
-        &::after {
-          // CG image above form
-          content: "";
-          display: block;
-          background: url("/images/img-contentgive.png") no-repeat center top / 100% auto;
-          width: 80%;
-          max-width: 25rem;
-          min-height: 10rem;
-          margin: auto;
+        @include containerStyle(black);
+        @include containerReversed;
+        flex: 0 1 50%;
+
+        p:last-child{
+          margin-bottom: 0;
         }
-      }
-
-      .lp-form {
-        @include containerStyle;
-
-        #mauticform_studentjourneycontentgivev1emailgetguide_nickname_bhpot {
+        
+        &::after {
           display: none;
         }
       }
     }
-
-    @media (min-width: $mq-800) {
-      .center {
-        display: flex;
-        justify-content: center;
-
-        &::before {
-          // CG image next to form
-          content: "";
-          display: block;
-          background: url("/images/img-contentgive.png") no-repeat right center / contain;
-          width: 100%;
-          max-width: 20rem;
-          min-width: 18rem;
-          margin-right: -4rem;
-        }
-      }
-
-      .lp-intro-form-content {
-        align-items: center;
-        min-height: 40rem;
-        max-width: $mq-700;
-
-        .lp-intro {
-          @include containerStyle(black);
-          @include containerReversed;
-
-          flex: 0 1 50%;
-
-          p:last-child {
-            margin-bottom: 0;
-          }
-
-          &::after {
-            display: none;
-          }
-        }
-      }
-    }
   }
+}
+
+
 }
