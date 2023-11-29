@@ -360,9 +360,11 @@ html {
 // Form Override
 // ----------
 
+// hide hidden fields
 #mauticform_studentjourneyapplyformv1emailgeneral_nickname_bhpot,
 #mauticform_studentjourneycontentgivev1emailgetguide_nickname_bhpot,
 #mauticform_studentjourneyinquiryv1emailxprogramversionx_nickname_bhpot,
-#mauticform_studentjourneysurveyv1emailgeneral_nickname_bhpot{
+#mauticform_studentjourneysurveyv1emailgeneral_nickname_bhpot,
+#mauticform_studentjourneysurveyv1emailgeneral_sms_opt_in{
   display: none;
 }
