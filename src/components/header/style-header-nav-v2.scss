@@ -9,7 +9,6 @@
 // Header Layout 2
 
 .header-nav {
-
   @include fluidRem("padding", 1rem 0, 1.5rem 0);
 
   .school-header-nav-wrapper {
@@ -32,11 +31,10 @@
     }
   }
 
-  .school-header {
-    
-    @media (max-width: maxMQ($mq-700)) {
-      @include fluidRem("padding-bottom", 1rem, 1.5rem);
-   }
+  @media (max-width: maxMQ($mq-700)) {
+    .main-nav {
+      @include fluidRem("padding-top", 1rem, 1.5rem);
+    }
   }
 }
 

@@ -1,0 +1,119 @@
+@use "sass:color";
+@use "sass:math";
+@use "library/foundation/config" as *;
+@use "library/foundation/components" as *;
+@use "library/foundation/utilities" as *;
+
+.🚀-header-nav-v4 {
+
+  position:relative;
+
+// ================
+// Header Layout 4
+
+// ================
+// Navigation
+
+.header-nav {
+  background: $c-white;
+
+  .school-header {
+    @include fluidRem("padding", 1.15rem 0, 1.5rem 0);
+  }
+
+  .main-nav {
+    background: $c-black;
+    
+    .center {
+      @include fullWidth;
+    }
+  
+    ul {
+      margin: 0;
+      display: flex;
+  
+      li {
+        list-style-type: none;
+        flex: 1 1 auto;
+        
+        a {
+          display: block;
+          color: $c-white;
+          @include fluidRem("padding", 0.5rem 0.25rem, 1rem 2rem);
+          text-decoration: none;
+          text-align: center;
+
+          &:focus,
+          &:hover,
+          &.active {
+            box-shadow: inset 0 0 0 4px $c-lightGrey;
+            background: $c-white;
+            color: $c-black;
+          }
+        }
+      }
+    }
+
+    // Request and Apply links need extra focus
+    li:nth-child(n+3) a {
+      background: $c-lightGrey;
+      color:black;
+
+      &:hover,
+      &:focus {
+  
+      }
+  
+      &.active {
+        
+      }
+    }
+  }
+
+  @media (min-width: $mq-900) {
+    background:none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    .school-header-nav-wrapper {
+      @include center;
+      display: grid;
+      grid-template: 1fr / 1fr auto;
+      align-items: center;
+    }
+
+    .main-nav{
+      background: rgba($c-black, .75);
+    }
+  }
+}
+
+// ================
+// Page Intro
+
+.lp-page-intro {
+  padding: 25vw 0 5vw;
+  background: $c-white url("/images/img-background.jpg") no-repeat center top / cover; // Mobile Image
+  text-align:center;
+
+  h2 {
+    text-shadow: 0 0 20px white;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $mq-700) {
+    background: $c-white url("/images/img-background.jpg") no-repeat center top / cover; //Desktop Image
+  }
+
+  @media (min-width: $mq-1600) {
+    padding: 23rem 0 5rem;
+  }
+}
+
+
+}
