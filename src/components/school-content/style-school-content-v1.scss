@@ -1,0 +1,53 @@
+@use "sass:color";
+@use "sass:math";
+@use "library/foundation/config" as *;
+@use "library/foundation/components" as *;
+@use "library/foundation/utilities" as *;
+
+.🚀-school-content-v1 {
+// ================
+// School Content Layout 1
+
+.lp-school-content {
+  @include boxSpacing;
+
+  .lp-school-content{
+    ul{
+      @include fancyList;
+    }
+  }
+
+  // Leave <a> styles, delete from html if not needed.
+  a{
+    @extend %button;
+  }
+
+  .center{
+    &:before{
+      content:'';
+      display:block;
+      background: url("/images/img-woman-cafe.jpg") no-repeat center /cover; // mobile image
+      width:100%;
+      height:35vw;
+      margin-bottom:1rem;
+    }
+  }
+
+  @media (min-width: $mq-800){
+    .center{
+      display:grid;
+      grid-template-columns: auto 60%;
+      align-items:center;
+      gap:2rem;
+
+      &:before{
+        background: url("/images/img-woman-cafe.jpg") no-repeat center /cover; // desktop image
+        height:100%;
+        margin:0;
+      }
+    }
+  }
+}
+
+
+}

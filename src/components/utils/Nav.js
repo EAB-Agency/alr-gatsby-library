@@ -40,6 +40,9 @@ const Nav = () => {
           <Link to="/inquiry" onClick={closeMenu}>
             Inquiry
           </Link>
+          <Link to="/school-content" onClick={closeMenu}>
+            School Content
+          </Link>
           <Link to="/school-tiles" onClick={closeMenu}>
             School Tiles
           </Link>
