@@ -8,43 +8,76 @@
 // ================
 // School Content Layout 1
 
+
 .lp-school-content {
-  @include boxSpacing;
-
-  .lp-school-content{
-    ul{
-      @include fancyList;
-    }
-  }
-
-  // Leave <a> styles, delete from html if not needed.
-  a{
-    @extend %button;
-  }
+  @include boxSpacing(0);
+  overflow:hidden;
 
   .center{
     &:before{
       content:'';
       display:block;
       background: url("/images/img-woman-cafe.jpg") no-repeat center /cover; // mobile image
-      width:100%;
       height:35vw;
-      margin-bottom:1rem;
+      grid-area:image;
+      margin: 0 -6% 1rem; // allows full-width image // adjust % depending on your center margin. 
+      width:112% 
     }
   }
 
+  .intro{
+    max-width: $mq-700;
+    grid-area: intro;
+  }
+
+  .content-wrapper{
+    grid-area: content;
+    display:grid;
+    gap:1rem;
+
+    .content-container{
+      padding:1rem;
+      background:white;
+    }
+  }
+
+  // Leave <a> styles, delete from html if not needed.
+  a{
+    // @extend %button;
+  }
+
   @media (min-width: $mq-800){
+    @include boxSpacing;
+    
     .center{
       display:grid;
       grid-template-columns: auto 60%;
-      align-items:center;
-      gap:2rem;
+      grid-template-areas:  "intro intro"
+                            "image content";
 
       &:before{
         background: url("/images/img-woman-cafe.jpg") no-repeat center /cover; // desktop image
         height:100%;
         margin:0;
+        width:100%;
       }
+    }
+
+    .content-wrapper{
+      margin: 1rem 0;
+      margin-left:-1rem;
+    }
+  }
+
+  @media (min-width: $mq-1200){
+    .center{
+      column-gap:2rem;
+      grid-template-areas:  "image intro"
+                            "image content";
+    }
+
+    .content-wrapper{
+      margin:0;
     }
   }
 }
