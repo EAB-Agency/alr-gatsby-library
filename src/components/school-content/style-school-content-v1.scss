@@ -13,7 +13,7 @@
   @include boxSpacing(0);
   overflow:hidden;
 
-  .center{
+  .school-content-wrapper{
     &:before{
       content:'';
       display:block;
@@ -49,7 +49,7 @@
   @media (min-width: $mq-800){
     @include boxSpacing;
     
-    .center{
+    .school-content-wrapper{
       display:grid;
       grid-template-columns: auto 60%;
       grid-template-areas:  "intro intro"
