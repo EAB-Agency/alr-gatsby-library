@@ -9,8 +9,56 @@
 // ================
 // Inquiry Layout 1
 
-.lp-intro-form {
+.lp-intro-form {  
+  @include boxSpacing();
+  background: $c-lightGrey;
 
+  .lp-intro{
+    max-width: 75ch;
+    margin:auto;
+  }
+
+  .lp-form {
+    margin-top: 2rem;
+    border: 1px solid $c-lightGrey;
+
+    .lp-form-fields {
+      @include containerStyle();
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
+      height: 15rem;
+      width: 100%;
+    }
+  }  
+
+
+  @media (min-width: $mq-900) and (max-width: $mq-1000){
+
+    // keep required label from breaking independently. 
+    .mauticform-row-partial-half{
+      .mauticform-req-label{
+        display:block;
+      }
+    }
+  }
+
+  @media (min-width: $mq-900) {
+
+    .lp-intro-form-content {
+      display: grid;
+      grid-template: 1fr / 1fr 1fr;
+      grid-gap: 0 2rem;
+      align-items: center;
+    }
+
+    .lp-form {
+      margin: 0;
+    }
+  }
 }
 
 

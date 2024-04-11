@@ -31,10 +31,16 @@ const DefaultInquiry = () => (
                 purus a tortor quam interdum. Et sed iaculis enim.
               </li>
             </ul>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Eu blandit netus
+              scelerisque sit elit. Non lacus ultrices lectus purus a tortor
+              quam interdum. Et sed iaculis enim.
+            </p>
           </div>
         </div>
 
         <div className="lp-form">
+                
           <div className="lp-form-fields" id="form-form">
             <AcquiaForm
               src="https://alr-creative-sj-2-0-sandbox-v2.contact-server.com/form/generate.js?id=48"
