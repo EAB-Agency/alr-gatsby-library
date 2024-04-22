@@ -15,7 +15,7 @@ const codeFiles = [
   },
   {
     code: html.default,
-    language: 'html',
+    // language: 'html',
   },
 ];
 
