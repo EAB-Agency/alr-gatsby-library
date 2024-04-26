@@ -27,9 +27,9 @@ const applyFive = () => (
       <div className="center lp-apply-wrapper">
         <div className="content-container lp-apply-content">
           <div className="lp-apply-copy">
-            <h2 className="lp-apply-title">
+            <h1 className="lp-apply-title">
               Experience Support, Service, and Success
-            </h2>
+            </h1>
             <p>
               Expand your professional potential with one of our highly-regarded
               master's or doctoral degrees. We promise a personalized,

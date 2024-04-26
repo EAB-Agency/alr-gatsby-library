@@ -6,7 +6,7 @@ const DefaultInquiry = () => (
     <div className="center lp-intro-form-wrapper">
       <div className="lp-intro-form-content">
         <div className="lp-intro">
-          <h3 className="lp-intro-title">Headline related to ad copy.</h3>
+          <h2 className="lp-intro-title">Headline related to ad copy.</h2>
           <div className="lp-intro-copy">
             <p>
               Lorem ipsum dolor sit amet consectetur. Eu blandit netus
@@ -40,7 +40,6 @@ const DefaultInquiry = () => (
         </div>
 
         <div className="lp-form">
-                
           <div className="lp-form-fields" id="form-form">
             <AcquiaForm
               src="https://alr-creative-sj-2-0-sandbox-v2.contact-server.com/form/generate.js?id=48"

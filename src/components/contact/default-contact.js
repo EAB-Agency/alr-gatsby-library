@@ -5,7 +5,7 @@ const DefaultContact = () => (
     <div className="center lp-school-wrapper">
       <div className="lp-school-contact-info">
         <div className="lp-school-contact-intro">
-          <h3>Let’s Get Connected</h3>
+          <h2>Let’s Get Connected</h2>
 
           <p>
             Earning your master’s degree is an important step in your career,

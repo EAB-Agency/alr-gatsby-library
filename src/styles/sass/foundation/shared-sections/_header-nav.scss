@@ -5,81 +5,33 @@
 @use "../components" as *;
 
 // ================
-// Layout
+// Styles used by all ACS landing pages
 // ================
 
 // ================
 // Header
 
+
 // ================
 // Navigation
 
+// Copy paste code from Layout Library here
 
-//Copy Paste Layout Library Code Here
 
-// .main-nav {
-//   border-bottom: 8px solid black;
-
-//   .center {
-//     display: flex;
-//     justify-content: center;
-
-//     @media (max-width: $mq-400) {
-//       width: 100%;
-//     }
-
-//     @media (min-width: $mq-900) {
-//       justify-content: end;
-//       margin-top: -1rem;
-//     }
-//   }
-
-//   ul,
-//   li {
-//     margin: 0;
-//     padding: 0;
-//   }
-
-//   ul {
-//     list-style: none;
-//     display: flex;
-//   }
-
-//   li {
-//     margin: 0 1px;
-
-//     &:last-child {
-//       margin-right: 0;
-//     }
-
-//     &:first-child {
-//       margin-left: 0;
-//     }
-//   }
-
-//   a {
-//     @include fluidRem("font-size", 0.8125rem, 1.0625rem);
-//     @include fluidRem("padding", 0.6rem 0.6rem, 0.6rem 1.7rem);
-
-//     background: #767676;
-//     color: white;
-//     border-radius: 5px 5px 0 0;
-//     display: flex;
-//     width: 100%;
-//     height: 100%;
-//     align-items: center;
-//     text-align: center;
-//     text-decoration: none;
-//     line-height: 1.2;
-
-//     &:hover,
-//     &:focus {
-//       background: black;
-//     }
-
-//     &.active {
-//       background: black;
-//       transition: none;
-//     }
-//   }
-// }
+// ================
+// Skip to Content
+.skip-link {
+	background: $c-white;
+  border: 3px solid $c-black;
+	color: $c-black;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: .65rem;
+  position: absolute;
+	transition: all .25s ease-in-out;
+	transform: translateY(-100%);
+  z-index: 9999;
+}
+.skip-link:focus {
+	transform: translateY(0%);
+}

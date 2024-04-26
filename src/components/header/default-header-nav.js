@@ -5,7 +5,7 @@ const DefaultHeaderNav = () => (
     <div className="school-header-nav-wrapper">
       <header className="school-header">
         <div className="center school-header-wrapper">
-          <h1 className="school-logo">The School Name</h1>
+          <div className="school-logo">The School Name</div>
         </div>
       </header>
       <nav className="main-nav" id="main-nav">
@@ -21,7 +21,9 @@ const DefaultHeaderNav = () => (
               <a href="#request">Get Info</a>
             </li>
             <li>
-              <a href="#apply" className="active">Apply</a>
+              <a href="#apply" className="active">
+                Apply
+              </a>
             </li>
           </ul>
         </div>

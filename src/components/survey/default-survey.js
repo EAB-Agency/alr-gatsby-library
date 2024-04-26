@@ -6,7 +6,7 @@ const DefaultSurvey = () => (
     <div className="center lp-intro-form-wrapper">
       <div className="lp-intro-form-content">
         <div className="lp-intro">
-          <h2 className="lp-intro-title">Let us know your future plans!</h2>
+          <h1 className="lp-intro-title">Let us know your future plans!</h1>
           <div className="intro-copy">
             <p>
               Thank the prospect and encourage them to fill out the survey.
