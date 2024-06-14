@@ -6,9 +6,9 @@ const DefaultGive = () => (
     <div className="center lp-intro-form-wrapper">
       <div className="lp-intro-form-content">
         <div className="lp-intro">
-          <h1 className="lp-intro-title">
+          <h2 className="lp-intro-title">
             Download <strong>global-token=content-give-title!</strong>
-          </h1>
+          </h2>
           <div className="lp-intro-copy">
             <p>
               Copy that introduces the content give and highlights what it's all

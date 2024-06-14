@@ -23,14 +23,14 @@ const SchoolContentTwo = () => (
     <section className="lp-school">
       <div className="center lp-school-wrapper">
         <div className="lp-school-content">
-          <h3 className="lp-school-content-title">
+          <h2 className="lp-school-content-title">
             Learn more about the School Name.
-          </h3>
+          </h2>
           <ul className="lp-school-link-list">
             <li className="lp-school-tile-item">
               <details>
                 <summary>
-                  <h4>School link #1</h4>
+                  <h3>School link #1</h3>
                 </summary>
                 <div className="container">
                   <p>
@@ -44,7 +44,7 @@ const SchoolContentTwo = () => (
             <li className="lp-school-tile-item">
               <details>
                 <summary>
-                  <h4>School link #2</h4>
+                  <h3>School link #2</h3>
                 </summary>
                 <div className="container">
                   <p>
@@ -58,7 +58,7 @@ const SchoolContentTwo = () => (
             <li className="lp-school-tile-item">
               <details>
                 <summary>
-                  <h4>School link #3</h4>
+                  <h3>School link #3</h3>
                 </summary>
                 <div className="container">
                   <p>

@@ -4,9 +4,7 @@ const DefaultVideo = () => (
   <section className="lp-video">
     <div className="center lp-video-wrapper">
       <div className="video-intro">
-        <h1>
-          Reach Your <span className="title-accent">Fullest</span> Potential
-        </h1>
+        <h2>Reach Your Fullest Potential</h2>
         <p>
           Watch our video&nbsp;to learn more about how a degree from SEU can
           help you start achieving your career goals sooner.

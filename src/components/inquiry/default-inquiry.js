@@ -6,7 +6,7 @@ const DefaultInquiry = () => (
     <div className="center lp-intro-form-wrapper">
       <div className="lp-intro-form-content">
         <div className="lp-intro">
-          <h2 className="lp-intro-title">Headline related to ad copy.</h2>
+          <h1 className="lp-intro-title">Headline related to ad copy.</h1>
           <div className="lp-intro-copy">
             <p>
               Lorem ipsum dolor sit amet consectetur. Eu blandit netus

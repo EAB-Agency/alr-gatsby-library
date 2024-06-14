@@ -4,9 +4,9 @@ const DefaultTiles = () => (
   <section className="lp-school">
     <div className="center lp-school-wrapper">
       <div className="lp-school-content">
-        <h3 className="lp-school-content-title">
+        <h2 className="lp-school-content-title">
           Learn more about the School Name.
-        </h3>
+        </h2>
         <ul className="lp-school-link-list">
           <li className="lp-school-link-item">
             <a

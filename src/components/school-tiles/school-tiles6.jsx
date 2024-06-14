@@ -27,7 +27,7 @@ const SchoolTilesSix = () => (
         <div className="lp-school-content">
           <ul className="lp-school-link-list">
             <li className="lp-school-link-item">
-              <h4 className="headline">Applying to Graduate Programs at BU</h4>
+              <h3 className="headline">Applying to Graduate Programs at BU</h3>
               <p>
                 When applying to a graduate or professional program at Bear
                 University, keep in mind that each graduate school, center, or
@@ -53,7 +53,7 @@ const SchoolTilesSix = () => (
               </div>
             </li>
             <li className="lp-school-link-item">
-              <h4 className="headline">Why a Degree from BU is Worth It</h4>
+              <h3 className="headline">Why a Degree from BU is Worth It</h3>
               <p>
                 The real-world experience students gain at BU under the
                 mentorship of expert faculty prepares them to excel wherever
@@ -78,7 +78,7 @@ const SchoolTilesSix = () => (
               </div>
             </li>
             <li className="lp-school-link-item">
-              <h4 className="headline">Is Online Right for You?</h4>
+              <h3 className="headline">Is Online Right for You?</h3>
               <p>
                 BU offers a wide range of flexible online programs with new
                 start dates available every month. You can take courses at your
@@ -101,7 +101,7 @@ const SchoolTilesSix = () => (
               </div>
             </li>
             <li className="lp-school-link-item">
-              <h4 className="headline">Or is On-Campus the Right Fit?</h4>
+              <h3 className="headline">Or is On-Campus the Right Fit?</h3>
               <p>
                 BU's Vermont campus is a beautiful place to learn. Classrooms
                 are equipped with the type of equipment modern professionals

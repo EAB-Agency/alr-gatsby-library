@@ -27,9 +27,9 @@ const applySix = () => (
       <div className="center lp-apply-wrapper">
         <div className="content-container lp-apply-content">
           <div className="lp-apply-copy">
-            <h1 className="lp-apply-title">
+            <h2 className="lp-apply-title">
               Experience Support, Service, and Success
-            </h1>
+            </h2>
           </div>
           <div className="copy-wrap">
             <p>
