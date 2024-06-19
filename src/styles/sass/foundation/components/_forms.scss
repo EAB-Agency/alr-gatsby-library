@@ -20,10 +20,17 @@
   font-size: 1rem;
   line-height: 1.6;
   border-radius: 0;
+  transition: $t-transition;
 
   &:hover,
   &:focus {
     outline: none;
+    box-shadow: inset 0 0 0 1px $c-black;
+  }
+
+  &:focus-visible{
+    outline: $x-focusOutline;
+    outline-offset: $d-focusOutlineOffset;
   }
 }
 

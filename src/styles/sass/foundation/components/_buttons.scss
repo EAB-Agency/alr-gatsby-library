@@ -37,7 +37,6 @@
 %button {
   @include buttonColor;
   @include fluidRem("font-size", 1rem, 1.15rem);
-
   transition: all 0.25s ease-in-out;
   display: block;
   width: 100%;
@@ -51,6 +50,16 @@
   line-height: 1.2;
   appearance: none;
   border-radius: 0;
+
+  &:hover,
+  &:focus{
+    
+  }
+
+  &:focus-visible{
+    outline: $x-focusOutline;
+    outline-offset: $d-focusOutlineOffset;
+  }
 
   @media (min-width: $mq-500) {
     display: inline-block;

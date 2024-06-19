@@ -20,35 +20,52 @@ const codeFiles = [
 
 const SchoolContentTwo = () => (
   <div className="🚀-school-content-v2 layout-section">
-
     <section className="lp-school">
       <div className="center lp-school-wrapper">
         <div className="lp-school-content">
-          <h3 className="lp-school-content-title">
+          <h2 className="lp-school-content-title">
             Learn more about the School Name.
-          </h3>
+          </h2>
           <ul className="lp-school-link-list">
             <li className="lp-school-tile-item">
               <details>
-                <summary><h4>School link #1</h4></summary>
-                <div class="container">
-                  <p>School link text. Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <summary>
+                  <h3>School link #1</h3>
+                </summary>
+                <div className="container">
+                  <p>
+                    School link text. Lorem Ipsum is not simply random text. It
+                    has roots in a piece of classical Latin literature from 45
+                    BC, making it over 2000 years old.
+                  </p>
                 </div>
               </details>
             </li>
             <li className="lp-school-tile-item">
               <details>
-                <summary><h4>School link #2</h4></summary>
-                <div class="container">
-                  <p>School link text. Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <summary>
+                  <h3>School link #2</h3>
+                </summary>
+                <div className="container">
+                  <p>
+                    School link text. Lorem Ipsum is not simply random text. It
+                    has roots in a piece of classical Latin literature from 45
+                    BC, making it over 2000 years old.
+                  </p>
                 </div>
               </details>
             </li>
             <li className="lp-school-tile-item">
               <details>
-                <summary><h4>School link #3</h4></summary>
-                <div class="container">
-                  <p>School link text. Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <summary>
+                  <h3>School link #3</h3>
+                </summary>
+                <div className="container">
+                  <p>
+                    School link text. Lorem Ipsum is not simply random text. It
+                    has roots in a piece of classical Latin literature from 45
+                    BC, making it over 2000 years old.
+                  </p>
                 </div>
               </details>
             </li>
