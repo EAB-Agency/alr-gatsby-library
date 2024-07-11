@@ -15,14 +15,20 @@
     margin: 0;
     padding: 0;
 
-    li {
-      list-style-type: none;
-      @include containerStyle($c-white);
-      text-align: center;
+    // Layout if there are 3 items
+    &:has(> :nth-child(3):last-child) {
+      @include gridItems ($_x-number: "3", $_mq-small: $mq-600, $_mq-large: $mq-800, $_x-gridGapSmall: 1.5rem, $_x-gridGapLarge: 2rem);
+    }
 
-      ~ li {
-        margin-top: 1.5rem;
-      }
+    // Layout if there are 4 items
+    &:has(> :nth-child(4):last-child) {
+      @include gridItems ($_x-number: "4", $_mq-small: $mq-600, $_mq-large: $mq-1000, $_x-gridGapSmall: 1.5rem, $_x-gridGapLarge: 2rem);
+    }
+
+    li {
+      // @include containerStyle($c-white);
+      list-style-type: none;
+      text-align: center;
 
       span {
         display: block;
@@ -42,46 +48,6 @@
 
       .title {
         @include fluidRem("font-size", 1.25rem, 1.5rem); 
-      }
-    }
-  }
-
-  @media (min-width: $mq-600) {
-    // Change media queries based on content
-    .lp-stats-list {
-      display: grid;
-      grid-template: 1fr 1fr / repeat(4, 1fr);
-      grid-gap: 1rem;
-
-      li {
-        grid-column: span 2;
-
-        ~ li {
-          margin-top: 0;
-        }
-
-        &:nth-child(3) {
-          grid-column: 2 / 4;
-          grid-row: 2 / 3;
-        }
-      
-      }
-    }
-  }
-
-  @media (min-width: $mq-1000) {
-    // Change media queries based on content
-    .lp-stats-list {
-      grid-template: 1fr / repeat(3, 1fr);
-      grid-gap: 2rem;
-
-      li {
-        grid-column: span 1;
-
-        &:nth-child(3) {
-          grid-column: 3/4;
-          grid-row: 1/2;
-        }
       }
     }
   }

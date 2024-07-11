@@ -4,19 +4,19 @@ import DefaultContact from './default-tiles-static';
 import './school-tiles-static-v2.scss';
 
 const styleSheet = require('!!raw-loader!./school-tiles-static-v2.scss');
-// const html = require('!!raw-loader!./default-apply.js');
+const html = require('!!raw-loader!./school-tiles-static-v2.html');
 
 const codeFiles = [
   {
-    fileName: 'school-tiles-static-v2.scss',
+    fileName: 'school-tiles-static-v1.scss',
     code: styleSheet.default,
     language: 'scss',
     lineNumbersToDelete: '1-6',
   },
-  // {
-  //   code: html.default,
-  //   language: 'html',
-  // },
+  {
+    code: html.default,
+    language: 'html',
+  },
 ];
 
 const SchoolTilesStaticTwo = () => (

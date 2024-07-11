@@ -1,0 +1,44 @@
+@use "sass:color";
+@use "sass:math";
+@use "library/foundation/config" as *;
+@use "library/foundation/components" as *;
+@use "library/foundation/utilities" as *;
+
+.🚀-stats-v4 {
+  // ================
+  // Stats Layout 4
+
+  .lp-badges-section {
+    @include boxSpacing();
+
+    // Layout if there are 3 items
+    .lp-stats-list:has(> :nth-child(3):last-child) {
+      @include gridItems ($_x-number: "3", $_mq-small: $mq-400, $_mq-large: $mq-700, $_x-gridGapSmall: 1rem, $_x-gridGapLarge: 1.5rem);
+    }
+
+    // Layout if there are 4 items
+    .lp-stats-list:has(> :nth-child(4):last-child) {
+      @include gridItems ($_x-number: "4", $_mq-small: $mq-400, $_mq-large: $mq-700, $_x-gridGapSmall: 1rem, $_x-gridGapLarge: 1.5rem);
+    }
+  
+    .lp-stats-list {
+      margin: 0;
+      padding: 0;
+      align-content:center;
+      justify-content:center;
+
+      li {
+        list-style-type: none;
+        text-align: center;
+      }
+  
+      img {
+        width: 100%;
+        display:block;
+        text-align: center;
+        max-width:17rem;
+      }
+    }
+  }
+
+}

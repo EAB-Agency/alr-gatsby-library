@@ -4,7 +4,7 @@ const DefaultTestimonial = () => (
   <div className="lp-testimonial">
     <div className="center testimonial-wrapper">
       <div className="testimonial-container">
-        <img alt="Sneha Soni" className="testimonial-photo" height="100" width="100" src="https://admiss.info/assets/lp-live/1537-hoo-g-live/img-sneha.jpeg" />
+        <img alt="Portrait of" class="testimonial-photo" height="100" width="100" src="https://admiss.info/assets/lp-live/111-layout-lib-live/student-journey/img-testimonial-xxx.jpg" />
         
         <div className="testimonial-quote">
           <blockquote>
