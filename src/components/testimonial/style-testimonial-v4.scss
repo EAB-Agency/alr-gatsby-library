@@ -1,0 +1,122 @@
+@use "library/foundation/config" as *;
+// @use "library/foundation/components" as *;
+@use "library/foundation/utilities" as *;
+
+.🚀-testimonial-v4 {
+// ================
+// Testimonial Layout 4
+
+.lp-testimonial{
+  @include boxSpacing($_spacingType: "margin");
+
+  .testimonial-container {
+    margin:auto;
+
+    img {
+      width: 100%;
+      height:40vw;
+      margin: auto;
+      object-fit: cover; // image-size
+      object-position: 50% 50%; // image-position
+      text-align: center;
+      margin-bottom:1rem;
+    }
+
+    blockquote {
+      margin:0;
+
+      p {
+        font-style: italic;
+        position: relative;
+        font-size: 1.125em;
+
+        &:last-of-type{
+          margin:0;
+        }
+
+        &::before,
+        &::after {
+          font-family: $f-iconFont;
+          @include fluidRem("font-size", 1rem, 1.25rem);
+          color: $c-black;
+          display: inline-block;
+          line-height:1;
+        }
+  
+        &::before {
+          content: $i-quoteLeft;
+          top: 0;
+          margin-right:.75rem;
+        }
+  
+        &::after {
+          content: $i-quoteRight;
+          margin-left: 0.75rem;
+          margin-top: 0.25rem;
+        }
+      }
+    }
+
+    cite {
+      font-style: normal;
+      margin-top: 1rem;
+      @include fluidRem("font-size", 0.875rem, 0.95rem);
+      display:block;
+    }
+  }
+
+
+  @media (min-width: $mq-600){
+
+    .center{
+      position:relative;
+    }
+
+    .testimonial-container{
+      flex-direction:row;
+      align-items:stretch;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+
+      img {
+        height:100%;
+        min-height:20rem;
+        max-height: 25rem;
+        margin:0;
+      }
+
+      .testimonial-quote{
+        flex: 1 0 70%;
+        align-self:center;
+      }
+    }
+
+    blockquote{
+      position:relative;
+      padding:1rem;
+    }
+
+    cite{
+      position:absolute;
+      bottom:0;
+      left:0;
+      background:$c-black;
+      color:white;
+      padding:.5rem;
+      max-width: 15rem;
+    }
+  }
+
+  @media (min-width: $mq-900){
+    .testimonial-container{
+      gap:1rem;
+    }
+
+    blockquote{
+      padding:1.5rem;
+    }
+  }
+}
+
+
+}

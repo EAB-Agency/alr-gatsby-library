@@ -10,13 +10,40 @@
 
 .lp-intro-form {
 
-  &::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 40vw;
-    max-height: 35rem;
-    background: url("/images/img-woman-cafe.jpg") no-repeat 0% 20% / cover;
+  .lp-inquiry-title{
+    background: $c-black url("/images/img-woman-cafe.jpg") no-repeat 0% 50% / cover;
+    overflow-y:hidden;
+    position:relative;
+
+      // Gradient to help with accessibility
+      &:before{
+        content:'';
+        display:block;
+        position:absolute;
+        background: linear-gradient(0deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 50%);
+        height:100%;
+        width:100%;
+      }
+
+
+    .content-container{
+      padding-top: clamp(8rem, 30vw, 20rem);
+      padding-bottom:1rem;
+      position:relative;
+      z-index:5;
+    }
+
+    .lp-intro-title{
+      color:white;
+      margin:0;
+      display:inline-block;
+
+      // Following code helps with text legibility
+      text-shadow: 0 0 10px rgba(0,0,0,.5);
+      background: rgba(0,0,0,.15);
+      box-shadow: 0 0 30px 20px rgba(0,0,0,.15);
+      border-radius: 2rem;
+    }
 
     // Add other PS version images here
     .lp-type-inquiry-version-1 &{
@@ -32,19 +59,24 @@
   }
 
   .lp-intro {
-    padding:2rem 0;
     max-width: 75ch;
     margin:auto;
   }
 
   .lp-form {
-    @include containerStyle;
+    @include containerStyle($c-white);
   }
 
-  @media (min-width: $mq-900) {
+  @media (min-width: $mq-800) and (max-width: $mq-1000){
+    .mauticform-row-partial-half{
+      width:100%;
+    }
+  }
 
-    &:before{
-      background: url("/images/img-woman-cafe-lg.jpg") no-repeat 0% 20% / cover;
+  @media (min-width: $mq-800) {
+
+    .lp-inquiry-title{
+      background: $c-black url("/images/img-woman-cafe-lg.jpg") no-repeat 0% 50% / cover;
 
       // Add other PS version images here
       .lp-type-inquiry-version-1 &{
@@ -57,13 +89,12 @@
 
     .lp-intro-form-content {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: flex-end;
-      @include fluidRem("column-gap", 1rem, 3rem);
+      grid-template-columns: 1.1fr 1fr;
+      align-items: flex-start;
+      @include fluidRem("column-gap", 1rem, 2rem, $mq-900, $mq-1200);
     }
 
     .lp-intro {
-      padding:0;
       
       p:last-child{
         margin-bottom:0;

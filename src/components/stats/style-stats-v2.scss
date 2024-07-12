@@ -14,7 +14,16 @@
   .lp-stats-list {
     margin: 0;
     padding: 0;
-    @include gridItems("3", $mq-700, $mq-900, 2rem, 2rem);
+
+    // Layout if there are 3 items
+    &:has(> :nth-child(3):last-child) {
+      @include gridItems ($_x-number: "3", $_mq-small: $mq-700, $_mq-large: $mq-900, $_x-gridGapSmall: 2rem, $_x-gridGapLarge: 2rem);
+    }
+
+    // Layout if there are 4 items
+    &:has(> :nth-child(4):last-child) {
+      @include gridItems ($_x-number: "4", $_mq-small: $mq-700, $_mq-large: $mq-1100, $_x-gridGapSmall: 2rem, $_x-gridGapLarge: 2rem);
+    }
 
     li {
       list-style-type: none;
@@ -59,21 +68,11 @@
         display: block;
       }
 
-      .emphasis,
-      .title {
-        font-weight: 900;
-        font-style: normal;
-      }
-
-      .emphasis {
-        @extend h1;
-        font-family: $f-bodyFont;
-        margin-bottom: 0.5rem;
-      }
-
       .title {
         @extend h5;
         font-family: $f-bodyFont;
+        font-weight: 900;
+        font-style: normal;
       }
 
       .link {
@@ -84,8 +83,6 @@
     @media (min-width: $mq-700) {
       // Whatever is declared as the first media query in the gridItems mixin above
       li {
-        max-width: 30rem;
-        margin: 0 auto;
 
         ~ li {
           border-top: none;

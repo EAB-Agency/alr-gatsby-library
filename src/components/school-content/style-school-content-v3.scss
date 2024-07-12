@@ -11,12 +11,6 @@
 .lp-school-content {
   @include boxSpacing;
 
-  .lp-school-content{
-    ul{
-      @include fancyList;
-    }
-  }
-
   // Leave <a> styles, delete from html if not needed.
   a{
     
@@ -29,6 +23,12 @@
       background: url("/images/img-woman-cafe.jpg") no-repeat center /cover; // mobile image
       width:100%;
       height:35vw;
+      margin-bottom:1rem;
+    }
+  }
+
+  .content-wrapper{
+    .content-container{
       margin-bottom:1rem;
     }
   }

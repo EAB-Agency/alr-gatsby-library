@@ -9,7 +9,7 @@
   // Stats Layout 3
 
 .lp-stats-section {
-  @include boxSpacing(2rem, 2rem);
+  @include boxSpacing();
 
   .lp-stats-list {
     margin: 0;
