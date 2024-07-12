@@ -1,7 +1,5 @@
-@use "sass:color";
-@use "sass:math";
 @use "library/foundation/config" as *;
-@use "library/foundation/components" as *;
+// @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
 .🚀-testimonial-v1 {
@@ -64,26 +62,20 @@
 
     cite {
       font-style: normal;
-      margin-top: 1.5rem;
       @include fluidRem("font-size", 0.875rem, 0.975rem);
       display:block;
+      color: rgba($c-black, .8);
     }
   }
 
 
   @media (min-width: $mq-500){
     &:not(.two-col){
-        
-      .center{
-        display:flex;
-        gap:.5rem;
-      }
 
       .testimonial-container{
         flex-direction:row;
         align-items:stretch;
 				
-
         img {
           flex-basis:30%;
           max-width: 15rem;
