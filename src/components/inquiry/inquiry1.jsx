@@ -6,7 +6,7 @@ import './style-inquiry-v1.scss';
 
 // eslint-disable-next-line import/no-unresolved
 const styleSheet = require('!!raw-loader!./style-inquiry-v1.scss');
-const html = require('!!raw-loader!./default-inquiry.html');
+const html = require('!!raw-loader!./inquiry1.html');
 
 const codeFiles = [
   {
