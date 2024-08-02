@@ -26,17 +26,17 @@ const StatsFour = () => (
         <ul className="lp-stats-list">
           <li>
             <div className="item-container">
-              <img alt="U.S. News &amp; World Report Rankings - " height="100" width="100" src="https://admiss.info/assets/lp-live/111-layout-lib-live/student-journey/img-badge-xxx.png"  />
+              <img loading="lazy" alt="U.S. News &amp; World Report Rankings - " height="100" width="100" src="https://admiss.info/assets/lp-live/111-layout-lib-live/student-journey/img-badge-xxx.png"  />
             </div>
           </li>
           <li>
             <div className="item-container">
-              <img alt="U.S. News &amp; World Report Rankings - " height="100" width="100" src="https://admiss.info/assets/lp-live/111-layout-lib-live/student-journey/img-badge-xxx.png" />
+              <img loading="lazy" alt="U.S. News &amp; World Report Rankings - " height="100" width="100" src="https://admiss.info/assets/lp-live/111-layout-lib-live/student-journey/img-badge-xxx.png" />
             </div>
           </li>
           <li>
             <div className="item-container">
-              <img alt="U.S. News &amp; World Report Rankings - " height="100" width="100" src="https://admiss.info/assets/lp-live/111-layout-lib-live/student-journey/img-badge-xxx.png" />
+              <img loading="lazy" alt="U.S. News &amp; World Report Rankings - " height="100" width="100" src="https://admiss.info/assets/lp-live/111-layout-lib-live/student-journey/img-badge-xxx.png" />
             </div>
           </li>
         </ul>

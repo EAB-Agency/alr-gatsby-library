@@ -29,7 +29,7 @@ const TestimonialTwo= () => (
           <p>Whether through our flexible online programs or the option to turn real-life experience into college credit, it's our mission to assist our hardworking students however we can. The dedication our graduate students show in their careers, academics, and personal responsibilities inspires us every day. We're proud to be there for them during each step of their journey at MBU.</p>
           </blockquote>
           <div className="img-cite">
-            <img alt="Portrait of" class="testimonial-photo" height="100" width="100" src="https://admiss.info/assets/lp-live/111-layout-lib-live/student-journey/img-testimonial-xxx.jpg" />
+            <img loading="lazy" alt="Portrait of" class="testimonial-photo" height="100" width="100" src="https://admiss.info/assets/lp-live/111-layout-lib-live/student-journey/img-testimonial-xxx.jpg" />
             <cite>Meghan Munsey<br/>Associate Director of First Year Experience<br/>MBU&nbsp;Online</cite>
           </div>
         </div>
