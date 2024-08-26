@@ -40,11 +40,16 @@ $d-sideSmPadding: calc((#{math.div((100% - $d-centerWidth), 2)}));
     .lp-intro-form-content {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
-      grid-template-rows: 3rem auto 1fr 3rem;
-      grid-template-areas:  ". form"
-                            "intro form"
-                            "image form"
-                            ". form";
+      grid-template-rows: auto 1fr;
+      grid-template-areas: "intro form"
+                            "image form";
+
+      // Uncomment following lines if you want spacing above and below intro and image area.
+      // grid-template-rows: 3rem auto 1fr 3rem;
+      // grid-template-areas:  ". form"
+      //                       "intro form"
+      //                       "image form"
+      //                       ". form";
 
       &::after {
         content: '';
