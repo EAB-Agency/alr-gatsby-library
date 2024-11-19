@@ -12,12 +12,25 @@
 .lp-video {
   @include boxSpacing;
 
-  .video-container {
-    @include iframeWrapper($_d-iframeWidth: 640, $_d-iframeHeight: 360); // makes iframe fit container
+  @media (min-width: $mq-800) {
+    .center {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .video-intro {
+      flex-basis:40%;
+    }
+
+    .video-container {
+      flex-basis: 60%;
+      @include fluidRem("padding-top", 16rem, 25rem, $mq-800); // video height
+    }
   }
 
   // ================
-  // YouTube Lazy Load
+  // YouTube Lazy Load - DO NOT EDIT
   
   .lazy-yt {
     position: relative;
@@ -94,23 +107,6 @@
     .yt-facade:focus {
       outline: none;
       box-shadow: 0 0 0 3px #4d90fe;
-    }
-  }
-
-  @media (min-width: $mq-800) {
-    .center {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .video-intro {
-      flex-basis:40%;
-    }
-
-    .video-container {
-      flex-basis: 60%;
-      @include fluidRem("padding-top", 16rem, 25rem, $mq-800); // video height
     }
   }
 }
