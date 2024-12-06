@@ -11,6 +11,10 @@
 .lp-intro-form {
   @include boxSpacing;
 
+  .center{
+    max-width: $mq-1000;
+  }
+
   .lp-intro-form-content {
 
     .lp-intro {
@@ -37,7 +41,6 @@
       grid-template-columns: 2fr 1fr;
       grid-template-rows: auto auto;
       grid-gap: 2rem;
-      min-height: 42rem;
       
       .lp-intro {
         // control for character lengths with max-width

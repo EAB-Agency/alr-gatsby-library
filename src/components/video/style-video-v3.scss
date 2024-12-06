@@ -1,0 +1,38 @@
+@use "sass:color";
+@use "sass:math";
+@use "library/foundation/config" as *;
+@use "library/foundation/components" as *;
+@use "library/foundation/utilities" as *;
+
+
+.🚀-video-v3{
+// ================
+// Video Layout 1
+
+.lp-video {
+  @include boxSpacing;
+
+  .video-container {
+    @include iframeWrapper($_d-iframeWidth: 640, $_d-iframeHeight: 360); // makes iframe fit container
+  }
+
+  @media (min-width: $mq-800) {
+    .center {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .video-intro {
+      flex-basis:40%;
+    }
+
+    .video-container {
+      flex-basis: 60%;
+      @include fluidRem("padding-top", 16rem, 25rem, $mq-800); // video height
+    }
+  }
+}
+
+
+}
