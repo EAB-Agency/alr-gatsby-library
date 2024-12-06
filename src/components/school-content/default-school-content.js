@@ -19,7 +19,7 @@ const DefaultSchoolContent = () => (
 
         <div className="content-wrapper">
           <div className="content-container">
-            <h3>Headline 1</h3>
+            <h3 className="headline">Headline 1</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -36,7 +36,7 @@ const DefaultSchoolContent = () => (
             </a>
           </div>
           <div className="content-container">
-            <h3>Headline 2</h3>
+            <h3 className="headline">Headline 2</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -51,7 +51,7 @@ const DefaultSchoolContent = () => (
             </a>
           </div>
           <div className="content-container">
-            <h3>Headline 3</h3>
+            <h3 className="headline">Headline 3</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.

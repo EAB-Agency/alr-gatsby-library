@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "sass:math";
 @use "library/foundation/config" as *;
-@use "library/foundation/components" as *;
+// @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
 
@@ -30,7 +30,8 @@
       content: '';
       display: block;
       background: url("/images/img-woman-cafe.jpg") no-repeat center / cover;
-      height: 15rem;
+      height:30vw;
+      min-height:10rem;
       width: 100%;
     }
   }  
@@ -40,9 +41,7 @@
 
     // keep required label from breaking independently. 
     .mauticform-row-partial-half{
-      .mauticform-req-label{
-        display:block;
-      }
+      width:100%;
     }
   }
 
@@ -51,12 +50,27 @@
     .lp-intro-form-content {
       display: grid;
       grid-template: 1fr / 1fr 1fr;
-      grid-gap: 0 2rem;
+      gap: 0 2rem;
       align-items: center;
     }
 
+    .lp-intro{
+      p:last-child,
+      ul:last-child{
+        margin-bottom:0;
+      }
+    }
+
     .lp-form {
-      margin: 0;
+      margin: 0;  
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      
+      //img
+      &:before{
+        height:100%;
+      }
     }
   }
 }

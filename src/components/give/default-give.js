@@ -34,40 +34,6 @@ const DefaultGive = () => (
                 multiple
               />
             </div>
-
-            <div className="lp-form-footer" />
-          </div>
-
-          <div
-            className="lp-form-thanks form-thanks"
-            id="form-thanks"
-            style={{ display: 'none' }}
-          >
-            <h3 className="lp-form-thanks-title">
-              Thanks for providing us with your information!
-            </h3>
-            <p>
-              Click the link below to download{' '}
-              <strong>global-token=content-give-title.</strong>
-            </p>
-            <p className="button">
-              <a
-                href="{global-token=content-give-url}"
-                className="lp-give-download"
-                target="_blank"
-              >
-                Download
-              </a>
-            </p>
-            <hr />
-            <p>
-              Ready to apply to global-token=school-name-alt now? That's great!
-              Simply{' '}
-              <a href="global-token=application-url" id="link_apply_cg_thanks">
-                submit your application
-              </a>{' '}
-              and we'll consider you for admission soon.
-            </p>
           </div>
         </div>
       </div>

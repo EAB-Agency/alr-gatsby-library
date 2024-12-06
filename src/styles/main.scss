@@ -365,6 +365,7 @@ html {
 #mauticform_studentjourneycontentgivev1emailgetguide_nickname_bhpot,
 #mauticform_studentjourneyinquiryv1emailxprogramversionx_nickname_bhpot,
 #mauticform_studentjourneysurveyv1emailgeneral_nickname_bhpot,
-#mauticform_studentjourneysurveyv1emailgeneral_sms_opt_in{
-  display: none;
+#mauticform_studentjourneysurveyv1emailgeneral_sms_opt_in,
+#mauticform_studentjourneyapplyformv1defaultgenerallayoutlibraryuse_nickname_bhpot{
+  display: none !important;
 }

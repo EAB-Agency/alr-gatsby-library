@@ -1,7 +1,7 @@
-@use "sass:color";
-@use "sass:math";
+// @use "sass:color";
+// @use "sass:math";
 @use "library/foundation/config" as *;
-@use "library/foundation/components" as *;
+// @use "library/foundation/components" as *;
 @use "library/foundation/utilities" as *;
 
 .🚀-apply-v1 {
@@ -9,10 +9,9 @@
 // Apply Layout 1
 
 .lp-apply {
+  @include applyFormInlineEmail("(min-width: #{$mq-600})", "2");
   background: $c-white;
   padding: 0;
-
-  @include applyFormInlineEmail("(min-width: #{$mq-600})", "2");
 
   &::before {
     // Image above content on small screens

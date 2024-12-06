@@ -30,7 +30,7 @@ const SchoolContentTwo = () => (
             <li className="lp-school-tile-item">
               <details>
                 <summary>
-                  <h3>School link #1</h3>
+                  <h3 className="headline">School link #1</h3>
                 </summary>
                 <div className="container">
                   <p>
@@ -44,7 +44,7 @@ const SchoolContentTwo = () => (
             <li className="lp-school-tile-item">
               <details>
                 <summary>
-                  <h3>School link #2</h3>
+                  <h3 className="headline">School link #2</h3>
                 </summary>
                 <div className="container">
                   <p>
@@ -58,7 +58,7 @@ const SchoolContentTwo = () => (
             <li className="lp-school-tile-item">
               <details>
                 <summary>
-                  <h3>School link #3</h3>
+                  <h3 className="headline">School link #3</h3>
                 </summary>
                 <div className="container">
                   <p>
