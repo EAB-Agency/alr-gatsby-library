@@ -14,27 +14,53 @@
   .lp-school-content {
 
     .lp-school-link-list {
-      @include gridItems("4");
       list-style: none;
       margin: 0;
+
+      // Code blocks below change layout based on number of tiles present. Add as many as needed for layouts across pages. 
+      &:has(> :nth-child(3):last-child) {
+        @include gridItems ($_x-number: "3", $_mq-small: $mq-700, $_mq-large: $mq-1100, $_x-gridGapSmall: 1.5rem, $_x-gridGapLarge: 1.5rem);
+      }
+      &:has(> :nth-child(4):last-child) {
+        @include gridItems ($_x-number: "4", $_mq-small: $mq-700, $_mq-large: $mq-1100, $_x-gridGapSmall: 1.5rem, $_x-gridGapLarge: 1.5rem);
+      }
+      &:has(> :nth-child(5):last-child) {
+        @include gridItems ($_x-number: "5", $_mq-small: $mq-700, $_mq-large: $mq-1100, $_x-gridGapSmall: 1.5rem, $_x-gridGapLarge: 1.5rem);
+      }
     }
   
-    li {
+    .lp-school-tile-item {
       height: 100%;
       width: 100%;
-      position: relative;
-      display: block;
-      
+      display:grid;
+      grid-template-rows: 12rem auto; //first value controls image height
+        
       &::before{
         content:'';
-        width: 100%;
-        height: 12rem;
         display: block;
       }
 
-      .link-wrap {
+      .tile-container {
         background: $c-white;
         padding: 1rem;
+        display:flex;
+        flex-direction:column;
+      }
+
+      .tile-title{
+
+      }
+
+      .tile-copy{
+        flex:1;
+      }
+
+      p:last-child{
+        margin:0;
+      }
+
+      .dynamic-link{
+
       }
     
       &:nth-child(1) { 

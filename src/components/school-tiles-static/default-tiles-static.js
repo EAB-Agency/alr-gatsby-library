@@ -9,43 +9,55 @@ const DefaultTilesStatic = () => (
         </h2>
         <ul className="lp-school-link-list">
           <li className="lp-school-tile-item">
-            <div className="link-wrap">
+            <div className="tile-container">
               <h3 className="tile-title">School link #1</h3>
-              <span className="tile-copy">
+              <p className="tile-copy">
                 School link text. Lorem Ipsum is not simply random text. It has
                 roots in a piece of classical Latin literature from 45 BC,
                 making it over 2000 years old.
-              </span>
+              </p>
+              <p className="dynamic-link">
+                <a href="https://www.lynchburg.edu/graduate/" id="link_X" target="_blank">Learn More</a>
+              </p>
             </div>
           </li>
           <li className="lp-school-tile-item">
-            <div className="link-wrap">
+            <div className="tile-container">
               <h3 className="tile-title">School link #2</h3>
-              <span className="tile-copy">
+              <p className="tile-copy">
                 School link text. Lorem Ipsum is not simply random text. It has
                 roots in a piece of classical Latin literature from 45 BC,
                 making it over 2000 years old.
-              </span>
+              </p>
+              <p className="dynamic-link">
+                <a href="https://www.lynchburg.edu/graduate/" id="link_X" target="_blank">Learn More</a>
+              </p>
             </div>
           </li>
           <li className="lp-school-tile-item">
-            <div className="link-wrap">
+            <div className="tile-container">
               <h3 className="tile-title">School link #3</h3>
-              <span className="tile-copy">
+              <p className="tile-copy">
                 School link text. Lorem Ipsum is not simply random text. It has
                 roots in a piece of classical Latin literature from 45 BC,
                 making it over 2000 years old.
-              </span>
+              </p>
+              <p className="dynamic-link">
+                <a href="https://www.lynchburg.edu/graduate/" id="link_X" target="_blank">Learn More</a>
+              </p>
             </div>
           </li>
           <li className="lp-school-tile-item">
-            <div className="link-wrap">
+            <div className="tile-container">
               <h3 className="tile-title">School link #4</h3>
-              <span className="tile-copy">
+              <p className="tile-copy">
                 School link text. Lorem Ipsum is not simply random text. It has
                 roots in a piece of classical Latin literature from 45 BC,
                 making it over 2000 years old.
-              </span>
+              </p>
+              <p className="dynamic-link">
+                <a href="https://www.lynchburg.edu/graduate/" id="link_X" target="_blank">Learn More</a>
+              </p>
             </div>
           </li>
         </ul>
